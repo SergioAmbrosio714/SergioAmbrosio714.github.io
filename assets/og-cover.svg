@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Ambrosio · Ingeniería estructural</title>
+  <desc id="desc">Portafolio de ingeniería estructural, modelación computacional e investigación. La estructura ilustrada es conceptual.</desc>
+  <rect width="1200" height="630" fill="#f4f7f4"/>
+  <path d="M64 70H1136M64 548H1136" stroke="#cdd9d5"/>
+  <text x="64" y="117" fill="#245563" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" letter-spacing="5">AMBROSIO</text>
+  <text x="64" y="267" fill="#253b41" font-family="Arial, Helvetica, sans-serif" font-size="67" font-weight="600">Ingeniería</text>
+  <text x="64" y="345" fill="#253b41" font-family="Arial, Helvetica, sans-serif" font-size="67" font-weight="600">estructural.</text>
+  <text x="64" y="421" fill="#586e72" font-family="Arial, Helvetica, sans-serif" font-size="23" >Modelación · Automatización · Investigación</text>
+  <g stroke-linejoin="round" stroke-linecap="round">
+    <path d="M865,390L865,120" fill="none" stroke="#acbcbf" stroke-width="1.62"/>
+    <path d="M821,415L821,145" fill="none" stroke="#acbcbf" stroke-width="1.62"/>
+    <path d="M777,440L777,170" fill="none" stroke="#acbcbf" stroke-width="1.62"/>
+    <path d="M925,410L925,140" fill="none" stroke="#acbcbf" stroke-width="1.62"/>
+    <path d="M881,435L881,165" fill="none" stroke="#acbcbf" stroke-width="1.62"/>
+    <path d="M837,460L837,190" fill="none" stroke="#acbcbf" stroke-width="1.62"/>
+    <path d="M985,430L985,160" fill="none" stroke="#acbcbf" stroke-width="1.62"/>
+    <path d="M941,455L941,185" fill="none" stroke="#acbcbf" stroke-width="1.62"/>
+    <path d="M897,480L897,210" fill="none" stroke="#acbcbf" stroke-width="1.62"/>
+    <path d="M1045,450L1045,180" fill="none" stroke="#acbcbf" stroke-width="1.62"/>
+    <path d="M1001,475L1001,205" fill="none" stroke="#acbcbf" stroke-width="1.62"/>
+    <path d="M957,500L957,230" fill="none" stroke="#acbcbf" stroke-width="1.62"/>
+    <polygon points="861,378.75 1071,448.75 961,511.25 751,441.25" fill="#e5ece8" stroke="#b9c8c5" stroke-width="1"/>
+    <path d="M925,410L837,460" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <path d="M985,430L897,480" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <path d="M821,415L1001,475" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <polygon points="777,395 957,455 957,459 777,399" fill="#d0dcd8" stroke="#9fb3b5" stroke-width="1"/>
+    <polygon points="1045,405 957,455 957,459 1045,409" fill="#c2d1ce" stroke="#9fb3b5" stroke-width="1"/>
+    <polygon points="865,345 1045,405 957,455 777,395" fill="#eef3f0" fill-opacity="0.64" stroke="#8da4a8" stroke-width="1.4"/>
+    <path d="M925,365L837,415" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <path d="M985,385L897,435" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <path d="M821,370L1001,430" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <polygon points="777,350 957,410 957,414 777,354" fill="#d0dcd8" stroke="#9fb3b5" stroke-width="1"/>
+    <polygon points="1045,360 957,410 957,414 1045,364" fill="#c2d1ce" stroke="#9fb3b5" stroke-width="1"/>
+    <polygon points="865,300 1045,360 957,410 777,350" fill="#eef3f0" fill-opacity="0.64" stroke="#8da4a8" stroke-width="1.4"/>
+    <path d="M925,320L837,370" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <path d="M985,340L897,390" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <path d="M821,325L1001,385" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <polygon points="777,305 957,365 957,369 777,309" fill="#d0dcd8" stroke="#9fb3b5" stroke-width="1"/>
+    <polygon points="1045,315 957,365 957,369 1045,319" fill="#c2d1ce" stroke="#9fb3b5" stroke-width="1"/>
+    <polygon points="865,255 1045,315 957,365 777,305" fill="#eef3f0" fill-opacity="0.64" stroke="#8da4a8" stroke-width="1.4"/>
+    <path d="M925,275L837,325" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <path d="M985,295L897,345" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <path d="M821,280L1001,340" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <polygon points="777,260 957,320 957,324 777,264" fill="#d0dcd8" stroke="#9fb3b5" stroke-width="1"/>
+    <polygon points="1045,270 957,320 957,324 1045,274" fill="#c2d1ce" stroke="#9fb3b5" stroke-width="1"/>
+    <polygon points="865,210 1045,270 957,320 777,260" fill="#eef3f0" fill-opacity="0.64" stroke="#8da4a8" stroke-width="1.4"/>
+    <path d="M925,230L837,280" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <path d="M985,250L897,300" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <path d="M821,235L1001,295" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <polygon points="777,215 957,275 957,279 777,219" fill="#d0dcd8" stroke="#9fb3b5" stroke-width="1"/>
+    <polygon points="1045,225 957,275 957,279 1045,229" fill="#c2d1ce" stroke="#9fb3b5" stroke-width="1"/>
+    <polygon points="865,165 1045,225 957,275 777,215" fill="#eef3f0" fill-opacity="0.64" stroke="#8da4a8" stroke-width="1.4"/>
+    <path d="M925,185L837,235" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <path d="M985,205L897,255" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <path d="M821,190L1001,250" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <polygon points="777,170 957,230 957,234 777,174" fill="#d0dcd8" stroke="#9fb3b5" stroke-width="1"/>
+    <polygon points="1045,180 957,230 957,234 1045,184" fill="#c2d1ce" stroke="#9fb3b5" stroke-width="1"/>
+    <polygon points="865,120 1045,180 957,230 777,170" fill="#e9efed" fill-opacity="1" stroke="#8da4a8" stroke-width="1.4"/>
+    <path d="M925,140L837,190" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <path d="M985,160L897,210" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <path d="M821,145L1001,205" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <path d="M777,440L777,170" fill="none" stroke="#617f85" stroke-width="2.7"/>
+    <path d="M837,460L837,190" fill="none" stroke="#617f85" stroke-width="2.7"/>
+    <path d="M897,480L897,210" fill="none" stroke="#617f85" stroke-width="2.7"/>
+    <path d="M957,500L957,230" fill="none" stroke="#617f85" stroke-width="2.7"/>
+    <path d="M1045,450L1045,180" fill="none" stroke="#617f85" stroke-width="2.7"/>
+    <path d="M1001,475L1001,205" fill="none" stroke="#617f85" stroke-width="2.7"/>
+    <path d="M777,440L777,170" fill="none" stroke="#245563" stroke-width="4"/>
+    <circle cx="777" cy="395" r="1.89" fill="#245563"/>
+    <circle cx="777" cy="350" r="1.89" fill="#245563"/>
+    <circle cx="777" cy="305" r="1.89" fill="#245563"/>
+    <circle cx="777" cy="260" r="1.89" fill="#245563"/>
+    <circle cx="777" cy="215" r="1.89" fill="#245563"/>
+    <circle cx="777" cy="170" r="1.89" fill="#245563"/>
+  </g>
+  <text x="64" y="589" fill="#586e72" font-family="Arial, Helvetica, sans-serif" font-size="17" letter-spacing="2">PORTAFOLIO PROFESIONAL</text>
+  <text x="1136" y="589" fill="#586e72" font-family="Arial, Helvetica, sans-serif" font-size="16" text-anchor="end" letter-spacing="1">ESQUEMA CONCEPTUAL</text>
+</svg>

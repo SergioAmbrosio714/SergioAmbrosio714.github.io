@@ -1,0 +1,39 @@
+name: Validar portafolio
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verificar JavaScript
+        run: node --check app.js
+      - name: Probar interacciones y cálculos
+        run: node tests/smoke.test.cjs
+      - name: Verificar enlaces locales
+        run: node tests/links.test.cjs
+      - name: Preparar herramientas de navegador fuera del sitio
+        run: |
+          npm install --prefix "$RUNNER_TEMP/portfolio-qa" --no-save --ignore-scripts playwright@1.64.0 axe-core@4.14.0
+          node "$RUNNER_TEMP/portfolio-qa/node_modules/playwright/cli.js" install --with-deps chromium
+      - name: Probar escritorio, móvil y accesibilidad
+        env:
+          PLAYWRIGHT_MODULE: ${{ runner.temp }}/portfolio-qa/node_modules/playwright
+          AXE_PATH: ${{ runner.temp }}/portfolio-qa/node_modules/axe-core/axe.min.js
+          QA_SCREENSHOTS: ${{ runner.temp }}/portfolio-artifacts
+        run: node tests/browser.test.cjs
+      - name: Guardar capturas e informe
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: portfolio-browser-report
+          path: ${{ runner.temp }}/portfolio-artifacts
+          if-no-files-found: ignore
+          retention-days: 14

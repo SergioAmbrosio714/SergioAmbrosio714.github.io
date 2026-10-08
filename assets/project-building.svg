@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="470" viewBox="0 0 820 470" role="img" aria-labelledby="title desc">
+  <title id="title">Investigación en columnas · edificio conceptual</title>
+  <desc id="desc">Axonometría de una estructura idealizada de doce niveles con una línea de columnas resaltada. Ilustra el alcance de una investigación en formulación; no es una obra ni un modelo calculado.</desc>
+  <rect width="820" height="470" fill="#eef2f1"/>
+  <path d="M40 80H780M40 408H780" fill="none" stroke="#cedad7"/>
+  <text x="40" y="52" fill="#245563" font-family="Arial, Helvetica, sans-serif" font-size="17" letter-spacing="1.5">04 / COLUMNAS Y REFORZAMIENTO</text>
+  <g stroke-linejoin="round" stroke-linecap="round">
+    <path d="M340,312L340,108" fill="none" stroke="#acbcbf" stroke-width="1.2"/>
+    <path d="M292,331L292,127" fill="none" stroke="#acbcbf" stroke-width="1.2"/>
+    <path d="M244,350L244,146" fill="none" stroke="#acbcbf" stroke-width="1.2"/>
+    <path d="M403,326L403,122" fill="none" stroke="#acbcbf" stroke-width="1.2"/>
+    <path d="M355,345L355,141" fill="none" stroke="#acbcbf" stroke-width="1.2"/>
+    <path d="M307,364L307,160" fill="none" stroke="#acbcbf" stroke-width="1.2"/>
+    <path d="M466,340L466,136" fill="none" stroke="#acbcbf" stroke-width="1.2"/>
+    <path d="M418,359L418,155" fill="none" stroke="#acbcbf" stroke-width="1.2"/>
+    <path d="M370,378L370,174" fill="none" stroke="#acbcbf" stroke-width="1.2"/>
+    <path d="M529,354L529,150" fill="none" stroke="#acbcbf" stroke-width="1.2"/>
+    <path d="M481,373L481,169" fill="none" stroke="#acbcbf" stroke-width="1.2"/>
+    <path d="M433,392L433,188" fill="none" stroke="#acbcbf" stroke-width="1.2"/>
+    <polygon points="336.25,303.75 556.75,352.75 436.75,400.25 216.25,351.25" fill="#e5ece8" stroke="#b9c8c5" stroke-width="1"/>
+    <path d="M403,326L307,364" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <path d="M466,340L370,378" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <path d="M292,331L481,373" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <polygon points="244,333 433,375 433,377 244,335" fill="#d0dcd8" stroke="#9fb3b5" stroke-width="1"/>
+    <polygon points="529,337 433,375 433,377 529,339" fill="#c2d1ce" stroke="#9fb3b5" stroke-width="1"/>
+    <polygon points="340,295 529,337 433,375 244,333" fill="#eef3f0" fill-opacity="0.64" stroke="#8da4a8" stroke-width="1.4"/>
+    <path d="M403,309L307,347" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <path d="M466,323L370,361" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <path d="M292,314L481,356" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <polygon points="244,316 433,358 433,360 244,318" fill="#d0dcd8" stroke="#9fb3b5" stroke-width="1"/>
+    <polygon points="529,320 433,358 433,360 529,322" fill="#c2d1ce" stroke="#9fb3b5" stroke-width="1"/>
+    <polygon points="340,278 529,320 433,358 244,316" fill="#eef3f0" fill-opacity="0.64" stroke="#8da4a8" stroke-width="1.4"/>
+    <path d="M403,292L307,330" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <path d="M466,306L370,344" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <path d="M292,297L481,339" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <polygon points="244,299 433,341 433,343 244,301" fill="#d0dcd8" stroke="#9fb3b5" stroke-width="1"/>
+    <polygon points="529,303 433,341 433,343 529,305" fill="#c2d1ce" stroke="#9fb3b5" stroke-width="1"/>
+    <polygon points="340,261 529,303 433,341 244,299" fill="#eef3f0" fill-opacity="0.64" stroke="#8da4a8" stroke-width="1.4"/>
+    <path d="M403,275L307,313" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <path d="M466,289L370,327" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <path d="M292,280L481,322" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <polygon points="244,282 433,324 433,326 244,284" fill="#d0dcd8" stroke="#9fb3b5" stroke-width="1"/>
+    <polygon points="529,286 433,324 433,326 529,288" fill="#c2d1ce" stroke="#9fb3b5" stroke-width="1"/>
+    <polygon points="340,244 529,286 433,324 244,282" fill="#eef3f0" fill-opacity="0.64" stroke="#8da4a8" stroke-width="1.4"/>
+    <path d="M403,258L307,296" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <path d="M466,272L370,310" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <path d="M292,263L481,305" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <polygon points="244,265 433,307 433,309 244,267" fill="#d0dcd8" stroke="#9fb3b5" stroke-width="1"/>
+    <polygon points="529,269 433,307 433,309 529,271" fill="#c2d1ce" stroke="#9fb3b5" stroke-width="1"/>
+    <polygon points="340,227 529,269 433,307 244,265" fill="#eef3f0" fill-opacity="0.64" stroke="#8da4a8" stroke-width="1.4"/>
+    <path d="M403,241L307,279" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <path d="M466,255L370,293" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <path d="M292,246L481,288" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <polygon points="244,248 433,290 433,292 244,250" fill="#d0dcd8" stroke="#9fb3b5" stroke-width="1"/>
+    <polygon points="529,252 433,290 433,292 529,254" fill="#c2d1ce" stroke="#9fb3b5" stroke-width="1"/>
+    <polygon points="340,210 529,252 433,290 244,248" fill="#eef3f0" fill-opacity="0.64" stroke="#8da4a8" stroke-width="1.4"/>
+    <path d="M403,224L307,262" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <path d="M466,238L370,276" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <path d="M292,229L481,271" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <polygon points="244,231 433,273 433,275 244,233" fill="#d0dcd8" stroke="#9fb3b5" stroke-width="1"/>
+    <polygon points="529,235 433,273 433,275 529,237" fill="#c2d1ce" stroke="#9fb3b5" stroke-width="1"/>
+    <polygon points="340,193 529,235 433,273 244,231" fill="#eef3f0" fill-opacity="0.64" stroke="#8da4a8" stroke-width="1.4"/>
+    <path d="M403,207L307,245" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <path d="M466,221L370,259" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <path d="M292,212L481,254" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <polygon points="244,214 433,256 433,258 244,216" fill="#d0dcd8" stroke="#9fb3b5" stroke-width="1"/>
+    <polygon points="529,218 433,256 433,258 529,220" fill="#c2d1ce" stroke="#9fb3b5" stroke-width="1"/>
+    <polygon points="340,176 529,218 433,256 244,214" fill="#eef3f0" fill-opacity="0.64" stroke="#8da4a8" stroke-width="1.4"/>
+    <path d="M403,190L307,228" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <path d="M466,204L370,242" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <path d="M292,195L481,237" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <polygon points="244,197 433,239 433,241 244,199" fill="#d0dcd8" stroke="#9fb3b5" stroke-width="1"/>
+    <polygon points="529,201 433,239 433,241 529,203" fill="#c2d1ce" stroke="#9fb3b5" stroke-width="1"/>
+    <polygon points="340,159 529,201 433,239 244,197" fill="#eef3f0" fill-opacity="0.64" stroke="#8da4a8" stroke-width="1.4"/>
+    <path d="M403,173L307,211" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <path d="M466,187L370,225" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <path d="M292,178L481,220" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <polygon points="244,180 433,222 433,224 244,182" fill="#d0dcd8" stroke="#9fb3b5" stroke-width="1"/>
+    <polygon points="529,184 433,222 433,224 529,186" fill="#c2d1ce" stroke="#9fb3b5" stroke-width="1"/>
+    <polygon points="340,142 529,184 433,222 244,180" fill="#eef3f0" fill-opacity="0.64" stroke="#8da4a8" stroke-width="1.4"/>
+    <path d="M403,156L307,194" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <path d="M466,170L370,208" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <path d="M292,161L481,203" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <polygon points="244,163 433,205 433,207 244,165" fill="#d0dcd8" stroke="#9fb3b5" stroke-width="1"/>
+    <polygon points="529,167 433,205 433,207 529,169" fill="#c2d1ce" stroke="#9fb3b5" stroke-width="1"/>
+    <polygon points="340,125 529,167 433,205 244,163" fill="#eef3f0" fill-opacity="0.64" stroke="#8da4a8" stroke-width="1.4"/>
+    <path d="M403,139L307,177" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <path d="M466,153L370,191" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <path d="M292,144L481,186" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <polygon points="244,146 433,188 433,190 244,148" fill="#d0dcd8" stroke="#9fb3b5" stroke-width="1"/>
+    <polygon points="529,150 433,188 433,190 529,152" fill="#c2d1ce" stroke="#9fb3b5" stroke-width="1"/>
+    <polygon points="340,108 529,150 433,188 244,146" fill="#e9efed" fill-opacity="1" stroke="#8da4a8" stroke-width="1.4"/>
+    <path d="M403,122L307,160" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <path d="M466,136L370,174" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <path d="M292,127L481,169" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <path d="M244,350L244,146" fill="none" stroke="#617f85" stroke-width="2"/>
+    <path d="M307,364L307,160" fill="none" stroke="#617f85" stroke-width="2"/>
+    <path d="M370,378L370,174" fill="none" stroke="#617f85" stroke-width="2"/>
+    <path d="M433,392L433,188" fill="none" stroke="#617f85" stroke-width="2"/>
+    <path d="M529,354L529,150" fill="none" stroke="#617f85" stroke-width="2"/>
+    <path d="M481,373L481,169" fill="none" stroke="#617f85" stroke-width="2"/>
+    <path d="M307,364L307,160" fill="none" stroke="#245563" stroke-width="3.3"/>
+    <circle cx="307" cy="347" r="1.4" fill="#245563"/>
+    <circle cx="307" cy="330" r="1.4" fill="#245563"/>
+    <circle cx="307" cy="313" r="1.4" fill="#245563"/>
+    <circle cx="307" cy="296" r="1.4" fill="#245563"/>
+    <circle cx="307" cy="279" r="1.4" fill="#245563"/>
+    <circle cx="307" cy="262" r="1.4" fill="#245563"/>
+    <circle cx="307" cy="245" r="1.4" fill="#245563"/>
+    <circle cx="307" cy="228" r="1.4" fill="#245563"/>
+    <circle cx="307" cy="211" r="1.4" fill="#245563"/>
+    <circle cx="307" cy="194" r="1.4" fill="#245563"/>
+    <circle cx="307" cy="177" r="1.4" fill="#245563"/>
+    <circle cx="307" cy="160" r="1.4" fill="#245563"/>
+  </g>
+  <path d="M307 265L201 283H92M530 172H612" fill="none" stroke="#91a5a8" stroke-width="1.5"/>
+  <circle cx="307" cy="265" r="3" fill="#245563"/>
+  <text x="92" y="306" fill="#253b41" font-family="Arial, Helvetica, sans-serif" font-size="18" >Columna</text>
+  <text x="92" y="330" fill="#253b41" font-family="Arial, Helvetica, sans-serif" font-size="18" >de estudio</text>
+  <text x="629" y="179" fill="#253b41" font-family="Arial, Helvetica, sans-serif" font-size="18" >12 niveles</text>
+  <text x="40" y="440" fill="#586e72" font-family="Arial, Helvetica, sans-serif" font-size="16" letter-spacing="1">EDIFICIO CONCEPTUAL · ESTUDIO EN FORMULACIÓN</text>
+</svg>

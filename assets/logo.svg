@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" role="img" aria-label="Ambrosio">
+  <rect width="80" height="80" rx="4" fill="#245563"/>
+  <path d="M16 62L40 17L64 62M26 44H54" fill="none" stroke="#f5f8f5" stroke-width="4.5" stroke-linejoin="miter"/>
+  <path d="M14 68H66" stroke="#a9c0c2" stroke-width="1"/>
+</svg>

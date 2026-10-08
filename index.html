@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#183d49" />
+  <meta name="description" content="Portafolio de ingeniería estructural: investigación sísmica, automatización con Python y AutoLISP, análisis no lineal y metodología BIM." />
+  <meta property="og:title" content="AMBROSIO | Ingeniería estructural computacional" />
+  <meta property="og:description" content="Modelación sísmica, automatización y diseño basado en evidencia." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://sergioambrosio714.github.io/assets/og-cover.png" />
+  <link rel="canonical" href="https://sergioambrosio714.github.io/" />
+  <meta property="og:url" content="https://sergioambrosio714.github.io/" />
+  <meta property="og:locale" content="es_PE" />
+  <meta property="og:image:alt" content="Ambrosio — ingeniería estructural y computación" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>AMBROSIO — Ingeniería estructural computacional</title>
+  <script src="app.js" defer></script>
+  <noscript><style>.nav-toggle,.control,.lab-reset{display:none!important}@media(max-width:800px){.nav-row{flex-wrap:wrap;padding-block:15px;gap:15px}.primary-nav{display:flex;position:static;flex-direction:row;flex-wrap:wrap;padding:0;box-shadow:none;border:0;gap:15px}.primary-nav a{padding:8px 0;border:0}}</style></noscript>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Ir al contenido</a>
+  <header class="site-header" id="header">
+    <div class="container nav-row">
+      <a class="brand" href="#inicio" aria-label="Ambrosio, inicio">
+        <img src="assets/logo.svg" alt="" width="37" height="37" />
+        <span><strong>AMBROSIO</strong><small>STRUCTURAL LAB</small></span>
+      </a>
+      <nav class="primary-nav" id="primary-nav" aria-label="Navegación principal">
+        <a href="#proyectos">Proyectos</a><a href="#metodo">Enfoque</a><a href="#laboratorio">Laboratorio</a><a href="#perfil">Perfil</a>
+      </nav>
+      <a class="nav-cta" href="#contacto">Hablemos <span aria-hidden="true">↗</span></a>
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Abrir menú"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="container hero-layout">
+        <div class="hero-copy">
+          <div class="eyebrow eyebrow-light"><span class="signal-dot"></span> AMBROSIO / INGENIERÍA ESTRUCTURAL</div>
+          <h1 id="hero-title">Estructuras con<br /><span class="hero-outline">criterio.</span><br /><em>Código con propósito.</em></h1>
+          <p class="hero-lead">Análisis sísmico, modelación avanzada y automatización para transformar problemas complejos en decisiones técnicas verificables.</p>
+          <div class="hero-actions">
+            <a href="#proyectos" class="button button-primary">Explorar proyectos <span aria-hidden="true">↗</span></a>
+            <a href="#laboratorio" class="button button-outline">Probar laboratorio <span aria-hidden="true">↘</span></a>
+          </div>
+          <div class="hero-fine"><span class="crosshair">✳</span> Enfoque en concreto armado, evaluación sísmica y herramientas de ingeniería</div>
+        </div>
+        <div class="hero-art" aria-label="Ilustración técnica de una estructura tridimensional con elementos y nodos">
+          <div class="art-meta art-meta-top"><span>SISTEMA / 3D</span><span>ESQUEMA CONCEPTUAL</span></div>
+          <img class="hero-drawing" width="800" height="730" fetchpriority="high" src="assets/hero-structure.svg" alt="Ilustración conceptual de un edificio estructural tridimensional, con columnas, vigas, diafragmas y nodos." />
+          <div class="art-meta art-meta-bottom"><span>PÓRTICOS DE CONCRETO</span><span>FIG. 001</span></div>
+        </div>
+      </div>
+      <div class="hero-bottom-line"></div>
+    </section>
+
+    <div class="metrics" aria-label="Resultados reportados del estudio CFRP">
+      <div class="container metrics-row">
+        <div class="metrics-intro"><span class="tiny-label">ESTUDIO CFRP</span><p>Indicadores del caso estudiado.</p></div>
+        <div class="metric"><strong>117<span>/117</span></strong><span>objetivos cíclicos completados*</span></div>
+        <div class="metric"><strong>7,928<span>%</span></strong><span>NRMSE de calibración*</span></div>
+        <div class="metric"><strong>+12,725<span>%</span></strong><span>respuesta resistente a +5 % de deriva*</span></div>
+      </div>
+      <div class="container"><p class="metrics-note">*Cifras reportadas en la documentación del proyecto; archivos de cálculo y datos de respaldo aún no adjuntos. Aplican exclusivamente al caso estudiado. <a href="casos/01-pilares-cfrp.html">Consultar alcance y evidencia ↗</a></p></div>
+    </div>
+
+    <section class="section section-projects" id="proyectos" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-heading"><div><span class="eyebrow">01 / PROYECTOS Y EVIDENCIA</span><h2 id="projects-title">Del modelo al <em>resultado.</em></h2></div><p>Investigación, herramientas y propuestas. Cada caso explica su método, su estado y la evidencia disponible.</p></div>
+        <div class="filter-row" role="group" aria-label="Filtrar proyectos">
+          <button class="filter-button active" data-filter="todos" type="button" aria-pressed="true">Todos <span>05</span></button>
+          <button class="filter-button" data-filter="sismo" type="button" aria-pressed="false">Análisis sísmico</button>
+          <button class="filter-button" data-filter="automatizacion" type="button" aria-pressed="false">Automatización</button>
+          <button class="filter-button" data-filter="investigacion" type="button" aria-pressed="false">Investigación</button>
+        </div>
+        <p id="filter-status" class="sr-only" role="status" aria-live="polite">5 proyectos disponibles</p>
+        <div class="project-grid" id="project-grid">
+          <article class="project-card featured" data-category="sismo investigacion">
+            <div class="project-media project-media-a"><img src="assets/project-cfrp.svg" alt="Esquema conceptual de un pilar con confinamiento CFRP y su sección transversal; no representa resultados de cálculo." loading="lazy" decoding="async" width="820" height="470" /><span class="media-index">CASE 001 / SEISMIC</span></div>
+            <div class="project-body"><div class="project-topline"><span class="type-label">INVESTIGACIÓN NUMÉRICA</span><span class="project-status">Resultados reportados</span></div><h3>Comportamiento sísmico de pilares con CFRP</h3><p>Calibración cíclica en OpenSeesPy y comparación BASE vs. CFRP para evaluar resistencia, deriva y respuesta inelástica.</p><div class="chips"><span>OpenSeesPy</span><span>Concrete04</span><span>Python</span></div><a class="project-link" href="casos/01-pilares-cfrp.html" data-project="cfrp">Explorar caso <span aria-hidden="true">↗</span></a></div>
+          </article>
+          <article class="project-card" data-category="sismo automatizacion">
+            <div class="project-media project-media-b"><img src="assets/project-e030.svg" alt="Flujo conceptual de extracción ETABS, procesamiento Python, cálculo Mathcad Prime y reporte PDF." loading="lazy" decoding="async" width="820" height="470" /><span class="media-index">CASE 002 / WORKFLOW</span></div>
+            <div class="project-body"><div class="project-topline"><span class="type-label">SOFTWARE DE INGENIERÍA</span><span class="project-status in-progress">En desarrollo</span></div><h3>Flujo de verificación sísmica E.030</h3><p>Arquitectura de evaluación reproducible, desde extracción de resultados ETABS hasta memoria de cálculo con Mathcad Prime.</p><div class="chips"><span>ETABS API</span><span>Python</span><span>Mathcad</span></div><a class="project-link" href="casos/02-motor-e030.html" data-project="e030">Explorar caso <span aria-hidden="true">↗</span></a></div>
+          </article>
+          <article class="project-card" data-category="automatizacion">
+            <div class="project-media project-media-c"><img src="assets/project-lisp.svg" alt="Ilustración conceptual de detallado de armaduras; no es una captura de AutoCAD." loading="lazy" decoding="async" width="820" height="470" /><span class="media-index">CASE 003 / CAD</span></div>
+            <div class="project-body"><div class="project-topline"><span class="type-label">HERRAMIENTAS DE PRODUCCIÓN</span><span class="project-status">Rutinas descritas</span></div><h3>Automatización de planos con AutoLISP</h3><p>Rutinas de dibujo y normalización gráfica para vigas, columnas, placas y escaleras, con criterios parametrizados.</p><div class="chips"><span>AutoCAD</span><span>AutoLISP</span><span>Detalles</span></div><a class="project-link" href="casos/03-autolisp.html" data-project="lisp">Explorar caso <span aria-hidden="true">↗</span></a></div>
+          </article>
+          <article class="project-card" data-category="sismo investigacion">
+            <div class="project-media project-media-d"><img src="assets/project-building.svg" alt="Vista esquemática conceptual de un edificio de doce niveles con columnas resaltadas para evaluación." loading="lazy" decoding="async" width="820" height="470" /><span class="media-index">CASE 004 / RESEARCH</span></div>
+            <div class="project-body"><div class="project-topline"><span class="type-label">PROPUESTA DE INVESTIGACIÓN</span><span class="project-status in-progress">En formulación</span></div><h3>Predicción de respuesta en columnas reforzadas</h3><p>Estudio numérico planteado para comparar alternativas de reforzamiento local en edificios de hasta 12 pisos.</p><div class="chips"><span>Concreto armado</span><span>Refuerzo</span><span>Datos</span></div><a class="project-link" href="casos/04-columnas.html" data-project="columnas">Explorar caso <span aria-hidden="true">↗</span></a></div>
+          </article>
+          <article class="project-card wide-card" data-category="automatizacion">
+            <div class="project-media project-media-e"><img src="assets/project-beam.svg" alt="Esquema de viga simplemente apoyada con carga distribuida, reacciones, cortante y momento." loading="lazy" decoding="async" width="820" height="470" /><span class="media-index">CASE 005 / LIVE DEMO</span></div>
+            <div class="project-body"><div class="project-topline"><span class="type-label">DEMOSTRADOR INTERACTIVO</span><span class="project-status live">Disponible aquí</span></div><h3>Mini laboratorio de análisis de vigas</h3><p>Una herramienta funcional para explorar reacciones, fuerza cortante y momento flector variando luz y carga distribuida.</p><div class="chips"><span>JavaScript</span><span>Equilibrio</span><span>Diagramas V–M</span></div><a class="project-link" href="#laboratorio">Abrir demostrador <span aria-hidden="true">↗</span></a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-method" id="metodo" aria-labelledby="method-title">
+      <div class="container method-layout">
+        <div><span class="eyebrow eyebrow-light">02 / CÓMO TRABAJO</span><h2 id="method-title">La ingeniería exige <em>trazabilidad.</em></h2><p>Me interesa conectar la mecánica estructural con procesos digitales que permitan verificar hipótesis, repetir análisis y comunicar resultados con claridad.</p><a class="text-link" href="#perfil">Conocer mi perfil <span aria-hidden="true">↗</span></a></div>
+        <div class="method-steps">
+          <div class="method-item"><span>01</span><div><h3>Planteamiento estructural</h3><p>Definir geometría, materiales, cargas, supuestos y limitaciones antes de modelar.</p></div><span class="method-sign">↗</span></div>
+          <div class="method-item"><span>02</span><div><h3>Modelación y automatización</h3><p>Elegir herramientas según la pregunta técnica y conservar unidades, versiones y supuestos del modelo.</p></div><span class="method-sign">↗</span></div>
+          <div class="method-item"><span>03</span><div><h3>Verificación y comunicación</h3><p>Revisar resultados, documentar límites y transformar datos en memorias, planos y gráficos comprensibles.</p></div><span class="method-sign">↗</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section lab-section" id="laboratorio" aria-labelledby="lab-title">
+      <div class="container">
+        <div class="section-heading lab-heading"><div><span class="eyebrow">03 / LABORATORIO ABIERTO</span><h2 id="lab-title">Ingeniería que puedes <em>probar.</em></h2></div><p>Modifica la luz y la carga. Explora el equilibrio y los esfuerzos internos de una viga con dos apoyos.</p></div>
+        <div class="lab-board">
+          <div class="lab-inputs">
+            <div class="lab-tag"><span class="signal-dot"></span> SIMULACIÓN DIDÁCTICA · ACTIVA</div>
+            <h3>Viga biapoyada</h3><p>Modelo elástico estático con carga uniforme a lo largo de toda la luz.</p>
+            <noscript><p>Activa JavaScript para modificar los parámetros y ver los diagramas. Los valores de referencia son L = 6 m y q = 18 kN/m: R = 54 kN y Mmáx = 81 kN·m.</p></noscript>
+            <div class="control"><div class="control-heading"><label for="span-input">Luz de la viga</label><output for="span-input" id="span-value">6,0 m</output></div><input id="span-input" type="range" min="3" max="12" step="0.5" value="6" /></div>
+            <div class="control"><div class="control-heading"><label for="load-input">Carga distribuida</label><output for="load-input" id="load-value">18 kN/m</output></div><input id="load-input" type="range" min="5" max="50" step="1" value="18" /></div>
+            <div class="lab-results" aria-live="polite"><div><span>Reacción por apoyo</span><strong id="reaction-value">54,0 <small>kN</small></strong></div><div><span>Momento máximo</span><strong id="moment-value">81,0 <small>kN·m</small></strong></div></div>
+            <button class="lab-reset" id="lab-reset" type="button">Restablecer valores</button>
+            <p class="lab-disclaimer">Herramienta didáctica basada en equilibrio estático. No verifica secciones, flechas, estabilidad ni cumplimiento normativo.</p>
+          </div>
+          <div class="lab-visuals">
+            <div class="plot-header"><strong>DIAGRAMA DE CARGA</strong><span>01 / ESQUEMA</span></div>
+            <svg id="beam-svg" class="beam-svg" viewBox="0 0 760 205" role="img" aria-label="Viga simplemente apoyada con carga distribuida y dos reacciones"><defs><marker id="arrow" orient="auto" markerWidth="6" markerHeight="6" refX="4" refY="3"><path d="M0,0 L6,3 L0,6 Z" fill="#6c8b9a" /></marker></defs><g id="beam-load-arrows"></g><path d="M72 120 H688" stroke="#082835" stroke-width="10" stroke-linecap="round" /><path d="M72 129 L58 148 L86 148 Z" fill="#a1bfca" /><circle cx="675" cy="143" r="7" fill="none" stroke="#a1bfca" stroke-width="3" /><circle cx="689" cy="143" r="7" fill="none" stroke="#a1bfca" stroke-width="3" /><path d="M663 132 L701 132" stroke="#a1bfca" stroke-width="5" /><path d="M48 157 H98 M653 157 H711" stroke="#526977" stroke-width="3" /><text x="380" y="181" text-anchor="middle" class="svg-label" id="beam-l-label">L = 6,0 m</text><text x="380" y="30" text-anchor="middle" class="svg-label" id="beam-q-label">q = 18 kN/m</text></svg>
+            <div class="plot-header border-top"><strong>FUERZA CORTANTE V(x)</strong><span id="shear-scale">±54 kN</span></div>
+            <svg class="diagram-svg" viewBox="0 0 760 155" role="img" aria-label="Diagrama lineal de cortante de la viga"><path d="M65 75 H700" stroke="#9fb1bc" stroke-width="1.2" stroke-dasharray="5 7"/><path d="M65 18 V137 M700 18 V137" stroke="#dee6e7"/><path id="shear-fill" fill="#d2e3e5" opacity=".58"/><polyline id="shear-path" fill="none" stroke="#245563" stroke-width="4" stroke-linejoin="round"/><text x="65" y="149" class="svg-min-label">0</text><text x="690" y="149" class="svg-min-label">L</text></svg>
+            <div class="plot-header border-top"><strong>MOMENTO FLECTOR M(x)</strong><span id="moment-scale">Mmax = 81 kN·m</span></div>
+            <svg class="diagram-svg moment-svg" viewBox="0 0 760 155" role="img" aria-label="Diagrama parabólico de momento flector de la viga"><path d="M65 26 H700" stroke="#9fb1bc" stroke-width="1.2" stroke-dasharray="5 7"/><path d="M65 14 V140 M700 14 V140" stroke="#dee6e7"/><path id="moment-fill" fill="#d1dde3" opacity=".74"/><polyline id="moment-path" fill="none" stroke="#476777" stroke-width="4" stroke-linejoin="round"/><text x="65" y="149" class="svg-min-label">0</text><text x="690" y="149" class="svg-min-label">L</text></svg>
+            <div class="formula-row"><span>R = qL / 2</span><span>M<sub>máx</sub> = qL² / 8</span><span>V(x) = q(L/2 − x)</span><span>M(x) = qx(L − x)/2</span></div>
+            <p class="plot-note">Diagramas normalizados a sus máximos: consulta los valores de escala. Cortante positivo a la izquierda; momento positivo dibujado hacia abajo. La geometría no está a escala.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section profile-section" id="perfil" aria-labelledby="profile-title">
+      <div class="container profile-layout">
+        <div class="profile-aside"><span class="eyebrow">04 / PERFIL PROFESIONAL</span><div class="profile-monogram" aria-hidden="true">A<span>·</span></div><div class="profile-caption">PERÚ / INGENIERÍA CIVIL<br />ESTRUCTURAS + AUTOMATIZACIÓN</div></div>
+        <div class="profile-copy"><h2 id="profile-title">Un enfoque entre el <em>cálculo y el código.</em></h2><p>Desarrollo y estudio soluciones relacionadas con el análisis sísmico de estructuras, la evaluación del comportamiento inelástico, el detallado estructural y la automatización de procesos de ingeniería. Mi portafolio da prioridad a proyectos con metodología, herramientas y resultados identificables.</p><div class="skills-label">HERRAMIENTAS, APLICACIÓN Y EVIDENCIA</div>
+          <dl class="skill-groups">
+            <div><dt>OpenSeesPy · Python</dt><dd>Modelación no lineal y calibración descritas en el <a href="casos/01-pilares-cfrp.html">estudio CFRP</a>. Código y datos de respaldo pendientes de incorporación.</dd></div>
+            <div><dt>ETABS · Mathcad Prime</dt><dd>Extracción y documentación de verificaciones en el <a href="casos/02-motor-e030.html">flujo E.030 en desarrollo</a>. Integración y validación aún pendientes.</dd></div>
+            <div><dt>AutoCAD · AutoLISP</dt><dd>Familias de rutinas de detallado descritas en el <a href="casos/03-autolisp.html">caso de automatización</a>. Sin fuentes ni capturas publicadas.</dd></div>
+            <div><dt>SAP2000 · Herramientas BIM</dt><dd>Áreas de interés y desarrollo profesional. Este portafolio aún no incorpora casos que acrediten su aplicación.</dd></div>
+          </dl>
+          <p class="profile-note">Interés en análisis sísmico, concreto armado y diseño sismorresistente. Los casos distinguen resultados reportados, desarrollos parciales y propuestas; no representan experiencia laboral, obras ejecutadas ni certificaciones.</p></div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contacto" aria-labelledby="contact-title">
+      <div class="container contact-layout"><div><span class="eyebrow eyebrow-light">05 / SIGUIENTE CONVERSACIÓN</span><h2 id="contact-title">Construyamos la próxima <em>solución.</em></h2><p>Disponible para explorar oportunidades profesionales y colaboraciones en ingeniería estructural, análisis y automatización.</p></div><div class="contact-links"><a id="github-link" class="contact-big" href="https://github.com/SergioAmbrosio714" target="_blank" rel="noopener noreferrer">Explorar GitHub <span aria-hidden="true">↗</span></a><a id="email-link" class="contact-small" hidden>Enviar correo profesional <span aria-hidden="true">↗</span></a><a id="linkedin-link" class="contact-small" hidden>Ver perfil de LinkedIn <span aria-hidden="true">↗</span></a></div></div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container footer-row"><span>© <span id="year">2026</span> AMBROSIO / STRUCTURAL LAB</span><span>Construido con claridad técnica y diseño responsable.</span><a href="#inicio">Volver arriba ↑</a></div></footer>
+
+  <dialog class="project-dialog" id="project-dialog" aria-labelledby="dialog-title"><div class="dialog-shell"><div class="dialog-head"><span id="dialog-number">CASO / 001</span><button type="button" id="dialog-close" class="dialog-close" aria-label="Cerrar detalle">✕</button></div><div class="dialog-content"><span class="eyebrow" id="dialog-eyebrow"></span><h2 id="dialog-title"></h2><p class="dialog-intro" id="dialog-intro"></p><div class="dialog-facts" id="dialog-facts"></div><h3>Enfoque y desarrollo</h3><p id="dialog-method"></p><h3>Resultado y estado</h3><p id="dialog-result"></p><div class="dialog-caution" id="dialog-caution"></div><div class="dialog-bottom"><a id="dialog-case-link" href="#" class="button button-dark">Leer ficha técnica <span aria-hidden="true">↗</span></a><span>PORTAFOLIO TÉCNICO</span></div></div></div></dialog>
+</body>
+</html>

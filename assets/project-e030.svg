@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="470" viewBox="0 0 820 470" role="img" aria-labelledby="title desc">
+  <title id="title">Flujo de revisión sísmica · arquitectura propuesta</title>
+  <desc id="desc">Cuatro etapas conectadas: lectura de ETABS, normalización en Python, cálculo en Mathcad Prime y preparación de memoria. Flujo conceptual en desarrollo.</desc>
+  <rect width="820" height="470" fill="#eef2f1"/>
+  <path d="M40 80H780M40 408H780" fill="none" stroke="#cedad7"/>
+  <text x="40" y="52" fill="#245563" font-family="Arial, Helvetica, sans-serif" font-size="17" letter-spacing="1.5">02 / FLUJO DE REVISIÓN SÍSMICA</text>  <g fill="#f9fbfa" stroke="#c6d3d0" stroke-width="1.5">
+    <rect x="40" y="151" width="160" height="169"/><rect x="233" y="151" width="160" height="169"/>
+    <rect x="426" y="151" width="160" height="169"/><rect x="619" y="151" width="160" height="169"/>
+  </g>
+  <g fill="none" stroke="#245563" stroke-width="2" stroke-linejoin="round">
+    <path d="M91 215V179H149V215M91 191H149M91 203H149M110 179V215M130 179V215"/>
+    <path d="M297 181L281 197L297 213M329 181L345 197L329 213M321 178L305 216"/>
+    <path d="M481 181H498L488 197L499 212H480M512 183H532M512 196H532M512 209H526"/>
+    <path d="M679 178H708L720 190V217H679ZM708 178V190H720M689 199H710M689 207H710"/>
+    <path d="M206 234H226M220 228L226 234L220 240M399 234H419M413 228L419 234L413 240M592 234H612M606 228L612 234L606 240"/>
+  </g>
+  <text x="120" y="254" fill="#245563" font-family="Arial, Helvetica, sans-serif" font-size="23" text-anchor="middle" font-weight="600">ETABS</text>  <text x="313" y="254" fill="#245563" font-family="Arial, Helvetica, sans-serif" font-size="23" text-anchor="middle" font-weight="600">Python</text>  <text x="506" y="254" fill="#245563" font-family="Arial, Helvetica, sans-serif" font-size="22" text-anchor="middle" font-weight="600">Mathcad</text>  <text x="699" y="254" fill="#245563" font-family="Arial, Helvetica, sans-serif" font-size="23" text-anchor="middle" font-weight="600">Memoria</text>  <text x="120" y="282" fill="#586e72" font-family="Arial, Helvetica, sans-serif" font-size="17" text-anchor="middle">Lectura</text>  <text x="313" y="282" fill="#586e72" font-family="Arial, Helvetica, sans-serif" font-size="17" text-anchor="middle">Normalización</text>  <text x="506" y="282" fill="#586e72" font-family="Arial, Helvetica, sans-serif" font-size="17" text-anchor="middle">Cálculo · Prime</text>  <text x="699" y="282" fill="#586e72" font-family="Arial, Helvetica, sans-serif" font-size="17" text-anchor="middle">Documentación</text>  <text x="40" y="440" fill="#586e72" font-family="Arial, Helvetica, sans-serif" font-size="16" letter-spacing="1">ARQUITECTURA CONCEPTUAL · EN DESARROLLO</text>
+</svg>

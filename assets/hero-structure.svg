@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="730" viewBox="0 0 800 730" role="img" aria-labelledby="title desc">
+  <title id="title">Estructura de pórticos · axonometría conceptual</title>
+  <desc id="desc">Modelo conceptual de seis niveles y una retícula de tres por dos vanos, con columnas, vigas y planos de piso. La axonometría no corresponde a un proyecto construido ni a resultados de análisis.</desc>
+  <rect width="800" height="730" fill="#f7f9f7"/>
+  <defs><pattern id="plan-grid" width="48" height="48" patternUnits="userSpaceOnUse" patternTransform="matrix(1 .38 -1 .57 405 556)"><path d="M48 0H0V48" fill="none" stroke="#e0e8e3" stroke-width="1"/></pattern></defs>
+  <path d="M61 520L408 389L746 558L400 725Z" fill="url(#plan-grid)"/>
+  <g stroke-linejoin="round" stroke-linecap="round">
+    <path d="M350,450L350,120" fill="none" stroke="#acbcbf" stroke-width="2.1"/>
+    <path d="M280,490L280,160" fill="none" stroke="#acbcbf" stroke-width="2.1"/>
+    <path d="M210,530L210,200" fill="none" stroke="#acbcbf" stroke-width="2.1"/>
+    <path d="M430,481L430,151" fill="none" stroke="#acbcbf" stroke-width="2.1"/>
+    <path d="M360,521L360,191" fill="none" stroke="#acbcbf" stroke-width="2.1"/>
+    <path d="M290,561L290,231" fill="none" stroke="#acbcbf" stroke-width="2.1"/>
+    <path d="M510,512L510,182" fill="none" stroke="#acbcbf" stroke-width="2.1"/>
+    <path d="M440,552L440,222" fill="none" stroke="#acbcbf" stroke-width="2.1"/>
+    <path d="M370,592L370,262" fill="none" stroke="#acbcbf" stroke-width="2.1"/>
+    <path d="M590,543L590,213" fill="none" stroke="#acbcbf" stroke-width="2.1"/>
+    <path d="M520,583L520,253" fill="none" stroke="#acbcbf" stroke-width="2.1"/>
+    <path d="M450,623L450,293" fill="none" stroke="#acbcbf" stroke-width="2.1"/>
+    <polygon points="347.5,432.25 627.5,540.75 452.5,640.75 172.5,532.25" fill="#e5ece8" stroke="#b9c8c5" stroke-width="1"/>
+    <path d="M430,481L290,561" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <path d="M510,512L370,592" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <path d="M280,490L520,583" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <polygon points="210,475 450,568 450,573 210,480" fill="#d0dcd8" stroke="#9fb3b5" stroke-width="1"/>
+    <polygon points="590,488 450,568 450,573 590,493" fill="#c2d1ce" stroke="#9fb3b5" stroke-width="1"/>
+    <polygon points="350,395 590,488 450,568 210,475" fill="#eef3f0" fill-opacity="0.64" stroke="#8da4a8" stroke-width="1.4"/>
+    <path d="M430,426L290,506" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <path d="M510,457L370,537" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <path d="M280,435L520,528" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <polygon points="210,420 450,513 450,518 210,425" fill="#d0dcd8" stroke="#9fb3b5" stroke-width="1"/>
+    <polygon points="590,433 450,513 450,518 590,438" fill="#c2d1ce" stroke="#9fb3b5" stroke-width="1"/>
+    <polygon points="350,340 590,433 450,513 210,420" fill="#eef3f0" fill-opacity="0.64" stroke="#8da4a8" stroke-width="1.4"/>
+    <path d="M430,371L290,451" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <path d="M510,402L370,482" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <path d="M280,380L520,473" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <polygon points="210,365 450,458 450,463 210,370" fill="#d0dcd8" stroke="#9fb3b5" stroke-width="1"/>
+    <polygon points="590,378 450,458 450,463 590,383" fill="#c2d1ce" stroke="#9fb3b5" stroke-width="1"/>
+    <polygon points="350,285 590,378 450,458 210,365" fill="#eef3f0" fill-opacity="0.64" stroke="#8da4a8" stroke-width="1.4"/>
+    <path d="M430,316L290,396" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <path d="M510,347L370,427" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <path d="M280,325L520,418" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <polygon points="210,310 450,403 450,408 210,315" fill="#d0dcd8" stroke="#9fb3b5" stroke-width="1"/>
+    <polygon points="590,323 450,403 450,408 590,328" fill="#c2d1ce" stroke="#9fb3b5" stroke-width="1"/>
+    <polygon points="350,230 590,323 450,403 210,310" fill="#eef3f0" fill-opacity="0.64" stroke="#8da4a8" stroke-width="1.4"/>
+    <path d="M430,261L290,341" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <path d="M510,292L370,372" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <path d="M280,270L520,363" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <polygon points="210,255 450,348 450,353 210,260" fill="#d0dcd8" stroke="#9fb3b5" stroke-width="1"/>
+    <polygon points="590,268 450,348 450,353 590,273" fill="#c2d1ce" stroke="#9fb3b5" stroke-width="1"/>
+    <polygon points="350,175 590,268 450,348 210,255" fill="#eef3f0" fill-opacity="0.64" stroke="#8da4a8" stroke-width="1.4"/>
+    <path d="M430,206L290,286" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <path d="M510,237L370,317" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <path d="M280,215L520,308" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <polygon points="210,200 450,293 450,298 210,205" fill="#d0dcd8" stroke="#9fb3b5" stroke-width="1"/>
+    <polygon points="590,213 450,293 450,298 590,218" fill="#c2d1ce" stroke="#9fb3b5" stroke-width="1"/>
+    <polygon points="350,120 590,213 450,293 210,200" fill="#e9efed" fill-opacity="1" stroke="#8da4a8" stroke-width="1.4"/>
+    <path d="M430,151L290,231" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <path d="M510,182L370,262" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <path d="M280,160L520,253" fill="none" stroke="#b5c4c4" stroke-width="1"/>
+    <path d="M210,530L210,200" fill="none" stroke="#617f85" stroke-width="3.5"/>
+    <path d="M290,561L290,231" fill="none" stroke="#617f85" stroke-width="3.5"/>
+    <path d="M370,592L370,262" fill="none" stroke="#617f85" stroke-width="3.5"/>
+    <path d="M450,623L450,293" fill="none" stroke="#617f85" stroke-width="3.5"/>
+    <path d="M590,543L590,213" fill="none" stroke="#617f85" stroke-width="3.5"/>
+    <path d="M520,583L520,253" fill="none" stroke="#617f85" stroke-width="3.5"/>
+    <path d="M210,530L210,200" fill="none" stroke="#245563" stroke-width="4.8"/>
+    <circle cx="210" cy="475" r="2.4499999999999997" fill="#245563"/>
+    <circle cx="210" cy="420" r="2.4499999999999997" fill="#245563"/>
+    <circle cx="210" cy="365" r="2.4499999999999997" fill="#245563"/>
+    <circle cx="210" cy="310" r="2.4499999999999997" fill="#245563"/>
+    <circle cx="210" cy="255" r="2.4499999999999997" fill="#245563"/>
+    <circle cx="210" cy="200" r="2.4499999999999997" fill="#245563"/>
+  </g>
+  <g fill="none" stroke="#93a9ac" stroke-width="1.3">
+    <path d="M530 237L619 198H710"/>
+    <path d="M210 420L149 449H85"/>
+    <path d="M626 620L668 636M626 620L594 641M626 620V575"/>
+  </g>
+  <g fill="#245563"><circle cx="530" cy="237" r="3.5"/><circle cx="210" cy="420" r="3.5"/></g>
+  <text x="610" y="182" fill="#586e72" font-family="Arial, Helvetica, sans-serif" font-size="16" letter-spacing="1.3">PÓRTICOS</text>
+  <text x="84" y="477" fill="#586e72" font-family="Arial, Helvetica, sans-serif" font-size="16" letter-spacing="1.3">COLUMNAS</text>
+  <text x="680" y="643" fill="#586e72" font-family="Arial, Helvetica, sans-serif" font-size="16" >x</text>
+  <text x="578" y="650" fill="#586e72" font-family="Arial, Helvetica, sans-serif" font-size="16" >y</text>
+  <text x="620" y="564" fill="#586e72" font-family="Arial, Helvetica, sans-serif" font-size="16" >z</text>
+  <text x="45" y="51" fill="#245563" font-family="Arial, Helvetica, sans-serif" font-size="18" letter-spacing="2">SISTEMA ESTRUCTURAL</text>
+  <text x="45" y="78" fill="#586e72" font-family="Arial, Helvetica, sans-serif" font-size="16" letter-spacing=".9">AXONOMETRÍA / ESQUEMA CONCEPTUAL</text>
+  <path d="M45 676H755" fill="none" stroke="#d5dfda"/>
+  <text x="45" y="710" fill="#586e72" font-family="Arial, Helvetica, sans-serif" font-size="16" letter-spacing=".6">CONCRETO ARMADO · MODELO IDEALIZADO</text>
+  <text x="755" y="710" fill="#245563" font-family="Arial, Helvetica, sans-serif" font-size="17" text-anchor="end">01</text>
+</svg>

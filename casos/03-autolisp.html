@@ -1,0 +1,45 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Familias de rutinas AutoLISP descritas para detalles estructurales en AutoCAD. Alcance, procedimiento y evidencia pendiente.">
+  <meta name="theme-color" content="#173f4b">
+  <title>AutoLISP para detalles estructurales · Caso 03 — AMBROSIO</title>
+  <link rel="canonical" href="https://sergioambrosio714.github.io/casos/03-autolisp.html">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="es_PE">
+  <meta property="og:title" content="AutoLISP para detalles estructurales · AMBROSIO">
+  <meta property="og:description" content="Automatización descrita de vigas, columnas, placas y escaleras. Fuentes y capturas pendientes de incorporar.">
+  <meta property="og:url" content="https://sergioambrosio714.github.io/casos/03-autolisp.html">
+  <meta property="og:image" content="https://sergioambrosio714.github.io/assets/og-cover.png">
+  <meta property="og:image:alt" content="AMBROSIO — Ingeniería estructural, modelación y automatización.">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="case.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="top"><div class="wrap"><a class="brand" href="../index.html">AMBROSIO<small>STRUCTURAL LAB</small></a><nav aria-label="Navegación principal"><a href="../index.html#proyectos">← Volver al portafolio</a></nav></div></header>
+  <main id="contenido">
+    <header class="head"><div class="wrap"><span class="id">CASO 03 / AUTOMATIZACIÓN DEL DIBUJO</span><h1>Detalles estructurales con lógica paramétrica.</h1><p>Familias de rutinas AutoLISP descritas para organizar operaciones repetitivas de dibujo, armado, cotas y presentación en AutoCAD.</p><span class="status">Desarrollo técnico descrito · Fuentes pendientes</span></div></header>
+    <div class="wrap content">
+      <aside class="sidebar" aria-label="Índice y herramientas del caso"><h2>En esta ficha</h2><nav aria-label="Índice del caso"><a href="#problema">01. Problema y objetivo</a><a href="#metodologia">02. Familias y metodología</a><a href="#procedimiento">03. Procedimiento</a><a href="#evidencia">04. Resultado y evidencia</a><a href="#competencias">05. Competencias</a></nav><dl><dt>Herramientas descritas</dt><dd>AutoCAD<br>AutoLISP</dd><dt>Elementos</dt><dd>Vigas y columnas<br>Placas y escaleras</dd></dl></aside>
+      <article class="article" aria-label="Ficha técnica de automatización AutoLISP">
+        <section id="problema"><h2>Problema técnico y objetivo</h2><p>El dibujo de elementos de concreto armado repite operaciones de contorno, distribución de estribos, acero longitudinal, cotas e intersecciones. La consistencia entre capas, textos y geometría requiere criterios explícitos.</p><p><strong>Objetivo:</strong> organizar esas operaciones mediante comandos parametrizados para apoyar la producción de detalles y facilitar su revisión. La automatización descrita se refiere al dibujo; no acredita el diseño estructural del elemento.</p></section>
+        <figure class="figure"><img src="../assets/project-lisp.svg" alt="Esquema conceptual de parametrización de un detalle de viga y su armado." width="820" height="470"><figcaption>Ilustración técnica conceptual. No es una captura de AutoCAD, un detalle aprobado ni una cuantía de acero validada.</figcaption></figure>
+        <section id="metodologia"><h2>Familias descritas y metodología</h2><ul><li><strong>Vigas:</strong> configuración y dibujo de estribos por tramo o área seleccionada.</li><li><strong>Acero y cotas:</strong> rutinas para acero longitudinal y dimensionado con convenciones gráficas uniformes.</li><li><strong>Columnas y placas:</strong> secciones con geometría y disposición del armado parametrizadas.</li><li><strong>Escaleras e intersecciones:</strong> generación de geometrías, elementos de borde y encuentros.</li><li><strong>Organización gráfica:</strong> reglas de capas, colores, espaciados y textos para mantener consistencia documental.</li></ul><p>La metodología descrita separa parámetros de entrada, construcción geométrica y presentación. Los archivos <code>.lsp</code> no están adjuntos, por lo que no se presenta esta descripción como una auditoría de los comandos implementados.</p></section>
+        <section id="procedimiento"><h2>Procedimiento de uso descrito</h2><ol><li><strong>Preparar los parámetros:</strong> dimensiones, recubrimientos, diámetros, distribución y convenciones de dibujo según el detalle requerido.</li><li><strong>Elegir el elemento o tramo:</strong> identificar la geometría y la familia de comandos pertinente.</li><li><strong>Generar el dibujo:</strong> construir contornos, representación del acero, cotas y textos en sus capas.</li><li><strong>Revisar la salida:</strong> comprobar geometría, legibilidad, unidades e interferencias con el resto de los planos.</li><li><strong>Contrastar criterios técnicos:</strong> revisar confinamiento, longitudes de desarrollo, separaciones y compatibilidad con los planos estructurales aprobados.</li></ol></section>
+        <section id="evidencia"><h2>Resultado descrito y evidencia pendiente</h2><p>La documentación describe un flujo de dibujo más sistemático y configurable. <strong>No hay archivos fuente, capturas de ejecución ni mediciones adjuntas que permitan verificar su funcionamiento o cuantificar productividad.</strong> No se atribuyen porcentajes de ahorro de tiempo.</p><table class="evidence-table"><thead><tr><th scope="col">Disponible</th><th scope="col">Pendiente de incorporar</th></tr></thead><tbody><tr><td>Descripción de familias de rutinas y operaciones.</td><td>Ejemplos de código que puedan compartirse y documentación de comandos.</td></tr><tr><td>Esquema conceptual del detallado.</td><td>Capturas auténticas de AutoCAD, ejemplos de entrada y salida, y versión compatible.</td></tr><tr><td>Criterios de revisión del dibujo.</td><td>Casos ejecutados, registro de errores y mediciones comparables si se desea evaluar tiempos.</td></tr></tbody></table><div class="note"><strong>Alcance.</strong> El detallado automático requiere revisión técnica de los criterios aplicables y de la compatibilidad del conjunto. Un dibujo generado no demuestra por sí mismo cumplimiento normativo ni reemplaza la responsabilidad del diseñador.</div></section>
+        <section id="competencias"><h2>Competencias abordadas</h2><p>Descomposición de tareas repetitivas, parametrización geométrica, organización del dibujo técnico y documentación de procedimientos. AutoCAD y AutoLISP son las tecnologías descritas para estas familias; la evidencia ejecutable permanece pendiente de publicación.</p></section>
+        <nav class="case-nav" aria-label="Navegación entre casos"><a href="02-motor-e030.html">← Anterior: flujo E.030</a><a href="04-columnas.html">Siguiente: estudio de columnas →</a></nav>
+      </article>
+    </div>
+  </main>
+  <footer class="foot wrap"><span>AMBROSIO / PORTAFOLIO TÉCNICO</span><a href="https://github.com/SergioAmbrosio714">GitHub · SergioAmbrosio714</a></footer>
+</body>
+</html>
+
+

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="470" viewBox="0 0 820 470" role="img" aria-labelledby="title desc">
+  <title id="title">Detalle paramétrico · esquema conceptual</title>
+  <desc id="desc">Sección esquemática de concreto armado con dimensiones variables b y h, recubrimiento, estribo y barras longitudinales. Ilustra parámetros de dibujo, no un detalle constructivo validado.</desc>
+  <rect width="820" height="470" fill="#eef2f1"/>
+  <path d="M40 80H780M40 408H780" fill="none" stroke="#cedad7"/>
+  <text x="40" y="52" fill="#245563" font-family="Arial, Helvetica, sans-serif" font-size="17" letter-spacing="1.5">03 / DETALLADO PARAMÉTRICO</text>  <defs><pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#dfe6e3" stroke-width=".7"/></pattern></defs>
+  <rect x="82" y="105" width="450" height="274" fill="url(#grid)"/>
+  <!-- Section view: the longitudinal steel is represented by separate circles. -->
+  <rect x="140" y="158" width="335" height="181" fill="#f9fbfa" stroke="#435b62" stroke-width="2"/>
+  <rect x="166" y="184" width="283" height="129" rx="16" fill="none" stroke="#245563" stroke-width="3"/>
+  <path d="M431 184L446 197L434 209" fill="none" stroke="#245563" stroke-width="3"/>
+  <g fill="#245563">
+    <circle cx="183" cy="201" r="7"/><circle cx="245" cy="201" r="7"/><circle cx="369" cy="201" r="7"/><circle cx="431" cy="201" r="7"/>
+    <circle cx="183" cy="296" r="7"/><circle cx="245" cy="296" r="7"/><circle cx="369" cy="296" r="7"/><circle cx="431" cy="296" r="7"/>
+  </g>
+  <g fill="none" stroke="#748e93" stroke-width="1.5">
+    <path d="M140 144V115M475 144V115M140 128H475M134 134L146 122M469 134L481 122"/>
+    <path d="M127 158H101M127 339H101M113 158V339M107 164L119 152M107 345L119 333"/>
+    <path d="M450 187L523 152H570M433 296L524 311H570"/>
+  </g>
+  <text x="307" y="118" fill="#245563" font-family="Arial, Helvetica, sans-serif" font-size="21" text-anchor="middle" font-style="italic">b</text>  <text x="91" y="257" fill="#245563" font-family="Arial, Helvetica, sans-serif" font-size="21" text-anchor="middle" font-style="italic">h</text>  <text x="584" y="157" fill="#253b41" font-family="Arial, Helvetica, sans-serif" font-size="18" >Estribo</text>  <text x="584" y="316" fill="#253b41" font-family="Arial, Helvetica, sans-serif" font-size="18" >Acero longitudinal</text>  <text x="40" y="440" fill="#586e72" font-family="Arial, Helvetica, sans-serif" font-size="16" letter-spacing="1">GEOMETRÍA CONCEPTUAL · PARÁMETROS VARIABLES</text>
+</svg>

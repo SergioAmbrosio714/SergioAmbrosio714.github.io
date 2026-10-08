@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="470" viewBox="0 0 820 470" role="img" aria-labelledby="title desc">
+  <title id="title">Viga biapoyada · modelo didáctico</title>
+  <desc id="desc">Viga con carga uniforme q, apoyo articulado y apoyo móvil, diagrama lineal de cortante y parabólico de momento. Expresiones analíticas de equilibrio para un modelo didáctico.</desc>
+  <rect width="820" height="470" fill="#eef2f1"/>
+  <path d="M40 80H780M40 408H780" fill="none" stroke="#cedad7"/>
+  <text x="40" y="52" fill="#245563" font-family="Arial, Helvetica, sans-serif" font-size="17" letter-spacing="1.5">05 / EQUILIBRIO Y RESPUESTA</text>  <defs><marker id="load-arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0 0L6 3L0 6Z" fill="#245563"/></marker></defs>
+  <path d="M118 112H703" fill="none" stroke="#91a5a8" stroke-width="1.5"/>
+  <g stroke="#245563" stroke-width="1.5" marker-end="url(#load-arrow)">
+    <path d="M125 112V158"/><path d="M177 112V158"/><path d="M229 112V158"/><path d="M281 112V158"/>
+    <path d="M333 112V158"/><path d="M385 112V158"/><path d="M437 112V158"/><path d="M489 112V158"/>
+    <path d="M541 112V158"/><path d="M593 112V158"/><path d="M645 112V158"/><path d="M697 112V158"/>
+  </g>
+  <path d="M118 171H704" fill="none" stroke="#253b41" stroke-width="5"/>
+  <path d="M118 178L105 198H131Z" fill="#d8e3df" stroke="#647e82" stroke-width="1.5"/>
+  <path d="M704 178L691 194H717Z" fill="#d8e3df" stroke="#647e82" stroke-width="1.5"/>
+  <g stroke="#647e82" fill="#eef2f1" stroke-width="1.5"><circle cx="698" cy="200" r="4"/><circle cx="710" cy="200" r="4"/><path d="M97 207H139M683 207H725"/></g>
+  <path d="M118 273H704M118 340H704" fill="none" stroke="#91a5a8" stroke-dasharray="5 6"/>
+  <path d="M118 273V238L704 308V273Z" fill="#245563" fill-opacity=".08"/>
+  <path d="M118 273V238L704 308V273" fill="none" stroke="#245563" stroke-width="2.5"/>
+  <path d="M118 340Q411 432 704 340Z" fill="#245563" fill-opacity=".11"/>
+  <path d="M118 340Q411 432 704 340" fill="none" stroke="#245563" stroke-width="2.5"/>
+  <text x="735" y="144" fill="#245563" font-family="Arial, Helvetica, sans-serif" font-size="19" font-style="italic">q</text>  <text x="61" y="280" fill="#245563" font-family="Arial, Helvetica, sans-serif" font-size="20" font-style="italic">V</text>  <text x="61" y="361" fill="#245563" font-family="Arial, Helvetica, sans-serif" font-size="20" font-style="italic">M</text>  <text x="384" y="228" fill="#586e72" font-family="Arial, Helvetica, sans-serif" font-size="18" font-style="italic">L</text>  <text x="40" y="440" fill="#586e72" font-family="Arial, Helvetica, sans-serif" font-size="16" letter-spacing="1">MODELO DIDÁCTICO</text>  <text x="456" y="440" fill="#245563" font-family="Arial, Helvetica, sans-serif" font-size="17" >R = qL / 2     Mmáx = qL² / 8</text>
+</svg>
