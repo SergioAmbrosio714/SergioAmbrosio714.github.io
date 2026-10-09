@@ -3,10 +3,10 @@
   No se incluyen correos, LinkedIn o certificaciones inventadas.
 */
 const PROFILE = Object.freeze({
-  name: 'Ambrosio',
+  name: 'Sergio Ambrosio',
   github: 'https://github.com/SergioAmbrosio714', // cuenta indicada por el titular
   email: '', // Ejemplo: nombre@dominio.com
-  linkedin: '' // Ejemplo: https://www.linkedin.com/in/tu-usuario/
+  linkedin: 'https://www.linkedin.com/in/sergio-junior-ambrosio-camayo-668241116/' // Perfil enlazado en el CV
 });
 
 const PROJECTS = Object.freeze({

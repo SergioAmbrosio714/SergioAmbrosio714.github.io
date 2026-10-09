@@ -46,6 +46,53 @@ async function screenshot(page, label) {
     }
   }
 }
+async function checkHeroModel(page, label) {
+  const model = page.locator('.hero-model');
+  const canvas = page.locator('#structural-model');
+  await page.waitForSelector('.hero-model.is-ready');
+  await model.scrollIntoViewIfNeeded();
+  check(await canvas.isVisible(), label + ': modelo 3D no visible');
+  const drawing = await canvas.evaluate(element => {
+    const pixels = element.getContext('2d').getImageData(0, 0, element.width, element.height).data;
+    const colors = new Set();
+    for (let index = 0; index < pixels.length; index += 64) {
+      if (pixels[index + 3]) colors.add(pixels[index] + ',' + pixels[index + 1] + ',' + pixels[index + 2]);
+    }
+    return { width: element.width, height: element.height, colors: colors.size };
+  });
+  check(drawing.width > 100 && drawing.height > 100 && drawing.colors > 8, label + ': canvas vacío o sin dibujo estructural');
+  const initial = await canvas.evaluate(element => element.toDataURL());
+  // La preferencia de movimiento reducido debe conservar la vista sin actividad continua.
+  await page.waitForTimeout(200);
+  check(await canvas.evaluate(element => element.toDataURL()) === initial, label + ': movimiento no solicitado con reduced-motion');
+  let previous = initial;
+  for (const view of ['front', 'side', 'iso']) {
+    const button = page.locator('[data-model-view="' + view + '"]');
+    await button.focus();
+    await page.keyboard.press('Enter');
+    await page.waitForTimeout(100);
+    check(await button.getAttribute('aria-pressed') === 'true', label + ': selección accesible de vista ' + view);
+    check(await page.locator('[data-model-view][aria-pressed="true"]').count() === 1, label + ': más de una vista activa');
+    const current = await canvas.evaluate(element => element.toDataURL());
+    check(current !== previous, label + ': vista ' + view + ' no cambia la proyección');
+    previous = current;
+  }
+  await page.locator('[data-model-view="front"]').click();
+  await page.locator('#model-reset').click();
+  check(await page.locator('[data-model-view="iso"]').getAttribute('aria-pressed') === 'true', label + ': restablecer vista isométrica');
+  const bounds = await canvas.boundingBox();
+  const beforeDrag = await canvas.evaluate(element => element.toDataURL());
+  await page.mouse.move(bounds.x + bounds.width * .4, bounds.y + bounds.height * .5);
+  await page.mouse.down();
+  await page.mouse.move(bounds.x + bounds.width * .6, bounds.y + bounds.height * .55, { steps: 5 });
+  await page.mouse.up();
+  await page.waitForTimeout(100);
+  check(await model.getAttribute('data-view') === 'custom', label + ': arrastre no permite orientar el modelo');
+  check(await canvas.evaluate(element => element.toDataURL()) !== beforeDrag, label + ': arrastre no cambia la proyección');
+  await page.locator('#model-reset').click();
+  if (screenshotDir) await model.screenshot({ path: path.join(screenshotDir, label + '-hero-model.png'), animations: 'disabled' });
+  await page.evaluate(() => window.scrollTo(0, 0));
+}
 async function main() {
   if (screenshotDir) fs.mkdirSync(screenshotDir, { recursive: true });
   await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
@@ -78,6 +125,7 @@ async function main() {
         await screenshot(page, label);
         await audit(page, label);
         if (file !== 'index.html') continue;
+        await checkHeroModel(page, label);
         if (viewport.width <= 768) {
           await page.locator('#nav-toggle').click();
           check(await page.locator('#nav-toggle').getAttribute('aria-expanded') === 'true', label + ': menú no se abre');
@@ -125,16 +173,55 @@ async function main() {
       }
       await context.close();
     }
-    const noJs = await browser.newContext({ javaScriptEnabled: false });
-    const page = await noJs.newPage();
-    await page.goto(origin);
-    check(await page.locator('a[data-project][href^="casos/"]').count() === 4, 'Sin JavaScript: fichas deben ser accesibles');
-    await noJs.close();
+    for (const width of [1440, 390]) {
+      const noJs = await browser.newContext({ javaScriptEnabled: false, viewport: { width, height: 900 } });
+      const page = await noJs.newPage();
+      await page.goto(origin);
+      check(await page.locator('a[data-project][href^="casos/"]').count() === 4, 'Sin JavaScript: fichas deben ser accesibles');
+      check(await page.locator('.hero-model img').isVisible(), 'Sin JavaScript: esquema alternativo no visible');
+      check(await page.locator('.hero-model img').evaluate(img => img.complete && img.naturalWidth > 0), 'Sin JavaScript: esquema alternativo no carga');
+      check(!await page.locator('[data-model-view]').first().isVisible(), 'Sin JavaScript: controles 3D inoperantes deben estar ocultos');
+      check(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1), 'Sin JavaScript: desbordamiento horizontal a ' + width + 'px');
+      await screenshot(page, width + '-no-js');
+      await noJs.close();
+    }
+    const noCanvas = await browser.newContext();
+    await noCanvas.addInitScript(() => { HTMLCanvasElement.prototype.getContext = () => null; });
+    const fallbackPage = await noCanvas.newPage();
+    await fallbackPage.goto(origin);
+    check(await fallbackPage.locator('.hero-model img').isVisible(), 'Sin canvas: esquema alternativo no visible');
+    check(!await fallbackPage.locator('.hero-model').evaluate(element => element.classList.contains('is-ready')), 'Sin canvas: controles 3D no deben activarse');
+    await noCanvas.close();
+    const touch = await browser.newContext({ viewport: { width: 390, height: 844 }, hasTouch: true, isMobile: true, reducedMotion: 'reduce' });
+    const touchPage = await touch.newPage();
+    await touchPage.goto(origin);
+    await touchPage.waitForSelector('.hero-model.is-ready');
+    const touchCanvas = touchPage.locator('#structural-model');
+    await touchCanvas.scrollIntoViewIfNeeded();
+    const touchSession = await touch.newCDPSession(touchPage);
+    async function swipe(dx, dy) {
+      const bounds = await touchCanvas.boundingBox();
+      const x = bounds.x + bounds.width * .5, y = bounds.y + bounds.height * .5;
+      await touchSession.send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: [{ x, y }] });
+      for (let step = 1; step <= 6; step++) {
+        await touchSession.send('Input.dispatchTouchEvent', { type: 'touchMove', touchPoints: [{ x: x + dx * step / 6, y: y + dy * step / 6 }] });
+      }
+      await touchSession.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] });
+      await touchPage.waitForTimeout(200);
+    }
+    const scrollBefore = await touchPage.evaluate(() => window.scrollY);
+    await swipe(0, -110);
+    check(await touchPage.evaluate(() => window.scrollY) > scrollBefore + 30, 'Táctil: el modelo no debe bloquear el desplazamiento vertical');
+    check(await touchPage.locator('.hero-model').getAttribute('data-view') === 'iso', 'Táctil: desplazar la página no debe girar el modelo');
+    await touchCanvas.scrollIntoViewIfNeeded();
+    await swipe(75, 0);
+    check(await touchPage.locator('.hero-model').getAttribute('data-view') === 'custom', 'Táctil: arrastre horizontal no gira el modelo');
+    await touch.close();
   } finally {
     await browser.close();
     if (screenshotDir) fs.writeFileSync(path.join(screenshotDir, 'report.json'), JSON.stringify({ pages: pages.length, viewports: viewports.map(viewport => viewport.width), failures, audits: report }, null, 2));
   }
   assert.equal(failures.length, 0, failures.join('\n'));
-  console.log('PASS: ' + pages.length + ' páginas × ' + viewports.length + ' tamaños; imágenes, filtros, teclado, diálogos, laboratorio, enlaces sin JS y auditoría axe WCAG 2.1 AA.');
+  console.log('PASS: ' + pages.length + ' páginas × ' + viewports.length + ' tamaños; modelo 3D, movimiento reducido, alternativas sin JS/canvas, filtros, teclado, diálogos, laboratorio y auditoría axe WCAG 2.1 AA.');
 }
 main().catch(error => { console.error(error); process.exitCode = 1; }).finally(() => server.close());

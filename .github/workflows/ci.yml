@@ -14,7 +14,9 @@ jobs:
         with:
           node-version: '22'
       - name: Verificar JavaScript
-        run: node --check app.js
+        run: |
+          node --check app.js
+          node --check hero-model.js
       - name: Probar interacciones y cálculos
         run: node tests/smoke.test.cjs
       - name: Verificar enlaces locales
