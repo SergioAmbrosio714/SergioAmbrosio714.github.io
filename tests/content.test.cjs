@@ -19,6 +19,24 @@ function list(dir) {
 function bilingual(value, label) {
   for (const lang of ['es', 'en']) assert(typeof value?.[lang] === 'string' && value[lang].trim(), label + ': missing ' + lang);
 }
+function intactText(value, label, skipProse = false) {
+  if (typeof value === 'string') {
+    assert(!value.includes('\uFFFD'), label + ': Unicode replacement character in source data');
+    if (!skipProse) {
+      const prose = value.replace(/https?:\/\/\S+/g, '').replace(/```[\s\S]*?```|`[^`]*`/g, '');
+      assert(!/(?:\p{L}\?+\p{L}|\d\?+\d)/u.test(prose), label + ': possible text encoding loss inside a word or number');
+    }
+  } else if (Array.isArray(value)) value.forEach((item, index) => intactText(item, label + '[' + index + ']', skipProse));
+  else if (value && typeof value === 'object') {
+    for (const [key, item] of Object.entries(value)) {
+      intactText(item, label + '.' + key, skipProse || /^(?:url|href|src|code|codeExample|equation|command|commands|formula|pattern)$/i.test(key));
+    }
+  }
+}
+// Encoding mistakes can remain valid JSON and then spread to every generated page.
+for (const file of fs.readdirSync(path.join(root, 'data')).filter(name => name.endsWith('.json'))) {
+  intactText(JSON.parse(read('data/' + file)), 'data/' + file);
+}
 function localUrl(url) {
   const parsed = new URL(url);
   assert.equal(parsed.origin, origin, 'Unexpected canonical/alternate host');

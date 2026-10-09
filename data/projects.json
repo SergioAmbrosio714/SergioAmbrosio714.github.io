@@ -7,14 +7,14 @@
       "image": {
         "src": "assets/project-sunsetgolf.svg",
         "source": {
-          "es": "Ilustración vectorial original creada para este portafolio a partir de la descripción aportada del proyecto.",
-          "en": "Original vector illustration created for this portfolio from the project description provided for this portfolio."
+          "es": "Ilustración vectorial original basada en la descripción del proyecto.",
+          "en": "Original vector illustration based on the project description."
         },
         "software": "SVG",
         "date": "2026-10-08",
         "usage": {
-          "es": "Recurso ilustrativo del portafolio. Sustituible por material auténtico con autorización de publicación; no contiene planos ni modelos del empleador.",
-          "en": "Illustrative portfolio asset. May be replaced with authentic material authorized for publication; contains no employer drawings or models."
+          "es": "Ilustración del portafolio; no incorpora planos ni modelos del empleador.",
+          "en": "Portfolio illustration; contains no employer drawings or models."
         },
         "caption": {
           "es": "Volumetría ilustrativa de una edificación de 21 niveles y 3 sótanos. No reproduce la arquitectura ni el modelo estructural de SUNSETGOLF TORRE C.",
@@ -30,15 +30,15 @@
       "references": [
         {
           "title": {
-            "es": "CV y actualización profesional proporcionados por Sergio Ambrosio",
-            "en": "CV and professional update provided by Sergio Ambrosio"
+            "es": "CV profesional e información del proyecto",
+            "en": "Professional CV and project information"
           }
         }
       ],
       "es": {
         "title": "SUNSETGOLF TORRE C",
         "subtitle": "Edificio multifamiliar · Santiago de Surco, Lima · 2024",
-        "summary": "Modelación y diseño estructural de un edificio de 21 niveles y 3 sótanos: verificación de elementos principales y cimentaciones, con coordinación de arquitectura y MEP.",
+        "summary": "Modelación y diseño estructural de una torre multifamiliar de 21 niveles y 3 sótanos. Del análisis del edificio a la verificación de elementos y cimentaciones, en coordinación con arquitectura y MEP.",
         "status": "Experiencia profesional",
         "category": "Edificaciones",
         "imageAlt": "Volumetría conceptual de una torre con 21 niveles sobre rasante y tres sótanos; ilustración referencial del alcance, no modelo real del proyecto.",
@@ -64,67 +64,61 @@
             "value": "ETABS · SAFE · Mathcad · AutoCAD"
           },
           {
-            "label": "Referencias declaradas",
+            "label": "Marco normativo",
             "value": "RNE · ACI 318"
           }
         ],
         "sections": [
           {
-            "title": "Contexto del proyecto",
+            "title": "Resumen del proyecto",
             "paragraphs": [
-              "SUNSETGOLF TORRE C corresponde a un edificio multifamiliar en Santiago de Surco, Lima. Su escala —21 niveles y 3 sótanos— sitúa el trabajo en el ámbito de las edificaciones en altura y la coordinación de la superestructura con los niveles inferiores.",
-              "El antecedente está registrado en el CV como parte de mi experiencia profesional en 2024. La denominación TORRE C procede de la información complementaria aportada por Sergio Ambrosio."
+              "SUNSETGOLF TORRE C es un edificio multifamiliar de 21 niveles y 3 sótanos en Santiago de Surco, Lima. Mi participación en 2024 comprendió la modelación, el diseño y la verificación estructural, junto con la documentación de cálculo y planos.",
+              "La escala del edificio reúne dos niveles de revisión: entender la respuesta del conjunto y trasladar sus demandas al diseño de los elementos y las cimentaciones. La coordinación con arquitectura e instalaciones forma parte de esa misma tarea."
             ]
           },
           {
             "title": "Alcance de mi participación",
             "paragraphs": [
-              "Mi participación comprendió el modelado y diseño estructural, la verificación de elementos principales y el diseño de cimentaciones. También incluyó compatibilización con arquitectura y especialidades MEP, y documentación mediante memoria de cálculo y planos."
+              "Mi trabajo abarcó el modelo de análisis, la verificación de los elementos principales, el diseño de cimentaciones y la compatibilización con arquitectura y MEP."
             ],
             "bullets": [
-              "Modelación y análisis del edificio en ETABS.",
+              "Modelación y análisis estructural en ETABS.",
               "Diseño y verificación de elementos principales y cimentaciones.",
-              "Coordinación de geometría estructural con arquitectura e instalaciones.",
-              "Elaboración de documentación de cálculo y planos en AutoCAD."
+              "Compatibilización de la geometría estructural con arquitectura e instalaciones.",
+              "Preparación de memoria de cálculo y planos en AutoCAD."
             ]
           },
           {
-            "title": "Sistema estructural y escala",
+            "title": "Lectura del sistema estructural",
             "paragraphs": [
-              "La información proporcionada para este portafolio documenta el uso multifamiliar, los 21 niveles y los 3 sótanos. La definición de pórticos, muros, losas y cimentaciones deberá mostrarse mediante planos o modelos autorizados antes de describir una configuración resistente específica.",
-              "La ilustración de esta ficha representa únicamente la escala general del antecedente. No corresponde a una geometría construida, un plano de diseño ni una captura del modelo analizado."
+              "En una torre con varios sótanos, la revisión del conjunto debe mantener continuidad entre los niveles sobre rasante, los elementos inferiores y la cimentación. Las demandas de un elemento se interpretan dentro de ese recorrido de cargas, con las hipótesis del modelo que las originan.",
+              "La configuración específica de pórticos, muros, losas y cimentaciones no se detalla aquí, porque los planos y el modelo del proyecto no forman parte del material público."
             ]
           },
           {
-            "title": "Modelación y diseño",
+            "title": "Del análisis global al diseño local",
             "paragraphs": [
-              "El flujo de herramientas declarado combina ETABS para modelación y análisis, SAFE para cimentaciones, Mathcad para comprobaciones y memoria, y AutoCAD para planos. La relación entre el modelo global, los elementos y la cimentación es el centro del alcance profesional descrito."
+              "ETABS, SAFE y Mathcad vinculan tres tareas del alcance: analizar el edificio, estudiar las cimentaciones y documentar comprobaciones. Para interpretar los resultados, cada demanda debe conservar su caso de análisis, unidades y revisión del modelo."
             ],
             "bullets": [
-              "Modelo global: organización de geometría, niveles y sistema resistente.",
-              "Verificación de elementos: conexión de las demandas del modelo con comprobaciones documentadas.",
-              "Cimentaciones: coordinación de las acciones de la superestructura con su análisis y diseño.",
-              "Entregables: coherencia entre resultados de cálculo, planos y especialidades."
+              "Análisis global: revisar geometría, niveles, masas y rigideces antes de interpretar la respuesta.",
+              "Diseño local: relacionar las demandas del modelo con las verificaciones de los elementos principales.",
+              "Cimentación: trasladar las reacciones conservando casos y criterios compatibles.",
+              "Control de resultados: mantener correspondencia entre modelo, memoria y planos."
             ]
           },
           {
-            "title": "Revisión y coordinación",
+            "title": "Cimentaciones y coordinación",
             "paragraphs": [
-              "La compatibilización con arquitectura y MEP forma parte explícita del alcance del CV. En una edificación de esta escala, las aberturas, interferencias y continuidad de los elementos requieren atención conjunta entre especialidades.",
-              "Las comprobaciones y decisiones específicas del proyecto se podrán ilustrar con revisiones y extractos autorizados. No se publican valores de derivas, periodos, cortantes, cuantías ni dimensiones de diseño que no estén disponibles."
+              "El diseño de cimentaciones conecta la respuesta de la superestructura con las condiciones de apoyo. En este alcance, la revisión de reacciones y su correspondencia con los elementos inferiores es el vínculo entre el modelo global y el estudio en SAFE.",
+              "La compatibilización con arquitectura y MEP permite revisar la geometría en conjunto. Aberturas, pasos de instalaciones y continuidad de elementos son puntos de coordinación habituales en esta tipología; cualquier cambio debe reflejarse de forma coherente en el cálculo y los planos."
             ]
           },
           {
-            "title": "Herramientas y referencias de diseño",
+            "title": "Herramientas y marco normativo",
             "paragraphs": [
-              "Herramientas declaradas: ETABS, SAFE, Mathcad y AutoCAD. El CV identifica el Reglamento Nacional de Edificaciones y ACI 318 como referencias del trabajo.",
-              "Las ediciones normativas y los criterios aplicados deben consultarse en la memoria del proyecto. Esta ficha identifica experiencia y alcance; no certifica cumplimiento a partir de la ilustración pública.",
-              "Como marco de revisión, E.020 relaciona las acciones con el uso; E.030, la respuesta sísmica; E.060 y ACI 318, el diseño de concreto; y E.050, los criterios geotécnicos de cimentación. RNE y ACI 318 están declarados para el proyecto; la identificación de cada texto y edición aplicada exige la memoria. Las ediciones de referencia consultadas en 2026 no se atribuyen retrospectivamente a este trabajo de 2024."
-            ],
-            "bullets": [
-              "Método de análisis a documentar: casos, masas, rigideces y procedimiento sísmico del modelo ETABS, con sus hipótesis y unidades.",
-              "Verificaciones relacionadas con el alcance: respuesta global y desplazamientos; resistencia y detallado de elementos principales; reacciones y criterios de cimentación.",
-              "Trazabilidad documental: vincular cada comprobación con el caso de carga, la revisión del modelo, la memoria y los planos coordinados."
+              "Herramientas del proyecto: ETABS, SAFE, Mathcad y AutoCAD. El CV identifica el Reglamento Nacional de Edificaciones y ACI 318 como referencias de diseño.",
+              "El catálogo enlazado reúne criterios de acciones, respuesta sísmica, concreto y cimentaciones mediante E.020, E.030, E.060, ACI 318 y E.050. Las ediciones empleadas en este trabajo de 2024 no están documentadas en la ficha pública; las referencias consultadas en 2026 no se le atribuyen retrospectivamente."
             ],
             "links": [
               {
@@ -160,15 +154,10 @@
             ]
           },
           {
-            "title": "Python como apoyo: aplicaciones posibles",
+            "title": "Documentación y revisión",
             "paragraphs": [
-              "En un flujo de revisión de edificios de esta escala, Python puede ayudar a organizar resultados exportados y comparar revisiones. Estas son oportunidades de aplicación; no se afirma que se desarrollara o utilizara una herramienta Python en SUNSETGOLF.",
-              "Los demostradores enlazados se crearon para el portafolio en octubre de 2026 con datos didácticos. El procesamiento por nivel no calcula automáticamente derivas normativas ni representa una conexión activa con ETABS."
-            ],
-            "bullets": [
-              "Normalizar unidades e identificar datos faltantes en tablas exportadas por nivel y caso.",
-              "Comparar desplazamientos entre casos o revisiones conservando nivel, unidades y procedencia.",
-              "Preparar gráficos y tablas de revisión para una memoria, sujetos a interpretación y comprobación del ingeniero."
+              "La memoria de cálculo y los planos en AutoCAD permiten comunicar los criterios del análisis y su traducción al diseño. La revisión debe poder relacionar cada comprobación con un elemento, un caso de carga y una versión del modelo.",
+              "Como extensión de este método, Python podría normalizar tablas por nivel y comparar desplazamientos entre revisiones. No se documenta su uso en SUNSETGOLF. El ejemplo enlazado se desarrolló para este portafolio en octubre de 2026 con datos sintéticos; no se conecta a ETABS ni calcula automáticamente derivas normativas."
             ],
             "links": [
               {
@@ -184,27 +173,10 @@
             ]
           },
           {
-            "title": "Desafíos generales de ingeniería",
+            "title": "Fuentes y alcance",
             "paragraphs": [
-              "La escala del edificio permite explicar tres temas propios de este tipo de trabajo: coherencia del comportamiento global, continuidad del sistema hacia los sótanos y cimentaciones, y compatibilización de elementos resistentes con los requerimientos de otras especialidades."
-            ],
-            "bullets": [
-              "Interpretar los resultados globales antes de revisar elementos de forma aislada.",
-              "Mantener trazabilidad entre modelo, memoria y planos.",
-              "Coordinar cambios de geometría para conservar la consistencia de los entregables."
-            ]
-          },
-          {
-            "title": "Documentación y evidencia",
-            "paragraphs": [
-              "El CV y la información complementaria aportada por Sergio Ambrosio sustentan el nombre, año, ubicación, escala y alcance individual publicado. El empleador o titular contractual de este proyecto no se identifica expresamente en la ficha del CV y no se atribuye por inferencia.",
-              "La ficha documenta mi contribución individual dentro de un proyecto profesional. La atribución empresarial se completará con la documentación correspondiente."
-            ],
-            "bullets": [
-              "Vista autorizada del modelo ETABS y esquema del sistema resistente.",
-              "Extracto autorizado de la memoria y criterios de modelación.",
-              "Documentación de cimentaciones y coordinación entre especialidades.",
-              "Identificación del empleador, titular del proyecto y permisos de publicación del material que se incorpore."
+              "La descripción se basa en mi CV y en la información complementaria del proyecto. Documenta mi participación individual; el empleador y el titular contractual no están identificados en las fuentes disponibles.",
+              "Los planos, el modelo y la memoria no se publican en esta ficha. Por ello, no se presentan cargas, derivas, periodos, cuantías ni resultados de diseño. Las ilustraciones son conceptuales; cualquier documentación original requiere autorización para su publicación."
             ]
           }
         ]
@@ -212,7 +184,7 @@
       "en": {
         "title": "SUNSETGOLF TORRE C",
         "subtitle": "Residential building · Santiago de Surco, Lima · 2024",
-        "summary": "Structural modelling and design of a 21-storey building with 3 basements: verification of primary members and foundations, with architecture and MEP coordination.",
+        "summary": "Structural modelling and design of a 21-storey residential tower with 3 basements, linking building analysis to member and foundation checks in coordination with architecture and MEP.",
         "status": "Professional experience",
         "category": "Buildings",
         "imageAlt": "Conceptual massing of a tower with 21 above-ground storeys and three basements; an illustration of the project scale, not the actual project model.",
@@ -238,67 +210,61 @@
             "value": "ETABS · SAFE · Mathcad · AutoCAD"
           },
           {
-            "label": "Declared references",
+            "label": "Design references",
             "value": "RNE · ACI 318"
           }
         ],
         "sections": [
           {
-            "title": "Project context",
+            "title": "Project overview",
             "paragraphs": [
-              "SUNSETGOLF TORRE C is a residential building in Santiago de Surco, Lima. Its scale—21 storeys and 3 basements—places the work within high-rise building engineering and the coordination of the superstructure with the lower levels.",
-              "The project appears in my CV as part of my professional experience in 2024. The TORRE C designation comes from the supplementary information provided by Sergio Ambrosio."
+              "SUNSETGOLF TORRE C is a residential building with 21 storeys and 3 basements in Santiago de Surco, Lima. My contribution in 2024 covered structural modelling, design and verification, together with calculation reports and drawings.",
+              "The building calls for two connected levels of review: understanding its overall response and translating model demands into member and foundation design. Coordination with architecture and building services is part of the same process."
             ]
           },
           {
             "title": "My contribution",
             "paragraphs": [
-              "My contribution covered structural modelling and design, verification of primary members and foundation design. It also included coordination with architecture and MEP disciplines, and documentation through a calculation report and drawings."
+              "My work covered the analysis model, verification of primary members, foundation design, and coordination with architecture and MEP."
             ],
             "bullets": [
-              "Building modelling and analysis in ETABS.",
+              "Structural modelling and analysis in ETABS.",
               "Design and verification of primary members and foundations.",
               "Coordination of structural geometry with architecture and building services.",
-              "Preparation of calculation documentation and AutoCAD drawings."
+              "Preparation of calculation reports and AutoCAD drawings."
             ]
           },
           {
-            "title": "Structural system and scale",
+            "title": "Understanding the structural system",
             "paragraphs": [
-              "The information provided for this portfolio records the residential use, 21 storeys and 3 basements. The arrangement of frames, walls, slabs and foundations requires authorized drawings or models before a specific structural configuration can be described.",
-              "The illustration represents only the general scale of the project. It is not the as-built geometry, a design drawing or a screenshot of the analysed model."
+              "For a tower with several basement levels, the overall review must address structural continuity from the floors above ground through the lower levels and into the foundations. Member demands need to be interpreted within this load path and the assumptions of the model that produced them.",
+              "The specific arrangement of frames, walls, slabs and foundations is not described here, as project drawings and the analysis model are not included in the public material."
             ]
           },
           {
-            "title": "Modelling and design",
+            "title": "From global analysis to member design",
             "paragraphs": [
-              "The declared workflow combines ETABS for modelling and analysis, SAFE for foundations, Mathcad for checks and calculations, and AutoCAD for drawings. Linking the global model, members and foundations is central to the documented scope."
+              "ETABS, SAFE and Mathcad connect three tasks within the scope: building analysis, foundation studies and calculation checks. Results must retain their analysis case, units and model revision to remain meaningful."
             ],
             "bullets": [
-              "Global model: organization of geometry, storeys and structural system.",
-              "Member verification: connecting model demands with documented checks.",
-              "Foundations: coordinating superstructure actions with foundation analysis and design.",
-              "Deliverables: consistency between calculations, drawings and other disciplines."
+              "Global analysis: review geometry, storeys, mass and stiffness before interpreting the response.",
+              "Member design: relate model demands to the checks for primary members.",
+              "Foundations: transfer reactions with consistent cases and design assumptions.",
+              "Results review: maintain consistency between the model, calculations and drawings."
             ]
           },
           {
-            "title": "Review and coordination",
+            "title": "Foundations and coordination",
             "paragraphs": [
-              "Architecture and MEP coordination is explicitly included in the CV. In a building of this scale, openings, clashes and member continuity require coordinated attention across disciplines.",
-              "Project-specific checks and decisions can be illustrated through authorized extracts and reviews. Drift ratios, periods, base shears, reinforcement ratios and design dimensions are not published without supporting information."
+              "Foundation design connects the superstructure response with its support conditions. Reviewing reactions and their relationship to the lower structural elements links the global model with the foundation study in SAFE.",
+              "Coordination with architecture and MEP brings the geometry of different disciplines together. Openings, service routes and member continuity are typical coordination points for this building type; changes must be carried consistently into calculations and drawings."
             ]
           },
           {
             "title": "Tools and design references",
             "paragraphs": [
-              "Declared tools: ETABS, SAFE, Mathcad and AutoCAD. The CV identifies Peru's National Building Regulations (RNE) and ACI 318 as references for the work.",
-              "The applicable editions and project criteria must be established from the calculation report. This page records experience and scope; it does not certify compliance from the public illustration.",
-              "As a review framework, E.020 connects loads with occupancy; E.030 addresses seismic response; E.060 and ACI 318 address concrete design; and E.050 addresses geotechnical foundation criteria. RNE and ACI 318 are declared for this project; identifying each applied text and edition requires the calculation report. Reference editions consulted in 2026 are not retrospectively attributed to this 2024 work."
-            ],
-            "bullets": [
-              "Analysis method to document: ETABS cases, mass, stiffness and seismic procedure, including assumptions and units.",
-              "Checks related to the scope: global response and displacement; strength and detailing of primary members; foundation reactions and criteria.",
-              "Document traceability: connect each check with its load case, model revision, calculation report and coordinated drawings."
+              "Project tools: ETABS, SAFE, Mathcad and AutoCAD. The CV identifies Peru’s National Building Regulations (RNE) and ACI 318 as design references.",
+              "The linked catalogue covers loads, seismic response, concrete and foundations through E.020, E.030, E.060, ACI 318 and E.050. The editions used on this 2024 project are not identified in the public record; reference editions reviewed in 2026 are not attributed retrospectively to the work."
             ],
             "links": [
               {
@@ -334,15 +300,10 @@
             ]
           },
           {
-            "title": "Python support: potential applications",
+            "title": "Documentation and review",
             "paragraphs": [
-              "In the review of buildings of this scale, Python can help organize exported results and compare revisions. These are potential applications; no Python tool is claimed to have been developed or used on SUNSETGOLF.",
-              "The linked demonstrations were created for this portfolio in October 2026 using educational data. The level-results processor does not automatically calculate code-defined drift or provide a live ETABS connection."
-            ],
-            "bullets": [
-              "Normalize units and identify missing data in exported tables by level and case.",
-              "Compare displacements between cases or revisions while retaining level, units and provenance.",
-              "Prepare review plots and tables for a calculation report, subject to engineering interpretation and checking."
+              "The calculation report and AutoCAD drawings communicate the analysis criteria and their translation into design. Each check should be traceable to a member, a load case and a model revision.",
+              "Python could extend this workflow by normalizing storey tables and comparing displacements across revisions. Its use on SUNSETGOLF is not documented. The linked example was developed for this portfolio in October 2026 using synthetic data; it neither connects to ETABS nor automatically calculates code-defined drift."
             ],
             "links": [
               {
@@ -358,27 +319,10 @@
             ]
           },
           {
-            "title": "General engineering challenges",
+            "title": "Sources and scope",
             "paragraphs": [
-              "The scale of this building provides a context for three recurring engineering concerns: coherent global behaviour, structural continuity through basements and foundations, and coordination of the structural system with other disciplines."
-            ],
-            "bullets": [
-              "Interpret global results before checking members in isolation.",
-              "Maintain traceability between the model, calculation report and drawings.",
-              "Coordinate geometry changes to preserve consistency across deliverables."
-            ]
-          },
-          {
-            "title": "Documentation and evidence",
-            "paragraphs": [
-              "The CV and the supplementary information provided by Sergio Ambrosio support the published name, year, location, scale and individual contribution. The project entry in the CV does not explicitly identify the employer or contractual project owner, so neither is inferred.",
-              "This page documents my individual contribution to a professional project. The corporate attribution will be completed from the corresponding documentation."
-            ],
-            "bullets": [
-              "Authorized ETABS model view and structural system diagram.",
-              "Authorized calculation extracts and modelling criteria.",
-              "Foundation documentation and multidisciplinary coordination records.",
-              "Identification of the employer, project owner and publication permissions for any added material."
+              "This account draws on my CV and supplementary project information. It describes my individual contribution; the available sources do not identify the employer or contractual project owner.",
+              "Project drawings, the analysis model and the calculation report are not published here. Accordingly, the page presents no loads, drift ratios, periods, reinforcement quantities or design results. The illustrations are conceptual; original project material requires permission for publication."
             ]
           }
         ]
@@ -392,14 +336,14 @@
       "image": {
         "src": "assets/project-cepitoce.svg",
         "source": {
-          "es": "Ilustración vectorial original creada para este portafolio a partir de la descripción aportada del proyecto.",
-          "en": "Original vector illustration created for this portfolio from the project description provided for this portfolio."
+          "es": "Ilustración vectorial original basada en la descripción del proyecto.",
+          "en": "Original vector illustration based on the project description."
         },
         "software": "SVG",
         "date": "2026-10-08",
         "usage": {
-          "es": "Recurso ilustrativo del portafolio. Sustituible por material auténtico con autorización de publicación; no contiene planos ni modelos del empleador.",
-          "en": "Illustrative portfolio asset. May be replaced with authentic material authorized for publication; contains no employer drawings or models."
+          "es": "Ilustración del portafolio; no incorpora planos ni modelos del empleador.",
+          "en": "Portfolio illustration; contains no employer drawings or models."
         },
         "caption": {
           "es": "Esquema ilustrativo de pórtico de subestación, torre y soportes. Las geometrías no pertenecen al modelo de CEPITOCE y no contienen cargas ni resultados.",
@@ -415,15 +359,15 @@
       "references": [
         {
           "title": {
-            "es": "CV y actualización profesional proporcionados por Sergio Ambrosio",
-            "en": "CV and professional update provided by Sergio Ambrosio"
+            "es": "CV profesional e información del proyecto",
+            "en": "Professional CV and project information"
           }
         }
       ],
       "es": {
         "title": "CEPITOCE / INFRAESTRUCTURA ELÉCTRICA",
         "subtitle": "HMV Ingenieros · Estructuras metálicas de alta tensión · 2026",
-        "summary": "Diseño y verificación de torres, pórticos y soportes de equipos para infraestructura de alta tensión, con optimización de soluciones y documentación de ingeniería.",
+        "summary": "Diseño y verificación de torres, pórticos y soportes de equipos de alta tensión en HMV Ingenieros. Revisión de soluciones metálicas, criterios de diseño y documentación técnica.",
         "status": "Experiencia profesional",
         "category": "Infraestructura eléctrica",
         "imageAlt": "Esquema referencial de una torre, un pórtico y soportes de subestación; no es una captura del modelo ni una disposición real de CEPITOCE.",
@@ -455,62 +399,56 @@
         ],
         "sections": [
           {
-            "title": "Contexto del proyecto",
+            "title": "Resumen del proyecto",
             "paragraphs": [
-              "CEPITOCE figura en el CV como un proyecto desarrollado en HMV Ingenieros durante 2026, asociado a estructuras metálicas para alta tensión. El alcance documentado comprende torres, pórticos y soportes para equipos eléctricos.",
-              "Este antecedente se sitúa en mi experiencia en infraestructura eléctrica de media y alta tensión. La ubicación, tensiones nominales y configuración del proyecto no se incorporan sin documentación pública autorizada."
+              "CEPITOCE reúne estructuras metálicas para infraestructura eléctrica de alta tensión: torres, pórticos y soportes de equipos. Participé en su diseño y verificación en HMV Ingenieros durante 2026.",
+              "El trabajo relaciona la función de cada estructura con su resistencia, estabilidad y transferencia de acciones. La optimización de soluciones y la preparación de documentación técnica forman parte del alcance."
             ]
           },
           {
             "title": "Alcance de mi participación",
             "paragraphs": [
-              "Participé en el diseño de pórticos y torres de alta tensión, y en el diseño y verificación de soportes metálicos para equipos. El CV también registra optimización de soluciones, desarrollo de criterios de diseño y documentación técnica."
+              "Participé en el diseño de pórticos y torres de alta tensión y en la verificación de soportes metálicos para equipos eléctricos, como Ingeniero estructural — Profesional III en HMV."
             ],
             "bullets": [
               "Diseño y revisión de elementos estructurales metálicos.",
-              "Verificación y optimización de soluciones resistentes.",
-              "Criterios de diseño, memorias de cálculo y entregables técnicos.",
-              "Coordinación técnica y acompañamiento a un practicante de ingeniería, según el CV."
+              "Evaluación y optimización de soluciones resistentes, livianas y eficientes.",
+              "Desarrollo de criterios de diseño, memorias de cálculo y entregables técnicos.",
+              "Coordinación técnica y acompañamiento a un practicante de ingeniería."
             ]
           },
           {
-            "title": "Sistemas e interfaces estructurales",
+            "title": "Torres, pórticos y soportes",
             "paragraphs": [
-              "Las torres, pórticos y soportes desempeñan funciones diferentes dentro de la infraestructura eléctrica. Su lectura conjunta exige reconocer el recorrido de cargas y las interfaces entre equipos, estructuras y cimentaciones.",
-              "La experiencia declarada en HMV incluye diseño de cimentaciones para torres, pórticos y equipos, además de revisión de modelos, memorias y planos. Los detalles específicos de CEPITOCE deberán vincularse a extractos autorizados de sus entregables."
+              "Las tres tipologías requieren una lectura diferenciada. En torres y pórticos, la geometría y las condiciones de apoyo organizan la respuesta del conjunto. En soportes de equipos, la interfaz con el equipo condiciona la forma en que las acciones llegan a la estructura.",
+              "En ambos casos, el recorrido de cargas debe continuar a través de elementos, uniones y apoyos. La rigidez representada en el modelo tiene que ser compatible con los detalles que transmiten esas acciones. Estos son criterios de lectura del sistema, sin asumir una configuración específica de CEPITOCE."
             ]
           },
           {
             "title": "Verificación y optimización",
             "paragraphs": [
-              "La optimización descrita en el CV se refiere a la búsqueda de soluciones estructurales resistentes, livianas y eficientes. No se publica un porcentaje de ahorro ni una mejora cuantitativa porque esos indicadores no se han adjuntado.",
-              "Para comunicar técnicamente este trabajo, la evidencia futura debe relacionar los criterios de diseño con el modelo, las verificaciones de elementos y conexiones, y la transmisión de acciones a las cimentaciones."
+              "La optimización formó parte del trabajo de diseño. Su sentido técnico es comparar soluciones conservando criterios, acciones y condiciones de apoyo, de modo que una alternativa más liviana mantenga las prestaciones requeridas.",
+              "La revisión de una estructura metálica enlaza el comportamiento global con la verificación de sus componentes. La estabilidad y los efectos de segundo orden se evalúan según el sistema y el procedimiento adoptado."
             ],
             "bullets": [
-              "Modelo y supuestos de apoyo consistentes con el sistema representado.",
-              "Verificación de elementos y conexiones dentro del alcance de diseño.",
-              "Coherencia entre reacciones, anclajes y cimentaciones.",
-              "Revisión coordinada de memoria y planos."
+              "Relacionar las demandas globales con las verificaciones de elementos.",
+              "Mantener compatibilidad entre rigidez modelada y transmisión de fuerzas en las uniones.",
+              "Conservar casos de carga compatibles al revisar reacciones y apoyos.",
+              "Reflejar las modificaciones del diseño en la memoria y los planos."
             ]
           },
           {
-            "title": "Documentación y coordinación",
+            "title": "Cimentaciones e interfaces",
             "paragraphs": [
-              "La responsabilidad documentada comprende criterios, memorias y entregables de ingeniería. La coordinación técnica y el acompañamiento a un practicante describen parte de mi participación individual; no equivalen a atribuirme la dirección contractual completa del proyecto.",
-              "El empleador identificado para este antecedente es HMV Ingenieros. La ficha describe mi contribución individual dentro de ese contexto profesional."
+              "Mi trabajo en HMV también incluyó cimentaciones para torres, pórticos y equipos, así como revisión de modelos, memorias y planos. La descripción específica disponible de CEPITOCE se concentra en el diseño de las estructuras metálicas.",
+              "Para estas tipologías, la interfaz estructura–cimentación exige conservar ejes, signos, unidades y simultaneidad de las acciones. La revisión conjunta de apoyos y reacciones permite relacionar el comportamiento del modelo con los criterios estructurales y geotécnicos de la cimentación."
             ]
           },
           {
-            "title": "Herramientas y criterios técnicos",
+            "title": "Criterios y referencias técnicas",
             "paragraphs": [
-              "El CV no desglosa paquetes de software ni ediciones normativas específicamente para CEPITOCE. Por ello, esta ficha no asigna aplicaciones, tensiones, cargas de equipos ni combinaciones que no estén documentadas.",
-              "Las futuras capturas podrán identificar software, fecha, autoría y condición de uso. Los extractos de cálculo deberán mantener los criterios y unidades necesarios para interpretar su alcance.",
-              "Como referencias relacionadas con esta tipología, ASCE/SEI 7 organiza acciones y AISC 360 aporta criterios de acero; las cimentaciones requieren además una base estructural y geotécnica definida. Esta relación explica un método de revisión: no acredita que CEPITOCE empleara esos documentos. La jurisdicción, las especificaciones del cliente y la memoria deben establecer las normas y ediciones efectivamente adoptadas."
-            ],
-            "bullets": [
-              "Método a documentar: geometría, apoyos, estados de equipos y procedimiento de análisis, incluyendo estabilidad y efectos de segundo orden cuando correspondan.",
-              "Elementos del alcance declarado: torres, pórticos, soportes y cimentaciones; las conexiones deben ser coherentes con la transferencia de acciones y la rigidez modelada.",
-              "Registro de revisión: criterios, estados de carga compatibles, verificaciones y coordinación entre memoria, planos y entregables. No se publican resultados o ratios no aportados."
+              "Los criterios de diseño y la documentación de ingeniería forman parte de mi participación. Los programas de análisis, las normas y sus ediciones específicas para CEPITOCE no están identificados en las fuentes de esta ficha.",
+              "ASCE/SEI 7 y AISC 360 se enlazan como referencias para estudiar acciones y estructuras de acero. Su inclusión es temática: las normas efectivamente adoptadas dependen de la jurisdicción, las especificaciones del cliente y la memoria del proyecto."
             ],
             "links": [
               {
@@ -536,15 +474,10 @@
             ]
           },
           {
-            "title": "Python como apoyo: aplicaciones posibles",
+            "title": "Documentación y coordinación",
             "paragraphs": [
-              "La programación puede apoyar el control de tablas de cargas de equipos, reacciones y revisiones de modelos. Se presentan oportunidades de automatización, sin afirmar que existió una integración Python en CEPITOCE.",
-              "El demostrador de voladizo es una comprobación analítica didáctica desarrollada para el portafolio en octubre de 2026. No representa una torre ni un soporte real del proyecto y no verifica conexiones ni cumplimiento normativo."
-            ],
-            "bullets": [
-              "Comprobar unidades, signos, ejes y estados compatibles antes de ordenar tablas de reacciones.",
-              "Comparar alternativas geométricas mediante indicadores claramente definidos, conservando hipótesis y límites del modelo.",
-              "Generar resúmenes de cambios entre revisiones para apoyar la revisión de memorias y planos."
+              "Los entregables reúnen criterios de diseño, cálculos y planos que deben describir una misma solución. La coordinación técnica incluye resolver observaciones y mantener consistencia entre revisiones; el acompañamiento al practicante formó parte de mi trabajo individual.",
+              "Python podría apoyar este proceso mediante comprobaciones de unidades y tablas de reacciones o resúmenes de cambios. No se documenta una integración Python en CEPITOCE. El voladizo enlazado es un ejemplo analítico independiente creado en octubre de 2026: no representa una torre o soporte del proyecto ni verifica sus conexiones."
             ],
             "links": [
               {
@@ -560,26 +493,10 @@
             ]
           },
           {
-            "title": "Desafíos generales de ingeniería",
+            "title": "Fuentes y alcance",
             "paragraphs": [
-              "En este tipo de infraestructura, la coordinación entre función eléctrica y respuesta estructural es central. Las geometrías y restricciones de equipos deben mantenerse compatibles con la estabilidad, la resistencia y la transferencia de cargas."
-            ],
-            "bullets": [
-              "Coordinar el soporte de equipos con el sistema resistente.",
-              "Comparar alternativas sin perder trazabilidad de los criterios de diseño.",
-              "Conservar consistencia entre modelos, cimentaciones y documentación."
-            ]
-          },
-          {
-            "title": "Evidencia disponible y siguiente incorporación",
-            "paragraphs": [
-              "La fuente inicial es la descripción del proyecto incluida en el CV, complementada por la información complementaria aportada por Sergio Ambrosio. La imagen es un recurso vectorial ilustrativo creado para esta ficha."
-            ],
-            "bullets": [
-              "Vistas autorizadas de torres, pórticos y soportes del proyecto.",
-              "Extractos de criterios de diseño, verificaciones y documentación de cimentaciones.",
-              "Identificación de software, revisiones y normas efectivamente empleadas.",
-              "Confirmación del alcance publicable con el empleador antes de incorporar modelos o planos."
+              "La ficha se basa en el proyecto y las funciones descritos en mi CV, junto con información profesional complementaria. La participación corresponde a mi trabajo en HMV Ingenieros.",
+              "El material público no incluye modelos, planos, cargas, resultados de cálculo ni mediciones de ahorro. Las figuras son ilustraciones conceptuales. Los detalles del proyecto y cualquier documentación original se incorporarán únicamente con autorización de publicación."
             ]
           }
         ]
@@ -587,7 +504,7 @@
       "en": {
         "title": "CEPITOCE / ELECTRICAL INFRASTRUCTURE",
         "subtitle": "HMV Ingenieros · High-voltage steel structures · 2026",
-        "summary": "Design and verification of towers, gantries and equipment supports for high-voltage infrastructure, with assessment of design alternatives and engineering documentation.",
+        "summary": "Design and verification of high-voltage towers, gantries and equipment supports at HMV Ingenieros, including steel design reviews, design criteria and technical documentation.",
         "status": "Professional experience",
         "category": "Electrical infrastructure",
         "imageAlt": "Illustrative diagram of a tower, gantry and substation supports; not a model screenshot or the actual CEPITOCE arrangement.",
@@ -619,62 +536,56 @@
         ],
         "sections": [
           {
-            "title": "Project context",
+            "title": "Project overview",
             "paragraphs": [
-              "CEPITOCE is listed in the CV as a project undertaken at HMV Ingenieros in 2026 involving steel structures for high-voltage infrastructure. The documented scope includes towers, gantries and electrical equipment supports.",
-              "The project forms part of my experience in medium- and high-voltage infrastructure. Location, nominal voltages and project configuration are not included without authorized public documentation."
+              "CEPITOCE involves steel structures for high-voltage electrical infrastructure: towers, gantries and equipment supports. I contributed to their design and verification at HMV Ingenieros in 2026.",
+              "The work connects each structure’s function with its strength, stability and load transfer. Assessment of design alternatives and preparation of technical documentation were part of the scope."
             ]
           },
           {
             "title": "My contribution",
             "paragraphs": [
-              "I contributed to the design of high-voltage gantries and towers, and to the design and verification of steel equipment supports. The CV also records assessment of structural alternatives, development of design criteria and technical documentation."
+              "As a Structural Engineer — Professional III at HMV, I contributed to the design of high-voltage towers and gantries and the verification of steel supports for electrical equipment."
             ],
             "bullets": [
-              "Design and review of steel structural elements.",
-              "Verification and optimization of structural solutions.",
-              "Design criteria, calculation reports and technical deliverables.",
-              "Technical coordination and support for an engineering intern, as recorded in the CV."
+              "Design and review of steel structural members.",
+              "Assessment and optimization of strong, lightweight and efficient solutions.",
+              "Development of design criteria, calculation reports and technical deliverables.",
+              "Technical coordination and guidance for an engineering intern."
             ]
           },
           {
-            "title": "Structural systems and interfaces",
+            "title": "Towers, gantries and equipment supports",
             "paragraphs": [
-              "Towers, gantries and supports serve different functions within electrical infrastructure. Considering them together requires an understanding of load paths and interfaces between equipment, structures and foundations.",
-              "The declared scope at HMV includes foundation design for towers, gantries and equipment, together with review of models, calculation reports and drawings. CEPITOCE-specific details should be linked to authorized deliverable extracts."
+              "These three structural types require different considerations. For towers and gantries, geometry and support conditions govern the overall response. For equipment supports, the equipment interface determines how actions enter the structure.",
+              "In each case, the load path must continue through members, connections and supports. Modelled stiffness needs to be consistent with the details that transfer these actions. These principles explain the review approach without assuming a specific CEPITOCE configuration."
             ]
           },
           {
             "title": "Verification and optimization",
             "paragraphs": [
-              "The optimization recorded in the CV concerns the pursuit of structurally adequate, lightweight and efficient solutions. No saving percentage or quantified improvement is published because supporting indicators have not been provided.",
-              "Future evidence should connect the design criteria with the model, member and connection checks, and the transfer of actions into the foundations."
+              "Design optimization was part of the work. It involves comparing alternatives against consistent criteria, actions and support conditions, so that a lighter solution retains the required performance.",
+              "Reviewing a steel structure connects overall behaviour with component checks. Stability and second-order effects are assessed according to the structural system and the adopted analysis procedure."
             ],
             "bullets": [
-              "Model and support assumptions consistent with the represented system.",
-              "Member and connection verification within the design scope.",
-              "Consistency between reactions, anchors and foundations.",
-              "Coordinated review of calculation reports and drawings."
+              "Relate global demands to member checks.",
+              "Maintain consistency between modelled stiffness and force transfer through connections.",
+              "Retain compatible load cases when reviewing reactions and supports.",
+              "Carry design changes through to calculations and drawings."
             ]
           },
           {
-            "title": "Documentation and coordination",
+            "title": "Foundations and interfaces",
             "paragraphs": [
-              "The documented responsibility includes criteria, calculation reports and engineering deliverables. Technical coordination and support for an intern describe part of my individual contribution; they do not establish responsibility for the entire project contract.",
-              "HMV Ingenieros is the identified employer for this project. This page describes my individual contribution within that professional context."
+              "My work at HMV also covered foundations for towers, gantries and equipment, together with review of models, calculation reports and drawings. The available project-specific description of CEPITOCE focuses on the steel structures.",
+              "For these structural types, the structure–foundation interface requires consistent axes, signs, units and concurrent actions. Reviewing supports and reactions together connects the model response with structural and geotechnical foundation criteria."
             ]
           },
           {
-            "title": "Tools and technical criteria",
+            "title": "Design criteria and technical references",
             "paragraphs": [
-              "The CV does not specify software packages or code editions for CEPITOCE. This page therefore does not assign applications, voltages, equipment loads or load combinations without supporting documentation.",
-              "Future screenshots can identify software, date, authorship and publication permission. Calculation extracts should retain the criteria and units needed to interpret their scope.",
-              "As references related to this type of structure, ASCE/SEI 7 organizes actions and AISC 360 provides steel criteria; foundations also require a defined structural and geotechnical basis. This relationship explains a review method, not documented use of those standards on CEPITOCE. Jurisdiction, client specifications and the calculation report must establish the documents and editions actually adopted."
-            ],
-            "bullets": [
-              "Method to document: geometry, supports, equipment states and analysis procedure, including stability and second-order effects where relevant.",
-              "Members within the declared scope: towers, gantries, supports and foundations; connections must be consistent with load transfer and modelled stiffness.",
-              "Review record: criteria, compatible load states, checks and coordination between the calculation report, drawings and deliverables. Unavailable results or utilization ratios are not published."
+              "Developing design criteria and engineering documentation was part of my contribution. The analysis software, standards and editions used specifically for CEPITOCE are not identified in the sources for this page.",
+              "ASCE/SEI 7 and AISC 360 are linked as references for studying loads and steel structures. These links provide technical context; the standards actually adopted depend on jurisdiction, client specifications and the project calculation report."
             ],
             "links": [
               {
@@ -700,15 +611,10 @@
             ]
           },
           {
-            "title": "Python support: potential applications",
+            "title": "Documentation and coordination",
             "paragraphs": [
-              "Programming can support the control of equipment-load tables, reactions and model revisions. These are automation opportunities; no Python integration is claimed for CEPITOCE.",
-              "The cantilever demonstration is an educational analytical check developed for this portfolio in October 2026. It does not represent a project tower or equipment support and does not check connections or code compliance."
-            ],
-            "bullets": [
-              "Check units, signs, axes and compatible states before organizing reaction tables.",
-              "Compare geometric alternatives through defined indicators while retaining model assumptions and limitations.",
-              "Generate change summaries between revisions to support review of calculation reports and drawings."
+              "Design criteria, calculations and drawings must describe the same solution. Technical coordination involves resolving review comments and keeping revisions consistent; supporting the engineering intern was part of my individual contribution.",
+              "Python could assist with unit checks, reaction tables and revision summaries. A Python integration on CEPITOCE is not documented. The linked cantilever is an independent analytical example created in October 2026; it does not represent a project tower or support or verify its connections."
             ],
             "links": [
               {
@@ -724,26 +630,10 @@
             ]
           },
           {
-            "title": "General engineering challenges",
+            "title": "Sources and scope",
             "paragraphs": [
-              "Coordination between electrical function and structural response is central to this type of infrastructure. Equipment geometry and constraints must remain compatible with stability, resistance and load transfer."
-            ],
-            "bullets": [
-              "Coordinate equipment support requirements with the structural system.",
-              "Compare alternatives while retaining traceable design criteria.",
-              "Maintain consistency between models, foundations and documentation."
-            ]
-          },
-          {
-            "title": "Available evidence and next additions",
-            "paragraphs": [
-              "The initial source is the project description in the CV, supplemented by the supplementary information provided by Sergio Ambrosio. The image is an original illustrative vector asset created for this project page."
-            ],
-            "bullets": [
-              "Authorized views of project towers, gantries and equipment supports.",
-              "Extracts of design criteria, checks and foundation documentation.",
-              "Identification of the software, revisions and standards actually used.",
-              "Confirmation of the publishable scope with the employer before adding models or drawings."
+              "This page draws on the project and responsibilities described in my CV and supplementary professional information. The contribution relates to my work at HMV Ingenieros.",
+              "Public material does not include project models, drawings, loads, calculation results or measured savings. The figures are conceptual illustrations. Project details and original documents require permission before publication."
             ]
           }
         ]
@@ -756,14 +646,14 @@
       "image": {
         "src": "assets/project-cidelsa.svg",
         "source": {
-          "es": "Ilustración vectorial original creada para este portafolio a partir de la descripción aportada del proyecto.",
-          "en": "Original vector illustration created for this portfolio from the project description provided for this portfolio."
+          "es": "Ilustración vectorial original basada en la descripción del proyecto.",
+          "en": "Original vector illustration based on the project description."
         },
         "software": "SVG",
         "date": "2026-10-08",
         "usage": {
-          "es": "Recurso ilustrativo del portafolio. Sustituible por material auténtico con autorización de publicación; no contiene planos ni modelos del empleador.",
-          "en": "Illustrative portfolio asset. May be replaced with authentic material authorized for publication; contains no employer drawings or models."
+          "es": "Ilustración del portafolio; no incorpora planos ni modelos del empleador.",
+          "en": "Portfolio illustration; contains no employer drawings or models."
         },
         "caption": {
           "es": "Composición ilustrativa de una estructura metálica y una planta de aproximadamente 20 × 30 m. No reproduce la geometría, las conexiones ni la cimentación real del proyecto.",
@@ -779,15 +669,15 @@
       "references": [
         {
           "title": {
-            "es": "CV y actualización profesional proporcionados por Sergio Ambrosio",
-            "en": "CV and professional update provided by Sergio Ambrosio"
+            "es": "CV profesional e información del proyecto",
+            "en": "Professional CV and project information"
           }
         }
       ],
       "es": {
         "title": "ALMACENES CIDELSA / YANACOCHA",
         "subtitle": "Carpa multiusos · Estructura metálica · 2024",
-        "summary": "Diseño y verificación de una estructura metálica de aproximadamente 20 × 30 m, incluyendo elementos principales, conexiones y cimentaciones, con coordinación de arquitectura y MEP.",
+        "summary": "Diseño y verificación de una estructura metálica de aproximadamente 20 × 30 m para uso múltiple. Análisis global, elementos, conexiones y cimentaciones, con documentación en Revit y coordinación de especialidades.",
         "status": "Experiencia profesional",
         "category": "Acero e infraestructura",
         "imageAlt": "Estructura metálica esquemática y planta rectangular de aproximadamente veinte por treinta metros, elaboradas como ilustración del alcance y no como modelo real de CIDELSA.",
@@ -801,7 +691,7 @@
             "value": "2024"
           },
           {
-            "label": "Uso declarado",
+            "label": "Uso",
             "value": "Carpa multiusos"
           },
           {
@@ -813,68 +703,62 @@
             "value": "SAP2000 · SAFE · Mathcad · IDEA StatiCa · Revit"
           },
           {
-            "label": "Referencias declaradas",
+            "label": "Marco normativo",
             "value": "RNE · AISC"
           }
         ],
         "sections": [
           {
-            "title": "Contexto y alcance",
+            "title": "Resumen del proyecto",
             "paragraphs": [
-              "El CV identifica ALMACENES CIDELSA, en Yanacocha, como una carpa multiusos de aproximadamente 20 × 30 m, desarrollada en 2024. El antecedente corresponde al diseño y verificación de una estructura de acero.",
-              "La escala en planta es un dato descriptivo del proyecto. No permite deducir por sí sola la altura, modulación, tipo de cubierta, secciones o condiciones de apoyo; estos aspectos requieren documentación específica."
+              "ALMACENES CIDELSA / YANACOCHA corresponde a una carpa multiusos de estructura metálica, con dimensiones generales de aproximadamente 20 × 30 m. Mi participación en 2024 incluyó modelación, diseño y verificación estructural.",
+              "El alcance enlaza el análisis del conjunto con los elementos principales, las conexiones y las cimentaciones. La memoria de cálculo y los planos en Revit comunican esa relación, en coordinación con arquitectura y MEP."
             ]
           },
           {
             "title": "Alcance de mi participación",
             "paragraphs": [
-              "Mi trabajo comprendió modelado y diseño estructural en acero, diseño y verificación de elementos principales, conexiones y cimentaciones, y compatibilización con arquitectura y MEP. Los entregables declarados incluyen memoria de cálculo y planos en Revit."
+              "Mi trabajo comprendió el diseño de la estructura de acero, la verificación de elementos y conexiones, el diseño de cimentaciones y la compatibilización entre disciplinas."
             ],
             "bullets": [
-              "Modelación y análisis de la estructura metálica.",
+              "Modelación y análisis de la estructura metálica en SAP2000.",
               "Diseño y verificación de elementos principales y conexiones.",
-              "Diseño de cimentaciones y coordinación de las acciones transmitidas.",
-              "Compatibilización y desarrollo de documentación de ingeniería."
+              "Diseño de cimentaciones y revisión de las acciones transmitidas.",
+              "Memoria de cálculo, planos en Revit y coordinación con arquitectura y MEP."
             ]
           },
           {
-            "title": "Sistema estructural y representación",
+            "title": "Sistema estructural y recorrido de cargas",
             "paragraphs": [
-              "La información disponible identifica una estructura metálica y su uso como carpa multiusos. La organización de pórticos, arriostramientos, cubierta y apoyos deberá describirse a partir del modelo o planos autorizados.",
-              "La imagen de esta ficha es deliberadamente esquemática. Su planta 20 × 30 m comunica el orden de magnitud del antecedente; la elevación no reproduce la configuración real."
+              "La estructura metálica resuelve el soporte de una carpa multiusos. Sus dimensiones generales sitúan la escala del trabajo, pero no definen por sí solas la altura, la distribución de pórticos, el arriostramiento o las condiciones de apoyo.",
+              "La lectura del sistema conecta el modelo global con los elementos que reciben y transmiten las acciones. El detalle de la configuración resistente se reserva a los modelos y planos del proyecto, que no están publicados."
             ]
           },
           {
-            "title": "Modelación, conexiones y cimentaciones",
+            "title": "Del modelo global a las conexiones",
             "paragraphs": [
-              "El conjunto de herramientas declarado relaciona SAP2000 con el análisis global, SAFE con el estudio de cimentaciones, Mathcad con comprobaciones, IDEA StatiCa con conexiones y Revit con la documentación del proyecto.",
-              "El alcance de elementos, conexiones y cimentaciones permite presentar el trabajo como un sistema de verificaciones enlazadas: las demandas del modelo deben conservar coherencia a lo largo del recorrido de cargas. Esta descripción explica el enfoque de revisión, sin incorporar resultados no disponibles."
+              "SAP2000, Mathcad e IDEA StatiCa vinculan el análisis del conjunto con la verificación de elementos y conexiones. La transferencia entre estas etapas exige conservar los esfuerzos de casos compatibles y las hipótesis de rigidez y apoyo.",
+              "Una conexión se interpreta dentro del sistema: su transmisión de fuerzas y su capacidad de deformación deben ser coherentes con el comportamiento representado en el modelo global. La revisión del detalle completa la lectura de las demandas de análisis."
             ],
             "bullets": [
-              "Modelo global y acciones de diseño.",
-              "Verificación de elementos y compatibilidad de las conexiones.",
-              "Transferencia de reacciones a apoyos y cimentaciones.",
-              "Correspondencia entre comprobaciones, memoria y planos."
+              "Modelo global: geometría, acciones, apoyos y estabilidad.",
+              "Elementos: demandas y verificaciones de los miembros principales.",
+              "Conexiones: fuerzas transferidas y compatibilidad con las hipótesis del modelo.",
+              "Documentación: correspondencia entre cálculo, detalles y planos."
             ]
           },
           {
-            "title": "Coordinación y entregables",
+            "title": "Cimentaciones y compatibilización",
             "paragraphs": [
-              "La compatibilización con arquitectura y MEP figura expresamente en el CV. Su alcance reúne la coordinación de la geometría estructural con los requerimientos de uso y de las otras disciplinas.",
-              "Los planos en Revit y la memoria de cálculo forman parte de los entregables declarados. No se publica documentación reservada ni se atribuye autoría exclusiva de la totalidad del proyecto."
+              "El estudio de cimentaciones en SAFE completa el recorrido de las acciones desde la superestructura hasta sus apoyos. Las reacciones deben conservar sus ejes, signos y casos de carga para que la revisión de la cimentación sea consistente con el análisis global.",
+              "La compatibilización con arquitectura y MEP reúne la geometría estructural y los requerimientos de uso. Los planos en Revit permiten documentar la solución coordinada junto con la memoria de cálculo."
             ]
           },
           {
-            "title": "Herramientas y referencias de diseño",
+            "title": "Herramientas y marco normativo",
             "paragraphs": [
-              "Herramientas declaradas: SAP2000, SAFE, Mathcad, IDEA StatiCa y Revit. Las referencias normativas indicadas en el CV son RNE y AISC.",
-              "No se asignan ediciones, resistencias de materiales, combinaciones de carga ni capacidades resistentes sin acceso a la memoria correspondiente. Los resultados cuantitativos podrán incorporarse sólo con evidencia y autorización.",
-              "La declaración documental de este proyecto identifica RNE y AISC como familias de referencia. E.020, E.050 y AISC 360 permiten explicar, respectivamente, acciones, criterios geotécnicos y revisión del acero; esta asociación temática no confirma documentos o ediciones específicos empleados en 2024. La aplicación personal de E.090 permanece por confirmar."
-            ],
-            "bullets": [
-              "Método a documentar: casos y combinaciones del modelo SAP2000, hipótesis de apoyos, estabilidad y correspondencia con el sistema construido.",
-              "Verificaciones del alcance: miembros principales, conexiones y cimentaciones, con atención a compatibilidad de deformaciones y transferencia de reacciones.",
-              "Documentación a relacionar: comprobaciones, memoria, detalles de conexiones y planos Revit, con sus unidades, criterios y revisión."
+              "Herramientas del proyecto: SAP2000, SAFE, Mathcad, IDEA StatiCa y Revit. El CV identifica RNE y AISC como familias de referencia.",
+              "Los enlaces a E.020, E.050 y AISC 360 permiten consultar criterios de acciones, cimentaciones y acero. No confirman documentos o ediciones específicos utilizados en 2024; la aplicación de E.090 permanece por confirmar."
             ],
             "links": [
               {
@@ -910,15 +794,10 @@
             ]
           },
           {
-            "title": "Python como apoyo: aplicaciones posibles",
+            "title": "Documentación y revisión",
             "paragraphs": [
-              "En una estructura metálica, Python puede facilitar la organización de resultados y la comparación de alternativas bajo hipótesis constantes. Se trata de aplicaciones posibles; no se atribuye su uso al trabajo ejecutado para CIDELSA.",
-              "El demostrador paramétrico enlazado fue creado para este portafolio en octubre de 2026. Resuelve un voladizo idealizado, no la estructura de 20 × 30 m, sus conexiones ni su cimentación."
-            ],
-            "bullets": [
-              "Ordenar fuerzas y reacciones exportadas por miembro, caso y unidad, conservando estados compatibles.",
-              "Comparar parámetros geométricos y sensibilidad con un modelo analítico limitado antes de interpretar escenarios más complejos.",
-              "Producir tablas y gráficos que documenten supuestos y cambios, sujetos a revisión del modelo y de los criterios de diseño."
+              "La revisión de la memoria y los planos enlaza miembros, conexiones y cimentaciones. Cada cambio de geometría o hipótesis debe conservar su correspondencia con los esfuerzos utilizados y los detalles que se documentan.",
+              "Python podría organizar tablas de fuerzas y reacciones, comparar revisiones y preparar gráficos de sensibilidad. Su uso en CIDELSA no está documentado. El ejemplo paramétrico enlazado, creado en octubre de 2026, resuelve un voladizo idealizado; no reproduce esta estructura ni sus conexiones o cimentaciones."
             ],
             "links": [
               {
@@ -934,27 +813,10 @@
             ]
           },
           {
-            "title": "Desafíos generales de ingeniería",
+            "title": "Fuentes y alcance",
             "paragraphs": [
-              "El diseño de estructuras metálicas de este tipo requiere interpretar conjuntamente estabilidad, elementos, conexiones y apoyos. La coordinación entre modelo y documentación es especialmente relevante cuando los requerimientos de espacio y uso condicionan la solución."
-            ],
-            "bullets": [
-              "Conservar continuidad en el recorrido de cargas.",
-              "Revisar las interfaces entre elementos, conexiones y cimentaciones.",
-              "Documentar los supuestos que permiten interpretar cada verificación."
-            ]
-          },
-          {
-            "title": "Procedencia y material pendiente",
-            "paragraphs": [
-              "El CV y la información complementaria aportada por Sergio Ambrosio sustentan el nombre del antecedente, el año, el uso, las dimensiones generales y la participación publicada. El CV no vincula expresamente este proyecto con un empleador concreto, por lo que esa atribución se mantiene pendiente.",
-              "La ficha describe mi participación individual en un proyecto profesional; la atribución empresarial se completará con la documentación correspondiente."
-            ],
-            "bullets": [
-              "Vista autorizada del modelo y esquema de configuración resistente.",
-              "Detalles publicables de conexiones y cimentaciones.",
-              "Extractos de la memoria con unidades, criterios y revisión identificados.",
-              "Confirmación del empleador, titular del proyecto y permisos sobre modelos, planos e imágenes."
+              "La descripción se basa en mi CV y en información complementaria del proyecto. Documenta mi contribución individual; las fuentes disponibles no vinculan este antecedente con un empleador concreto ni identifican al titular contractual.",
+              "La ficha no publica modelos, planos, memorias ni resultados cuantitativos de diseño. La ilustración representa el uso y la escala general, no la configuración real. Cualquier material original requiere autorización antes de publicarse."
             ]
           }
         ]
@@ -962,7 +824,7 @@
       "en": {
         "title": "ALMACENES CIDELSA / YANACOCHA",
         "subtitle": "Multipurpose tent structure · Steel structure · 2024",
-        "summary": "Design and verification of an approximately 20 × 30 m steel structure, including primary members, connections and foundations, with architecture and MEP coordination.",
+        "summary": "Design and verification of an approximately 20 × 30 m steel multipurpose tent structure, covering global analysis, members, connections and foundations, with Revit documentation and multidisciplinary coordination.",
         "status": "Professional experience",
         "category": "Steel and infrastructure",
         "imageAlt": "Schematic steel structure and rectangular plan approximately twenty by thirty metres, illustrating the scope rather than the actual CIDELSA model.",
@@ -976,7 +838,7 @@
             "value": "2024"
           },
           {
-            "label": "Declared use",
+            "label": "Use",
             "value": "Multipurpose tent structure"
           },
           {
@@ -988,68 +850,62 @@
             "value": "SAP2000 · SAFE · Mathcad · IDEA StatiCa · Revit"
           },
           {
-            "label": "Declared references",
+            "label": "Design references",
             "value": "RNE · AISC"
           }
         ],
         "sections": [
           {
-            "title": "Context and scope",
+            "title": "Project overview",
             "paragraphs": [
-              "The CV identifies ALMACENES CIDELSA at Yanacocha as an approximately 20 × 30 m multipurpose tent structure undertaken in 2024. The project concerns the design and verification of a steel structure.",
-              "The plan dimensions describe the project's overall scale. They do not establish its height, bay arrangement, roof type, member sections or support conditions; these require specific documentation."
+              "ALMACENES CIDELSA / YANACOCHA is a steel multipurpose tent structure with overall dimensions of approximately 20 × 30 m. My contribution in 2024 covered structural modelling, design and verification.",
+              "The scope connects overall analysis with primary members, connections and foundations. The calculation report and Revit drawings communicate that relationship, in coordination with architecture and MEP."
             ]
           },
           {
             "title": "My contribution",
             "paragraphs": [
-              "My work covered steel structural modelling and design, design and verification of primary members, connections and foundations, and coordination with architecture and MEP. The declared deliverables include a calculation report and drawings in Revit."
+              "My work covered steel structural design, member and connection checks, foundation design and multidisciplinary coordination."
             ],
             "bullets": [
-              "Modelling and analysis of the steel structure.",
+              "Modelling and analysis of the steel structure in SAP2000.",
               "Design and verification of primary members and connections.",
-              "Foundation design and coordination of transferred actions.",
-              "Multidisciplinary coordination and development of engineering documentation."
+              "Foundation design and review of transferred actions.",
+              "Calculation reports, Revit drawings and coordination with architecture and MEP."
             ]
           },
           {
-            "title": "Structural system and representation",
+            "title": "Structural system and load path",
             "paragraphs": [
-              "The available information identifies a steel structure used as a multipurpose tent facility. Frames, bracing, roofing and supports should be described from authorized models or drawings.",
-              "The image on this page is intentionally schematic. Its 20 × 30 m plan communicates the overall scale; the elevation does not reproduce the actual configuration."
+              "The steel structure supports a multipurpose tent facility. Its overall dimensions establish the scale of the work but do not by themselves define height, frame spacing, bracing or support conditions.",
+              "Understanding the system connects the global model with the members receiving and transferring actions. The detailed structural arrangement belongs to the project models and drawings, which are not published here."
             ]
           },
           {
-            "title": "Modelling, connections and foundations",
+            "title": "From the global model to connections",
             "paragraphs": [
-              "The declared toolset connects SAP2000 with global analysis, SAFE with foundation studies, Mathcad with checks, IDEA StatiCa with connections, and Revit with project documentation.",
-              "The scope covering members, connections and foundations enables the work to be presented as linked checks: model demands must remain consistent along the load path. This explains the review approach without introducing unavailable results."
+              "SAP2000, Mathcad and IDEA StatiCa connect overall analysis with member and connection checks. Moving between these stages requires forces from compatible cases and consistent stiffness and support assumptions.",
+              "A connection must be considered as part of the system: its force transfer and deformation capacity need to be consistent with the behaviour represented in the global model. Reviewing the detail completes the interpretation of analysis demands."
             ],
             "bullets": [
-              "Global model and design actions.",
-              "Member verification and connection compatibility.",
-              "Transfer of reactions into supports and foundations.",
-              "Consistency between checks, calculation reports and drawings."
+              "Global model: geometry, actions, supports and stability.",
+              "Members: demands and checks for the primary structural members.",
+              "Connections: transferred forces and consistency with model assumptions.",
+              "Documentation: agreement between calculations, details and drawings."
             ]
           },
           {
-            "title": "Coordination and deliverables",
+            "title": "Foundations and coordination",
             "paragraphs": [
-              "Coordination with architecture and MEP is explicitly stated in the CV. This connects structural geometry with functional requirements and other disciplines.",
-              "Revit drawings and the calculation report are among the declared deliverables. Restricted documents are not published, and exclusive authorship of the entire project is not claimed."
+              "Foundation studies in SAFE complete the load path from the superstructure into its supports. Reactions must retain their axes, signs and load cases so that foundation checks remain consistent with the global analysis.",
+              "Coordination with architecture and MEP brings structural geometry together with functional requirements. Revit drawings document the coordinated solution alongside the calculation report."
             ]
           },
           {
             "title": "Tools and design references",
             "paragraphs": [
-              "Declared tools: SAP2000, SAFE, Mathcad, IDEA StatiCa and Revit. The design references identified in the CV are RNE and AISC.",
-              "Code editions, material strengths, load combinations and structural capacities are not assigned without the corresponding calculation report. Quantitative results can be added only with evidence and publication permission.",
-              "The project information identifies RNE and AISC as reference families. E.020, E.050 and AISC 360 explain loads, geotechnical criteria and steel checks respectively; this thematic association does not establish the specific documents or editions used in 2024. Personal application of E.090 remains unconfirmed."
-            ],
-            "bullets": [
-              "Method to document: SAP2000 cases and combinations, support and stability assumptions, and correspondence with the constructed system.",
-              "Checks within the scope: primary members, connections and foundations, considering deformation compatibility and reaction transfer.",
-              "Documentation to connect: checks, calculation report, connection details and Revit drawings, with identified units, criteria and revision."
+              "Project tools: SAP2000, SAFE, Mathcad, IDEA StatiCa and Revit. The CV identifies RNE and AISC as reference families.",
+              "The links to E.020, E.050 and AISC 360 provide access to load, foundation and steel design criteria. They do not establish specific documents or editions used in 2024; application of E.090 remains unconfirmed."
             ],
             "links": [
               {
@@ -1085,15 +941,10 @@
             ]
           },
           {
-            "title": "Python support: potential applications",
+            "title": "Documentation and review",
             "paragraphs": [
-              "For a steel structure, Python can help organize results and compare alternatives under consistent assumptions. These are potential applications; their use is not attributed to the completed CIDELSA work.",
-              "The linked parametric demonstration was created for this portfolio in October 2026. It solves an idealized cantilever, not the 20 × 30 m structure, its connections or its foundations."
-            ],
-            "bullets": [
-              "Organize exported forces and reactions by member, case and unit while retaining compatible response states.",
-              "Compare geometry and sensitivity through a limited analytical model before interpreting more complex scenarios.",
-              "Produce tables and plots documenting assumptions and changes, subject to review of the model and design criteria."
+              "Reviewing the calculation report and drawings connects members, connections and foundations. Each change in geometry or assumptions must remain consistent with the forces used in design and the details shown on the drawings.",
+              "Python could organize force and reaction tables, compare revisions and prepare sensitivity plots. Its use on CIDELSA is not documented. The linked parametric example, created in October 2026, solves an idealized cantilever; it does not reproduce this structure, its connections or its foundations."
             ],
             "links": [
               {
@@ -1109,27 +960,10 @@
             ]
           },
           {
-            "title": "General engineering challenges",
+            "title": "Sources and scope",
             "paragraphs": [
-              "Design of this type of steel structure requires an integrated assessment of stability, members, connections and supports. Coordination between model and documentation is particularly relevant when spatial and functional requirements constrain the design."
-            ],
-            "bullets": [
-              "Maintain continuity along the load path.",
-              "Review interfaces between members, connections and foundations.",
-              "Document the assumptions needed to interpret each verification."
-            ]
-          },
-          {
-            "title": "Provenance and pending material",
-            "paragraphs": [
-              "The CV and the supplementary information provided by Sergio Ambrosio support the project name, year, use, overall dimensions and published contribution. The CV does not explicitly link this project to a particular employer, so that attribution remains open.",
-              "This page describes my individual contribution to a professional project; the corporate attribution will be completed from the corresponding documentation."
-            ],
-            "bullets": [
-              "Authorized model view and structural system diagram.",
-              "Publishable connection and foundation details.",
-              "Calculation extracts with identified units, criteria and revision.",
-              "Confirmation of the employer, project owner and permissions for models, drawings and images."
+              "This account draws on my CV and supplementary project information. It describes my individual contribution; the available sources do not link the project to a specific employer or identify the contractual project owner.",
+              "Project models, drawings, calculations and quantitative design results are not published here. The illustration conveys the use and overall scale, rather than the actual arrangement. Original project material requires permission before publication."
             ]
           }
         ]

@@ -3,12 +3,12 @@
   "es": {
     "title": "Normativa y criterios de diseño",
     "intro": "Relacionar acciones, modelo, resistencia y detallado exige una base de diseño coherente. El RNE y las referencias internacionales se presentan aquí por su función dentro del proceso de ingeniería.",
-    "scope": "La aplicación profesional declarada procede de la información aportada por Sergio Ambrosio. Las ediciones mostradas son referencias verificadas en fuentes oficiales, no ediciones acreditadas para todos sus proyectos. Una norma consultada no supone certificación; E.090 permanece por confirmar y AISC 341/AWS D1.1 son referencias complementarias."
+    "scope": "Las normas de práctica profesional corresponden a mi experiencia recogida en el CV. Las ediciones mostradas son referencias consultadas; la edición de cada proyecto se identifica en su memoria. Mi aplicación de E.090 está por confirmar. AISC 341 y AWS D1.1 se incluyen como referencias complementarias, sin uso profesional documentado."
   },
   "en": {
     "title": "Design Codes & Engineering Standards",
     "intro": "Connecting loads, the model, resistance and detailing requires a coherent design basis. RNE and international references are presented here by their role in the engineering process.",
-    "scope": "Declared professional application comes from information provided by Sergio Ambrosio. The editions shown are references checked against official sources, not editions established for every project. Consulting a standard does not imply certification; E.090 remains unconfirmed and AISC 341/AWS D1.1 are supplementary references."
+    "scope": "The standards marked as professional practice relate to the experience recorded in my CV. The editions shown are consulted references; each project report identifies the edition used. My application of E.090 remains unconfirmed. AISC 341 and AWS D1.1 are supplementary references, with no documented professional use."
   },
   "items": [
     {
@@ -25,7 +25,7 @@
         "family": "Acciones y combinaciones",
         "region": "Perú",
         "editionStatus": "Texto oficial publicado por el MVCS; marco base del RNE de 2006.",
-        "practiceStatus": "Aplicación profesional declarada",
+        "practiceStatus": "Práctica profesional · CV",
         "applications": [
           "Definición de cargas permanentes, de uso y ambientales según ocupación y condiciones del proyecto.",
           "Organización de acciones y combinaciones coherentes con la norma de cada material."
@@ -34,7 +34,7 @@
           "Cargas mínimas, áreas tributarias y transferencia de acciones.",
           "Coherencia entre cargas de servicio, combinaciones y unidades."
         ],
-        "projectRelation": "SUNSETGOLF y CIDELSA declaran RNE como referencia general. La asociación específica con E.020 y la edición del expediente requieren la memoria de cálculo.",
+        "projectRelation": "RNE forma parte de las referencias generales de SUNSETGOLF y CIDELSA. La memoria de cada proyecto debe precisar el uso de E.020 y su edición.",
         "scope": "Las cargas de equipos y sus estados operativos requieren datos del fabricante; una tabla normativa no sustituye esos datos."
       },
       "en": {
@@ -42,7 +42,7 @@
         "family": "Actions and load combinations",
         "region": "Peru",
         "editionStatus": "Official text published by MVCS within the original 2006 RNE framework.",
-        "practiceStatus": "Professional application declared",
+        "practiceStatus": "Professional practice · CV",
         "applications": [
           "Definition of permanent, occupancy and environmental loads for the project.",
           "Organization of actions and combinations consistent with the material design standard."
@@ -51,7 +51,7 @@
           "Minimum loads, tributary areas and load transfer.",
           "Consistency of service loads, combinations and units."
         ],
-        "projectRelation": "SUNSETGOLF and CIDELSA identify RNE as a general reference. The specific use of E.020 and the project edition require the calculation report.",
+        "projectRelation": "RNE is a general reference for SUNSETGOLF and CIDELSA. Each project report should specify the use of E.020 and its edition.",
         "scope": "Equipment loads and operating states require manufacturer information; a code table does not replace it."
       },
       "references": [
@@ -86,7 +86,7 @@
         "family": "Ingeniería sísmica",
         "region": "Perú",
         "editionStatus": "Texto 2026 modificado por R.M. 183-2026; disposición transitoria modificada por R.M. 217-2026. Son actos aprobados.",
-        "practiceStatus": "Aplicación profesional declarada · actualización consultada",
+        "practiceStatus": "Práctica profesional · CV · actualización consultada",
         "applications": [
           "Definición de demanda sísmica, sistema resistente y procedimiento de análisis.",
           "Revisión de configuración, respuesta global y desplazamientos."
@@ -95,7 +95,7 @@
           "Parámetros, regularidad, masas, respuesta modal y fuerzas sísmicas.",
           "Derivas y compatibilidad de desplazamientos según el texto aplicable."
         ],
-        "projectRelation": "Relacionada con la experiencia en edificios y el prototipo E.030. La edición 2026 no se atribuye a SUNSETGOLF 2024 ni se presume implementada en el prototipo.",
+        "projectRelation": "Relacionada con mi trabajo en edificaciones y con el prototipo E.030. SUNSETGOLF corresponde a 2024; la adaptación del prototipo al texto de 2026 sigue sin verificar.",
         "scope": "La R.M. 217 permite conservar el texto anterior en los supuestos de proyectos en curso que describe. La selección exige revisar el estado del expediente; no existe una migración automática de todos los proyectos."
       },
       "en": {
@@ -103,7 +103,7 @@
         "family": "Earthquake engineering",
         "region": "Peru",
         "editionStatus": "2026 text amended by Resolution 183-2026; transitional provision amended by Resolution 217-2026. Both are approved instruments.",
-        "practiceStatus": "Professional application declared · update consulted",
+        "practiceStatus": "Professional practice · CV · update consulted",
         "applications": [
           "Definition of seismic demand, resisting system and analysis procedure.",
           "Review of configuration, global response and displacements."
@@ -112,7 +112,7 @@
           "Parameters, regularity, mass, modal response and seismic forces.",
           "Drift and displacement compatibility under the applicable text."
         ],
-        "projectRelation": "Related to building experience and the E.030 prototype. The 2026 edition is not attributed to SUNSETGOLF 2024 or assumed to be implemented in the prototype.",
+        "projectRelation": "Related to my building design work and the E.030 prototype. SUNSETGOLF dates from 2024; the prototype’s adaptation to the 2026 text remains unverified.",
         "scope": "Resolution 217 permits the previous text for specified ongoing-project conditions. Selection requires reviewing the submission status; the new edition does not automatically apply to every ongoing project."
       },
       "references": [
@@ -154,7 +154,7 @@
         "family": "Geotecnia y cimentaciones",
         "region": "Perú",
         "editionStatus": "Actualización de 2018 identificada en la resolución y el compendio oficial del MVCS.",
-        "practiceStatus": "Aplicación profesional declarada",
+        "practiceStatus": "Práctica profesional · CV",
         "applications": [
           "Coordinación del estudio de mecánica de suelos con el sistema de cimentación.",
           "Interpretación de parámetros geotécnicos y condiciones del terreno."
@@ -163,7 +163,7 @@
           "Presiones de contacto, asentamientos y condiciones de apoyo.",
           "Compatibilidad entre reacciones del modelo y criterios del estudio geotécnico."
         ],
-        "projectRelation": "El diseño de cimentaciones está documentado en SUNSETGOLF, CIDELSA y la experiencia en HMV. La aplicación específica de E.050 se confirma con cada expediente.",
+        "projectRelation": "Mi alcance en SUNSETGOLF, CIDELSA y HMV incluye cimentaciones. La memoria de cada proyecto debe precisar la aplicación de E.050.",
         "scope": "El diseño estructural no sustituye la investigación geotécnica. Parámetros admisibles, asentamientos y recomendaciones deben conservar su procedencia."
       },
       "en": {
@@ -171,7 +171,7 @@
         "family": "Geotechnics and foundations",
         "region": "Peru",
         "editionStatus": "2018 update identified in the resolution and the official MVCS collection.",
-        "practiceStatus": "Professional application declared",
+        "practiceStatus": "Professional practice · CV",
         "applications": [
           "Coordination of the geotechnical investigation with the foundation system.",
           "Interpretation of ground parameters and site conditions."
@@ -180,7 +180,7 @@
           "Contact pressures, settlement and support conditions.",
           "Compatibility between model reactions and geotechnical design criteria."
         ],
-        "projectRelation": "Foundation design is documented for SUNSETGOLF, CIDELSA and HMV experience. Project-specific use of E.050 is established from each design record.",
+        "projectRelation": "My work on SUNSETGOLF, CIDELSA and at HMV includes foundations. Each project report should specify how E.050 applies.",
         "scope": "Structural design does not replace geotechnical investigation. Allowable parameters, settlement estimates and recommendations must retain their provenance."
       },
       "references": [
@@ -215,7 +215,7 @@
         "family": "Diseño y detallado de concreto",
         "region": "Perú",
         "editionStatus": "Texto de 2009 identificado por D.S. 010-2009 en el compendio oficial consultado.",
-        "practiceStatus": "Aplicación profesional declarada",
+        "practiceStatus": "Práctica profesional · CV",
         "applications": [
           "Diseño de vigas, columnas, muros, losas y componentes de cimentación dentro de su alcance.",
           "Coordinación de resistencia, servicio y detallado."
@@ -224,7 +224,7 @@
           "Flexión, cortante, interacción axial-flexión y punzonamiento cuando corresponda.",
           "Anclaje, empalmes, disposición del refuerzo y requisitos sísmicos."
         ],
-        "projectRelation": "Relacionada con el alcance de concreto y cimentaciones de SUNSETGOLF y la experiencia en MRZ. La ficha del proyecto declara RNE; su memoria debe identificar la edición aplicada.",
+        "projectRelation": "Relacionada con el diseño de concreto y cimentaciones en SUNSETGOLF y mi trabajo en MRZ. RNE figura como referencia general; la edición aplicada se identifica en la memoria.",
         "scope": "Una edición reciente de ACI 318 no modifica automáticamente E.060. Debe mantenerse la jerarquía normativa del proyecto."
       },
       "en": {
@@ -232,7 +232,7 @@
         "family": "Concrete design and detailing",
         "region": "Peru",
         "editionStatus": "2009 text identified under Supreme Decree 010-2009 in the official collection consulted.",
-        "practiceStatus": "Professional application declared",
+        "practiceStatus": "Professional practice · CV",
         "applications": [
           "Design of beams, columns, walls, slabs and foundation components within its scope.",
           "Coordination of strength, serviceability and detailing."
@@ -241,7 +241,7 @@
           "Flexure, shear, axial-flexural interaction and punching shear where relevant.",
           "Development, splices, reinforcement arrangement and seismic provisions."
         ],
-        "projectRelation": "Related to concrete and foundation work on SUNSETGOLF and experience at MRZ. The project entry identifies RNE; the report must establish the edition used.",
+        "projectRelation": "Related to concrete and foundation design on SUNSETGOLF and my work at MRZ. RNE is a general reference; the calculation report identifies the edition used.",
         "scope": "A newer ACI 318 edition does not automatically amend E.060. The project's regulatory hierarchy must be retained."
       },
       "references": [
@@ -275,7 +275,7 @@
         "name": "Estructuras metálicas",
         "family": "Acero estructural",
         "region": "Perú",
-        "editionStatus": "Texto oficial disponible en el RNE; base de 2006. No se atribuye una edición nueva de 2026.",
+        "editionStatus": "Texto oficial del RNE, dentro del marco de 2006. No se ha identificado una nueva edición de 2026.",
         "practiceStatus": "Aplicación personal por confirmar",
         "applications": [
           "Marco peruano para diseño, fabricación y montaje de estructuras de acero en edificaciones.",
@@ -285,14 +285,14 @@
           "Resistencia y estabilidad de miembros.",
           "Conexiones, servicio y requisitos de fabricación y montaje."
         ],
-        "projectRelation": "Referencia relacionada con CIDELSA y estructuras industriales. Su inclusión no confirma que haya sido aplicada por Sergio en esos proyectos.",
+        "projectRelation": "Referencia pertinente para CIDELSA y estructuras industriales; su aplicación en mi trabajo está pendiente de confirmación.",
         "scope": "No se identifica E.090 como equivalente actualizado de AISC 360-22 ni se combinan sus factores sin una base de diseño coherente."
       },
       "en": {
         "name": "Steel structures",
         "family": "Structural steel",
         "region": "Peru",
-        "editionStatus": "Official RNE text available from the 2006 framework. No new 2026 edition is claimed.",
+        "editionStatus": "Official RNE text within the 2006 framework. No new 2026 edition has been identified.",
         "practiceStatus": "Personal application awaiting confirmation",
         "applications": [
           "Peruvian framework for structural steel design, fabrication and erection in buildings.",
@@ -302,7 +302,7 @@
           "Member strength and stability.",
           "Connections, serviceability, fabrication and erection requirements."
         ],
-        "projectRelation": "A reference related to CIDELSA and industrial structures. Its inclusion does not confirm Sergio's use of it on those projects.",
+        "projectRelation": "A relevant reference for CIDELSA and industrial structures; its application in my work awaits confirmation.",
         "scope": "E.090 is not presented as an updated equivalent of AISC 360-22; factors from the two documents are not combined without a coherent design basis."
       },
       "references": [
@@ -337,7 +337,7 @@
         "family": "Concreto estructural",
         "region": "Estados Unidos · referencia internacional",
         "editionStatus": "Edición 2025 publicada por ACI. La edición empleada en trabajos anteriores no está documentada en este portafolio.",
-        "practiceStatus": "Aplicación profesional declarada",
+        "practiceStatus": "Práctica profesional · CV",
         "applications": [
           "Diseño y detallado de elementos, sistemas y conexiones de concreto.",
           "Vinculación de análisis, resistencia, servicio y durabilidad."
@@ -346,7 +346,7 @@
           "Flexión, cortante, interacción y anclajes según el sistema.",
           "Deformaciones, desarrollo del refuerzo y requisitos de detallado."
         ],
-        "projectRelation": "ACI 318 figura expresamente entre las referencias declaradas de SUNSETGOLF. El trabajo es de 2024: no se le atribuye la edición 2025.",
+        "projectRelation": "ACI 318 figura entre las referencias de SUNSETGOLF, proyecto de 2024. La edición utilizada entonces está pendiente de precisar.",
         "scope": "La edición de referencia consultada no acredita una adopción local ni reemplaza la base de diseño aprobada."
       },
       "en": {
@@ -354,7 +354,7 @@
         "family": "Structural concrete",
         "region": "United States · international reference",
         "editionStatus": "2025 edition published by ACI. The edition used in earlier work is not documented in this portfolio.",
-        "practiceStatus": "Professional application declared",
+        "practiceStatus": "Professional practice · CV",
         "applications": [
           "Design and detailing of concrete members, systems and connections.",
           "Integration of analysis, strength, serviceability and durability."
@@ -363,7 +363,7 @@
           "Flexure, shear, interaction and anchorage for the selected system.",
           "Deformations, reinforcement development and detailing requirements."
         ],
-        "projectRelation": "ACI 318 is explicitly listed among SUNSETGOLF's declared references. The work dates from 2024; the 2025 edition is not attributed to it.",
+        "projectRelation": "ACI 318 is among the references for SUNSETGOLF, a 2024 project. The edition used at the time has yet to be established.",
         "scope": "The reference edition consulted does not establish local adoption or replace the approved project design basis."
       },
       "references": [
@@ -398,7 +398,7 @@
         "family": "Acciones y criterios de diseño",
         "region": "Estados Unidos · referencia internacional",
         "editionStatus": "ASCE identifica 7-22 como edición actual. Su portal incluye suplementos 1–3 y erratas; deben revisarse junto con la edición adoptada.",
-        "practiceStatus": "Aplicación profesional declarada",
+        "practiceStatus": "Práctica profesional · CV",
         "applications": [
           "Definición de acciones ambientales, gravitacionales y combinaciones.",
           "Organización de categorías y criterios de diseño según la jurisdicción."
@@ -415,7 +415,7 @@
         "family": "Loads and design criteria",
         "region": "United States · international reference",
         "editionStatus": "ASCE identifies 7-22 as the current edition. Its portal lists Supplements 1–3 and errata, to be checked with the adopted edition.",
-        "practiceStatus": "Professional application declared",
+        "practiceStatus": "Professional practice · CV",
         "applications": [
           "Definition of environmental and gravity actions and combinations.",
           "Organization of design categories and criteria for the jurisdiction."
@@ -459,7 +459,7 @@
         "family": "Acero: resistencia y estabilidad",
         "region": "Estados Unidos · referencia internacional",
         "editionStatus": "Edición 2022 publicada como norma actual. El registro oficial incluye erratas de enero de 2025 y septiembre de 2026.",
-        "practiceStatus": "Aplicación profesional declarada",
+        "practiceStatus": "Práctica profesional · CV",
         "applications": [
           "Diseño de miembros y conexiones de acero mediante LRFD o ASD.",
           "Revisión de estabilidad del sistema y estados límite."
@@ -476,7 +476,7 @@
         "family": "Steel: strength and stability",
         "region": "United States · international reference",
         "editionStatus": "2022 edition listed as current. The official register includes January 2025 and September 2026 errata.",
-        "practiceStatus": "Professional application declared",
+        "practiceStatus": "Professional practice · CV",
         "applications": [
           "Design of steel members and connections using LRFD or ASD.",
           "Review of system stability and limit states."
@@ -520,7 +520,7 @@
         "family": "Evaluación sísmica y desempeño",
         "region": "Estados Unidos · referencia internacional",
         "editionStatus": "Edición 2023 identificada por ASCE; la evaluación se organiza en tres niveles y objetivos de desempeño.",
-        "practiceStatus": "Aplicación profesional declarada",
+        "practiceStatus": "Práctica profesional · CV",
         "applications": [
           "Evaluación de deficiencias y formulación de objetivos de intervención.",
           "Selección de procedimientos y revisión de respuesta global y local."
@@ -529,7 +529,7 @@
           "Compatibilidad entre amenaza, objetivo, modelo y criterio de aceptación.",
           "Demandas de fuerza y deformación de componentes dentro de su alcance."
         ],
-        "projectRelation": "Relacionada con la experiencia declarada en evaluación y reforzamiento y con las notas técnicas. No se presenta como validación del estudio CFRP ni de sus cifras.",
+        "projectRelation": "Relacionada con mi experiencia en evaluación y reforzamiento y con las notas técnicas. El estudio CFRP conserva sus propios resultados reportados y limitaciones de documentación.",
         "scope": "La edición 2023 remite a documentos específicos para concreto y acero existentes; no es suficiente aplicar reglas de edificios nuevos por analogía."
       },
       "en": {
@@ -537,7 +537,7 @@
         "family": "Seismic assessment and performance",
         "region": "United States · international reference",
         "editionStatus": "2023 edition identified by ASCE; evaluation uses three tiers and performance objectives.",
-        "practiceStatus": "Professional application declared",
+        "practiceStatus": "Professional practice · CV",
         "applications": [
           "Assessment of deficiencies and definition of retrofit objectives.",
           "Selection of procedures and review of global and local response."
@@ -546,7 +546,7 @@
           "Consistency between hazard, objective, model and acceptance criteria.",
           "Component force and deformation demands within its scope."
         ],
-        "projectRelation": "Related to declared assessment and retrofit experience and the technical notes. It does not validate the CFRP study or its reported figures.",
+        "projectRelation": "Related to my assessment and strengthening experience and the technical notes. The CFRP study retains its own reported findings and documentation limits.",
         "scope": "The 2023 edition references specific documents for existing concrete and steel; new-building rules cannot simply be transferred by analogy."
       },
       "references": [
@@ -574,7 +574,7 @@
         "family": "Concreto existente y rehabilitación",
         "region": "Estados Unidos · referencia internacional",
         "editionStatus": "Edición 2025 publicada por ACI; no se atribuye retrospectivamente a intervenciones anteriores.",
-        "practiceStatus": "Aplicación profesional declarada",
+        "practiceStatus": "Práctica profesional · CV",
         "applications": [
           "Diagnóstico y definición de la base de evaluación del concreto existente.",
           "Desarrollo de reparaciones y rehabilitación con criterios de compatibilidad y ejecución."
@@ -583,7 +583,7 @@
           "Propiedades investigadas, condición de los materiales y capacidad.",
           "Interacción entre intervención, estructura existente y etapas de obra."
         ],
-        "projectRelation": "Relacionada con el alcance declarado de encamisados y FRP en MRZ. No se publica una intervención identificada con memoria que confirme esta edición.",
+        "projectRelation": "Relacionada con mi trabajo de encamisados y FRP en MRZ. La edición aplicada en esas intervenciones está pendiente de documentar.",
         "scope": "La rehabilitación incluye condiciones existentes y ejecución; no se reduce a aumentar una resistencia nominal."
       },
       "en": {
@@ -591,7 +591,7 @@
         "family": "Existing concrete and rehabilitation",
         "region": "United States · international reference",
         "editionStatus": "2025 edition published by ACI; it is not retrospectively attributed to earlier interventions.",
-        "practiceStatus": "Professional application declared",
+        "practiceStatus": "Professional practice · CV",
         "applications": [
           "Diagnosis and definition of the assessment basis for existing concrete.",
           "Development of repairs and rehabilitation considering compatibility and execution."
@@ -600,7 +600,7 @@
           "Investigated properties, material condition and capacity.",
           "Interaction between the intervention, existing structure and construction stages."
         ],
-        "projectRelation": "Related to declared jacketing and FRP work at MRZ. No identified intervention with a published report establishes this edition.",
+        "projectRelation": "Related to my jacketing and FRP work at MRZ. The edition used for those interventions has yet to be documented.",
         "scope": "Rehabilitation addresses existing conditions and execution; increasing nominal strength alone is insufficient."
       },
       "references": [
@@ -635,7 +635,7 @@
         "family": "Refuerzo con FRP",
         "region": "Estados Unidos · referencia internacional",
         "editionStatus": "ACI PRC-440.2-23 reemplaza ACI 440.2R-17. ACI CODE-440.13-24 es un código relacionado de alcance distinto; no reemplaza universalmente la guía.",
-        "practiceStatus": "Referencia declarada para FRP",
+        "practiceStatus": "Referencia FRP · CV",
         "applications": [
           "Selección del mecanismo de refuerzo y revisión del sustrato, orientación y adherencia.",
           "Estudio de refuerzo a flexión, cortante y confinamiento dentro del alcance correspondiente."
@@ -652,7 +652,7 @@
         "family": "FRP strengthening",
         "region": "United States · international reference",
         "editionStatus": "ACI PRC-440.2-23 supersedes ACI 440.2R-17. ACI CODE-440.13-24 is a related code with a different scope, not a universal replacement for the guide.",
-        "practiceStatus": "Declared FRP reference",
+        "practiceStatus": "FRP reference · CV",
         "applications": [
           "Selection of the strengthening mechanism and review of substrate, orientation and bond.",
           "Study of flexural, shear and confinement strengthening within the relevant scope."
@@ -703,7 +703,7 @@
         "family": "Acero y sistemas sismorresistentes",
         "region": "Estados Unidos · referencia complementaria",
         "editionStatus": "Edición 2022 publicada por AISC, coordinada con AISC 360-22.",
-        "practiceStatus": "Referencia complementaria · uso profesional no acreditado",
+        "practiceStatus": "Referencia complementaria · uso no documentado",
         "applications": [
           "Definición de requisitos para sistemas de acero y compuestos resistentes a sismo.",
           "Coordinación del sistema, miembros, conexiones y detallado."
@@ -712,15 +712,15 @@
           "Requisitos específicos del sistema seleccionado y su mecanismo previsto.",
           "Demandas de conexiones y compatibilidad del detallado."
         ],
-        "projectRelation": "Referencia contextual para estructuras industriales. No se atribuye uso en CEPITOCE, CIDELSA ni proyectos de SRK.",
-        "scope": "No equivale a una acreditación personal ni convierte cualquier pórtico de acero en un sistema dúctil."
+        "projectRelation": "Referencia para el estudio de sistemas sísmicos de acero en estructuras industriales. Su uso en CEPITOCE, CIDELSA o proyectos de SRK no está documentado.",
+        "scope": "La ductilidad depende del sistema, los miembros, las conexiones y el detallado; citar esta norma no acredita por sí solo ese comportamiento."
       },
       "en": {
         "name": "Seismic Provisions for Structural Steel Buildings",
         "family": "Steel seismic-force-resisting systems",
         "region": "United States · supplementary reference",
         "editionStatus": "2022 edition published by AISC, coordinated with AISC 360-22.",
-        "practiceStatus": "Supplementary reference · professional use not established",
+        "practiceStatus": "Supplementary reference · use not documented",
         "applications": [
           "Requirements for seismic-force-resisting steel and composite systems.",
           "Coordination of system, members, connections and detailing."
@@ -729,8 +729,8 @@
           "Requirements of the selected system and intended mechanism.",
           "Connection demands and detailing compatibility."
         ],
-        "projectRelation": "A contextual reference for industrial structures. No use is attributed to CEPITOCE, CIDELSA or SRK projects.",
-        "scope": "This is not a personal credential and does not make every steel frame a ductile system."
+        "projectRelation": "A reference for studying steel seismic systems in industrial structures. Its use on CEPITOCE, CIDELSA or SRK projects is not documented.",
+        "scope": "Ductility depends on the system, members, connections and detailing; citing this standard alone does not establish that behaviour."
       },
       "references": [
         {
@@ -764,7 +764,7 @@
         "family": "Conexiones soldadas y ejecución",
         "region": "Estados Unidos · referencia complementaria",
         "editionStatus": "AWS publica la edición 2025 con enmienda AMD1; su registro identifica segunda impresión de febrero de 2026 y erratas.",
-        "practiceStatus": "Referencia complementaria · uso profesional no acreditado",
+        "practiceStatus": "Referencia complementaria · uso no documentado",
         "applications": [
           "Especificación y revisión de soldaduras estructurales dentro de su alcance.",
           "Coordinación de requisitos de fabricación, calificación e inspección."
@@ -773,7 +773,7 @@
           "Procedimientos, calificaciones y criterios de aceptación.",
           "Consistencia entre detalles, materiales y documentación de soldadura."
         ],
-        "projectRelation": "Relacionada con interfaces de conexiones metálicas. No se atribuye su aplicación a un proyecto concreto ni una certificación de inspector a Sergio.",
+        "projectRelation": "Referencia para conexiones soldadas y su coordinación con fabricación e inspección. Sin aplicación documentada en un proyecto de este portafolio ni certificación personal de inspector.",
         "scope": "La edición contractual y sus enmiendas deben identificarse; citar el código no acredita la calidad de una soldadura ejecutada."
       },
       "en": {
@@ -781,7 +781,7 @@
         "family": "Welded connections and execution",
         "region": "United States · supplementary reference",
         "editionStatus": "AWS publishes the 2025 edition with AMD1; its register identifies a February 2026 second printing and errata.",
-        "practiceStatus": "Supplementary reference · professional use not established",
+        "practiceStatus": "Supplementary reference · use not documented",
         "applications": [
           "Specification and review of structural welds within its scope.",
           "Coordination of fabrication, qualification and inspection requirements."
@@ -790,7 +790,7 @@
           "Procedures, qualifications and acceptance criteria.",
           "Consistency of details, materials and welding documentation."
         ],
-        "projectRelation": "Related to steel-connection interfaces. No use on a specific project or welding-inspector certification is attributed to Sergio.",
+        "projectRelation": "A reference for welded connections and coordination with fabrication and inspection. No application on a portfolio project or personal inspector certification is documented.",
         "scope": "The contractual edition and amendments must be identified; citing the code does not establish the quality of an executed weld."
       },
       "references": [
@@ -922,7 +922,7 @@
             ]
           },
           {
-            "title": "06 · Complete the audit trail",
+            "title": "06 · Document the design decisions",
             "description": "Link each check to its input, criterion, edition, result and drawing. Python can normalize tables and flag inconsistencies; selection of criteria and engineering review remain the engineer's responsibility.",
             "codes": [
               "e020",

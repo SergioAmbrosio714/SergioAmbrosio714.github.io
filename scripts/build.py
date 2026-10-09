@@ -10,7 +10,7 @@ import argparse
 import json
 import posixpath
 import re
-from engineering_sections import standards_home, standards_page, automation_home, demo_page
+from engineering_sections import standards_home, standards_page, automation_home, demo_page, figure_tools
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = 'https://sergioambrosio714.github.io/'
@@ -101,7 +101,8 @@ def image_figure(item, path, lang, metadata=True, eager=False):
         fields = [('source', 'Fuente', 'Source'), ('software', 'Herramienta', 'Tool'), ('date', 'Fecha', 'Date'), ('description', 'Descripción', 'Description'), ('usage', 'Condición de uso', 'Usage')]
         pairs = ''.join(f'<div><dt>{tr(lang, es, en)}</dt><dd>{e(loc(image[key], lang))}</dd></div>' for key, es, en in fields if image.get(key))
         details = f'<details class="image-provenance"><summary>{tr(lang, "Procedencia de la figura", "Figure provenance")}</summary><dl>{pairs}</dl></details>'
-    return f'<figure class="technical-figure"><img src="{href(path, image["src"])}" alt="{e(alt)}" width="{image.get("width", 1200)}" height="{image.get("height", 760)}" loading="{("eager" if eager else "lazy")}" decoding="async"><figcaption>{e(caption)}</figcaption>{details}</figure>'
+    tools = figure_tools(path, lang, image['src'])
+    return f'<figure class="technical-figure"><img src="{href(path, image["src"])}" alt="{e(alt)}" width="{image.get("width", 1200)}" height="{image.get("height", 760)}" loading="{("eager" if eager else "lazy")}" decoding="async"><figcaption>{e(caption)}</figcaption>{tools}{details}</figure>'
 
 
 def facts(data):
@@ -130,7 +131,8 @@ def sections(data, path, lang):
             content += '<ul>' + ''.join(f'<li>{e(p)}</li>' for p in sec['bullets']) + '</ul>'
         if sec.get('table'):
             table = sec['table']
-            content += '<div class="table-scroll"><table><thead><tr>' + ''.join(f'<th scope="col">{e(v)}</th>' for v in table['headers']) + '</tr></thead><tbody>' + ''.join('<tr>' + ''.join(f'<td>{e(v)}</td>' for v in row) + '</tr>' for row in table['rows']) + '</tbody></table></div>'
+            table_label = tr(lang, 'Tabla: ', 'Table: ') + sec['title']
+            content += f'<div class="table-scroll" tabindex="0" role="region" aria-label="{e(table_label)}"><table><thead><tr>' + ''.join(f'<th scope="col">{e(v)}</th>' for v in table['headers']) + '</tr></thead><tbody>' + ''.join('<tr>' + ''.join(f'<td>{e(v)}</td>' for v in row) + '</tr>' for row in table['rows']) + '</tbody></table></div>'
         result.append(f'<section id="seccion-{index}"><h2>{e(sec["title"])}</h2>{content}</section>')
     return ''.join(result)
 
@@ -213,7 +215,8 @@ def home(lang):
     body += '</div></section>'
     portrait = PROFILE.get('portrait')
     portrait_html = f'<figure class="professional-portrait"><img src="{href(path, portrait["src"])}" alt="{e(PROFILE["name"])}" width="640" height="800" loading="lazy"><figcaption>{e(loc(portrait.get("caption", ""), lang))}</figcaption></figure>' if portrait else '<div class="about-monogram" aria-hidden="true">SA<span>STRUCTURAL<br>ENGINEERING</span></div>'
-    body += f'<section class="section about-section" id="perfil"><div class="container about-layout">{portrait_html}<div><span class="eyebrow">06 / {tr(lang, "SOBRE MÍ", "ABOUT")}</span><h2>{e(PROFILE["name"])}</h2><p class="degree">{e(PROFILE["degree"][lang])}</p><p>{e(PROFILE["summary"][lang])}</p><div class="education-note">' + ''.join(f'<p>{e(x[lang])}</p>' for x in PROFILE['education']) + f'</div><div class="about-actions"><a class="button button-dark" href="{href(path, f"assets/cv-sergio-ambrosio-{lang}.pdf")}" download>{tr(lang, "Descargar CV", "Download CV")} ↓</a>{ext(PROFILE["linkedin"], "LinkedIn")}</div></div></div></section>'
+    about_copy = ''.join(f'<p>{e(paragraph)}</p>' for paragraph in PROFILE['about'][lang])
+    body += f'<section class="section about-section" id="perfil"><div class="container about-layout">{portrait_html}<div><span class="eyebrow">06 / {tr(lang, "SOBRE MÍ", "ABOUT")}</span><h2>{e(PROFILE["name"])}</h2><div class="about-copy">{about_copy}</div><div class="about-actions"><a class="button button-dark" href="{href(path, f"assets/cv-sergio-ambrosio-{lang}.pdf")}" download>{tr(lang, "Descargar CV", "Download CV")} ↓</a>{ext(PROFILE["linkedin"], "LinkedIn")}</div></div></div></section>'
     body += f'<section class="section tools-section" id="herramientas"><div class="container"><div class="tools-heading"><div><span class="eyebrow">07 / STRUCTURAL LAB</span><h2>{tr(lang, "Modelos, código y exploración.", "Models, code and exploration.")}</h2></div><p>{tr(lang, "Desarrollos complementarios, estudios y propuestas en su estado actual.", "Supporting tools, studies and proposals, with their current development status.")}</p></div><div class="filter-bar" role="group" aria-label="{tr(lang, "Filtrar desarrollos", "Filter developments")}">'
     for key, es, en in [('todos', 'Todos', 'All'), ('analisis', 'Análisis', 'Analysis'), ('automatizacion', 'Automatización', 'Automation'), ('investigacion', 'Propuestas', 'Proposals')]:
         body += f'<button type="button" data-filter="{key}" aria-pressed="{str(key == "todos").lower()}" class="{"active" if key == "todos" else ""}">{tr(lang, es, en)}</button>'
@@ -249,7 +252,11 @@ def cv(lang):
 
 
 def readme():
-    rows = '\n'.join(f'- **[{x["es"]["title"]}]({BASE + route("es", "proyectos", x["slug"])})** — {x["year"]}. {x["es"].get("subtitle", "")}' for x in PROJECTS['items'])
+    project_rows = []
+    for project in PROJECTS['items']:
+        summary = re.split(r'(?<=[.!?])\s+', project['es']['summary'].strip(), maxsplit=1)[0]
+        project_rows.append(f'- **[{project["es"]["title"]}]({BASE + route("es", "proyectos", project["slug"])})** · {project["year"]} — {summary}')
+    rows = '\n'.join(project_rows)
     pubs = '\n'.join(f'- **{x["year"]} · [{x.get("referenceTitle", x["es"]["title"]).title()}]({BASE + route("es", "investigacion", x["slug"])})**' for x in RESEARCH['items'])
     return f'''<!-- Generated by portfolio/scripts/build.py from portfolio/data/. -->
 ![Sergio Ambrosio — Structural Engineering](assets/banner.svg)
@@ -260,7 +267,7 @@ def readme():
 
 {PROFILE['headline']['en']}
 
-Diseño, modelación y revisión de estructuras de acero y concreto. Actualmente desarrollo ingeniería estructural para minería en **SRK**, con trayectoria en edificaciones e infraestructura eléctrica en HMV, MRZ, AMEC Foster Wheeler y MIMCO.
+Diseño y reviso estructuras de acero y concreto para minería, edificaciones e infraestructura. Actualmente trabajo en **SRK**. Mi trayectoria incluye proyectos en HMV, MRZ, AMEC Foster Wheeler y MIMCO; integro análisis, criterios normativos y programación en Python para apoyar decisiones de ingeniería.
 
 [Portafolio en español]({BASE}) · [Portfolio in English]({BASE}en/index.html) · [CV PDF]({BASE}assets/cv-sergio-ambrosio-es.pdf) · [LinkedIn]({PROFILE['linkedin']})
 
@@ -272,19 +279,19 @@ Diseño, modelación y revisión de estructuras de acero y concreto. Actualmente
 
 {pubs}
 
-Coautor en **17WCEE** y expositor de una presentación breve en línea (SOP) del congreso híbrido de 2021. Las fichas enlazan las fuentes originales y distinguen publicaciones, presentaciones y actividades académicas.
+Soy coautor de un trabajo del **17WCEE** y figuro como expositor en el programa de presentaciones breves en línea (SOP) del congreso híbrido de 2021. Las fichas reúnen las publicaciones, sus fuentes y las actividades académicas relacionadas.
 
 ### Normativa, análisis y verificación
 
-Marco de aplicación declarado: RNE E.020, E.030, E.050 y E.060; ACI 318, ASCE/SEI 7, AISC 360, ASCE/SEI 41, ACI 562 y referencias FRP. [Ediciones, alcance y fuentes oficiales]({BASE}normativa/index.html). Análisis sísmico y no lineal, elementos finitos y reforzamiento; ETABS, SAP2000, SAFE, Mathcad, OpenSeesPy y Abaqus vinculados al problema estructural.
+En mi práctica utilizo RNE E.020, E.030, E.050 y E.060, además de ACI 318, ASCE/SEI 7, AISC 360, ASCE/SEI 41, ACI 562 y referencias para FRP. El [catálogo normativo]({BASE}normativa/index.html) distingue las ediciones consultadas y su relación con cada proyecto. Para análisis sísmico y no lineal, elementos finitos y reforzamiento, trabajo con ETABS, SAP2000, SAFE, Mathcad, OpenSeesPy y Abaqus según el problema estructural.
 
-### Python comprobable
+### Python y automatización
 
 - [Resultados por nivel]({BASE}laboratorio/resultados-por-nivel.html): importar CSV, validar unidades, comparar casos y exportar datos.
 - [Voladizo paramétrico]({BASE}laboratorio/voladizo-parametrico.html): equilibrio, deformación y esfuerzos con solución analítica.
 - [Código Python, ejemplos y pruebas](https://github.com/SergioAmbrosio714/SergioAmbrosio714.github.io/tree/main/python).
 
-Demostraciones desarrolladas para este portafolio en octubre de 2026; no se atribuyen a proyectos profesionales anteriores. Python complementa el criterio de diseño y la revisión, con procedimientos reproducibles y salidas trazables.
+Presento dos demostradores creados para este portafolio en octubre de 2026, independientes de los proyectos profesionales anteriores. Uso Python como apoyo a la revisión, con procedimientos que permiten comprobar unidades, seguir los cálculos y reproducir resultados.
 
 [Notas técnicas]({BASE}#notas) · [Experiencia profesional]({BASE}#experiencia) · [Structural Lab]({BASE}#herramientas)
 '''

@@ -22,7 +22,7 @@ function htmlFiles(directory) {
 }
 const homes = ['index.html', 'en/index.html'];
 const pages = (process.env.QA_MODE === 'homes' ? homes : htmlFiles(root)).sort((a, b) => Number(homes.includes(b)) - Number(homes.includes(a)) || a.localeCompare(b));
-const viewports = [{ width: 1920, height: 1080 }, { width: 1440, height: 1000 }, { width: 768, height: 1024 }, { width: 390, height: 844 }, { width: 320, height: 740 }];
+const viewports = [{ width: 1920, height: 1080 }, { width: 1440, height: 1000 }, { width: 1366, height: 900 }, { width: 768, height: 1024 }, { width: 390, height: 844 }, { width: 320, height: 740 }];
 const failures = [];
 const report = [];
 const check = (condition, message) => { if (!condition) failures.push(message); };

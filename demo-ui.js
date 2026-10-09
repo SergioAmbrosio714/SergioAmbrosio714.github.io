@@ -86,16 +86,16 @@
     for (let i = 0; i <= 4; i++) {
       const x = minX + (maxX - minX) * i / 4, y = minY + (maxY - minY) * i / 4;
       drawing.append(svg('path', { d: `M${px(x)} ${top}V${H-bottom}M${left} ${py(y)}H${W-right}`, stroke: '#d8e2e4', fill: 'none' }));
-      drawing.append(svg('text', { x: px(x), y: H - bottom + 24, 'text-anchor': 'middle', fill: '#45616e', 'font-size': 12, 'font-family': 'Arial,sans-serif' }, format(x, 2)));
-      drawing.append(svg('text', { x: left - 13, y: py(y) + 4, 'text-anchor': 'end', fill: '#45616e', 'font-size': 12, 'font-family': 'Arial,sans-serif' }, format(y, 3)));
+      drawing.append(svg('text', { x: px(x), y: H - bottom + 24, 'text-anchor': 'middle', fill: '#34515f', 'font-size': 14, 'font-family': 'Arial,sans-serif' }, format(x, 2)));
+      drawing.append(svg('text', { x: left - 13, y: py(y) + 4, 'text-anchor': 'end', fill: '#34515f', 'font-size': 14, 'font-family': 'Arial,sans-serif' }, format(y, 3)));
     }
     shown.forEach((line, i) => {
       const color = colors[i % colors.length];
       drawing.append(svg('polyline', { points: line.points.map(p => `${px(p[0]).toFixed(3)},${py(p[1]).toFixed(3)}`).join(' '), fill: 'none', stroke: color, 'stroke-width': i === 0 ? 3 : 2, 'stroke-dasharray': i > 0 ? `${9-i%4} ${3+i%3}` : 'none' }));
       if (line.points.length <= 50) line.points.forEach(p => drawing.append(svg('circle', { cx: px(p[0]), cy: py(p[1]), r: 2.6, fill: color })));
     });
-    drawing.append(svg('text', { x: (left + W - right) / 2, y: H - 14, 'text-anchor': 'middle', fill: '#254c5c', 'font-size': 13, 'font-family': 'Arial,sans-serif' }, xLabel));
-    drawing.append(svg('text', { x: 17, y: (top + H - bottom) / 2, transform: `rotate(-90 17 ${(top + H - bottom) / 2})`, 'text-anchor': 'middle', fill: '#254c5c', 'font-size': 13, 'font-family': 'Arial,sans-serif' }, yLabel));
+    drawing.append(svg('text', { x: (left + W - right) / 2, y: H - 14, 'text-anchor': 'middle', fill: '#254c5c', 'font-size': 16, 'font-family': 'Arial,sans-serif' }, xLabel));
+    drawing.append(svg('text', { x: 17, y: (top + H - bottom) / 2, transform: `rotate(-90 17 ${(top + H - bottom) / 2})`, 'text-anchor': 'middle', fill: '#254c5c', 'font-size': 16, 'font-family': 'Arial,sans-serif' }, yLabel));
     const legend = element('ul', undefined, 'chart-legend');
     shown.forEach((line, i) => { const li = element('li', line.name); li.style.setProperty('--series-color', colors[i % colors.length]); legend.append(li); });
     byId('demo-chart').replaceChildren(drawing, legend);
@@ -143,15 +143,16 @@
     const drawing=byId('demo-chart').querySelector('svg');
     if(!result||!drawing)return;
     const exported=drawing.cloneNode(true), names=[...byId('demo-chart').querySelectorAll('.chart-legend li')].map(li=>li.textContent);
-    const extra=names.length*24+64,width=drawing.viewBox.baseVal.width;
+    const extra=names.length*28+78,width=drawing.viewBox.baseVal.width;
     exported.setAttribute('viewBox',`0 0 ${width} ${390+extra}`);
     exported.setAttribute('width',String(width));exported.setAttribute('height',String(390+extra));
     exported.append(svg('rect',{x:0,y:390,width,height:extra,fill:'#f8faf9'}));
     names.forEach((name,i)=>{
-      exported.append(svg('line',{x1:30,y1:414+i*24,x2:55,y2:414+i*24,stroke:colors[i%colors.length],'stroke-width':3,'stroke-dasharray':i>0?`${9-i%4} ${3+i%3}`:'none'}));
-      exported.append(svg('text',{x:68,y:418+i*24,fill:'#254c5c','font-size':12,'font-family':'Arial,sans-serif'},name));
+      exported.append(svg('line',{x1:30,y1:414+i*28,x2:55,y2:414+i*28,stroke:colors[i%colors.length],'stroke-width':3,'stroke-dasharray':i>0?`${9-i%4} ${3+i%3}`:'none'}));
+      exported.append(svg('text',{x:68,y:418+i*28,fill:'#254c5c','font-size':14,'font-family':'Arial,sans-serif',...(name.length*8>width-98?{textLength:width-98,lengthAdjust:'spacingAndGlyphs'}:{})},name));
     });
-    exported.append(svg('text',{x:30,y:390+extra-16,fill:'#45616e','font-size':10,'font-family':'Arial,sans-serif'},config.kind==='storeys'?tr('Perfil geométrico · sin verificación normativa · hasta 12 casos','Geometric profile · no code-compliance check · up to 12 cases'):tr('Euler–Bernoulli · deformación amplificada · sin verificación normativa','Euler–Bernoulli · amplified deflection · no code-compliance check')));
+    exported.append(svg('text',{x:30,y:390+extra-36,fill:'#34515f','font-size':14,'font-family':'Arial,sans-serif'},config.kind==='storeys'?tr('Perfil geométrico · hasta 12 casos','Geometric profile · up to 12 cases'):tr('Euler–Bernoulli · deformación amplificada','Euler–Bernoulli · amplified deflection')));
+    exported.append(svg('text',{x:30,y:390+extra-14,fill:'#34515f','font-size':14,'font-family':'Arial,sans-serif'},tr('Sin verificación normativa','No code-compliance check')));
     download(new XMLSerializer().serializeToString(exported),config.kind+'-plot.svg','image/svg+xml');
   });
   if (config.kind === 'storeys') {

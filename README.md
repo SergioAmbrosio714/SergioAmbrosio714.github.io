@@ -10,7 +10,7 @@ El contenido mantenible está en `data/`. Edita ambas versiones lingüísticas y
 
 | Fuente | Contenido |
 | --- | --- |
-| `data/profile.json` | Identidad, grado, experiencia, especialidades, formación, contactos y fotografía |
+| `data/profile.json` | Identidad, presentación personal `about`, resumen del CV, experiencia, especialidades, formación, contactos y fotografía |
 | `data/projects.json` | Proyectos profesionales, participación y alcance |
 | `data/research.json` | Publicaciones, autores, títulos oficiales y evidencia documental |
 | `data/insights.json` | Ocho notas técnicas, referencias y seguimiento normativo |
@@ -27,6 +27,8 @@ El contenido mantenible está en `data/`. Edita ambas versiones lingüísticas y
 | `assets/` | Figuras, identidad visual y PDF públicos |
 
 Los campos bilingües usan `{"es": "...", "en": "..."}`. Las fichas incluyen `id`, `slug`, `es`, `en`, `image` y `references`. Sus secciones admiten párrafos, listas, ecuaciones, tablas, enlaces `links` y fragmentos `code: {language, text}`. Los textos de datos son texto plano; el generador se ocupa del HTML. Conserva identificadores y rutas al actualizar una ficha.
+
+`profile.about` contiene los párrafos de «Sobre mí» en listas `es` y `en`. Mantén una presentación en primera persona de unas 150–190 palabras en español, con una traducción equivalente: especialización, método de trabajo y responsabilidad profesional. Se muestra dentro de `.about-copy`, sin repetir el bloque de formación ni la cronología. `profile.summary` conserva el resumen breve del CV; experiencia, cargos, fechas y formación siguen en sus apartados correspondientes. El perfil de GitHub se genera desde `readme()` en `scripts/build.py`.
 
 Desde esta carpeta, con Python 3.12:
 
@@ -113,6 +115,16 @@ Cada figura de proyecto, investigación o nota documenta:
 
 El texto alternativo pertenece a `es.imageAlt` y `en.imageAlt`. `data/image-manifest.json` se genera a partir de estas fichas: no se edita directamente. Una ilustración conceptual debe identificarse como tal y diferenciarse de resultados calculados, fotografías y capturas reales. Las figuras actuales son originales; no reproducen gráficas de publicaciones ni acreditan resultados de una obra.
 
+Las figuras de las fichas conservan el `<img>` como hijo directo de `.technical-figure`. Después del pie, `.figure-tools` permite abrir el archivo original en otra pestaña. Los SVG de los demostradores en portada y sus capturas PNG ofrecen el mismo acceso; las capturas mantienen además su descarga. Conserva estos enlaces al modificar la presentación para que diagramas y etiquetas puedan ampliarse, especialmente en móvil.
+
+## Escala editorial y revisión de textos
+
+Mantén una escala en `rem` y ajusta cada componente por su función: cuerpo de 17–18 px en escritorio y 16–17 px en móvil, introducciones de 19–21 px, navegación y enlaces importantes de al menos 15 px, y pies/metadatos de 13–14 px. Las equivalencias parten del tamaño raíz habitual de 16 px; no lo fuerces para impedir las preferencias del navegador. Usa un interlineado de 1.55–1.75 para párrafos y columnas de aproximadamente 60–75 caracteres cuando corresponda.
+
+Resuelve los problemas de espacio mediante reflow, separación y distribución, sin reducir la letra. Revisa `styles.css`, `editorial.css`, `engineering.css` y `casos/case.css` antes de añadir reglas: evita sobrescrituras que oculten escalas contradictorias. Los estilos de impresión del CV se ajustan por separado en `cv/cv.css`.
+
+La revisión de copy debe conservar hechos, fechas, cálculos y estados de desarrollo. Escribe la presentación personal en primera persona; describe los proyectos con acciones y alcances concretos. Concentra procedencia y limitaciones en fuentes, metodología y pies de figura, sin repetir advertencias en cada párrafo ni convertir ejemplos nuevos en trabajo histórico. Lee ambos idiomas y comprueba la codificación UTF-8, incluidos acentos, signos y fechas.
+
 ## Fuentes y revisión técnica
 
 Las publicaciones conservan títulos oficiales, autoría y enlaces a sus documentos o registros. Las referencias usan `title` y, cuando corresponde, `note` en ES/EN, además de una URL. Las notas técnicas enlazan fuentes primarias de organismos, autores institucionales o fabricantes; distinguen normas, guías, documentación de software y material metodológico.
@@ -148,9 +160,14 @@ Las pruebas de navegador añaden revisión de escritorio/móvil, interacción de
 ```powershell
 node tests/browser.test.cjs
 node tests/demo-browser.test.cjs
+node tests/readability.test.cjs
 ```
 
 Requiere Playwright y axe-core. `PLAYWRIGHT_MODULE` selecciona el módulo, `BROWSER_PATH` permite usar Chrome/Edge instalado, `AXE_PATH` señala `axe.min.js` y `QA_SCREENSHOTS` define dónde guardar capturas e informe. Mantén dependencias e informes fuera del sitio. El workflow `.github/workflows/ci.yml` documenta las versiones y ejecuta las comprobaciones en GitHub Actions. Una prueba de accesibilidad automatizada complementa la revisión manual con teclado y lectura.
+
+`readability.test.cjs` revisa tamaños de texto, controles, desbordamientos y reflow. Para el zoom utiliza Chromium completo y el ajuste nativo `chrome.settingsPrivate.setDefaultZoom` desde `chrome://settings`. Comprueba el cambio del viewport CSS y del DPR, la conservación del tamaño de ventana y de las unidades CSS, y contrasta las métricas de CDP cuando incluyen el factor de zoom. No sustituye el zoom del navegador por emulación de DPR, pinch zoom ni transformaciones CSS; si el ajuste nativo no está disponible, la prueba falla explícitamente.
+
+Para una revisión editorial completa, inspecciona las páginas ES/EN a 320, 390, 768, 1366, 1440 y 1920 CSS px, con zoom del 125 %, 150 % y 200 % y reflow equivalente a 320 CSS px. Comprueba texto, navegación, foco, apertura de figuras, gráficas, tablas, formularios y PDF. Registra los casos efectivamente ejecutados y sus capturas; estos objetivos de revisión no constituyen por sí mismos un resultado satisfactorio.
 
 ## Publicación y actualizaciones
 

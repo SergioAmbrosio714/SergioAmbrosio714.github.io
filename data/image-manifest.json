@@ -4,14 +4,14 @@
     {
       "src": "assets/project-sunsetgolf.svg",
       "source": {
-        "es": "Ilustración vectorial original creada para este portafolio a partir de la descripción aportada del proyecto.",
-        "en": "Original vector illustration created for this portfolio from the project description provided for this portfolio."
+        "es": "Ilustración vectorial original basada en la descripción del proyecto.",
+        "en": "Original vector illustration based on the project description."
       },
       "software": "SVG",
       "date": "2026-10-08",
       "usage": {
-        "es": "Recurso ilustrativo del portafolio. Sustituible por material auténtico con autorización de publicación; no contiene planos ni modelos del empleador.",
-        "en": "Illustrative portfolio asset. May be replaced with authentic material authorized for publication; contains no employer drawings or models."
+        "es": "Ilustración del portafolio; no incorpora planos ni modelos del empleador.",
+        "en": "Portfolio illustration; contains no employer drawings or models."
       },
       "caption": {
         "es": "Volumetría ilustrativa de una edificación de 21 niveles y 3 sótanos. No reproduce la arquitectura ni el modelo estructural de SUNSETGOLF TORRE C.",
@@ -27,14 +27,14 @@
     {
       "src": "assets/project-cepitoce.svg",
       "source": {
-        "es": "Ilustración vectorial original creada para este portafolio a partir de la descripción aportada del proyecto.",
-        "en": "Original vector illustration created for this portfolio from the project description provided for this portfolio."
+        "es": "Ilustración vectorial original basada en la descripción del proyecto.",
+        "en": "Original vector illustration based on the project description."
       },
       "software": "SVG",
       "date": "2026-10-08",
       "usage": {
-        "es": "Recurso ilustrativo del portafolio. Sustituible por material auténtico con autorización de publicación; no contiene planos ni modelos del empleador.",
-        "en": "Illustrative portfolio asset. May be replaced with authentic material authorized for publication; contains no employer drawings or models."
+        "es": "Ilustración del portafolio; no incorpora planos ni modelos del empleador.",
+        "en": "Portfolio illustration; contains no employer drawings or models."
       },
       "caption": {
         "es": "Esquema ilustrativo de pórtico de subestación, torre y soportes. Las geometrías no pertenecen al modelo de CEPITOCE y no contienen cargas ni resultados.",
@@ -50,14 +50,14 @@
     {
       "src": "assets/project-cidelsa.svg",
       "source": {
-        "es": "Ilustración vectorial original creada para este portafolio a partir de la descripción aportada del proyecto.",
-        "en": "Original vector illustration created for this portfolio from the project description provided for this portfolio."
+        "es": "Ilustración vectorial original basada en la descripción del proyecto.",
+        "en": "Original vector illustration based on the project description."
       },
       "software": "SVG",
       "date": "2026-10-08",
       "usage": {
-        "es": "Recurso ilustrativo del portafolio. Sustituible por material auténtico con autorización de publicación; no contiene planos ni modelos del empleador.",
-        "en": "Illustrative portfolio asset. May be replaced with authentic material authorized for publication; contains no employer drawings or models."
+        "es": "Ilustración del portafolio; no incorpora planos ni modelos del empleador.",
+        "en": "Portfolio illustration; contains no employer drawings or models."
       },
       "caption": {
         "es": "Composición ilustrativa de una estructura metálica y una planta de aproximadamente 20 × 30 m. No reproduce la geometría, las conexiones ni la cimentación real del proyecto.",
@@ -245,11 +245,11 @@
       },
       "caption": {
         "es": "Deriva de entrepiso calculada con desplazamientos compatibles del mismo estado: (32 − 14) mm / 3000 mm = 0,006. No se representa un límite normativo.",
-        "en": "Story drift calculated using compatible displacements from the same response state: (32 − 14) mm / 3000 mm = 0.006. No code limit is shown."
+        "en": "Storey drift calculated using compatible displacements from the same response state: (32 − 14) mm / 3000 mm = 0.006. No code limit is shown."
       },
       "description": {
         "es": "Esquema de dos niveles y su desplazamiento lateral conceptual, con altura de entrepiso y diferencia de desplazamientos.",
-        "en": "Conceptual two-level lateral-displacement diagram showing story height and the difference between compatible floor displacements."
+        "en": "Conceptual two-level lateral-displacement diagram showing storey height and the difference between compatible floor displacements."
       },
       "width": 1000,
       "height": 600

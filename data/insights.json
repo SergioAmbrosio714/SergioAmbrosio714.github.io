@@ -1169,11 +1169,11 @@
         },
         "caption": {
           "es": "Deriva de entrepiso calculada con desplazamientos compatibles del mismo estado: (32 − 14) mm / 3000 mm = 0,006. No se representa un límite normativo.",
-          "en": "Story drift calculated using compatible displacements from the same response state: (32 − 14) mm / 3000 mm = 0.006. No code limit is shown."
+          "en": "Storey drift calculated using compatible displacements from the same response state: (32 − 14) mm / 3000 mm = 0.006. No code limit is shown."
         },
         "description": {
           "es": "Esquema de dos niveles y su desplazamiento lateral conceptual, con altura de entrepiso y diferencia de desplazamientos.",
-          "en": "Conceptual two-level lateral-displacement diagram showing story height and the difference between compatible floor displacements."
+          "en": "Conceptual two-level lateral-displacement diagram showing storey height and the difference between compatible floor displacements."
         },
         "width": 1000,
         "height": 600
@@ -1235,7 +1235,7 @@
                 "href": "python/process_results.py",
                 "label": {
                   "es": "Código del procesador por niveles",
-                  "en": "Story-results processor source"
+                  "en": "Storey-results processor source"
                 }
               }
             ]
@@ -1273,7 +1273,7 @@
         "subtitle": "The spectrum is an input; response depends on the complete system.",
         "summary": "Essential checks to make mass, stiffness, drift and load-path continuity represent the building being designed.",
         "category": "Earthquake engineering",
-        "imageAlt": "Conceptual two-level lateral-displacement diagram showing story height and the difference between compatible floor displacements.",
+        "imageAlt": "Conceptual two-level lateral-displacement diagram showing storey height and the difference between compatible floor displacements.",
         "sections": [
           {
             "title": "Introduction",
@@ -1292,14 +1292,14 @@
             "title": "Development: review at three scales",
             "paragraphs": [
               "At global scale, review total mass, reaction equilibrium, mode shapes and the sensitivity of periods to reasonable stiffness changes. An unusual mode shape may reveal disconnected components, unintended releases or incorrect diaphragm assignments. Torsional response requires examining plan locations and resisting paths; a single output line can hide edge demand.",
-              "At story scale, examine how diaphragm forces reach collectors, frames or walls and eventually the foundations. AISC seismic resources describe the roles of the system and its transfer components [4]. This continuity principle does not replace material-specific rules or make every floor slab a rigid diaphragm.",
+              "At storey scale, examine how diaphragm forces reach collectors, frames or walls and eventually the foundations. AISC seismic resources describe the roles of the system and its transfer components [4]. This continuity principle does not replace material-specific rules or make every floor slab a rigid diaphragm.",
               "At component scale, connect forces, deformations and detailing. Demands that can accommodate inelastic behavior should be distinguished from those associated with brittle mechanisms. Where nonlinear analysis is used, NIST (2017) offers a methodological framework for organizing such checks [3]."
             ]
           },
           {
-            "title": "Conceptual example: displacement is not story drift",
+            "title": "Conceptual example: displacement is not storey drift",
             "paragraphs": [
-              "In a single compatible response state, the lower floor moves 14 mm and the upper floor 32 mm, with a story height of 3.00 m. Their relative displacement is 18 mm and the drift ratio is 0.006, or 0.60%. Dividing 32 mm directly by the story height would calculate a different quantity.",
+              "In a single compatible response state, the lower floor moves 14 mm and the upper floor 32 mm, with a storey height of 3.00 m. Their relative displacement is 18 mm and the drift ratio is 0.006, or 0.60%. Dividing 32 mm directly by the storey height would calculate a different quantity.",
               "This is a geometric example and does not establish compliance: the code-defined displacement, any required amplification and the applicable limit are not specified. Likewise, two independent modal or time-history maxima cannot simply be subtracted as though they necessarily occurred simultaneously."
             ],
             "equation": "θᵢ = (uᵢ − uᵢ₋₁)/hᵢ = (32 − 14)/3000 = 0.006"
@@ -1307,7 +1307,7 @@
           {
             "title": "Check data before automating drift calculations",
             "paragraphs": [
-              "The story-results processor demonstrates three preliminary checks: ordered elevations with positive story heights, declared units and matching levels between cases. Its SERVICE_A and SERVICE_B datasets are synthetic service states. Their geometric ratios are not presented as E.030 seismic demands.",
+              "The storey-results processor demonstrates three preliminary checks: ordered elevations with positive storey heights, declared units and matching levels between cases. Its SERVICE_A and SERVICE_B datasets are synthetic service states. Their geometric ratios are not presented as E.030 seismic demands.",
               "Reviewing an actual seismic analysis also requires defining the diaphragm location, direction, combination procedure and transformation required by the applicable code. That decision lies outside the simplified CSV contract. Preserving this distinction prevents correct arithmetic from producing an incorrect code conclusion."
             ],
             "links": [
@@ -1325,7 +1325,7 @@
                 "href": "python/process_results.py",
                 "label": {
                   "es": "Código del procesador por niveles",
-                  "en": "Story-results processor source"
+                  "en": "Storey-results processor source"
                 }
               }
             ]
@@ -1711,7 +1711,7 @@
         "summary": "Un programa útil conserva el significado de los resultados. El demostrador por niveles muestra cómo validar unidades, comparar estados compatibles y documentar cada transformación antes de emitir conclusiones.",
         "category": "Python y verificación",
         "status": "Nota técnica · Demostrador de portafolio 2026",
-        "scope": "Demostradores desarrollados para este portafolio en 2026 con datos sintéticos. No acreditan uso en proyectos históricos ni verifican cumplimiento normativo.",
+        "scope": "Código y datos sintéticos desarrollados para este portafolio en 2026. Ejercicios de revisión geométrica, independientes de los proyectos profesionales anteriores y sin verificaciones de cumplimiento normativo.",
         "imageAlt": "Tabla conceptual de cuatro niveles SERVICE_A y perfil de desplazamientos, con controles de unidades y datos.",
         "facts": [
           {
@@ -1732,7 +1732,7 @@
             "title": "La pregunta estructural define el programa",
             "paragraphs": [
               "Revisar un modelo no consiste en acumular tablas. Primero se define qué decisión requiere evidencia: identificar un cambio de rigidez, comparar desplazamientos de servicio o comprobar equilibrio. Después se seleccionan variables, estados y tolerancias. Python permite repetir operaciones y registrar excepciones; interpretar una diferencia sigue exigiendo conocer la estructura, la carga y la idealización.",
-              "El laboratorio publicado acompaña este método con código ejecutable y datos sintéticos. Fue construido para este portafolio en 2026; no se atribuye su utilización a Sunsetgolf, CEPITOCE, CIDELSA ni otros proyectos históricos."
+              "El laboratorio acompaña este método con código ejecutable, datos sintéticos y pruebas que permiten revisar cada transformación, desde el CSV original hasta las tablas y los gráficos."
             ]
           },
           {
@@ -1799,7 +1799,7 @@
                 },
                 "label": {
                   "es": "Abrir demostrador por niveles",
-                  "en": "Open story-results demonstrator"
+                  "en": "Open storey-results demonstrator"
                 }
               },
               {
@@ -1842,10 +1842,10 @@
       "en": {
         "title": "How to integrate Python into structural model review",
         "subtitle": "From exported files to reproducible checks: data contracts, calculations and traceability.",
-        "summary": "Useful software preserves the meaning of results. The story-results demonstrator shows how to validate units, compare compatible states and document transformations before drawing conclusions.",
+        "summary": "Useful software preserves the meaning of results. The storey-results demonstrator shows how to validate units, compare compatible states and document transformations before drawing conclusions.",
         "category": "Python and verification",
         "status": "Technical note · 2026 portfolio demonstrator",
-        "scope": "Demonstrators developed for this portfolio in 2026 using synthetic data. They do not establish use in historical projects or verify code compliance.",
+        "scope": "Code and synthetic data developed for this portfolio in 2026. Geometric review exercises, independent of earlier professional projects and without code-compliance checks.",
         "imageAlt": "Conceptual four-level SERVICE_A table and displacement profile with unit and data checks.",
         "facts": [
           {
@@ -1866,7 +1866,7 @@
             "title": "The structural question defines the program",
             "paragraphs": [
               "Model review starts by identifying a decision that requires evidence: locating a stiffness change, comparing service displacements or checking equilibrium. Variables, response states and tolerances follow from that decision. Python makes operations repeatable and exceptions traceable; interpreting a difference still requires understanding the structure, loading and idealization.",
-              "The published laboratory supports this method with executable code and synthetic data. It was created for this portfolio in 2026. Its use is not attributed to Sunsetgolf, CEPITOCE, CIDELSA or other historical projects."
+              "The laboratory supports this method with executable code, synthetic data and tests that let a reviewer follow each transformation from the original CSV to the tables and plots."
             ]
           },
           {
@@ -1933,7 +1933,7 @@
                 },
                 "label": {
                   "es": "Abrir demostrador por niveles",
-                  "en": "Open story-results demonstrator"
+                  "en": "Open storey-results demonstrator"
                 }
               },
               {
@@ -2129,7 +2129,7 @@
             "title": "Comenzar por la base de diseño",
             "paragraphs": [
               "Una norma no se aplica seleccionando su nombre en el programa. La base de diseño debe identificar jurisdicción, uso, sistema resistente, materiales, condiciones del sitio y requisitos contractuales. También debe distinguir obra nueva, evaluación existente e intervención. Esa definición determina qué documentos gobiernan y cuáles se consultan como apoyo.",
-              "Conviene registrar designación, edición, modificaciones, fuente oficial y motivo de aplicación. Una edición recién publicada puede servir para estudiar cambios sin convertirse en la adoptada por un expediente. Las referencias actuales de esta nota no se atribuyen retrospectivamente a los proyectos del portafolio."
+              "Conviene registrar designación, edición, modificaciones, fuente oficial y motivo de aplicación. Una edición recién publicada permite estudiar cambios; la que corresponde a cada expediente se determina por su marco normativo y su base de diseño."
             ]
           },
           {
@@ -2254,7 +2254,7 @@
             "title": "Start with the design basis",
             "paragraphs": [
               "Applying a code requires more than selecting its name in software. The design basis identifies jurisdiction, occupancy, resisting system, materials, site conditions and contractual requirements. It also distinguishes new construction, assessment of existing structures and intervention. These decisions determine which documents govern and which provide supporting guidance.",
-              "Record designation, edition, amendments, official source and the reason for applicability. A newly published edition may support a review of changes without becoming the edition adopted for a submission. Current references in this note are not retrospectively attributed to portfolio projects."
+              "Record the designation, edition, amendments, official source and reason for applicability. A newly published edition supports the study of changes; the edition applicable to a project follows from its regulatory framework and design basis."
             ]
           },
           {
@@ -2357,12 +2357,12 @@
   "regulatory": {
     "es": {
       "title": "Novedades normativas",
-      "description": "Registro editorial de cambios aprobados, propuestas y erratas con fuente oficial y fecha de revisión. Corte documental: 8 de octubre de 2026. Se verificaron la R.M. 183-2026-VIVIENDA, que modifica la N.T. E.030 e incorpora su texto de 2026, y la R.M. 217-2026-VIVIENDA, que modifica la disposición transitoria de esa resolución. Este segundo acto no se presenta como una edición técnica distinta. La aplicabilidad a expedientes en curso requiere revisar el texto oficial; esta sección no sustituye esa determinación. Las futuras propuestas se identificarán como tales y no se anunciarán como reglas aprobadas.",
+      "description": "La R.M. 183-2026-VIVIENDA modifica la N.T. E.030 e incorpora su texto de 2026. La R.M. 217-2026-VIVIENDA modifica la disposición transitoria de esa resolución, sin constituir otra edición técnica. Ambas están aprobadas. Para los expedientes en curso, la aplicabilidad depende de esa disposición y de los antecedentes del proyecto. Fuentes oficiales consultadas el 8 de octubre de 2026.",
       "status": "E.030 2026 y disposición transitoria · fuentes oficiales verificadas"
     },
     "en": {
       "title": "Code and standards updates",
-      "description": "An editorial record of approved changes, proposals and errata with official sources and review dates. Document cutoff: 8 October 2026. Verified instruments are Resolution 183-2026-VIVIENDA, which amends N.T. E.030 and provides its 2026 text, and Resolution 217-2026-VIVIENDA, which amends that resolution's transitional provision. The latter is not presented as a different technical edition. Applicability to ongoing submissions requires review of the official text; this section does not replace that determination. Future proposals will be identified as proposals rather than announced as approved requirements.",
+      "description": "Resolution 183-2026-VIVIENDA amends N.T. E.030 and provides its 2026 text. Resolution 217-2026-VIVIENDA amends the transitional provision of that resolution, without constituting a separate technical edition. Both are approved. For ongoing submissions, applicability depends on that provision and the project’s circumstances. Official sources consulted on 8 October 2026.",
       "status": "E.030 2026 and transitional provision · official sources verified"
     },
     "references": [

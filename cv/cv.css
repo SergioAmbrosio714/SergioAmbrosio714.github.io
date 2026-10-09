@@ -1,1 +1,48 @@
-*{box-sizing:border-box}body{margin:0;color:#233b45;background:white;font:10pt/1.43 Arial,sans-serif}main{max-width:760px;padding:32px;margin:auto}header{border-bottom:2px solid #214c5b;padding-bottom:17px;margin-bottom:18px}h1{font-size:24pt;line-height:1.12;margin:9px 0 12px;letter-spacing:-.5px}h2{font-size:12pt;border-bottom:1px solid #d0dbde;padding-bottom:5px;margin:17px 0 9px;color:#17495a}h3{font-size:10.5pt;margin:0}p{margin:5px 0 9px}.kicker{font-size:9pt;letter-spacing:2px}.degree{font-weight:bold}.links{font-size:9pt}a{color:#164d61;text-underline-offset:2px}article{margin-bottom:12px;break-inside:avoid}.role-head{display:flex;justify-content:space-between;gap:12px}.role-head span{white-space:nowrap;font-size:9pt}ul{margin:5px 0;padding-left:17px}li{margin:2px 0}footer{font-size:8pt;border-top:1px solid #cad8dc;margin-top:18px;padding-top:9px;color:#455e68}@page{size:A4;margin:15mm 16mm}@media print{body{font-size:9.3pt}main{padding:0}h1{font-size:23pt}h2{margin-top:14px}article{margin-bottom:10px}.page-two{break-before:page}a{text-decoration:none}footer{margin-top:12px}}
+/* Screen reading and A4 printing use separate, explicit scales. */
+:root { color-scheme: light; --cv-ink: #233b45; --cv-muted: #455e68; --cv-accent: #17495a; --cv-line: #cad8dc; }
+* { box-sizing: border-box; }
+body { margin: 0; background: #fff; color: var(--cv-ink); font-family: Arial, sans-serif; font-size: 1.0625rem; line-height: 1.65; }
+main { max-width: 49rem; padding: 2.5rem 2rem; margin-inline: auto; }
+header { border-bottom: 2px solid #214c5b; padding-bottom: 1.5rem; margin-bottom: 1.75rem; }
+h1 { margin: .75rem 0 1rem; font-size: clamp(2rem, 5vw, 2.5rem); line-height: 1.18; letter-spacing: -.025em; overflow-wrap: break-word; }
+h2 { margin: 2rem 0 1rem; padding-bottom: .5rem; border-bottom: 1px solid #d0dbde; color: var(--cv-accent); font-size: 1.375rem; line-height: 1.35; }
+h3 { margin: 0; font-size: 1.125rem; line-height: 1.45; }
+p { margin: .5rem 0 1rem; }
+.kicker { font-size: .875rem; letter-spacing: .1em; }
+.degree { font-weight: 700; }
+.links { font-size: 1rem; line-height: 1.5; }
+.links a { display: inline-flex; align-items: center; min-height: 2.75rem; }
+a { color: #164d61; text-underline-offset: .1875rem; overflow-wrap: anywhere; }
+a:focus-visible { outline: .1875rem solid #476f86; outline-offset: .1875rem; }
+article { margin-bottom: 1.75rem; }
+.role-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: .25rem 1rem; margin-bottom: .25rem; }
+.role-head span { color: var(--cv-muted); font-size: .875rem; line-height: 1.6; }
+ul { margin: .75rem 0; padding-left: 1.375rem; }
+li { margin: .375rem 0; }
+footer { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--cv-line); color: var(--cv-muted); font-size: .875rem; line-height: 1.6; overflow-wrap: anywhere; }
+@media (max-width: 40rem) {
+  main { padding: 1.75rem 1.125rem; }
+  .role-head { display: block; }
+  .role-head span { display: block; margin-top: .25rem; }
+}
+@page { size: A4; margin: 14mm 16mm; }
+@media print {
+  body { font-size: 10.5pt; line-height: 1.3; }
+  main { max-width: none; padding: 0; }
+  header { padding-bottom: 8pt; margin-bottom: 9pt; }
+  h1 { margin: 6pt 0 8pt; font-size: 23pt; line-height: 1.12; letter-spacing: -.4pt; }
+  h2 { margin: 10pt 0 5pt; padding-bottom: 3pt; font-size: 12pt; line-height: 1.25; break-after: avoid; }
+  h3 { font-size: 10.5pt; line-height: 1.3; break-after: avoid; }
+  p { margin: 3pt 0 5pt; orphans: 2; widows: 2; }
+  .kicker { font-size: 9pt; }
+  .links { font-size: 10pt; line-height: 1.3; }
+  .links a { display: inline; min-height: 0; }
+  a { text-decoration: none; }
+  article { margin-bottom: 6pt; break-inside: avoid; }
+  .role-head { display: flex; flex-wrap: nowrap; margin-bottom: 2pt; gap: 8pt; }
+  .role-head span { margin: 0; font-size: 9.5pt; line-height: 1.3; white-space: nowrap; }
+  ul { margin: 3pt 0; padding-left: 13pt; }
+  li { margin: 1.5pt 0; }
+  .page-two { break-before: page; }
+  footer { margin-top: 10pt; padding-top: 6pt; font-size: 9pt; line-height: 1.3; }
+}

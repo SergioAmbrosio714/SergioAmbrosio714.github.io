@@ -54,6 +54,11 @@ jobs:
           AXE_PATH: ${{ runner.temp }}/portfolio-qa/node_modules/axe-core/axe.min.js
           QA_SCREENSHOTS: ${{ runner.temp }}/portfolio-artifacts
         run: node tests/demo-browser.test.cjs
+      - name: Verificar legibilidad, reflow y zoom real del navegador
+        env:
+          PLAYWRIGHT_MODULE: ${{ runner.temp }}/portfolio-qa/node_modules/playwright
+          QA_SCREENSHOTS: ${{ runner.temp }}/portfolio-artifacts
+        run: node tests/readability.test.cjs
       - name: Guardar capturas e informe
         if: always()
         uses: actions/upload-artifact@v4

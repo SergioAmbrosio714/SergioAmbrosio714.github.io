@@ -9,8 +9,8 @@
     "en": "Turning results into decisions requires more than exporting tables. Python helps organize data, check assumptions and repeat calculations through a readable procedure. Engineering judgement determines what is calculated and how it is interpreted."
   },
   "scope": {
-    "es": "Los dos demostradores publicados aquí se desarrollaron para este portafolio en octubre de 2026. Ilustran procedimientos verificables y no se atribuyen a proyectos profesionales anteriores. Las herramientas históricas conservan su estado documental en Structural Lab.",
-    "en": "The two demonstrations published here were developed for this portfolio in October 2026. They illustrate verifiable procedures and are not attributed to earlier professional projects. Historical tools retain their documented development status in Structural Lab."
+    "es": "Dos demostradores creados para el portafolio en octubre de 2026, con datos sintéticos y código reproducible. Son desarrollos independientes de los proyectos profesionales anteriores. El laboratorio también presenta mis estudios y herramientas previas, con su alcance y documentación disponible.",
+    "en": "Two demonstrations created for the portfolio in October 2026, using synthetic data and reproducible code. They were developed independently of earlier professional projects. The laboratory also presents my earlier studies and tools, with their scope and available documentation."
   },
   "applications": [
     {
@@ -109,13 +109,13 @@
         "title": "Análisis no lineal con OpenSeesPy",
         "problem": "La respuesta inelástica depende del modelo constitutivo, del protocolo y de la convergencia.",
         "method": "Documentar materiales, discretización y control de la solución; procesar fuerza, deformación y registros de convergencia.",
-        "output": "Un flujo de interpretación reproducible. La ficha CFRP conserva resultados reportados y evidencia reproducible pendiente."
+        "output": "Fuerzas, deformaciones y registros organizados para interpretar el modelo. La ficha CFRP identifica los resultados reportados y los archivos necesarios para reproducirlos."
       },
       "en": {
         "title": "Nonlinear analysis with OpenSeesPy",
         "problem": "Inelastic response depends on constitutive models, loading protocols and convergence.",
         "method": "Document materials, discretization and solution controls; process forces, deformations and convergence records.",
-        "output": "A reproducible interpretation workflow. The CFRP case retains its reported results and pending supporting evidence."
+        "output": "Forces, deformations and records organised for model interpretation. The CFRP case identifies the reported findings and the files needed to reproduce them."
       }
     },
     {
@@ -154,13 +154,13 @@
         "title": "AutoLISP y documentación CAD",
         "problem": "El detallado repetitivo exige consistencia entre geometría, armado, cotas y capas.",
         "method": "Parametrizar vigas, columnas, placas y escaleras; controlar acero longitudinal, estribos y convenciones gráficas.",
-        "output": "Documentación organizada para revisión. Las rutinas históricas descritas aún no cuentan con código ni capturas auténticas publicados."
+        "output": "Detalles organizados para revisión. El código y las capturas de las rutinas descritas están pendientes de publicación."
       },
       "en": {
         "title": "AutoLISP and CAD documentation",
         "problem": "Repetitive detailing requires consistency between geometry, reinforcement, dimensions and layers.",
         "method": "Parameterize beams, columns, walls and stairs; control longitudinal bars, ties and drawing conventions.",
-        "output": "Organized documentation for review. The documented historical routines do not yet include published source code or authentic screenshots."
+        "output": "Details organised for review. Source code and screenshots of the described routines have yet to be published."
       }
     }
   ],

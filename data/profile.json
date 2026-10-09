@@ -68,8 +68,8 @@
         "en": "Structural Engineer — Professional III"
       },
       "description": {
-        "es": "Diseño y revisión de estructuras para infraestructura eléctrica de media y alta tensión. Participación en CEPITOCE, documentada en el CV.",
-        "en": "Design and review of structures for medium- and high-voltage electrical infrastructure. Work on CEPITOCE is documented in the CV."
+        "es": "Diseño y revisión de estructuras para infraestructura eléctrica de media y alta tensión, con participación en CEPITOCE.",
+        "en": "Design and review of structures for medium- and high-voltage electrical infrastructure, including CEPITOCE."
       },
       "responsibilities": {
         "es": [
@@ -466,12 +466,26 @@
       "en": "Civil Engineer — professional degree, Universidad Nacional de Ingeniería, Faculty of Civil Engineering."
     },
     {
-      "es": "Estudios de Ingeniería Civil: 2013–2017. Tercio superior, según el CV.",
-      "en": "Civil engineering studies: 2013–2017. Upper third of the class, as reported in the CV."
+      "es": "Estudios de Ingeniería Civil: 2013–2017. Tercio superior.",
+      "en": "Civil engineering studies: 2013–2017. Upper third of the class."
     }
   ],
   "contactPolicy": {
     "es": "El correo profesional se habilita únicamente cuando el titular complete y autorice ese dato. El CV público omite domicilio, documentos de identidad, teléfono personal y datos de terceros.",
     "en": "A professional email address is enabled only when the owner provides and authorizes it. The public CV omits home address, identity documents, personal phone number and third-party personal information."
+  },
+  "about": {
+    "es": [
+      "Soy Ingeniero Civil titulado por la Universidad Nacional de Ingeniería. Trabajo en el diseño y la revisión de estructuras de acero y concreto para edificaciones, minería e infraestructura. Actualmente desarrollo ingeniería estructural para proyectos mineros en SRK.",
+      "Mi forma de abordar un proyecto parte de entender el sistema resistente, las condiciones de apoyo y el recorrido de las cargas. Relaciono la aplicación normativa con las hipótesis del modelo, las verificaciones de los elementos y la documentación que permite revisar cada decisión.",
+      "El análisis sísmico y no lineal forma parte de mi especialización. Utilizo procedimientos pushover y herramientas como Abaqus para estudiar el comportamiento estructural, prestando atención a materiales, condiciones de borde y límites de cada idealización. Python me permite organizar resultados, contrastar escenarios y repetir comprobaciones.",
+      "En la revisión técnica y la optimización, busco coherencia entre análisis, conexiones, cimentaciones y planos. Para mí, la responsabilidad profesional incluye explicar las hipótesis, reconocer las incertidumbres y sustentar las decisiones de diseño."
+    ],
+    "en": [
+      "I am a Civil Engineer with a professional degree from Universidad Nacional de Ingeniería. I design and review steel and concrete structures for buildings, mining and infrastructure. I currently work on structural engineering for mining projects at SRK.",
+      "I approach a project by understanding its structural system, support conditions and load paths. I connect code requirements with modelling assumptions, member checks and the documentation needed to review each decision.",
+      "Seismic and nonlinear analysis are part of my specialisation. I use pushover procedures and tools such as Abaqus to study structural behaviour, with close attention to materials, boundary conditions and the limits of each idealisation. Python helps me organise results, compare scenarios and repeat calculations with explicit units.",
+      "In technical review and design optimisation, I focus on consistency between the analysis, connections, foundations and drawings. For me, professional responsibility includes explaining assumptions, acknowledging uncertainty and providing a sound basis for design decisions."
+    ]
   }
 }
