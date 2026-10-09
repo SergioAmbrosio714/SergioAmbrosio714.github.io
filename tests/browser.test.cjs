@@ -187,8 +187,18 @@ async function main() {
             await audit(page, label + '-dialog');
           }
           await page.keyboard.press('Escape');
+          // Native focus restoration can precede the queued close event. Wait for
+          // app cleanup as well, so that event cannot affect the next dialog.
+          await page.waitForFunction(project => {
+            const dialog = document.getElementById('project-dialog');
+            const trigger = document.querySelector('[data-project="' + project + '"]');
+            return !dialog.open && !document.body.classList.contains('dialog-open') && document.activeElement === trigger;
+          }, key, { timeout: 2000 }).catch(error => {
+            failures.push(label + ': cierre y retorno de foco no completados para ' + key);
+            throw error;
+          });
           check(!await page.locator('#project-dialog').evaluate(node => node.open), label + ': Escape no cierra diálogo');
-          check(await trigger.evaluate(node => node === document.activeElement), label + ': foco no regresa al proyecto');
+          check(await trigger.evaluate(node => node === document.activeElement), label + ': foco no regresa al proyecto ' + key);
         }
         const disclosure = page.locator('details.beam-disclosure');
         if (!await disclosure.evaluate(element => element.open)) await disclosure.locator('summary').click();
