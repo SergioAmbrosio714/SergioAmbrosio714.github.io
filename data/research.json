@@ -1,0 +1,226 @@
+{
+  "items": [
+    {
+      "id": "17wcee",
+      "slug": "17wcee-tanques-aislados",
+      "year": 2021,
+      "authors": ["S. J. Ambrosio", "E. J. Mamani", "V. I. Fernández-Dávila"],
+      "referenceTitle": "PERFORMANCE OF SEISMICALLY ISOLATED LIQUID STORAGE TANKS USING TRIPLE PENDULUM BEARINGS",
+      "references": [
+        {"title": "17WCEE proceedings · Paper C000391 · NICEE", "url": "https://wcee.nicee.org/wcee/article/17WCEE/2c-0305.pdf", "kind": "paper"},
+        {"title": "17WCEE · SOP presentation programme, p. 2", "url": "https://www.jaee.gr.jp/jp/event/wcee/assets/dl/index/SOP_program.pdf#page=2", "kind": "programme"},
+        {"title": "17WCEE · Presentation formats", "url": "https://www.jaee.gr.jp/jp/event/wcee/program.html", "kind": "institutional"},
+        {"title": "17WCEE · Official conference dates and format", "url": "https://www.jaee.gr.jp/jp/event/wcee/index.html", "kind": "institutional"}
+      ],
+      "image": {
+        "src": "assets/research-tanks.svg",
+        "source": {"es": "Ilustración original del portafolio; no reproduce figuras del artículo.", "en": "Original portfolio illustration; no figures from the paper have been reproduced."},
+        "software": "SVG",
+        "date": "2026-10-08",
+        "usage": {"es": "Esquema conceptual de geometría y aislamiento. No es un resultado de análisis ni un detalle constructivo.", "en": "Conceptual geometry and isolation schematic. Not an analysis result or a construction detail."},
+        "caption": {"es": "Tanque, nivel de líquido e interfaz de aislamiento. El apoyo ampliado ilustra el deslizamiento de forma idealizada; no reproduce la geometría de un dispositivo comercial.", "en": "Tank, liquid level and isolation interface. The enlarged bearing illustrates idealised sliding rather than the geometry of a commercial device."}
+      },
+      "es": {
+        "title": "Tanques de líquidos aislados con apoyos de triple péndulo",
+        "subtitle": "17th World Conference on Earthquake Engineering · Sendai, Japón · 2021",
+        "summary": "Estudio de aislamiento sísmico de tanques de concreto armado con apoyos de triple péndulo.",
+        "status": "Autoría, resumen y programa contrastados",
+        "category": "Publicación en actas de congreso",
+        "imageAlt": "Esquema conceptual original de un tanque con líquido y una interfaz de aislamiento en su base.",
+        "facts": [
+          {"label": "Congreso", "value": "17WCEE"},
+          {"label": "Celebración", "value": "27 de septiembre – 2 de octubre de 2021"},
+          {"label": "Modalidad", "value": "Conferencia híbrida · Sendai, Japón"},
+          {"label": "Trabajo", "value": "C000391 · documento 2c-0305"},
+          {"label": "Programa SOP", "value": "Presentación 2g-0296 · Sergio Junior Ambrosio Camayo"},
+          {"label": "Revisión bibliográfica", "value": "8 de octubre de 2026"}
+        ],
+        "sections": [
+          {"title": "Metodología y parámetros", "paragraphs": ["Análisis tiempo-historia de 45 casos con 14 pares de registros. Variables: H/R, periodo efectivo, amortiguamiento y peligro sísmico SLE/DBE/MCE."]},
+          {"title": "Respuestas estudiadas", "bullets": ["Cortante basal y momento volcante.", "Oleaje y desplazamiento de la base."]},
+          {"title": "Conclusiones del resumen", "paragraphs": ["El resumen reporta mitigación de demanda mediante triple péndulo y sensibilidad a H/R y a periodos de 3 y 4 s. Los hallazgos se circunscriben al conjunto paramétrico."]},
+          {"title": "Un trabajo, dos referencias documentales", "paragraphs": ["El título de las actas se conserva en la referencia bibliográfica. El programa utiliza la variante «SEISMIC RESPONSE OF BASE-ISOLATED REINFORCED CONCRETE LIQUID STORAGE TANKS USING TRIPLE PENDULUM SYSTEMS». Ambas entradas comparten C000391 y representan un único trabajo.", "2c-0305 identifica el documento de las actas; 2g-0296 es el identificador de presentación consignado en el programa SOP. El programa nombra a Sergio Junior Ambrosio Camayo como expositor."]},
+          {"title": "Formato y alcance de la verificación", "paragraphs": ["La organización describe las SOP como presentaciones orales breves en línea vinculadas a la modalidad de póster. La conferencia fue híbrida; este registro no acredita presencia física en Japón.", "El contenido técnico de esta ficha resume el abstract indexado del repositorio NICEE. El programa y la información institucional del congreso se consultaron por separado. No se presenta esta ficha como una revisión integral ni una reproducción de los cálculos del artículo."]}
+        ]
+      },
+      "en": {
+        "title": "Liquid storage tanks isolated with triple pendulum bearings",
+        "subtitle": "17th World Conference on Earthquake Engineering · Sendai, Japan · 2021",
+        "summary": "A study of seismic isolation for reinforced concrete liquid storage tanks using triple pendulum bearings.",
+        "status": "Authorship, abstract and programme checked",
+        "category": "Conference proceedings paper",
+        "imageAlt": "Original conceptual schematic of a liquid storage tank with an isolation interface beneath its base.",
+        "facts": [
+          {"label": "Conference", "value": "17WCEE"},
+          {"label": "Conference dates", "value": "27 September – 2 October 2021"},
+          {"label": "Format", "value": "Hybrid conference · Sendai, Japan"},
+          {"label": "Paper", "value": "C000391 · proceedings document 2c-0305"},
+          {"label": "SOP programme", "value": "Presentation 2g-0296 · Sergio Junior Ambrosio Camayo"},
+          {"label": "Bibliographic review", "value": "8 October 2026"}
+        ],
+        "sections": [
+          {"title": "Method and parameters", "paragraphs": ["Time-history analysis of 45 cases using 14 pairs of records. Variables: H/R, effective period, damping and SLE/DBE/MCE seismic hazard levels."]},
+          {"title": "Response measures", "bullets": ["Base shear and overturning moment.", "Sloshing and base displacement."]},
+          {"title": "Findings reported in the abstract", "paragraphs": ["The abstract reports demand mitigation with triple pendulum bearings and sensitivity to H/R and periods of 3 and 4 s. Findings apply to the investigated parameter set."]},
+          {"title": "One paper, two documentary references", "paragraphs": ["The proceedings title is retained in the bibliographic reference. The programme uses the alternative title ‘SEISMIC RESPONSE OF BASE-ISOLATED REINFORCED CONCRETE LIQUID STORAGE TANKS USING TRIPLE PENDULUM SYSTEMS’. Both entries share C000391 and refer to one paper.", "2c-0305 identifies the proceedings document; 2g-0296 is the presentation identifier in the SOP programme. Sergio Junior Ambrosio Camayo is listed as the speaker."]},
+          {"title": "Presentation format and verification scope", "paragraphs": ["The organisers describe SOPs as short online oral presentations associated with the poster format. The conference was hybrid; this record does not establish physical attendance in Japan.", "The technical content of this page summarises the abstract indexed by the NICEE repository. The programme and official conference information were consulted separately. This page is not a full review or an independent reproduction of the paper's calculations."]}
+        ]
+      }
+    },
+    {
+      "id": "jsie2018",
+      "slug": "jornadas-sudamericanas-2018",
+      "year": 2018,
+      "authors": ["E. J. Mamani", "S. Ambrosio", "V. I. Fernández-Dávila"],
+      "referenceTitle": "PERFORMANCE OF SEISMICALLY ISOLATED WATER STORAGE TANKS",
+      "references": [
+        {"title": "PUCP · Institutional publication record · Víctor I. Fernández-Dávila", "url": "https://www.pucp.edu.pe/profesor/victor-fernandez-davila-gonzales/publicaciones/?orden=titulo&pagina=5&x=", "kind": "institutional"}
+      ],
+      "image": {
+        "src": "assets/research-comparison.svg",
+        "source": {"es": "Ilustración original del portafolio; no extraída de las actas.", "en": "Original portfolio illustration; not extracted from the proceedings."},
+        "software": "SVG",
+        "date": "2026-10-08",
+        "usage": {"es": "Comparación conceptual. No representa dimensiones ni resultados del trabajo.", "en": "Conceptual comparison. Does not represent the paper's dimensions or results."},
+        "caption": {"es": "A: condición de base fija. B: interfaz de aislamiento. Esquemas editoriales para explicar el tema; no son modelos reproducidos del artículo.", "en": "A: fixed-base condition. B: isolation interface. Editorial schematics illustrating the subject, not models reproduced from the paper."}
+      },
+      "es": {
+        "title": "Desempeño de tanques de agua con aislamiento sísmico",
+        "subtitle": "XXXVIII Jornadas Sudamericanas de Ingeniería Estructural · Lima · 2018",
+        "summary": "Coautoría registrada por la PUCP para un trabajo presentado en las Jornadas Sudamericanas de 2018.",
+        "status": "Registro institucional verificado",
+        "category": "Trabajo en actas · Registro bibliográfico",
+        "imageAlt": "Comparación conceptual original entre un tanque de base fija y un tanque con interfaz de aislamiento.",
+        "facts": [
+          {"label": "Evento", "value": "XXXVIII Jornadas Sudamericanas de Ingeniería Estructural"},
+          {"label": "Fecha", "value": "24–26 de octubre de 2018"},
+          {"label": "Sede", "value": "Lima, Perú"},
+          {"label": "Fuente", "value": "Portal institucional de profesores PUCP"},
+          {"label": "Revisión bibliográfica", "value": "8 de octubre de 2026"}
+        ],
+        "sections": [
+          {"title": "Registro y autoría", "paragraphs": ["El registro institucional identifica a E. J. Mamani, S. Ambrosio y V. I. Fernández-Dávila como autores. La entrada aparece duplicada en la página consultada; aquí se contabiliza una sola publicación."]},
+          {"title": "Alcance de la ficha", "paragraphs": ["La fuente consultada contiene datos bibliográficos, no el texto completo. Por ello no se asignan a este trabajo parámetros, ecuaciones o conclusiones de las otras publicaciones sobre tanques.", "La presentación oral figura en el CV. Su modalidad individual no se ha corroborado mediante un programa público del evento."]},
+          {"title": "Documentación para ampliar", "bullets": ["Texto completo o enlace editorial estable.", "Programa de la sesión y constancia de presentación.", "Figuras autorizadas con sus pies y condiciones de uso."]}
+        ]
+      },
+      "en": {
+        "title": "Performance of seismically isolated water storage tanks",
+        "subtitle": "XXXVIII South American Conference on Structural Engineering · Lima · 2018",
+        "summary": "Coauthorship recorded by PUCP for a paper at the 2018 South American Conference on Structural Engineering.",
+        "status": "Institutional record verified",
+        "category": "Proceedings contribution · Bibliographic record",
+        "imageAlt": "Original conceptual comparison between a fixed-base tank and a tank with an isolation interface.",
+        "facts": [
+          {"label": "Event", "value": "XXXVIII Jornadas Sudamericanas de Ingeniería Estructural"},
+          {"label": "Dates", "value": "24–26 October 2018"},
+          {"label": "Location", "value": "Lima, Peru"},
+          {"label": "Source", "value": "PUCP institutional faculty portal"},
+          {"label": "Bibliographic review", "value": "8 October 2026"}
+        ],
+        "sections": [
+          {"title": "Record and authorship", "paragraphs": ["The institutional record lists E. J. Mamani, S. Ambrosio and V. I. Fernández-Dávila as authors. The consulted page contains a duplicate entry; the portfolio counts it as one publication."]},
+          {"title": "Scope of this entry", "paragraphs": ["The consulted source provides bibliographic information rather than the full paper. Parameters, equations and conclusions from the other tank publications are therefore not attributed to this work.", "An oral presentation is listed in the CV. The individual presentation format has not been corroborated through a public event programme."]},
+          {"title": "Material for a fuller entry", "bullets": ["Full paper or a stable publisher link.", "Session programme and presentation record.", "Authorised figures with captions and usage terms."]}
+        ]
+      }
+    },
+    {
+      "id": "sigrd2018",
+      "slug": "simposio-riesgo-2018",
+      "year": 2018,
+      "authors": ["Sergio J. Ambrosio", "Elvis J. Mamani", "Víctor I. Fernández-Dávila"],
+      "referenceTitle": "DESEMPEÑO SÍSMICO DE TANQUES PARA ALMACENAMIENTO DE AGUA CON BASE AISLADA",
+      "references": [
+        {"title": "CIP · Memorias del 12.º SIGRD · pp. 62–66", "url": "https://www.cip.org.pe/publicaciones/2019/memorias-simposio-grd-2018-detalle.pdf#page=61", "kind": "paper"}
+      ],
+      "image": {
+        "src": "assets/research-model.svg",
+        "source": {"es": "Esquema original del portafolio basado en conceptos generales de modelación; no copia una figura publicada.", "en": "Original portfolio schematic based on general modelling concepts; not a copy of a published figure."},
+        "software": "SVG",
+        "date": "2026-10-08",
+        "usage": {"es": "Ilustración conceptual, sin resultados calculados ni valores del modelo publicado.", "en": "Conceptual illustration without computed results or parameter values from the published model."},
+        "caption": {"es": "Representación idealizada de componentes impulsiva y convectiva sobre una interfaz de aislamiento. Los símbolos explican el concepto; no especifican un modelo listo para análisis.", "en": "Idealised impulsive and convective components above an isolation interface. Symbols explain the concept rather than define a model ready for analysis."}
+      },
+      "es": {
+        "title": "Desempeño sísmico de tanques de agua con base aislada",
+        "subtitle": "12.º Simposio Internacional de Gestión del Riesgo de Desastres · Lima · 2018",
+        "summary": "Comparación numérica de tanques de concreto con base fija y aislamiento de triple péndulo.",
+        "status": "Texto completo consultado en memorias CIP",
+        "category": "Artículo en memorias de simposio",
+        "imageAlt": "Esquema original de masas impulsiva y convectiva conectadas a un tanque idealizado sobre aislamiento.",
+        "facts": [
+          {"label": "Evento", "value": "12.º Simposio Internacional de Gestión del Riesgo de Desastres"},
+          {"label": "Fecha y sede", "value": "Septiembre de 2018 · Lima, Perú"},
+          {"label": "Memorias", "value": "CIP–WFEO (CDRM) · páginas impresas 62–66"},
+          {"label": "Presentación", "value": "Póster, según el CV"},
+          {"label": "Revisión bibliográfica", "value": "8 de octubre de 2026"}
+        ],
+        "sections": [
+          {"title": "Metodología", "paragraphs": ["Modelos mecánicos equivalentes y análisis dinámico no lineal con siete pares de registros bidireccionales. Se comparan cortante, momento volcante, oleaje y desplazamiento de base."]},
+          {"title": "Parámetros investigados", "table": {"headers": ["Sistema", "Variables"], "rows": [["Tanque–agua", "H/R; t/R; radio constante de 10 m"], ["Aislamiento", "Periodo efectivo de 3 y 4 s; amortiguamiento de 10 % y 25 %"], ["Demanda", "SLE, DBE y MCE"]]}},
+          {"title": "Conclusiones y límites", "paragraphs": ["Los casos estudiados muestran menores cortantes y momentos, desplazamientos de base y poca variación del oleaje entre modelos."]},
+          {"title": "Referencia y modalidad", "paragraphs": ["El artículo ocupa las páginas impresas 62–66 de las memorias. La primera corresponde a la página 61 del archivo PDF enlazado.", "La coautoría y el contenido del artículo se verificaron en las memorias del CIP. La modalidad de póster procede del CV; no se presenta como una modalidad acreditada por el artículo."]}
+        ]
+      },
+      "en": {
+        "title": "Seismic performance of base-isolated water storage tanks",
+        "subtitle": "12th International Symposium on Disaster Risk Management · Lima · 2018",
+        "summary": "Numerical comparison of fixed-base concrete tanks and tanks isolated with triple pendulum bearings.",
+        "status": "Full text consulted in CIP proceedings",
+        "category": "Symposium proceedings paper",
+        "imageAlt": "Original schematic of impulsive and convective masses connected to an idealised tank above an isolation interface.",
+        "facts": [
+          {"label": "Event", "value": "12th International Symposium on Disaster Risk Management"},
+          {"label": "Date and location", "value": "September 2018 · Lima, Peru"},
+          {"label": "Proceedings", "value": "CIP–WFEO (CDRM) · printed pages 62–66"},
+          {"label": "Presentation", "value": "Poster, as listed in the CV"},
+          {"label": "Bibliographic review", "value": "8 October 2026"}
+        ],
+        "sections": [
+          {"title": "Method", "paragraphs": ["Equivalent mechanical models and nonlinear dynamic analysis using seven pairs of bidirectional records. Response measures include shear, overturning moment, sloshing and base displacement."]},
+          {"title": "Parameters investigated", "table": {"headers": ["System", "Variables"], "rows": [["Tank–water", "H/R; t/R; constant radius of 10 m"], ["Isolation", "Effective periods of 3 and 4 s; damping of 10% and 25%"], ["Demand", "SLE, DBE and MCE"]]}},
+          {"title": "Findings and limits", "paragraphs": ["The investigated cases show reduced shear and moment alongside displacement demand at the base. Sloshing varies little between models."]},
+          {"title": "Reference and presentation format", "paragraphs": ["The article spans printed pages 62–66 of the proceedings. Its first page is page 61 of the linked PDF file.", "Authorship and article content were checked against the CIP proceedings. The poster format comes from the CV; it is not presented as a format established by the article."]}
+        ]
+      }
+    }
+  ],
+  "activities": [
+    {
+      "es": {"title": "17WCEE · Programa de presentaciones SOP", "description": "Sergio Junior Ambrosio Camayo figura como expositor de C000391, presentación 2g-0296. Es el mismo trabajo incluido en esta selección de publicaciones.", "type": "Presentación breve programada · 2021", "evidence": "Programa oficial. La modalidad SOP se explica en la página de formatos del congreso; no acredita viaje ni asistencia presencial."},
+      "en": {"title": "17WCEE · SOP presentation programme", "description": "Sergio Junior Ambrosio Camayo is listed as the speaker for C000391, presentation 2g-0296. This is the same paper included in the publication selection.", "type": "Scheduled short presentation · 2021", "evidence": "Official programme. The conference format page explains SOPs; neither source establishes travel or in-person attendance."},
+      "references": [{"title": "17WCEE · SOP programme", "url": "https://www.jaee.gr.jp/jp/event/wcee/assets/dl/index/SOP_program.pdf#page=2", "kind": "programme"}]
+    },
+    {
+      "es": {"title": "XXXVIII Jornadas Sudamericanas", "description": "Presentación oral del trabajo sobre tanques aislados, según el CV. La coautoría del artículo cuenta con registro institucional independiente.", "type": "Presentación oral declarada · 2018", "evidence": "CV para la presentación; registro PUCP para la publicación. Modalidad individual pendiente de corroboración externa."},
+      "en": {"title": "XXXVIII South American Conference", "description": "Oral presentation of the isolated-tank study, as listed in the CV. Paper coauthorship has an independent institutional record.", "type": "Reported oral presentation · 2018", "evidence": "CV for the presentation; PUCP record for the publication. Individual presentation format awaits external corroboration."},
+      "references": [{"title": "PUCP · Publication record", "url": "https://www.pucp.edu.pe/profesor/victor-fernandez-davila-gonzales/publicaciones/?orden=titulo&pagina=5&x=", "kind": "institutional"}]
+    },
+    {
+      "es": {"title": "XX Congreso Nacional de Ingeniería Civil", "description": "Ponencia sobre desempeño sísmico de tanques de agua con base aislada, consignada en el CV.", "type": "Presentación oral declarada · 2018", "evidence": "CV. No se localizó un programa institucional que confirmara individualmente esta presentación durante la revisión."},
+      "en": {"title": "XX National Congress of Civil Engineering", "description": "Presentation on the seismic performance of base-isolated water tanks, as listed in the CV.", "type": "Reported oral presentation · 2018", "evidence": "CV. No institutional programme individually confirming this presentation was located during the review."},
+      "references": []
+    },
+    {
+      "es": {"title": "12.º Simposio de Gestión del Riesgo de Desastres", "description": "Presentación de póster consignada en el CV. El artículo asociado está disponible en las memorias del CIP.", "type": "Póster declarado · 2018", "evidence": "CV para la modalidad de póster; memorias CIP para autoría y texto del artículo."},
+      "en": {"title": "12th Disaster Risk Management Symposium", "description": "Poster presentation listed in the CV. The associated paper is available in the CIP proceedings.", "type": "Reported poster presentation · 2018", "evidence": "CV for the poster format; CIP proceedings for paper authorship and content."},
+      "references": [{"title": "CIP · Symposium proceedings", "url": "https://www.cip.org.pe/publicaciones/2019/memorias-simposio-grd-2018-detalle.pdf#page=61", "kind": "paper"}]
+    },
+    {
+      "es": {"title": "GADEST–UNI e I Congreso Nacional de Ingeniería Estructural", "description": "Relaciones exteriores en GADEST durante 2017 y apoyo en concursos académicos y logística del congreso, según el CV.", "type": "Organización académica", "evidence": "CV. Participación individual no corroborada mediante una fuente institucional pública en esta revisión."},
+      "en": {"title": "GADEST–UNI and the First National Congress of Structural Engineering", "description": "External relations at GADEST in 2017 and support for academic competitions and congress logistics, as listed in the CV.", "type": "Academic organisation", "evidence": "CV. Individual involvement was not corroborated through a public institutional source in this review."},
+      "references": []
+    },
+    {
+      "es": {"title": "Concursos de ponencias CONEIC", "description": "Participación en concursos de ponencias de 2017 y 2018, según el CV.", "type": "Participación académica", "evidence": "CV. No se atribuyen premios ni puestos; no se localizó una relación institucional de participantes que confirmara esta participación."},
+      "en": {"title": "CONEIC paper competitions", "description": "Participation in the 2017 and 2018 paper competitions, as listed in the CV.", "type": "Academic participation", "evidence": "CV. No awards or rankings are claimed; no institutional participant list confirming this participation was located."},
+      "references": []
+    },
+    {
+      "es": {"title": "VISUS · Evaluación de escuelas seguras", "description": "Levantamiento de información y evaluación de escuelas mediante VISUS, según el CV. Una publicación oficial confirma el programa de UNESCO con soporte de CISMID–UNI en Lima Norte.", "type": "Voluntariado declarado", "evidence": "La fuente institucional acredita el contexto del programa, no la participación individual de Sergio Ambrosio, cuya fuente es el CV."},
+      "en": {"title": "VISUS · Safer school assessment", "description": "Information gathering and school assessment using VISUS, as listed in the CV. An official publication confirms the UNESCO programme supported by CISMID–UNI in northern Lima.", "type": "Reported volunteering", "evidence": "The institutional source corroborates the programme context, not Sergio Ambrosio's individual participation, which is documented in the CV."},
+      "references": [{"title": "Gobierno del Perú · VISUS, UNESCO y CISMID–UNI", "url": "https://www.gob.pe/institucion/regionmadrededios-dre/noticias/685021-visus-unesco-presenta-metodologia-para-la-evaluacion-de-la-infraestructura-educativa", "kind": "institutional"}]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" role="img" aria-labelledby="title desc">
+<title id="title">CEPITOCE — estructuras ilustrativas / illustrative structures</title>
+<desc id="desc">Torre, pórtico y soporte dibujados como referencias geométricas para infraestructura eléctrica. No representan modelos ni resultados del proyecto. / Original reference diagrams, not project models or results.</desc>
+<defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#dbe4e5" stroke-width=".6"/></pattern><marker id="tick" markerWidth="7" markerHeight="7" refX="3.5" refY="3.5" orient="auto"><path d="M1 6L6 1" stroke="#597681" stroke-width="1"/></marker></defs>
+<style>text{font-family:Arial,Helvetica,sans-serif;fill:#294f5d}.label{font-size:15px;letter-spacing:1.2px}.small{font-size:12px;fill:#536d77;letter-spacing:.7px}.value{font-size:27px;fill:#183e4c}.line{stroke:#527580;stroke-width:1.5;fill:none}.light{stroke:#99afb5;stroke-width:1;fill:none}</style>
+<rect width="1200" height="800" fill="#eef2f2"/><rect x="42" y="115" width="1116" height="583" fill="url(#grid)" opacity=".46"/>
+<path d="M48 91H1152M48 724H1152" stroke="#cbd8db"/>
+<text x="48" y="54" class="label">02 / CEPITOCE</text><text x="1152" y="54" text-anchor="end" class="small">ALTA TENSIÓN / HIGH VOLTAGE</text>
+<path d="M96 628H1110" stroke="#b7c8cd" stroke-width="2"/><path d="M126 624L218 190H262L354 624" fill="#dde6e8" stroke="#466a77" stroke-width="3"/><path d="M218 190H262L206 274H274L218 190" class="line"/><path d="M206 274H274L186 376H294L206 274" class="line"/><path d="M186 376H294L158 496H322L186 376" class="line"/><path d="M158 496H322L126 624H354L158 496" class="line"/><path d="M152 280H328M177 270H303M140 350H340M160 337H320" stroke="#456c7b" stroke-width="4"/>
+<path d="M174 280V321M306 280V321M161 350V390M321 350V390" stroke="#869fa8" stroke-width="5" stroke-dasharray="3 3"/>
+<rect x="115" y="622" width="39" height="11" fill="#a3b9c0"/><rect x="327" y="622" width="39" height="11" fill="#a3b9c0"/>
+<text x="241" y="673" text-anchor="middle" class="label">TORRE / TOWER</text><path d="M475 622L490 287H536L552 622M787 622L803 287H849L864 622" fill="#dae5e7" stroke="#466a77" stroke-width="3"/>
+<path d="M490 287L546 497L482 497L541 382L486 382L551 622M849 287L792 497L857 497L798 382L853 382L787 622" class="line"/>
+<rect x="467" y="251" width="405" height="39" fill="#d3e0e4" stroke="#466a77" stroke-width="3"/>
+<path d="M475 285L519 257L564 285L609 257L654 285L699 257L744 285L789 257L834 285L866 257" class="line"/>
+<path d="M606 289V366M672 289V366M738 289V366" stroke="#93aab2" stroke-width="8" stroke-dasharray="3 5"/>
+<path d="M593 368H619M659 368H685M725 368H751" stroke="#416572" stroke-width="3"/>
+<rect x="462" y="622" width="98" height="12" fill="#a3b9c0"/><rect x="779" y="622" width="94" height="12" fill="#a3b9c0"/>
+<text x="668" y="673" text-anchor="middle" class="label">PÓRTICO / GANTRY</text>
+<path d="M964 622V480H1047V622M964 480L1047 622M1047 480L964 622" class="line" stroke-width="3"/>
+<path d="M951 478H1060" stroke="#456c7b" stroke-width="5"/>
+<path d="M981 477V406M1006 477V406M1031 477V406" stroke="#a2b6bd" stroke-width="8" stroke-dasharray="3 4"/>
+<rect x="948" y="622" width="115" height="12" fill="#a3b9c0"/>
+<text x="1004" y="673" text-anchor="middle" class="label">SOPORTE</text><text x="1004" y="694" text-anchor="middle" class="small">SUPPORT</text>
+<text x="48" y="135" class="small">GEOMETRÍAS REFERENCIALES / ILLUSTRATIVE GEOMETRIES</text>
+<text x="48" y="758" class="small">ILUSTRACIÓN ORIGINAL / ORIGINAL ILLUSTRATION</text><text x="1152" y="758" text-anchor="end" class="small">SIN RESULTADOS DE CÁLCULO / NO ANALYSIS RESULTS</text>
+</svg>

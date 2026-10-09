@@ -7,20 +7,29 @@ permissions:
 jobs:
   verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verificar fuentes y contenido generado
+        run: python scripts/build.py --check
       - name: Verificar JavaScript
         run: |
           node --check app.js
           node --check hero-model.js
+          node --check navigation.js
+          node --check profile-data.js
       - name: Probar interacciones y cálculos
         run: node tests/smoke.test.cjs
       - name: Verificar enlaces locales
         run: node tests/links.test.cjs
+      - name: Verificar contenido, HTML, procedencia y SEO bilingüe
+        run: node tests/content.test.cjs
       - name: Preparar herramientas de navegador fuera del sitio
         run: |
           npm install --prefix "$RUNNER_TEMP/portfolio-qa" --no-save --ignore-scripts playwright@1.64.0 axe-core@4.14.0

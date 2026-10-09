@@ -1,0 +1,1303 @@
+{
+  "items": [
+    {
+      "id": "pushover",
+      "slug": "interpretar-curvas-pushover",
+      "date": "2026-10-08",
+      "references": [
+        {
+          "title": {
+            "es": "FEMA 440 — Improvement of Nonlinear Static Seismic Analysis Procedures (2005), ficha oficial ATC",
+            "en": "FEMA 440 — Improvement of Nonlinear Static Seismic Analysis Procedures (2005), official ATC publication record"
+          },
+          "url": "https://store.atcouncil.org/products/fema-440-improvement-of-nonlinear-static-seismic-analysis-procedures",
+          "note": {
+            "es": "Referencia metodológica de 2005 sobre procedimientos estáticos no lineales; la ficha editorial oficial identifica el informe. No acredita resultados del ejemplo.",
+            "en": "2005 methodological reference on nonlinear static procedures; the official publisher record identifies the report. It does not validate the example's results."
+          }
+        },
+        {
+          "title": {
+            "es": "CSI — Acceleration-Displacement Response Spectrum, documentación oficial ETABS (consulta 2026-10-08)",
+            "en": "CSI — Acceleration-Displacement Response Spectrum, official ETABS documentation (accessed 2026-10-08)"
+          },
+          "url": "https://docs.csiamerica.com/help-files/etabs/Menus/Display/Acceleration_Displacement_Response_Spectrum_ADRS_.htm",
+          "note": {
+            "es": "Documentación del fabricante sobre la representación ADRS. El ejemplo de esta nota no calcula la demanda espectral ni un punto de desempeño.",
+            "en": "Vendor documentation on the ADRS representation. This note's example does not calculate spectral demand or a performance point."
+          }
+        },
+        {
+          "title": {
+            "es": "OpenSees — DisplacementControl, documentación oficial (consulta 2026-10-08)",
+            "en": "OpenSees — DisplacementControl, official documentation (accessed 2026-10-08)"
+          },
+          "url": "https://opensees.github.io/OpenSeesDocumentation/user/manual/analysis/integrator/DisplacementControl.html",
+          "note": {
+            "es": "Documentación del integrador de control por desplazamiento. Describe el procedimiento numérico, no criterios de aceptación estructural.",
+            "en": "Documentation for the displacement-control integrator. Describes the numerical procedure, not structural acceptance criteria."
+          }
+        },
+        {
+          "title": {
+            "es": "FEMA P-440A — Effects of Strength and Stiffness Degradation on Seismic Response (2009), ficha oficial ATC",
+            "en": "FEMA P-440A — Effects of Strength and Stiffness Degradation on Seismic Response (2009), official ATC publication record"
+          },
+          "url": "https://store.atcouncil.org/products/fema-p-440a-effects-of-strength-and-stiffness-degradation-on-seismic-response",
+          "note": {
+            "es": "Informe de 2009 sobre degradación de resistencia y rigidez; se utiliza para distinguir respuesta monotónica y efectos de degradación.",
+            "en": "2009 report on strength and stiffness degradation, used here to distinguish monotonic response from degradation effects."
+          }
+        }
+      ],
+      "image": {
+        "src": "assets/insight-pushover.svg",
+        "source": {
+          "es": "Ilustración vectorial original preparada para esta nota.",
+          "en": "Original vector illustration prepared for this note."
+        },
+        "software": "SVG",
+        "date": "2026-10-08",
+        "usage": {
+          "es": "Esquema educativo original; no es una captura de software ni evidencia de un proyecto.",
+          "en": "Original educational diagram; not a software screenshot or project evidence."
+        },
+        "caption": {
+          "es": "Curva bilineal analítica del ejemplo: fluencia a 20 mm y 500 kN. El desplazamiento de 60 mm es supuesto; no es un punto de desempeño calculado.",
+          "en": "Analytical bilinear curve for the example: yield at 20 mm and 500 kN. The 60 mm displacement is assumed; it is not a calculated performance point."
+        },
+        "description": {
+          "es": "Curva bilineal conceptual de cortante basal frente a desplazamiento, con fluencia y desplazamiento supuesto identificados.",
+          "en": "Conceptual bilinear base-shear versus displacement curve identifying yield and an assumed displacement."
+        },
+        "width": 1000,
+        "height": 600
+      },
+      "es": {
+        "title": "Pushover: leer el mecanismo antes que el punto",
+        "subtitle": "Capacidad, demanda y límites de una representación estática.",
+        "summary": "Cómo interpretar rigidez, fluencia y demanda de desplazamiento sin convertir una intersección gráfica en una garantía de desempeño.",
+        "category": "Análisis avanzado",
+        "imageAlt": "Curva bilineal conceptual de cortante basal frente a desplazamiento, con fluencia y desplazamiento supuesto identificados.",
+        "sections": [
+          {
+            "title": "Introducción",
+            "paragraphs": [
+              "Una curva pushover relaciona el cortante basal con el desplazamiento de un punto de control durante una secuencia de carga lateral. Su utilidad es mostrar cómo cambia la respuesta global mientras se movilizan mecanismos inelásticos. La curva no cuenta, por sí sola, dónde se concentra el daño, qué conexión gobierna o si un componente frágil alcanza su límite antes que el resto. Por eso conviene leerla junto con la secuencia de deformaciones y esfuerzos."
+            ]
+          },
+          {
+            "title": "El problema: capacidad y demanda no son equivalentes",
+            "paragraphs": [
+              "La capacidad procede del modelo estructural y del patrón de carga adoptado. La demanda depende de la amenaza, el espectro y el procedimiento utilizado. FEMA 440 (2005) estudia mejoras a los métodos estáticos no lineales de desplazamiento y de linealización equivalente [1]. Un punto de desempeño es una estimación compatible con esas hipótesis; no es una propiedad invariable del edificio ni un certificado automático de seguridad.",
+              "Para comparar capacidad y demanda en formato ADRS se convierten ambas a aceleración y desplazamiento espectrales, como explica CSI [2]. Mezclar un espectro en unidades de g con una curva en kN y mm sin transformación produce una intersección sin significado físico."
+            ]
+          },
+          {
+            "title": "Desarrollo: tres lecturas complementarias",
+            "paragraphs": [
+              "Primero se revisa el tramo inicial: su pendiente depende de las rigideces efectivas, las condiciones de apoyo y la representación de zonas fisuradas. Después se identifica la idealización de fluencia y la evolución de la rigidez tangente. Finalmente se examina si hay pérdida de resistencia, inestabilidad o cambios de mecanismo. La degradación cíclica no queda descrita íntegramente por una envolvente monotónica; FEMA P-440A (2009) trata expresamente esa diferencia [4].",
+              "El control de desplazamientos impone incrementos en un grado de libertad y permite seguir parte de la trayectoria poselástica [3]. Que un paso converja significa que satisface los criterios numéricos adoptados; todavía deben revisarse las demandas locales. Si un cálculo se detiene, tampoco debe identificarse el último paso como colapso sin investigar la causa."
+            ],
+            "equation": "K₀ = Vᵧ/δᵧ;  Ksec = V/δ;  μ = δ/δᵧ"
+          },
+          {
+            "title": "Ejemplo conceptual calculable a mano",
+            "paragraphs": [
+              "Se define una curva bilineal ficticia con Vᵧ = 500 kN, δᵧ = 20 mm y pendiente posfluencia de 2 kN/mm. Resultan K₀ = 25 kN/mm y, para un desplazamiento supuesto de 60 mm, V = 580 kN, Ksec ≈ 9,67 kN/mm y μ = 3. Estos números describen únicamente esa ley idealizada.",
+              "Los 60 mm no se obtuvieron de un espectro: no deben llamarse punto de desempeño. Para estimar ese punto faltan, como mínimo, la demanda sísmica, la transformación modal y el procedimiento de compatibilidad. Para evaluar aceptación faltan además los límites y demandas de cada componente."
+            ],
+            "equation": "V(δ) = 25δ, si δ ≤ 20 mm;  V(δ) = 500 + 2(δ − 20), si δ > 20 mm"
+          },
+          {
+            "title": "Errores habituales",
+            "bullets": [
+              "Comparar dos curvas sin conservar el peso, el punto de control, las unidades y el patrón lateral.",
+              "Interpretar una mayor fuerza máxima como mejora universal de ductilidad o capacidad de deformación.",
+              "Omitir torsión, modos superiores, efectos P–Δ o componentes gobernados por fuerza cuando son relevantes.",
+              "Usar rótulas automáticas sin comprobar materiales, secciones, interacción axial y dominio de aplicabilidad."
+            ]
+          },
+          {
+            "title": "Conclusión y alcance",
+            "paragraphs": [
+              "Una revisión útil conecta la forma de la curva con el mecanismo resistente y con demandas locales identificables. El resultado debe registrar hipótesis, patrón lateral, control, tolerancias y sensibilidad. Esta nota utiliza un ejemplo analítico educativo: no contiene un análisis de una obra ni prescribe criterios de aceptación para un proyecto. Las referencias se emplean con las ediciones indicadas, revisadas el 8 de octubre de 2026."
+            ]
+          }
+        ],
+        "status": "Nota técnica · Ejemplo conceptual",
+        "facts": [
+          {
+            "label": "Revisión",
+            "value": "2026-10-08"
+          },
+          {
+            "label": "Alcance",
+            "value": "Educativo · sin diseño de obra"
+          }
+        ]
+      },
+      "en": {
+        "title": "Pushover: read the mechanism before the point",
+        "subtitle": "Capacity, demand and the limits of a static representation.",
+        "summary": "Interpret stiffness, yielding and displacement demand without treating a graphical intersection as a guarantee of performance.",
+        "category": "Advanced analysis",
+        "imageAlt": "Conceptual bilinear base-shear versus displacement curve identifying yield and an assumed displacement.",
+        "sections": [
+          {
+            "title": "Introduction",
+            "paragraphs": [
+              "A pushover curve relates base shear to the displacement of a control point during a sequence of lateral loading. It helps reveal changes in global response as inelastic mechanisms develop. On its own, however, the curve does not show where damage concentrates, which connection governs, or whether a brittle component reaches its limit before the rest of the structure. It should therefore be read alongside the progression of component deformations and forces."
+            ]
+          },
+          {
+            "title": "The problem: capacity and demand are different quantities",
+            "paragraphs": [
+              "Capacity comes from the structural model and the selected loading pattern. Demand depends on the hazard, the spectrum and the chosen procedure. FEMA 440 (2005) examines improvements to nonlinear static displacement and equivalent-linearization procedures [1]. A performance point is an estimate consistent with those assumptions; it is neither an unchanging building property nor an automatic safety certificate.",
+              "Capacity and demand must both be converted into spectral acceleration and spectral displacement before comparison in ADRS coordinates, as described by CSI [2]. Intersecting a spectrum expressed in g with a curve expressed in kN and mm without this transformation has no physical meaning."
+            ]
+          },
+          {
+            "title": "Development: three complementary readings",
+            "paragraphs": [
+              "First, inspect the initial branch: its slope depends on effective stiffness, support conditions and the representation of cracked regions. Next, identify the yield idealization and the evolution of tangent stiffness. Finally, investigate strength loss, instability and changes in the governing mechanism. A monotonic envelope does not fully describe cyclic degradation; FEMA P-440A (2009) addresses this distinction explicitly [4].",
+              "Displacement control prescribes increments at a selected degree of freedom and can follow part of a post-elastic response path [3]. A converged increment meets the adopted numerical criteria; local demands must still be checked. Conversely, a terminated run does not establish collapse at its final completed increment without further investigation."
+            ],
+            "equation": "K₀ = Vᵧ/δᵧ;  Ksec = V/δ;  μ = δ/δᵧ"
+          },
+          {
+            "title": "Conceptual example that can be checked by hand",
+            "paragraphs": [
+              "Consider a fictional bilinear relationship with Vᵧ = 500 kN, δᵧ = 20 mm and a post-yield slope of 2 kN/mm. The initial stiffness is K₀ = 25 kN/mm. At an assumed displacement of 60 mm, V = 580 kN, Ksec ≈ 9.67 kN/mm and μ = 3. These values describe only the stated idealized relationship.",
+              "The 60 mm displacement was not obtained from a response spectrum and must not be labelled a performance point. Estimating such a point additionally requires seismic demand, a modal transformation and a compatibility procedure. Evaluating acceptance also requires component demands and applicable limits."
+            ],
+            "equation": "V(δ) = 25δ for δ ≤ 20 mm;  V(δ) = 500 + 2(δ − 20) for δ > 20 mm"
+          },
+          {
+            "title": "Common mistakes",
+            "bullets": [
+              "Comparing curves without keeping weight, control point, units and lateral-load pattern consistent.",
+              "Treating a higher peak force as a universal improvement in ductility or deformation capacity.",
+              "Ignoring torsion, higher modes, P–Δ effects or force-controlled components when relevant.",
+              "Assigning automatic hinges without checking materials, sections, axial interaction and applicability."
+            ]
+          },
+          {
+            "title": "Conclusion and scope",
+            "paragraphs": [
+              "A useful review links the shape of the curve to the resisting mechanism and identifiable local demands. The record should include assumptions, loading pattern, control method, tolerances and sensitivity checks. This educational analytical example is not an analysis of a built project and does not prescribe project acceptance criteria. References are identified by edition and were reviewed on 8 October 2026."
+            ]
+          }
+        ],
+        "status": "Technical note · Conceptual example",
+        "facts": [
+          {
+            "label": "Reviewed",
+            "value": "2026-10-08"
+          },
+          {
+            "label": "Scope",
+            "value": "Educational · not project-specific design"
+          }
+        ]
+      }
+    },
+    {
+      "id": "linear-nonlinear",
+      "slug": "analisis-lineal-y-no-lineal",
+      "date": "2026-10-08",
+      "references": [
+        {
+          "title": {
+            "es": "NIST GCR 17-917-46v1 — Guidelines for Nonlinear Structural Analysis for Design of Buildings, Part I: General (2017)",
+            "en": "NIST GCR 17-917-46v1 — Guidelines for Nonlinear Structural Analysis for Design of Buildings, Part I: General (2017)"
+          },
+          "url": "https://nvlpubs.nist.gov/nistpubs/gcr/2017/NIST.GCR.17-917-46v1.pdf",
+          "note": {
+            "es": "Guía metodológica de 2017, Parte I. Apoya la organización y revisión del análisis no lineal; no sustituye la norma adoptada para un proyecto.",
+            "en": "2017 methodological guide, Part I. Supports the organization and review of nonlinear analysis; it does not replace the code adopted for a project."
+          }
+        },
+        {
+          "title": {
+            "es": "OpenSees — Newton Algorithm, documentación oficial (consulta 2026-10-08)",
+            "en": "OpenSees — Newton Algorithm, official documentation (accessed 2026-10-08)"
+          },
+          "url": "https://opensees.github.io/OpenSeesDocumentation/user/manual/analysis/algorithm/Newton.html",
+          "note": {
+            "es": "Documentación del algoritmo de Newton. La convergencia depende también del modelo, el integrador y los criterios numéricos elegidos.",
+            "en": "Newton algorithm documentation. Convergence also depends on the model, integrator and selected numerical criteria."
+          }
+        },
+        {
+          "title": {
+            "es": "CSI — Define Load Cases, documentación oficial SAP2000 (consulta 2026-10-08)",
+            "en": "CSI — Define Load Cases, official SAP2000 documentation (accessed 2026-10-08)"
+          },
+          "url": "https://docs.csiamerica.com/help-files/sap/Menus/Define/Load_Cases/Define_Load_Cases.htm",
+          "note": {
+            "es": "Documentación del fabricante para distinguir patrones de carga y casos de análisis; no prescribe cargas de diseño.",
+            "en": "Vendor documentation distinguishing load patterns from analysis cases; it does not prescribe design loads."
+          }
+        },
+        {
+          "title": {
+            "es": "Dassault Systèmes / SIMULIA — Contact and Convergence in Abaqus/Standard (recurso técnico oficial; consulta 2026-10-08)",
+            "en": "Dassault Systèmes / SIMULIA — Contact and Convergence in Abaqus/Standard (official technical resource; accessed 2026-10-08)"
+          },
+          "url": "https://blog.3ds.com/brands/simulia/contact-convergence-abaqus-standard/",
+          "note": {
+            "es": "Recurso técnico oficial del fabricante sobre contacto y convergencia. No es una norma de diseño ni un registro de una simulación de esta nota.",
+            "en": "Official vendor technical resource on contact and convergence. It is neither a design standard nor a record of a simulation performed for this note."
+          }
+        }
+      ],
+      "image": {
+        "src": "assets/insight-linear-nonlinear.svg",
+        "source": {
+          "es": "Ilustración vectorial original preparada para esta nota.",
+          "en": "Original vector illustration prepared for this note."
+        },
+        "software": "SVG",
+        "date": "2026-10-08",
+        "usage": {
+          "es": "Esquema educativo original; no es una captura de software ni evidencia de un proyecto.",
+          "en": "Original educational diagram; not a software screenshot or project evidence."
+        },
+        "caption": {
+          "es": "Comparación analítica de un resorte lineal y otro bilineal con igual rigidez inicial. Son leyes elegidas para enseñar, no resultados de un modelo real.",
+          "en": "Analytical comparison of linear and bilinear springs with the same initial stiffness. These are teaching relationships, not results from a real structural model."
+        },
+        "description": {
+          "es": "Dos leyes fuerza-desplazamiento conceptuales: recta elástica y curva bilineal con igual pendiente inicial.",
+          "en": "Two conceptual force-displacement laws: an elastic straight line and a bilinear curve with the same initial slope."
+        },
+        "width": 1000,
+        "height": 600
+      },
+      "es": {
+        "title": "Lineal o no lineal: elegir según la pregunta",
+        "subtitle": "La complejidad del modelo debe responder al comportamiento que interesa.",
+        "summary": "Material, geometría y contacto pueden cambiar la respuesta. Un ejemplo bilineal muestra cuándo deja de ser válida la extrapolación elástica.",
+        "category": "Modelación estructural",
+        "imageAlt": "Dos leyes fuerza-desplazamiento conceptuales: recta elástica y curva bilineal con igual pendiente inicial.",
+        "sections": [
+          {
+            "title": "Introducción",
+            "paragraphs": [
+              "La elección entre análisis lineal y no lineal comienza con una pregunta: ¿qué respuesta necesita conocer el proyecto? Una estimación de desplazamientos de servicio, la redistribución después de fluencia y la pérdida de estabilidad no requieren las mismas hipótesis. Incorporar más parámetros no garantiza una respuesta mejor. Sí obliga a identificar qué mecanismo representa cada parámetro y con qué evidencia se justifica."
+            ]
+          },
+          {
+            "title": "Qué supone el modelo lineal",
+            "paragraphs": [
+              "En estática lineal, una matriz de rigidez constante relaciona fuerzas y desplazamientos. La proporcionalidad permite escalar respuestas y aplicar superposición dentro de esas hipótesis. Esto no convierte todos los resultados de software en sumables: por ejemplo, una combinación modal de máximos espectrales requiere su regla específica y no equivale a una historia simultánea.",
+              "También deben distinguirse patrón de carga y caso de análisis. CSI explica que el patrón define acciones, mientras el caso establece cómo se aplican y cómo se resuelve la respuesta [3]. Una geometría correctamente dibujada con un caso mal definido sigue siendo un problema distinto al que se quería estudiar."
+            ],
+            "equation": "K u = F;  K constante dentro de las hipótesis lineales"
+          },
+          {
+            "title": "Qué cambia en un análisis no lineal",
+            "paragraphs": [
+              "La no linealidad material aparece cuando la relación constitutiva cambia con el estado: plasticidad, fisuración o degradación son ejemplos. La no linealidad geométrica incorpora el efecto de la configuración deformada sobre el equilibrio. La apertura o cierre de contactos puede modificar las restricciones. Estos mecanismos pueden coexistir, pero deben activarse y verificarse por separado.",
+              "En una solución incremental de Newton se corrigen desplazamientos a partir del desequilibrio entre fuerzas externas e internas. La documentación de OpenSees describe el papel de la tangente en esa iteración [2]. No toda no linealidad implica grandes desplazamientos, y una estructura elástica también puede presentar efectos geométricos importantes.",
+              "NIST GCR 17-917-46v1 (2017) ofrece una base para organizar hipótesis, parámetros y verificaciones de modelos no lineales [1]. Una aplicación práctica consiste en recuperar primero la respuesta elástica a demanda baja y estudiar después la sensibilidad a rigidez, resistencia y condiciones de apoyo."
+            ],
+            "equation": "r(u) = Fext − Fint(u);  Kt(uᵢ) Δuᵢ = r(uᵢ)"
+          },
+          {
+            "title": "Ejemplo conceptual: dos resortes, una fuerza",
+            "paragraphs": [
+              "Se comparan dos resortes ficticios con rigidez inicial de 10 kN/mm. El primero permanece lineal. El segundo fluye a 100 kN y continúa con pendiente positiva de 1 kN/mm. Para una fuerza estática de 120 kN, el modelo lineal entrega 12 mm; el bilineal alcanza 10 + (120 − 100)/1 = 30 mm.",
+              "La diferencia procede de la ley constitutiva elegida, no de una superioridad automática del segundo modelo. Si esa ley no representa el componente real, los 30 mm tampoco son una predicción válida. Este cálculo no define descarga, disipación cíclica, fatiga ni rotura: esos comportamientos necesitarían hipótesis adicionales."
+            ],
+            "table": {
+              "headers": [
+                "Modelo",
+                "Hipótesis",
+                "Desplazamiento a 120 kN"
+              ],
+              "rows": [
+                [
+                  "Lineal",
+                  "K = 10 kN/mm constante",
+                  "12 mm"
+                ],
+                [
+                  "Bilineal",
+                  "Fy = 100 kN; Kpos = 1 kN/mm",
+                  "30 mm"
+                ]
+              ]
+            }
+          },
+          {
+            "title": "Errores habituales",
+            "bullets": [
+              "Aplicar superposición a estados no lineales con trayectorias o condiciones de contacto diferentes.",
+              "Confundir convergencia de equilibrio con validación experimental o independencia de malla.",
+              "Reducir tolerancias o añadir estabilización sin revisar unidades, mecanismos y balances.",
+              "Cambiar de solucionador para ocultar una restricción incorrecta: los problemas de contacto y equilibrio requieren diagnóstico físico [4]."
+            ]
+          },
+          {
+            "title": "Conclusión y alcance",
+            "paragraphs": [
+              "Un modelo apropiado es el más sencillo que conserva los mecanismos necesarios para la decisión. La comparación debe documentar qué hipótesis cambian y cómo afectan las magnitudes de interés. El ejemplo es analítico y educativo, sin diseño de una obra. Las referencias metodológicas conservan su edición identificada; revisión documental: 8 de octubre de 2026."
+            ]
+          }
+        ],
+        "status": "Nota técnica · Ejemplo conceptual",
+        "facts": [
+          {
+            "label": "Revisión",
+            "value": "2026-10-08"
+          },
+          {
+            "label": "Alcance",
+            "value": "Educativo · sin diseño de obra"
+          }
+        ]
+      },
+      "en": {
+        "title": "Linear or nonlinear: let the question decide",
+        "subtitle": "Model complexity should follow the behavior that matters.",
+        "summary": "Material response, geometry and contact can change the solution. A bilinear example shows when elastic extrapolation stops being valid.",
+        "category": "Structural modeling",
+        "imageAlt": "Two conceptual force-displacement laws: an elastic straight line and a bilinear curve with the same initial slope.",
+        "sections": [
+          {
+            "title": "Introduction",
+            "paragraphs": [
+              "Choosing linear or nonlinear analysis begins with a question: what response does the project need to establish? Service displacement, redistribution after yielding and loss of stability require different assumptions. Adding parameters does not guarantee a better answer. It does require the analyst to explain which mechanism each parameter represents and what evidence supports it."
+            ]
+          },
+          {
+            "title": "What a linear model assumes",
+            "paragraphs": [
+              "In linear statics, a constant stiffness matrix relates forces and displacements. Proportionality allows scaling and superposition within those assumptions. This does not make every software output directly additive: modal spectral maxima, for example, require an appropriate combination rule and are not a simultaneous response history.",
+              "A load pattern must also be distinguished from an analysis case. CSI explains that the pattern defines actions, while the case determines how they are applied and how response is calculated [3]. Correctly drawn geometry with an incorrectly defined case still solves a different problem from the intended one."
+            ],
+            "equation": "K u = F;  K is constant within the linear assumptions"
+          },
+          {
+            "title": "What changes in nonlinear analysis",
+            "paragraphs": [
+              "Material nonlinearity occurs when constitutive response changes with state, as in plasticity, cracking or degradation. Geometric nonlinearity includes the influence of the deformed configuration on equilibrium. Opening and closing contact can change restraints. These mechanisms may coexist, but they should be introduced and checked separately.",
+              "An incremental Newton solution corrects displacements using the imbalance between external and internal forces. OpenSees documentation describes the role of tangent stiffness in this iteration [2]. Nonlinearity does not always involve large displacements; an elastic structure may also exhibit significant geometric effects.",
+              "NIST GCR 17-917-46v1 (2017) provides a framework for organizing assumptions, parameters and checks in nonlinear models [1]. One practical approach is to first recover elastic response at low demand, then examine sensitivity to stiffness, strength and support assumptions."
+            ],
+            "equation": "r(u) = Fext − Fint(u);  Kt(uᵢ) Δuᵢ = r(uᵢ)"
+          },
+          {
+            "title": "Conceptual example: two springs, one force",
+            "paragraphs": [
+              "Consider two fictional springs with an initial stiffness of 10 kN/mm. The first remains linear. The second yields at 100 kN and then follows a positive slope of 1 kN/mm. Under a static force of 120 kN, the linear model gives 12 mm; the bilinear model gives 10 + (120 − 100)/1 = 30 mm.",
+              "The difference comes from the selected constitutive relationship, rather than automatic superiority of the second model. If that relationship does not represent the physical component, 30 mm is not a valid prediction either. This calculation defines neither unloading nor cyclic dissipation, fatigue or fracture; those behaviors would require further assumptions."
+            ],
+            "table": {
+              "headers": [
+                "Model",
+                "Assumption",
+                "Displacement at 120 kN"
+              ],
+              "rows": [
+                [
+                  "Linear",
+                  "Constant K = 10 kN/mm",
+                  "12 mm"
+                ],
+                [
+                  "Bilinear",
+                  "Fy = 100 kN; Kpost = 1 kN/mm",
+                  "30 mm"
+                ]
+              ]
+            }
+          },
+          {
+            "title": "Common mistakes",
+            "bullets": [
+              "Applying superposition to nonlinear states with different load histories or contact conditions.",
+              "Confusing equilibrium convergence with experimental validation or mesh independence.",
+              "Relaxing tolerances or adding stabilization without checking units, mechanisms and balances.",
+              "Changing the solver to hide an incorrect restraint: contact and equilibrium problems require a physical diagnosis [4]."
+            ]
+          },
+          {
+            "title": "Conclusion and scope",
+            "paragraphs": [
+              "An appropriate model is the simplest one that preserves the mechanisms needed for the decision. Comparisons should record which assumptions change and how those changes affect the quantities of interest. This is an educational analytical example, not a project design. Methodological references retain their identified editions; the document review date is 8 October 2026."
+            ]
+          }
+        ],
+        "status": "Technical note · Conceptual example",
+        "facts": [
+          {
+            "label": "Reviewed",
+            "value": "2026-10-08"
+          },
+          {
+            "label": "Scope",
+            "value": "Educational · not project-specific design"
+          }
+        ]
+      }
+    },
+    {
+      "id": "industrial-steel",
+      "slug": "acero-industrial-y-minero",
+      "date": "2026-10-08",
+      "references": [
+        {
+          "title": {
+            "es": "ANSI/AISC 360-22 — Specification for Structural Steel Buildings (2022)",
+            "en": "ANSI/AISC 360-22 — Specification for Structural Steel Buildings (2022)"
+          },
+          "url": "https://www.aisc.org/aisc/publications/current-standards/aisc-360/",
+          "note": {
+            "es": "Edición 2022 de la especificación general. Su aplicación y sus erratas deben identificarse en la base de diseño del proyecto.",
+            "en": "2022 edition of the general specification. Its applicability and errata should be identified in the project's design basis."
+          }
+        },
+        {
+          "title": {
+            "es": "ANSI/AISC 341-22 — Seismic Provisions for Structural Steel Buildings (2022)",
+            "en": "ANSI/AISC 341-22 — Seismic Provisions for Structural Steel Buildings (2022)"
+          },
+          "url": "https://www.aisc.org/aisc/publications/current-standards/aisc-341/",
+          "note": {
+            "es": "Disposiciones sísmicas de 2022 para sistemas dentro de su alcance; no convierten cualquier estructura de acero en un sistema dúctil.",
+            "en": "2022 seismic provisions for systems within their scope; they do not make every steel structure a ductile system."
+          }
+        },
+        {
+          "title": {
+            "es": "ANSI/AISC 303-22 — Code of Standard Practice for Structural Steel Buildings and Bridges (2022)",
+            "en": "ANSI/AISC 303-22 — Code of Standard Practice for Structural Steel Buildings and Bridges (2022)"
+          },
+          "url": "https://www.aisc.org/aisc/publications/current-standards/aisc-303/",
+          "note": {
+            "es": "Código de práctica de 2022 para responsabilidades y coordinación. No sustituye la especificación de resistencia.",
+            "en": "2022 code of standard practice covering responsibilities and coordination. It does not replace the strength-design specification."
+          }
+        },
+        {
+          "title": {
+            "es": "AISC — Design Guide 7: Industrial Building Design, 3.ª edición (2019), catálogo oficial",
+            "en": "AISC — Design Guide 7: Industrial Building Design, 3rd edition (2019), official catalog"
+          },
+          "url": "https://www.aisc.org/aisc/publications/design-guides/design-guide-summary/",
+          "note": {
+            "es": "El catálogo oficial identifica Design Guide 7, tercera edición de 2019. Una guía no equivale a una exigencia normativa adoptada.",
+            "en": "The official catalog identifies Design Guide 7, third edition, 2019. A guide is not equivalent to an adopted code requirement."
+          }
+        },
+        {
+          "title": {
+            "es": "AISC — Revisions and Errata, listado oficial (revisado 2026-10-08)",
+            "en": "AISC — Revisions and Errata, official listing (reviewed 2026-10-08)"
+          },
+          "url": "https://www.aisc.org/aisc/publications/revisions-and-errata/",
+          "note": {
+            "es": "Listado oficial revisado el 8 de octubre de 2026. Antes de diseñar, comprobar las correcciones correspondientes a cada edición utilizada.",
+            "en": "Official listing reviewed on 8 October 2026. Before design, check the corrections corresponding to each edition used."
+          }
+        }
+      ],
+      "image": {
+        "src": "assets/insight-industrial-steel.svg",
+        "source": {
+          "es": "Ilustración vectorial original preparada para esta nota.",
+          "en": "Original vector illustration prepared for this note."
+        },
+        "software": "SVG",
+        "date": "2026-10-08",
+        "usage": {
+          "es": "Esquema educativo original; no es una captura de software ni evidencia de un proyecto.",
+          "en": "Original educational diagram; not a software screenshot or project evidence."
+        },
+        "caption": {
+          "es": "Trayectoria conceptual de una fuerza horizontal desde la plataforma hasta el par de reacciones de cimentación. Geometría educativa; no dimensiona perfiles ni anclajes.",
+          "en": "Conceptual load path from a platform-level horizontal force to a foundation reaction couple. Educational geometry; no member or anchor design."
+        },
+        "description": {
+          "es": "Pórtico industrial conceptual con fuerza horizontal, arriostramiento, pedestales y par de reacciones de cimentación.",
+          "en": "Conceptual industrial frame with horizontal force, bracing, concrete pedestals and a foundation reaction couple."
+        },
+        "width": 1000,
+        "height": 600
+      },
+      "es": {
+        "title": "Acero industrial: diseñar la trayectoria de cargas",
+        "subtitle": "Equipos, conexiones, montaje y operación forman parte del mismo sistema.",
+        "summary": "Una estructura minera exige compatibilizar resistencia, estabilidad, servicio e interfaces con equipos; seleccionar perfiles es solo una parte del proceso.",
+        "category": "Acero e industria",
+        "imageAlt": "Pórtico industrial conceptual con fuerza horizontal, arriostramiento, pedestales y par de reacciones de cimentación.",
+        "sections": [
+          {
+            "title": "Introducción",
+            "paragraphs": [
+              "Una plataforma para equipos puede parecer un conjunto sencillo de vigas y columnas. Sin embargo, su comportamiento depende también de los puntos de apoyo del equipo, las conexiones, la continuidad del arriostramiento y la rigidez de las fundaciones. En instalaciones industriales y mineras, el análisis debe comenzar con la función operativa y la trayectoria completa de las acciones, desde su origen hasta el terreno."
+            ]
+          },
+          {
+            "title": "El problema: una carga de equipo no es solo su peso",
+            "paragraphs": [
+              "La información de entrada debe distinguir operación, equipo vacío o lleno, mantenimiento, montaje y situaciones excepcionales que correspondan. También debe definir fuerzas transmitidas, excentricidades, frecuencias de excitación, desplazamientos permitidos e interfaces con tuberías o transportadores. Los datos del fabricante necesitan unidades, sistema de ejes, combinaciones y condición de servicio identificables.",
+              "Una tabla de reacciones sin esos antecedentes puede llevar a sumar máximos que nunca actúan juntos o a ignorar una fuerza de arranque. La revisión estructural debe dejar visibles los supuestos pendientes. No es correcto reemplazar datos de equipos todavía desconocidos por valores presentados como definitivos."
+            ]
+          },
+          {
+            "title": "Desarrollo: revisar el sistema antes del perfil",
+            "paragraphs": [
+              "La estabilidad exige comprobar cómo se limita el desplazamiento lateral y cómo se restringen los modos de pandeo relevantes. Una diagonal dibujada no garantiza una trayectoria resistente: sus uniones, placas y anclajes deben transmitir las fuerzas y deformaciones previstas. La flexibilidad de conexiones y bases puede alterar tanto las demandas internas como los desplazamientos.",
+              "AISC 360-22 proporciona requisitos generales de diseño de acero e incluye los enfoques LRFD y ASD [1]. AISC 341-22 añade disposiciones para sistemas sismorresistentes dentro de su alcance [2]. Usar un perfil de acero no basta para atribuir al sistema una ductilidad o un factor de reducción determinados. La base normativa debe quedar fijada por proyecto y jurisdicción.",
+              "La documentación también debe asignar responsabilidades de diseño y coordinación, tema abordado por AISC 303-22 [3]. En la práctica, esto se traduce en aclarar quién define cargas, conexiones, tolerancias, secuencia de montaje y restricciones temporales. La condición durante montaje puede tener una estabilidad distinta a la de servicio."
+            ]
+          },
+          {
+            "title": "Ejemplo conceptual: del empuje al apoyo",
+            "paragraphs": [
+              "Considérese un pórtico idealizado que recibe una fuerza horizontal de 80 kN a 6 m sobre su base. El momento de vuelco es 480 kN·m. Si se equilibra exclusivamente mediante un par vertical separado 4 m, el incremento axial de cada lado es 120 kN, con signos opuestos.",
+              "Se ha supuesto un mecanismo plano y una transmisión idealizada. Todavía deben superponerse los efectos gravitatorios compatibles y comprobarse levantamiento, anclajes, base, pedestal y suelo según el modelo real. El ejemplo no dimensiona una cimentación ni sustituye la revisión tridimensional; sirve para detectar si las reacciones del modelo conservan un equilibrio elemental."
+            ],
+            "equation": "M = Fh = 80 × 6 = 480 kN·m;  ΔN = M/B = 480/4 = 120 kN"
+          },
+          {
+            "title": "Errores habituales",
+            "bullets": [
+              "Comprobar únicamente resistencia y omitir vibración, deformaciones de servicio o alineamiento de equipos.",
+              "Asignar bases empotradas y conexiones rígidas sin una justificación compatible con su detalle.",
+              "Eliminar acciones de montaje, fatiga o corrosión relevantes porque no aparecen en un caso estático básico.",
+              "Mezclar factores LRFD y ASD, o citar una edición sin revisar sus erratas oficiales [5]."
+            ]
+          },
+          {
+            "title": "Conclusión y alcance",
+            "paragraphs": [
+              "La calidad del diseño industrial se reconoce en la continuidad entre equipo, modelo, conexión, cimentación y documentación. Cada interfaz debe tener un responsable y una hipótesis trazable. Las referencias son AISC 360-22, 341-22, 303-22 y la guía industrial de 2019 [4]; no se afirma su adopción automática en un proyecto peruano. Ejemplo educativo propio, revisado el 8 de octubre de 2026."
+            ]
+          }
+        ],
+        "status": "Nota técnica · Ejemplo conceptual",
+        "facts": [
+          {
+            "label": "Revisión",
+            "value": "2026-10-08"
+          },
+          {
+            "label": "Alcance",
+            "value": "Educativo · sin diseño de obra"
+          }
+        ]
+      },
+      "en": {
+        "title": "Industrial steel: design the complete load path",
+        "subtitle": "Equipment, connections, erection and operation belong to one system.",
+        "summary": "Mining structures require strength, stability, serviceability and equipment interfaces to work together; selecting member sizes is only one part of the process.",
+        "category": "Steel and industry",
+        "imageAlt": "Conceptual industrial frame with horizontal force, bracing, concrete pedestals and a foundation reaction couple.",
+        "sections": [
+          {
+            "title": "Introduction",
+            "paragraphs": [
+              "An equipment platform may look like a straightforward assembly of beams and columns. Its response also depends on equipment support points, connections, bracing continuity and foundation stiffness. For industrial and mining facilities, analysis should start with the operational purpose and the complete path of actions from their source to the ground."
+            ]
+          },
+          {
+            "title": "The problem: equipment loading means more than weight",
+            "paragraphs": [
+              "Input information should distinguish operation, empty or full equipment, maintenance, erection and relevant exceptional conditions. It should also define transmitted forces, eccentricities, excitation frequencies, displacement limits and interfaces with piping or conveyors. Manufacturer data need identifiable units, axes, combinations and operating conditions.",
+              "A reaction table without this context may lead to adding maxima that do not occur together or overlooking a starting force. The structural review should make unresolved assumptions visible. Missing equipment data should not be replaced with estimates presented as final values."
+            ]
+          },
+          {
+            "title": "Development: examine the system before the member",
+            "paragraphs": [
+              "Stability requires understanding how lateral displacement is restrained and how relevant buckling modes are controlled. Drawing a brace does not establish a reliable load path: connections, plates and anchors must transfer the anticipated forces and accommodate the intended deformations. Connection and base flexibility may affect both internal demands and displacements.",
+              "AISC 360-22 provides general steel design requirements and includes LRFD and ASD approaches [1]. AISC 341-22 adds provisions for seismic force-resisting systems within its scope [2]. A steel section alone does not establish system ductility or justify a particular response-reduction factor. The applicable design basis must be defined for the project and jurisdiction.",
+              "Documentation should also assign design and coordination responsibilities, as addressed by AISC 303-22 [3]. In practice, this means establishing who defines loads, connections, tolerances, erection sequences and temporary restraints. Stability during erection may differ from stability under the final operating condition."
+            ]
+          },
+          {
+            "title": "Conceptual example: from lateral force to support",
+            "paragraphs": [
+              "Consider an idealized frame carrying an 80 kN horizontal force 6 m above its base. The overturning moment is 480 kN·m. If that moment is resisted entirely by a vertical force couple with 4 m spacing, each side receives an axial-force increment of 120 kN, with opposite signs.",
+              "This assumes a planar mechanism and an idealized force transfer. Compatible gravity effects still need to be added, and uplift, anchors, base plates, pedestals and soil must be checked using the actual model. The example does not size a foundation or replace a three-dimensional assessment; it provides an elementary equilibrium check against model reactions."
+            ],
+            "equation": "M = Fh = 80 × 6 = 480 kN·m;  ΔN = M/B = 480/4 = 120 kN"
+          },
+          {
+            "title": "Common mistakes",
+            "bullets": [
+              "Checking strength alone while omitting vibration, service deflections or equipment alignment.",
+              "Assuming fixed bases and rigid connections without support from their actual details.",
+              "Omitting relevant erection, fatigue or corrosion conditions because they are absent from a basic static case.",
+              "Mixing LRFD and ASD factors or citing an edition without checking its official errata [5]."
+            ]
+          },
+          {
+            "title": "Conclusion and scope",
+            "paragraphs": [
+              "Industrial design quality depends on continuity between equipment, model, connection, foundation and documentation. Each interface needs an assigned responsibility and a traceable assumption. References include AISC 360-22, 341-22, 303-22 and the 2019 industrial guide [4]; their automatic adoption in a Peruvian project is not implied. Original educational example, reviewed on 8 October 2026."
+            ]
+          }
+        ],
+        "status": "Technical note · Conceptual example",
+        "facts": [
+          {
+            "label": "Reviewed",
+            "value": "2026-10-08"
+          },
+          {
+            "label": "Scope",
+            "value": "Educational · not project-specific design"
+          }
+        ]
+      }
+    },
+    {
+      "id": "abaqus",
+      "slug": "abaqus-malla-material-contorno",
+      "date": "2026-10-08",
+      "references": [
+        {
+          "title": {
+            "es": "Dassault Systèmes / SIMULIA — Debugging Abaqus Models (recurso técnico oficial, sin edición normativa; consulta 2026-10-08)",
+            "en": "Dassault Systèmes / SIMULIA — Debugging Abaqus Models (official technical resource, not a code edition; accessed 2026-10-08)"
+          },
+          "url": "https://blog.3ds.com/brands/simulia/debugging-abaqus-models/",
+          "note": {
+            "es": "Recurso del fabricante para diagnóstico de modelos. Los ajustes concretos deben verificarse en la documentación de la versión de Abaqus utilizada.",
+            "en": "Vendor resource for model diagnostics. Specific settings should be checked against documentation for the Abaqus release used."
+          }
+        },
+        {
+          "title": {
+            "es": "Dassault Systèmes / SIMULIA — Contact and Convergence in Abaqus/Standard (recurso técnico oficial; consulta 2026-10-08)",
+            "en": "Dassault Systèmes / SIMULIA — Contact and Convergence in Abaqus/Standard (official technical resource; accessed 2026-10-08)"
+          },
+          "url": "https://blog.3ds.com/brands/simulia/contact-convergence-abaqus-standard/",
+          "note": {
+            "es": "Recurso técnico oficial del fabricante sobre contacto y convergencia. No es una norma de diseño ni un registro de una simulación de esta nota.",
+            "en": "Official vendor technical resource on contact and convergence. It is neither a design standard nor a record of a simulation performed for this note."
+          }
+        },
+        {
+          "title": {
+            "es": "Dassault Systèmes / SIMULIA Community — Strain Jumps: mesh convergence (recurso técnico oficial; consulta 2026-10-08)",
+            "en": "Dassault Systèmes / SIMULIA Community — Strain Jumps: mesh convergence (official technical resource; accessed 2026-10-08)"
+          },
+          "url": "https://3dswym.3dexperience.3ds.com/post/simulia-community/strain-jumps_3218",
+          "note": {
+            "es": "Recurso técnico de la comunidad oficial SIMULIA sobre discontinuidades de deformación y convergencia de malla.",
+            "en": "Technical resource from the official SIMULIA community on strain jumps and mesh convergence."
+          }
+        },
+        {
+          "title": {
+            "es": "Dassault Systèmes / SIMULIA Community — Continuum Damage Mechanics: References (2022)",
+            "en": "Dassault Systèmes / SIMULIA Community — Continuum Damage Mechanics: References (2022)"
+          },
+          "url": "https://3dswym.3dexperience.3ds.com/post/simulia-community/continuum-damage-mechanics-references_EpyyZEh3S1WlXwVcN6FbdQ",
+          "note": {
+            "es": "Recurso técnico de 2022 con referencias sobre daño y caracterización de materiales. No aporta datos calibrados para un proyecto de este portafolio.",
+            "en": "2022 technical resource with references on damage and material characterization. It does not provide calibrated data for a project in this portfolio."
+          }
+        }
+      ],
+      "image": {
+        "src": "assets/insight-abaqus.svg",
+        "source": {
+          "es": "Ilustración vectorial original preparada para esta nota.",
+          "en": "Original vector illustration prepared for this note."
+        },
+        "software": "SVG",
+        "date": "2026-10-08",
+        "usage": {
+          "es": "Esquema educativo original; no es una captura de software ni evidencia de un proyecto.",
+          "en": "Original educational diagram; not a software screenshot or project evidence."
+        },
+        "caption": {
+          "es": "Misma viga conceptual con tres densidades de malla. La figura representa discretización; no contiene contornos de esfuerzos ni resultados Abaqus.",
+          "en": "The same conceptual cantilever with three mesh densities. The figure shows discretization, not stress contours or Abaqus results."
+        },
+        "description": {
+          "es": "Tres discretizaciones conceptuales de una viga en voladizo bajo la misma carga y condición de apoyo.",
+          "en": "Three conceptual mesh densities for a cantilever with the same loading and support condition."
+        },
+        "width": 1000,
+        "height": 600
+      },
+      "es": {
+        "title": "Abaqus: una malla fina no valida el modelo",
+        "subtitle": "Separar discretización, material, restricciones y solución.",
+        "summary": "Un procedimiento para comprobar qué representa un modelo de elementos finitos y qué demuestra realmente su convergencia.",
+        "category": "Elementos finitos",
+        "imageAlt": "Tres discretizaciones conceptuales de una viga en voladizo bajo la misma carga y condición de apoyo.",
+        "sections": [
+          {
+            "title": "Introducción",
+            "paragraphs": [
+              "Antes de abrir el mallador conviene definir la magnitud que responderá la pregunta: desplazamiento global, fuerza de contacto, deformación plástica o una tensión localizada. Cada una exige una representación y una revisión diferentes. Una imagen suave de contornos no demuestra precisión; puede depender de extrapolación, promediado nodal o una escala gráfica que oculta diferencias. El modelo debe poder explicarse sin recurrir a esa imagen."
+            ]
+          },
+          {
+            "title": "El problema: hay varias formas de converger",
+            "paragraphs": [
+              "La convergencia iterativa se refiere al equilibrio de un incremento para una discretización determinada. La convergencia de malla estudia cómo cambia una magnitud al refinar esa discretización. La validación contrasta la representación física con evidencia independiente. Aprobar una de estas revisiones no sustituye las otras.",
+              "La documentación técnica de SIMULIA recomienda investigar los mensajes de diagnóstico y relacionarlos con regiones y características del modelo [1]. Reducir el tamaño mínimo de incremento puede permitir continuar una solución, pero no corrige por sí mismo una restricción incompatible, un material mal definido o un contacto que representa otro mecanismo."
+            ]
+          },
+          {
+            "title": "Desarrollo: cuatro decisiones que deben documentarse",
+            "paragraphs": [
+              "Geometría y elementos: justificar por qué se emplean vigas, cascarones o sólidos; revisar espesor, integración y comportamiento dominante. La malla debe capturar los gradientes de interés con una transición razonable de tamaños. El recurso oficial sobre convergencia de malla propone observar la variación de resultados al refinar [3], no elegir un número de elementos como prueba suficiente.",
+              "Material: registrar unidades, origen de propiedades, rango de deformación y dependencia de temperatura o velocidad cuando corresponda. Las variables requeridas por una ley plástica o de daño no son intercambiables con cualquier curva de ensayo; SIMULIA advierte, por ejemplo, sobre la interpretación del estado posterior a la estricción [4].",
+              "Restricciones y solución: representar grados de libertad, apoyos y contacto según el mecanismo físico, evitando modos rígidos no deseados y sobrerrestricción. Abaqus/Standard y Abaqus/Explicit usan estrategias diferentes; resolver un problema con Explicit no elimina la necesidad de controlar estabilidad, inercia y balances. Los recursos oficiales [1–2] ayudan a distinguir esas cuestiones."
+            ]
+          },
+          {
+            "title": "Ejemplo conceptual con referencia analítica",
+            "paragraphs": [
+              "Se propone un voladizo prismático elástico: L = 2 m, b = 0,10 m, h = 0,20 m, E = 200 GPa y una carga transversal extrema P = 10 kN. La teoría de Euler–Bernoulli, despreciando deformación por cortante, entrega I = 6,667 × 10⁻⁵ m⁴ y desplazamiento extremo δ = 2,00 mm.",
+              "Es una referencia analítica, no una simulación ejecutada. Un estudio futuro podría comparar tres mallas manteniendo material, carga y apoyos. Si se utilizan sólidos, deben reconocerse las diferencias respecto a la idealización de viga y revisarse las tensiones cerca del empotramiento sin confundir singularidades de idealización con fallas físicas. En la expresión de refinamiento, ℓ es el tamaño de malla y q la magnitud de interés, no nula en el denominador."
+            ],
+            "equation": "I = bh³/12;  δ = PL³/(3EI);  εmalla = |q(ℓ/2) − q(ℓ)| / |q(ℓ/2)|"
+          },
+          {
+            "title": "Errores habituales",
+            "bullets": [
+              "Refinar la malla mientras se cambia simultáneamente el elemento, el material y la condición de apoyo.",
+              "Usar el máximo nodal promediado como único indicador, especialmente cerca de discontinuidades idealizadas.",
+              "Aceptar energía artificial o estabilización sin cuantificar su influencia en la respuesta.",
+              "Publicar una deformada magnificada sin indicar el factor de escala ni distinguirla de la geometría real."
+            ]
+          },
+          {
+            "title": "Conclusión y alcance",
+            "paragraphs": [
+              "La entrega verificable debe registrar la versión de Abaqus utilizada, entradas, formulación, mallas comparadas, criterios de solución y balances. Esta nota no fija opciones de una versión específica ni presenta resultados de software: desarrolla un criterio general y un ejemplo educativo. Fuentes oficiales SIMULIA revisadas el 8 de octubre de 2026."
+            ]
+          }
+        ],
+        "status": "Nota técnica · Ejemplo conceptual",
+        "facts": [
+          {
+            "label": "Revisión",
+            "value": "2026-10-08"
+          },
+          {
+            "label": "Alcance",
+            "value": "Educativo · sin diseño de obra"
+          }
+        ]
+      },
+      "en": {
+        "title": "Abaqus: a fine mesh does not validate the model",
+        "subtitle": "Separate discretization, material response, restraints and solution.",
+        "summary": "A practical framework for checking what a finite-element model represents and what convergence actually establishes.",
+        "category": "Finite elements",
+        "imageAlt": "Three conceptual mesh densities for a cantilever with the same loading and support condition.",
+        "sections": [
+          {
+            "title": "Introduction",
+            "paragraphs": [
+              "Before meshing, define the quantity that will answer the engineering question: global displacement, contact force, plastic strain or a localized stress. Each requires a different representation and review. A smooth contour image does not establish accuracy; it may reflect extrapolation, nodal averaging or a plotting scale that hides differences. The model should remain explainable without that image."
+            ]
+          },
+          {
+            "title": "The problem: convergence has several meanings",
+            "paragraphs": [
+              "Iterative convergence concerns equilibrium of an increment for a particular discretization. Mesh convergence examines how a quantity changes as that discretization is refined. Validation compares the physical representation with independent evidence. Passing one of these checks does not replace the others.",
+              "SIMULIA technical resources recommend investigating diagnostic messages and relating them to model regions and features [1]. Reducing the minimum increment size may allow a solution to continue, but it does not by itself correct an incompatible restraint, incorrectly specified material or contact definition representing a different mechanism."
+            ]
+          },
+          {
+            "title": "Development: four decisions to document",
+            "paragraphs": [
+              "Geometry and elements: explain the use of beams, shells or solids; review thickness, integration and the dominant response. The mesh should capture gradients of interest with appropriate size transitions. The official mesh-convergence resource recommends tracking changes in results during refinement [3], rather than treating an element count as sufficient evidence.",
+              "Material: record units, property sources, the strain range and relevant temperature or rate dependence. Inputs required by a plasticity or damage law are not interchangeable with arbitrary test curves; SIMULIA specifically discusses interpretation after necking [4].",
+              "Restraints and solution: represent degrees of freedom, supports and contact according to the physical mechanism, avoiding unintended rigid-body modes and overconstraint. Abaqus/Standard and Abaqus/Explicit use different solution strategies; obtaining an Explicit solution does not remove the need to assess stability, inertia and energy balances. Official resources [1–2] help distinguish these issues."
+            ]
+          },
+          {
+            "title": "Conceptual example with an analytical reference",
+            "paragraphs": [
+              "Consider a prismatic elastic cantilever with L = 2 m, b = 0.10 m, h = 0.20 m, E = 200 GPa and a transverse tip force P = 10 kN. Euler–Bernoulli theory, neglecting shear deformation, gives I = 6.667 × 10⁻⁵ m⁴ and tip displacement δ = 2.00 mm.",
+              "This is an analytical reference, not an executed simulation. A future study could compare three meshes while preserving material, loading and supports. If solid elements are used, differences from the beam idealization must be recognized; stresses near the clamp also require review without mistaking idealization singularities for physical failure. In the refinement expression, ℓ is mesh size and q is the quantity of interest, with a nonzero denominator."
+            ],
+            "equation": "I = bh³/12;  δ = PL³/(3EI);  εmesh = |q(ℓ/2) − q(ℓ)| / |q(ℓ/2)|"
+          },
+          {
+            "title": "Common mistakes",
+            "bullets": [
+              "Refining the mesh while simultaneously changing element type, material and support conditions.",
+              "Using the maximum averaged nodal stress as the sole indicator, particularly near idealized discontinuities.",
+              "Accepting artificial energy or stabilization without quantifying its influence on response.",
+              "Publishing a magnified deformed shape without stating its scale or distinguishing it from actual geometry."
+            ]
+          },
+          {
+            "title": "Conclusion and scope",
+            "paragraphs": [
+              "A reviewable deliverable should record the Abaqus release used, inputs, formulation, meshes compared, solution criteria and balances. This note does not prescribe release-specific settings or present software results: it develops a general method and an educational example. Official SIMULIA sources were reviewed on 8 October 2026."
+            ]
+          }
+        ],
+        "status": "Technical note · Conceptual example",
+        "facts": [
+          {
+            "label": "Reviewed",
+            "value": "2026-10-08"
+          },
+          {
+            "label": "Scope",
+            "value": "Educational · not project-specific design"
+          }
+        ]
+      }
+    },
+    {
+      "id": "seismic-design",
+      "slug": "diseno-sismorresistente-edificios",
+      "date": "2026-10-08",
+      "references": [
+        {
+          "title": {
+            "es": "MVCS — R.M. 183-2026-VIVIENDA, modificación de la N.T. E.030 y texto E.030 2026; resolución de 28 de abril de 2026",
+            "en": "MVCS — Ministerial Resolution 183-2026-VIVIENDA, amendment to N.T. E.030 and the 2026 E.030 text; resolution of 28 April 2026"
+          },
+          "url": "https://www.gob.pe/institucion/vivienda/normas-legales/8081915-183-2026-vivienda",
+          "note": {
+            "es": "Resolución aprobada el 28 de abril de 2026 y sus anexos oficiales. La aplicabilidad se revisa junto con su disposición transitoria modificada.",
+            "en": "Resolution approved on 28 April 2026 and its official annexes. Applicability is reviewed together with its amended transitional provision."
+          }
+        },
+        {
+          "title": {
+            "es": "MVCS — R.M. 217-2026-VIVIENDA, modificación de la disposición transitoria de la R.M. 183-2026; resolución de 2 de junio de 2026",
+            "en": "MVCS — Ministerial Resolution 217-2026-VIVIENDA, amendment to the transitional provision of Resolution 183-2026; resolution of 2 June 2026"
+          },
+          "url": "https://www.gob.pe/institucion/vivienda/normas-legales/8219609-217-2026-vivienda",
+          "note": {
+            "es": "Resolución de 2 de junio de 2026 que modifica la disposición transitoria de la R.M. 183-2026-VIVIENDA; no se presenta como otra edición técnica de E.030.",
+            "en": "Resolution of 2 June 2026 amending the transitional provision of Resolution 183-2026-VIVIENDA; it is not presented as another technical edition of E.030."
+          }
+        },
+        {
+          "title": {
+            "es": "NIST GCR 17-917-46v1 — Guidelines for Nonlinear Structural Analysis for Design of Buildings, Part I: General (2017)",
+            "en": "NIST GCR 17-917-46v1 — Guidelines for Nonlinear Structural Analysis for Design of Buildings, Part I: General (2017)"
+          },
+          "url": "https://nvlpubs.nist.gov/nistpubs/gcr/2017/NIST.GCR.17-917-46v1.pdf",
+          "note": {
+            "es": "Guía metodológica de 2017, Parte I. Apoya la organización y revisión del análisis no lineal; no sustituye la norma adoptada para un proyecto.",
+            "en": "2017 methodological guide, Part I. Supports the organization and review of nonlinear analysis; it does not replace the code adopted for a project."
+          }
+        },
+        {
+          "title": {
+            "es": "AISC — Seismic: recursos oficiales sobre sistemas, diafragmas y colectores (consulta 2026-10-08)",
+            "en": "AISC — Seismic: official resources on systems, diaphragms and collectors (accessed 2026-10-08)"
+          },
+          "url": "https://www.aisc.org/aisc/solutions-center/seismic/",
+          "note": {
+            "es": "Recursos oficiales sobre sistemas y componentes de transferencia. Complementan la explicación de trayectoria de cargas; no reemplazan las normas aplicables.",
+            "en": "Official resources on systems and force-transfer components. They support the load-path discussion but do not replace applicable standards."
+          }
+        }
+      ],
+      "image": {
+        "src": "assets/insight-seismic-design.svg",
+        "source": {
+          "es": "Ilustración vectorial original preparada para esta nota.",
+          "en": "Original vector illustration prepared for this note."
+        },
+        "software": "SVG",
+        "date": "2026-10-08",
+        "usage": {
+          "es": "Esquema educativo original; no es una captura de software ni evidencia de un proyecto.",
+          "en": "Original educational diagram; not a software screenshot or project evidence."
+        },
+        "caption": {
+          "es": "Deriva de entrepiso calculada con desplazamientos compatibles del mismo estado: (32 − 14) mm / 3000 mm = 0,006. No se representa un límite normativo.",
+          "en": "Story drift calculated using compatible displacements from the same response state: (32 − 14) mm / 3000 mm = 0.006. No code limit is shown."
+        },
+        "description": {
+          "es": "Esquema de dos niveles y su desplazamiento lateral conceptual, con altura de entrepiso y diferencia de desplazamientos.",
+          "en": "Conceptual two-level lateral-displacement diagram showing story height and the difference between compatible floor displacements."
+        },
+        "width": 1000,
+        "height": 600
+      },
+      "es": {
+        "title": "Diseño sísmico: conectar configuración, demanda y detalle",
+        "subtitle": "El espectro es una entrada; el comportamiento depende del sistema completo.",
+        "summary": "Revisiones esenciales para que masas, rigideces, derivas y continuidad resistente representen el edificio que se pretende diseñar.",
+        "category": "Ingeniería sísmica",
+        "imageAlt": "Esquema de dos niveles y su desplazamiento lateral conceptual, con altura de entrepiso y diferencia de desplazamientos.",
+        "sections": [
+          {
+            "title": "Introducción",
+            "paragraphs": [
+              "El diseño sismorresistente comienza antes del análisis: configuración, continuidad vertical y distribución de masa y rigidez condicionan la respuesta. Un edificio puede satisfacer una comprobación aislada y conservar una trayectoria de cargas deficiente, una concentración de deformación o una conexión incompatible. El objetivo de la revisión es relacionar demanda global, respuesta local y detalle constructivo, no producir únicamente una tabla de periodos."
+            ]
+          },
+          {
+            "title": "El problema: representar el edificio y la norma correctos",
+            "paragraphs": [
+              "La masa sísmica debe corresponder al uso y a las acciones consideradas. El modelo debe representar diafragmas, elementos verticales, conexiones, apoyos y rigideces efectivas con hipótesis coherentes. Un tabique, una abertura o una discontinuidad que cambia el mecanismo no desaparece físicamente por haber sido omitido del archivo.",
+              "Para Perú se identificó la N.T. E.030 de 2026 publicada junto con la R.M. 183-2026-VIVIENDA [1]. La R.M. 217-2026 modifica su disposición complementaria transitoria [2]. Ambas son resoluciones aprobadas, no propuestas. Determinar qué texto corresponde a un expediente en curso requiere revisar esa disposición y los antecedentes del proyecto; esta nota no interpreta casos administrativos particulares."
+            ]
+          },
+          {
+            "title": "Desarrollo: una revisión en tres escalas",
+            "paragraphs": [
+              "En la escala global se revisan masa total, equilibrio de reacciones, formas modales y sensibilidad de periodos a cambios razonables de rigidez. Una forma modal extraña puede revelar conectividad incompleta, liberaciones indebidas o un diafragma mal asignado. La respuesta torsional exige examinar puntos de planta y trayectorias resistentes; una sola línea de resultados puede ocultar la demanda de borde.",
+              "En la escala de piso se comprueba cómo se transfiere la acción desde el diafragma hacia colectores, pórticos o muros y luego a la cimentación. Los recursos sísmicos de AISC explican el papel del sistema y sus componentes de transferencia [4]. Este principio de continuidad no reemplaza las reglas específicas del material ni convierte cualquier losa en un diafragma rígido.",
+              "En la escala de elemento se relacionan esfuerzos, deformaciones y detalles. Las demandas que pueden tolerar comportamiento inelástico deben distinguirse de aquellas asociadas con mecanismos frágiles. Cuando se emplea análisis no lineal, NIST (2017) aporta un marco metodológico para organizar esas comprobaciones [3]."
+            ]
+          },
+          {
+            "title": "Ejemplo conceptual: desplazamiento no es deriva",
+            "paragraphs": [
+              "En un mismo estado compatible de respuesta, un piso inferior se desplaza 14 mm y el superior 32 mm, con altura de entrepiso de 3,00 m. La diferencia es 18 mm y la razón de deriva resulta 0,006, equivalente a 0,60 %. Dividir directamente 32 mm por la altura del piso daría otra magnitud.",
+              "El ejemplo es geométrico y no demuestra cumplimiento: faltan la definición normativa del desplazamiento a comparar, las amplificaciones que correspondan y el límite aplicable. Tampoco sería correcto restar dos máximos modales o temporales independientes como si necesariamente ocurrieran al mismo tiempo."
+            ],
+            "equation": "θᵢ = (uᵢ − uᵢ₋₁)/hᵢ = (32 − 14)/3000 = 0,006"
+          },
+          {
+            "title": "Errores habituales",
+            "bullets": [
+              "Ajustar la masa para obtener un periodo esperado en vez de investigar sus causas.",
+              "Interpretar el cortante basal como único indicador y no revisar distribución, torsión o concentraciones de deriva.",
+              "Cambiar de edición normativa sin registrar el régimen aplicable, parámetros y criterios afectados.",
+              "Confundir una envolvente de resultados con un estado simultáneo de equilibrio para diseñar una conexión."
+            ]
+          },
+          {
+            "title": "Conclusión y alcance",
+            "paragraphs": [
+              "Un diseño claro permite seguir cada decisión desde la configuración hasta el detalle y su verificación. La documentación debe identificar el texto normativo utilizado, su aplicabilidad y la fecha de revisión. Esta nota ofrece criterios educativos y una operación geométrica, no límites de aceptación ni un diseño ejecutable. Revisión: 8 de octubre de 2026."
+            ]
+          }
+        ],
+        "status": "Nota técnica · Ejemplo conceptual",
+        "facts": [
+          {
+            "label": "Revisión",
+            "value": "2026-10-08"
+          },
+          {
+            "label": "Alcance",
+            "value": "Educativo · sin diseño de obra"
+          }
+        ]
+      },
+      "en": {
+        "title": "Seismic design: connect configuration, demand and detailing",
+        "subtitle": "The spectrum is an input; response depends on the complete system.",
+        "summary": "Essential checks to make mass, stiffness, drift and load-path continuity represent the building being designed.",
+        "category": "Earthquake engineering",
+        "imageAlt": "Conceptual two-level lateral-displacement diagram showing story height and the difference between compatible floor displacements.",
+        "sections": [
+          {
+            "title": "Introduction",
+            "paragraphs": [
+              "Seismic design starts before analysis: configuration, vertical continuity and the distribution of mass and stiffness influence response. A building may satisfy an isolated check while retaining an inadequate load path, concentrated deformation or an incompatible connection. Review should connect global demand, local response and construction details rather than simply produce a table of periods."
+            ]
+          },
+          {
+            "title": "The problem: represent the right building and design basis",
+            "paragraphs": [
+              "Seismic mass must reflect occupancy and the actions being considered. The model should represent diaphragms, vertical components, connections, supports and effective stiffness using consistent assumptions. A partition, opening or discontinuity that changes the mechanism does not physically disappear because it was omitted from a model.",
+              "For Peru, the 2026 N.T. E.030 text was identified with Ministerial Resolution 183-2026-VIVIENDA [1]. Resolution 217-2026 modifies its transitional provision [2]. These are approved resolutions, not proposals. Establishing which text applies to an ongoing submission requires reviewing that provision and the project's circumstances; this note does not interpret individual administrative cases."
+            ]
+          },
+          {
+            "title": "Development: review at three scales",
+            "paragraphs": [
+              "At global scale, review total mass, reaction equilibrium, mode shapes and the sensitivity of periods to reasonable stiffness changes. An unusual mode shape may reveal disconnected components, unintended releases or incorrect diaphragm assignments. Torsional response requires examining plan locations and resisting paths; a single output line can hide edge demand.",
+              "At story scale, examine how diaphragm forces reach collectors, frames or walls and eventually the foundations. AISC seismic resources describe the roles of the system and its transfer components [4]. This continuity principle does not replace material-specific rules or make every floor slab a rigid diaphragm.",
+              "At component scale, connect forces, deformations and detailing. Demands that can accommodate inelastic behavior should be distinguished from those associated with brittle mechanisms. Where nonlinear analysis is used, NIST (2017) offers a methodological framework for organizing such checks [3]."
+            ]
+          },
+          {
+            "title": "Conceptual example: displacement is not story drift",
+            "paragraphs": [
+              "In a single compatible response state, the lower floor moves 14 mm and the upper floor 32 mm, with a story height of 3.00 m. Their relative displacement is 18 mm and the drift ratio is 0.006, or 0.60%. Dividing 32 mm directly by the story height would calculate a different quantity.",
+              "This is a geometric example and does not establish compliance: the code-defined displacement, any required amplification and the applicable limit are not specified. Likewise, two independent modal or time-history maxima cannot simply be subtracted as though they necessarily occurred simultaneously."
+            ],
+            "equation": "θᵢ = (uᵢ − uᵢ₋₁)/hᵢ = (32 − 14)/3000 = 0.006"
+          },
+          {
+            "title": "Common mistakes",
+            "bullets": [
+              "Adjusting mass to obtain an expected period instead of investigating the discrepancy.",
+              "Treating base shear as the sole indicator without reviewing its distribution, torsion or drift concentrations.",
+              "Changing code editions without recording applicability, parameters and affected criteria.",
+              "Mistaking a results envelope for a simultaneous equilibrium state when designing a connection."
+            ]
+          },
+          {
+            "title": "Conclusion and scope",
+            "paragraphs": [
+              "A clear design record lets a reviewer follow each decision from configuration to detailing and verification. It should identify the code text, its applicability and the review date. This note provides educational criteria and a geometric calculation, not acceptance limits or a construction-ready design. Reviewed on 8 October 2026."
+            ]
+          }
+        ],
+        "status": "Technical note · Conceptual example",
+        "facts": [
+          {
+            "label": "Reviewed",
+            "value": "2026-10-08"
+          },
+          {
+            "label": "Scope",
+            "value": "Educational · not project-specific design"
+          }
+        ]
+      }
+    },
+    {
+      "id": "retrofit",
+      "slug": "evaluacion-y-reforzamiento-estructural",
+      "date": "2026-10-08",
+      "references": [
+        {
+          "title": {
+            "es": "ASCE/SEI 41-23 — Seismic Evaluation and Retrofit of Existing Buildings (2023), presentación oficial",
+            "en": "ASCE/SEI 41-23 — Seismic Evaluation and Retrofit of Existing Buildings (2023), official overview"
+          },
+          "url": "https://www.asce.org/publications-and-news/codes-and-standards/asce-sei-41",
+          "note": {
+            "es": "Presentación oficial de la edición 2023. El texto completo y su adopción deben consultarse para establecer objetivos y criterios específicos.",
+            "en": "Official overview of the 2023 edition. Consult the full text and its adoption status to establish specific objectives and criteria."
+          }
+        },
+        {
+          "title": {
+            "es": "ACI CODE-562-25 — Assessment, Repair, and Rehabilitation of Existing Concrete Structures (2025), ficha y alcance oficiales",
+            "en": "ACI CODE-562-25 — Assessment, Repair, and Rehabilitation of Existing Concrete Structures (2025), official listing and scope"
+          },
+          "url": "https://www.concrete.org/store/productdetail.aspx?itemid=56225",
+          "note": {
+            "es": "Ficha oficial de la edición 2025 para concreto existente. La nota distingue su alcance del de la evaluación sísmica de edificios.",
+            "en": "Official listing for the 2025 edition addressing existing concrete structures. This note distinguishes its scope from seismic evaluation of buildings."
+          }
+        },
+        {
+          "title": {
+            "es": "ACI PRC-440.2-23 — Design and Construction of Externally Bonded FRP Systems for Strengthening Concrete Structures, Guide (2023)",
+            "en": "ACI PRC-440.2-23 — Design and Construction of Externally Bonded FRP Systems for Strengthening Concrete Structures, Guide (2023)"
+          },
+          "url": "https://www.concrete.org/store/productdetail?ItemID=440223&Language=English&Units=US_AND_METRIC",
+          "note": {
+            "es": "Guía de 2023 para sistemas FRP adheridos externamente. Su condición de guía y sus límites de aplicación deben mantenerse explícitos.",
+            "en": "2023 guide for externally bonded FRP systems. Its status as a guide and its application limits should remain explicit."
+          }
+        },
+        {
+          "title": {
+            "es": "ANSI/AISC 342-22 — Seismic Provisions for Evaluation and Retrofit of Existing Structural Steel Buildings (2022)",
+            "en": "ANSI/AISC 342-22 — Seismic Provisions for Evaluation and Retrofit of Existing Structural Steel Buildings (2022)"
+          },
+          "url": "https://www.aisc.org/aisc/publications/current-standards/aisc-342/",
+          "note": {
+            "es": "Edición 2022 para evaluación y reforzamiento sísmico de estructuras de acero existentes; su adopción depende de la base de evaluación.",
+            "en": "2022 edition for seismic evaluation and retrofit of existing steel structures; adoption depends on the assessment basis."
+          }
+        }
+      ],
+      "image": {
+        "src": "assets/insight-retrofit.svg",
+        "source": {
+          "es": "Ilustración vectorial original preparada para esta nota.",
+          "en": "Original vector illustration prepared for this note."
+        },
+        "software": "SVG",
+        "date": "2026-10-08",
+        "usage": {
+          "es": "Esquema educativo original; no es una captura de software ni evidencia de un proyecto.",
+          "en": "Original educational diagram; not a software screenshot or project evidence."
+        },
+        "caption": {
+          "es": "Dos sistemas resistentes idealizados comparten una fuerza horizontal. Aumentar solo una rigidez cambia el reparto de 50/50 a 75/25 para la misma fuerza impuesta.",
+          "en": "Two idealized resisting systems share a horizontal force. Increasing only one stiffness changes the split from 50/50 to 75/25 under the same imposed force."
+        },
+        "description": {
+          "es": "Comparación conceptual de dos elementos resistentes en paralelo, mostrando cómo cambia el reparto de fuerza al modificar una rigidez.",
+          "en": "Conceptual comparison of two parallel resisting elements showing how force distribution changes when one stiffness increases."
+        },
+        "width": 1000,
+        "height": 600
+      },
+      "es": {
+        "title": "Reforzar empieza por explicar la deficiencia",
+        "subtitle": "Diagnóstico, objetivo de desempeño y compatibilidad del sistema.",
+        "summary": "Un refuerzo local modifica la estructura completa. La elección entre encamisado, FRP o nuevos elementos depende del mecanismo y de la evidencia disponible.",
+        "category": "Evaluación y refuerzo",
+        "imageAlt": "Comparación conceptual de dos elementos resistentes en paralelo, mostrando cómo cambia el reparto de fuerza al modificar una rigidez.",
+        "sections": [
+          {
+            "title": "Introducción",
+            "paragraphs": [
+              "Una intervención no debería comenzar seleccionando un material de refuerzo. Primero se necesita explicar qué deficiencia existe, por qué importa y qué mejora se busca. Pérdida de sección, capacidad de deformación insuficiente, discontinuidad resistente y deterioro del sustrato son problemas distintos. Una técnica eficaz para uno puede resultar irrelevante para otro o trasladar la demanda a un componente que no se había revisado."
+            ]
+          },
+          {
+            "title": "El problema: conocer lo construido",
+            "paragraphs": [
+              "La evaluación debe distinguir información documentada, observada, ensayada e inferida. Planos originales, cambios de uso, reparaciones anteriores, geometrías medidas y estado de materiales alimentan un modelo con incertidumbre explícita. Una resistencia obtenida de un documento de diseño no equivale automáticamente a una propiedad confirmada de la estructura existente.",
+              "ASCE/SEI 41-23 organiza la evaluación y rehabilitación sísmica mediante objetivos de desempeño y niveles de evaluación [1]. ACI CODE-562-25 aborda la evaluación, reparación y rehabilitación del concreto existente [2]. Son referencias con alcances diferentes: se debe establecer el marco aplicable, sin trasladar requisitos de obra nueva a una evaluación por simple analogía."
+            ]
+          },
+          {
+            "title": "Desarrollo: del mecanismo a la alternativa",
+            "paragraphs": [
+              "El diagnóstico debe localizar la limitación: resistencia, estabilidad, deformación, transferencia entre piezas o durabilidad. Después se comparan alternativas según el objetivo y la secuencia de ejecución. Un encamisado puede modificar dimensiones, rigidez y transmisión de esfuerzos; nuevos muros o arriostres cambian la distribución global. Por ello también se revisan diafragmas, conexiones y fundaciones.",
+              "Un sistema FRP puede contribuir a mecanismos específicos de fortalecimiento o confinamiento, pero requiere identificar orientación, anclaje, adherencia, estado del concreto y exposición. ACI PRC-440.2-23 es una guía para sistemas FRP externamente adheridos [3]; su existencia no convierte cualquier envoltura en una solución válida. La mejora de resistencia no implica automáticamente recuperar rigidez inicial ni resolver la corrosión.",
+              "En acero existente, AISC 342-22 proporciona un marco especializado de evaluación y rehabilitación sísmica [4]. En cualquier material deben examinarse mecanismos frágiles y compatibilidad de deformaciones. La capacidad del elemento intervenido sirve de poco si la unión o el apoyo no pueden recibir la demanda resultante."
+            ]
+          },
+          {
+            "title": "Ejemplo conceptual: reforzar redistribuye",
+            "paragraphs": [
+              "Se idealiza un piso con dos sistemas laterales en paralelo y un diafragma rígido sin torsión. Si ambos tienen rigidez k y la fuerza horizontal impuesta es 100 kN, cada uno recibe 50 kN. Al cambiar únicamente la rigidez del primero a 3k, el reparto pasa a 75 kN y 25 kN.",
+              "El cálculo muestra compatibilidad de desplazamientos y equilibrio, no eficacia de una intervención real. Se ha mantenido artificialmente la misma fuerza total: en un análisis sísmico, cambiar rigidez también puede modificar periodos y demanda. Antes de concluir que el refuerzo es favorable habría que revisar resistencia, deformaciones, conexiones y cimentaciones bajo la nueva respuesta."
+            ],
+            "equation": "F₁ = [k₁/(k₁ + k₂)] F;  F₂ = [k₂/(k₁ + k₂)] F"
+          },
+          {
+            "title": "Errores habituales",
+            "bullets": [
+              "Definir la solución antes de registrar daños, materiales, geometría y objetivo de desempeño.",
+              "Comparar solo capacidades nominales y omitir la redistribución o los estados durante ejecución.",
+              "Suponer que todos los datos del modelo tienen el mismo nivel de certeza.",
+              "Presentar una reducción de demanda en un elemento como mejora global sin revisar dónde se transfirió."
+            ]
+          },
+          {
+            "title": "Conclusión y alcance",
+            "paragraphs": [
+              "La propuesta debe enlazar evidencia, diagnóstico, objetivo, alternativa y verificación, con un registro de incertidumbres y una estrategia de control durante ejecución. Una revisión final comprueba el conjunto intervenido y su compatibilidad, no solo la pieza reforzada. Ejemplo educativo original; referencias ASCE 41-23, ACI 562-25, ACI PRC-440.2-23 y AISC 342-22 revisadas el 8 de octubre de 2026."
+            ]
+          }
+        ],
+        "status": "Nota técnica · Ejemplo conceptual",
+        "facts": [
+          {
+            "label": "Revisión",
+            "value": "2026-10-08"
+          },
+          {
+            "label": "Alcance",
+            "value": "Educativo · sin diseño de obra"
+          }
+        ]
+      },
+      "en": {
+        "title": "Retrofit starts by explaining the deficiency",
+        "subtitle": "Diagnosis, performance objectives and system compatibility.",
+        "summary": "Local strengthening changes the whole structure. Choosing jackets, FRP or new resisting elements depends on the mechanism and the available evidence.",
+        "category": "Assessment and retrofit",
+        "imageAlt": "Conceptual comparison of two parallel resisting elements showing how force distribution changes when one stiffness increases.",
+        "sections": [
+          {
+            "title": "Introduction",
+            "paragraphs": [
+              "An intervention should not begin by selecting a strengthening material. First establish the deficiency, why it matters and what improvement is required. Section loss, inadequate deformation capacity, discontinuous load paths and deteriorated substrate are different problems. A technique effective for one may be irrelevant to another or transfer demand to a component that was not previously examined."
+            ]
+          },
+          {
+            "title": "The problem: establish the as-built condition",
+            "paragraphs": [
+              "Assessment should distinguish documented, observed, tested and inferred information. Original drawings, changes in use, previous repairs, measured geometry and material condition inform a model with explicit uncertainty. A strength value stated in a design document does not automatically establish a confirmed property of the existing structure.",
+              "ASCE/SEI 41-23 organizes seismic evaluation and retrofit through performance objectives and evaluation tiers [1]. ACI CODE-562-25 addresses assessment, repair and rehabilitation of existing concrete [2]. Their scopes differ: the applicable framework must be established without simply transferring new-building requirements to an assessment by analogy."
+            ]
+          },
+          {
+            "title": "Development: from mechanism to intervention",
+            "paragraphs": [
+              "Diagnosis should identify the limitation: strength, stability, deformation, load transfer or durability. Alternatives can then be compared against the objective and construction sequence. A jacket can change dimensions, stiffness and force transfer; additional walls or braces change global distribution. Diaphragms, connections and foundations therefore also need review.",
+              "An FRP system can contribute to particular strengthening or confinement mechanisms, but fiber orientation, anchorage, bond, concrete condition and exposure must be defined. ACI PRC-440.2-23 is a guide for externally bonded FRP systems [3]; its existence does not make every wrap a valid solution. Greater strength does not automatically restore initial stiffness or resolve corrosion.",
+              "For existing steel structures, AISC 342-22 provides a specialized seismic evaluation and retrofit framework [4]. In every material, brittle mechanisms and deformation compatibility need examination. Strengthening a member provides little benefit if its connection or support cannot receive the resulting demand."
+            ]
+          },
+          {
+            "title": "Conceptual example: strengthening redistributes force",
+            "paragraphs": [
+              "Idealize a floor with two parallel lateral systems and a rigid diaphragm without torsion. If both systems have stiffness k and an imposed horizontal force of 100 kN acts on the floor, each receives 50 kN. Increasing only the first stiffness to 3k changes the distribution to 75 kN and 25 kN.",
+              "This demonstrates displacement compatibility and equilibrium, not the effectiveness of an actual intervention. Total force has been held artificially constant: in seismic analysis, changing stiffness may also change periods and demand. A favorable assessment would require reviewing strength, deformation, connections and foundations under the revised response."
+            ],
+            "equation": "F₁ = [k₁/(k₁ + k₂)] F;  F₂ = [k₂/(k₁ + k₂)] F"
+          },
+          {
+            "title": "Common mistakes",
+            "bullets": [
+              "Selecting a solution before recording damage, materials, geometry and the performance objective.",
+              "Comparing nominal strengths alone while overlooking redistribution or construction-stage conditions.",
+              "Assuming that every model input has the same degree of certainty.",
+              "Presenting lower demand in one member as a system-wide improvement without checking where the force moved."
+            ]
+          },
+          {
+            "title": "Conclusion and scope",
+            "paragraphs": [
+              "A proposal should connect evidence, diagnosis, objectives, alternatives and verification, with documented uncertainty and a construction-stage control strategy. Final review checks the modified system and its compatibility, not just the strengthened component. Original educational example; ASCE 41-23, ACI 562-25, ACI PRC-440.2-23 and AISC 342-22 references reviewed on 8 October 2026."
+            ]
+          }
+        ],
+        "status": "Technical note · Conceptual example",
+        "facts": [
+          {
+            "label": "Reviewed",
+            "value": "2026-10-08"
+          },
+          {
+            "label": "Scope",
+            "value": "Educational · not project-specific design"
+          }
+        ]
+      }
+    }
+  ],
+  "regulatory": {
+    "es": {
+      "title": "Novedades normativas",
+      "description": "Registro editorial de cambios aprobados, propuestas y erratas con fuente oficial y fecha de revisión. Corte documental: 8 de octubre de 2026. Se verificaron la R.M. 183-2026-VIVIENDA, que modifica la N.T. E.030 e incorpora su texto de 2026, y la R.M. 217-2026-VIVIENDA, que modifica la disposición transitoria de esa resolución. Este segundo acto no se presenta como una edición técnica distinta. La aplicabilidad a expedientes en curso requiere revisar el texto oficial; esta sección no sustituye esa determinación. Las futuras propuestas se identificarán como tales y no se anunciarán como reglas aprobadas.",
+      "status": "E.030 2026 y disposición transitoria · fuentes oficiales verificadas"
+    },
+    "en": {
+      "title": "Code and standards updates",
+      "description": "An editorial record of approved changes, proposals and errata with official sources and review dates. Document cutoff: 8 October 2026. Verified instruments are Resolution 183-2026-VIVIENDA, which amends N.T. E.030 and provides its 2026 text, and Resolution 217-2026-VIVIENDA, which amends that resolution's transitional provision. The latter is not presented as a different technical edition. Applicability to ongoing submissions requires review of the official text; this section does not replace that determination. Future proposals will be identified as proposals rather than announced as approved requirements.",
+      "status": "E.030 2026 and transitional provision · official sources verified"
+    },
+    "references": [
+      {
+        "title": {
+          "es": "MVCS — R.M. 183-2026-VIVIENDA, modificación de la N.T. E.030 y texto E.030 2026; resolución de 28 de abril de 2026",
+          "en": "MVCS — Ministerial Resolution 183-2026-VIVIENDA, amendment to N.T. E.030 and the 2026 E.030 text; resolution of 28 April 2026"
+        },
+        "url": "https://www.gob.pe/institucion/vivienda/normas-legales/8081915-183-2026-vivienda",
+        "note": {
+          "es": "Resolución aprobada el 28 de abril de 2026 y sus anexos oficiales. La aplicabilidad se revisa junto con su disposición transitoria modificada.",
+          "en": "Resolution approved on 28 April 2026 and its official annexes. Applicability is reviewed together with its amended transitional provision."
+        }
+      },
+      {
+        "title": {
+          "es": "MVCS — R.M. 217-2026-VIVIENDA, modificación de la disposición transitoria de la R.M. 183-2026; resolución de 2 de junio de 2026",
+          "en": "MVCS — Ministerial Resolution 217-2026-VIVIENDA, amendment to the transitional provision of Resolution 183-2026; resolution of 2 June 2026"
+        },
+        "url": "https://www.gob.pe/institucion/vivienda/normas-legales/8219609-217-2026-vivienda",
+        "note": {
+          "es": "Resolución de 2 de junio de 2026 que modifica la disposición transitoria de la R.M. 183-2026-VIVIENDA; no se presenta como otra edición técnica de E.030.",
+          "en": "Resolution of 2 June 2026 amending the transitional provision of Resolution 183-2026-VIVIENDA; it is not presented as another technical edition of E.030."
+        }
+      }
+    ]
+  }
+}

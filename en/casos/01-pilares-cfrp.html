@@ -1,0 +1,47 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="BASE and CFRP numerical study in OpenSeesPy: methodology, reported indicators and evidence needed for reproduction.">
+  <meta name="theme-color" content="#173f4b">
+  <title>CFRP-strengthened columns · Case 01 — Sergio Ambrosio</title>
+  <link rel="canonical" href="https://sergioambrosio714.github.io/en/casos/01-pilares-cfrp.html">
+  <link rel="alternate" hreflang="es" href="https://sergioambrosio714.github.io/casos/01-pilares-cfrp.html">
+  <link rel="alternate" hreflang="en" href="https://sergioambrosio714.github.io/en/casos/01-pilares-cfrp.html">
+  <link rel="alternate" hreflang="x-default" href="https://sergioambrosio714.github.io/casos/01-pilares-cfrp.html">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="CFRP-strengthened columns · Sergio Ambrosio">
+  <meta property="og:description" content="Nonlinear modelling and BASE/CFRP comparison. Reported indicators with explicit scope and outstanding evidence.">
+  <meta property="og:url" content="https://sergioambrosio714.github.io/en/casos/01-pilares-cfrp.html">
+  <meta property="og:image" content="https://sergioambrosio714.github.io/assets/og-cover.png">
+  <meta property="og:image:alt" content="Sergio Ambrosio — Structural engineering, modelling and analysis.">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../casos/case.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Skip to content</a>
+  <header class="top"><div class="wrap"><a class="brand" href="../index.html">SERGIO AMBROSIO<small>STRUCTURAL ENGINEERING</small></a><nav aria-label="Main navigation"><a href="../index.html#herramientas">← Back to portfolio</a><a href="../../assets/cv-sergio-ambrosio-en.pdf" download>Download CV</a><a href="https://www.linkedin.com/in/sergio-junior-ambrosio-camayo-668241116/">LinkedIn</a><span class="language-switch" role="group" aria-label="Language"><a href="../../casos/01-pilares-cfrp.html" lang="es" hreflang="es" aria-label="Leer esta ficha en español">ES</a><a href="01-pilares-cfrp.html" lang="en" hreflang="en" aria-current="page">EN</a></span></nav></div></header>
+  <main id="contenido">
+    <header class="head"><div class="wrap"><span class="id">CASE 01 / NONLINEAR MODELLING</span><h1>Seismic response of CFRP-strengthened columns.</h1><p>Calibration against an experimental reference and numerical comparison of BASE and CFRP conditions through cyclic lateral analysis in OpenSeesPy.</p><span class="status">Reported study · Reproducible evidence pending</span></div></header>
+    <div class="wrap content">
+      <aside class="sidebar" aria-label="Case contents and tools"><h2>In this case</h2><nav aria-label="Case contents"><a href="#problema">01. Problem and objective</a><a href="#metodologia">02. Methodology</a><a href="#procedimiento">03. Procedure</a><a href="#resultados">04. Reported results</a><a href="#evidencia">05. Evidence and scope</a><a href="#competencias">06. Skills addressed</a></nav><dl><dt>Tools described</dt><dd>OpenSeesPy<br>Python<br>Concrete04<br>Fibre sections</dd><dt>Focus</dt><dd>Reinforced concrete<br>CFRP confinement<br>Cyclic response</dd></dl></aside>
+      <article class="article" aria-label="CFRP study technical case">
+        <section id="problema"><h2>Technical problem and objective</h2><p>Passive confinement with carbon fibre can modify the inelastic response of reinforced concrete columns. The modelling problem is to represent that contribution and distinguish its effects on strength, deformation capacity and stiffness.</p><p><strong>Objective:</strong> compare the study column's lateral response under BASE and CFRP conditions, using a nonlinear model calibrated against a reference test. Conclusions relate to the particular conditions described in the research.</p></section>
+        <figure class="figure"><img src="../../assets/project-cfrp-en.svg" alt="Conceptual schematic of a column and its CFRP confinement." width="820" height="470"><figcaption>Conceptual illustration. It is not an OpenSeesPy screenshot, a measured test record or a computed response curve from the project.</figcaption></figure>
+        <section id="metodologia"><h2>Described methodology</h2><ul><li>Fibre-section modelling with concrete core and cover, longitudinal reinforcement and distinct constitutive relationships.</li><li>Use of the <strong>Concrete04</strong> material for both conditions, with equivalent confinement in the strengthened case.</li><li>Calibration against column C7, attributed in the project documentation to <strong>Nickelson and colleagues (2022)</strong>. The complete citation and test records are not included; that attribution remains to be checked.</li><li>BASE/CFRP comparison of lateral force, stiffness, drift and energy, with explicit model assumptions.</li></ul></section>
+        <section id="procedimiento"><h2>Working procedure</h2><ol><li><strong>Define the model:</strong> geometry, materials, axial load, boundary conditions and section discretisation.</li><li><strong>Apply the cyclic protocol:</strong> organise displacement targets and record response and convergence conditions.</li><li><strong>Calibrate the reference condition:</strong> compare numerical response with experimental records and evaluate the error.</li><li><strong>Compare the application column:</strong> run the BASE and CFRP scenarios and distinguish comparisons at equal drift from comparisons between peak values.</li><li><strong>Document the scope:</strong> retain parameters, calibration criteria, outputs and limitations for subsequent review.</li></ol><p>This procedure summarises the work described in the project documents; the files needed to execute it are not part of this portfolio.</p></section>
+        <section id="resultados"><h2>Reported results</h2><p>The following values come from the project documentation. <strong>They have not been independently verified</strong> using source files or raw data available in this repository.</p><div class="result-grid"><div><strong>117/117</strong><span>displacement targets completed during calibration, according to the report</span></div><div><strong>7.928%</strong><span>reported calibration NRMSE against the experimental reference</span></div><div><strong>+12.725%</strong><span>reported increase in lateral force at +5% drift in the application case</span></div></div><p>Reported positive peak forces are approximately <strong>675 kN (BASE) and 732 kN (CFRP)</strong>, reached at different drifts. This comparison between peaks is not equivalent to the increase at +5% drift.</p><p>Reported initial stiffness changes from approximately <strong>43.16 to 41.46 kN/mm</strong>. Within this case, strengthening is not interpreted as an automatic increase in initial stiffness.</p></section>
+        <section id="evidencia"><h2>Documentation and verifiability</h2><table class="evidence-table"><thead><tr><th scope="col">Available in the portfolio</th><th scope="col">Material still to be added</th></tr></thead><tbody><tr><td>Methodological overview and reported figures.</td><td>Complete technical report, OpenSeesPy version and modelling parameters.</td></tr><tr><td>Conceptual strengthening schematic.</td><td>Scripts, raw data, loading protocol, convergence records and authentic response curves.</td></tr><tr><td>Provisional identification of the reference test.</td><td>Full bibliographic reference, provenance and permission to use the experimental data.</td></tr></tbody></table><div class="note"><strong>Scope.</strong> This content introduces the approach and declared results. It does not yet enable reproduction of the research, guarantee the performance of other structures or support an intervention recommendation for an actual bridge.</div></section>
+        <section id="competencias"><h2>Skills addressed</h2><p>Nonlinear model formulation, data processing with Python, parameter calibration, critical interpretation of response indicators, and communication of assumptions and limitations. The case documents the described technical reasoning; verification of its implementation requires the outstanding supporting files.</p></section>
+        <nav class="case-nav" aria-label="Case navigation"><a href="../index.html#herramientas">← Research and tools</a><a href="02-motor-e030.html">Next: E.030 workflow →</a></nav>
+      </article>
+    </div>
+  </main>
+  <footer class="foot wrap"><span>SERGIO AMBROSIO / TECHNICAL PORTFOLIO</span><a href="https://github.com/SergioAmbrosio714">GitHub · SergioAmbrosio714</a></footer>
+</body>
+</html>

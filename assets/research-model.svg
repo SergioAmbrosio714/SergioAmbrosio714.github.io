@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Conceptual equivalent model for a liquid storage tank</title>
+  <desc id="desc">Original schematic with impulsive and convective mass components above an isolation interface. Labels are symbols, not calculated values.</desc>
+  <rect width="1200" height="720" fill="#f1f4f5"/>
+  <path d="M65 86H1135M65 635H1135" fill="none" stroke="#cfdade"/>
+  <g fill="none" stroke-linejoin="round">
+    <path d="M276 178V497H875V178" stroke="#8ca3ae" stroke-width="5"/>
+    <path d="M276 238H334L348 221L367 254L386 221L405 254L424 221L440 238H538M606 238H662L676 221L695 254L714 221L733 254L752 221L768 238H875" stroke="#527989" stroke-width="2.5"/>
+    <path d="M276 400H334L348 383L367 416L386 383L405 416L424 383L440 400H538M606 400H662L676 383L695 416L714 383L733 416L752 383L768 400H875" stroke="#527989" stroke-width="2.5"/>
+    <path d="M276 309H408M442 296V323M443 309H572M408 296H442M408 323H442M408 296V323M276 456H408M442 443V469M443 456H572M408 443H442M408 469H442M408 443V469" stroke="#8ba2ad" stroke-width="2"/>
+    <path d="M572 271V312M572 433V459" stroke="#718e9c" stroke-width="2"/>
+    <path d="M250 510H899V528H250Z" fill="#173f4b" stroke="#173f4b"/>
+    <path d="M335 550Q367 575 399 550M335 564Q367 589 399 564M535 550Q567 575 599 550M535 564Q567 589 599 564M735 550Q767 575 799 550M735 564Q767 589 799 564" stroke="#4e7786" stroke-width="5"/>
+    <path d="M249 601H899M255 608L268 595M285 608L298 595M315 608L328 595M345 608L358 595M375 608L388 595M405 608L418 595M435 608L448 595M465 608L478 595M495 608L508 595M525 608L538 595M555 608L568 595M585 608L598 595M615 608L628 595M645 608L658 595M675 608L688 595M705 608L718 595M735 608L748 595M765 608L778 595M795 608L808 595M825 608L838 595M855 608L868 595M885 608L898 595" stroke="#91a8b2"/>
+    <circle cx="572" cy="238" r="38" fill="#173f4b" stroke="#173f4b"/>
+    <circle cx="572" cy="400" r="38" fill="#527989" stroke="#527989"/>
+  </g>
+  <g font-family="Arial,Helvetica,sans-serif"><g fill="#fff" text-anchor="middle" font-size="24"><text x="572" y="246">m<tspan baseline-shift="sub" font-size="16">c</tspan></text><text x="572" y="408">m<tspan baseline-shift="sub" font-size="16">i</tspan></text></g><g fill="#173f4b"><text x="65" y="58" font-size="16" letter-spacing="3">RESEARCH / EQUIVALENT MODEL</text><text x="351" y="208" font-size="22">k<tspan baseline-shift="sub" font-size="14">c</tspan></text><text x="351" y="371" font-size="22">k<tspan baseline-shift="sub" font-size="14">i</tspan></text><text x="347" y="293" font-size="22">c<tspan baseline-shift="sub" font-size="14">c</tspan></text><text x="347" y="443" font-size="22">c<tspan baseline-shift="sub" font-size="14">i</tspan></text><text x="65" y="675" font-size="12" letter-spacing="2">CONCEPTUAL SCHEME · SYMBOLIC PARAMETERS · NOT TO SCALE</text></g></g>
+</svg>

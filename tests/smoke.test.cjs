@@ -4,7 +4,9 @@ const path = require('node:path');
 const vm = require('node:vm');
 const assert = require('node:assert/strict');
 
-const html = fs.readFileSync(path.resolve(__dirname, '../index.html'), 'utf8');
+function run(language) {
+const homeFile = path.resolve(__dirname, language === 'es' ? '../index.html' : '../en/index.html');
+const html = fs.readFileSync(homeFile, 'utf8');
 const script = fs.readFileSync(path.resolve(__dirname, '../app.js'), 'utf8');
 const attributes = tag => Object.fromEntries([...tag.matchAll(/([\w:-]+)\s*=\s*(["'])(.*?)\2/gs)].map(([, name, , value]) => [name, value]));
 let document;
@@ -67,6 +69,7 @@ const projectButtons = matchingNodes('data-project');
 const navLink = new FakeNode('nav-link');
 get('primary-nav').children = [navLink];
 document = {
+  documentElement: { lang: language },
   activeElement: null,
   getElementById: get,
   querySelectorAll: selector => ({ '[data-filter]': filters, '.project-card': cards, '[data-project]': projectButtons })[selector] || [],
@@ -78,6 +81,7 @@ document = {
   body: new FakeNode('body')
 };
 const context = vm.createContext({ document, Date, Intl, console });
+vm.runInContext(fs.readFileSync(path.resolve(__dirname, '../profile-data.js'), 'utf8'), context, { filename: 'profile-data.js' });
 vm.runInContext(script, context, { filename: 'app.js' });
 
 // Casos de equilibrio independientes del dibujo y de su escala normalizada.
@@ -95,7 +99,8 @@ for (const args of [[0, 18], [-1, 18], [6, -1], [6, 18, -1], [6, 18, 7], [NaN, 1
 }
 
 function displayedValue(id) {
-  return Number(get(id).innerHTML.replace(/<[^>]*>/g, '').trim().split(/\s/)[0].replaceAll('.', '').replace(',', '.'));
+  const value = get(id).innerHTML.replace(/<[^>]*>/g, '').trim().split(/\s/)[0];
+  return Number(language === 'es' ? value.replaceAll('.', '').replace(',', '.') : value.replaceAll(',', ''));
 }
 function assertLab(L, q) {
   get('span-input').value = String(L);
@@ -151,7 +156,7 @@ for (const trigger of projectButtons) {
   assert.equal(document.activeElement, get('dialog-close'), 'Foco inicial del diálogo');
   assert(get('dialog-title').textContent.length > 10);
   assert(get('dialog-facts').children.length > 0);
-  assert(fs.existsSync(path.resolve(__dirname, '..', get('dialog-case-link').href)), 'Ficha accesible desde el diálogo');
+  assert(fs.existsSync(path.resolve(path.dirname(homeFile), get('dialog-case-link').href)), 'Ficha accesible desde el diálogo');
   assert(document.body.classList.contains('dialog-open'));
   get('dialog-close').dispatch('click');
   assert.equal(get('project-dialog').open, false);
@@ -172,7 +177,7 @@ assert.equal(get('nav-toggle').getAttribute('aria-expanded'), 'false');
 get('nav-toggle').dispatch('click');
 document.dispatch('keydown', { key: 'Escape' });
 assert.equal(get('nav-toggle').getAttribute('aria-expanded'), 'false');
-assert.equal(get('nav-toggle').getAttribute('aria-label'), 'Abrir menú');
+assert.equal(get('nav-toggle').getAttribute('aria-label'), language === 'es' ? 'Abrir menú' : 'Open menu');
 assert.equal(document.activeElement, get('nav-toggle'));
 assert(!get('primary-nav').classList.contains('is-open'));
 assert.equal(get('github-link').href, 'https://github.com/SergioAmbrosio714');
@@ -182,4 +187,7 @@ assert.equal(get('linkedin-link').hidden, !profile.linkedin);
 if (profile.email) assert.equal(get('email-link').href, 'mailto:' + profile.email);
 if (profile.linkedin) assert.equal(get('linkedin-link').href, profile.linkedin);
 assert.equal(get('year').textContent, String(new Date().getFullYear()));
-console.log('PASS: ' + beamCases + ' combinaciones de viga; filtros, ' + projectButtons.length + ' diálogos, foco, menú y contacto.');
+console.log('PASS [' + language + ']: ' + beamCases + ' combinaciones de viga; filtros, ' + projectButtons.length + ' diálogos, foco, menú y contacto.');
+}
+run('es');
+run('en');

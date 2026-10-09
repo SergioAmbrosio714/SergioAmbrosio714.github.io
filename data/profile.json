@@ -1,0 +1,477 @@
+{
+  "name": "Sergio Junior Ambrosio Camayo",
+  "displayName": "Sergio Ambrosio",
+  "portrait": null,
+  "github": "https://github.com/SergioAmbrosio714",
+  "linkedin": "https://www.linkedin.com/in/sergio-junior-ambrosio-camayo-668241116/",
+  "email": "",
+  "yearsExperience": 8,
+  "lastReviewed": "2026-10-08",
+  "degree": {
+    "es": "Ingeniero Civil titulado — Universidad Nacional de Ingeniería (UNI), Facultad de Ingeniería Civil",
+    "en": "Civil Engineer — professional degree, Universidad Nacional de Ingeniería (UNI), Faculty of Civil Engineering"
+  },
+  "headline": {
+    "es": "Ingeniería estructural | Acero y concreto | Minería e instalaciones industriales | Análisis sísmico y no lineal",
+    "en": "Structural Engineer | Steel & Concrete Structures | Mining & Industrial Facilities | Seismic & Nonlinear Analysis"
+  },
+  "summary": {
+    "es": "Ingeniero civil especializado en diseño y análisis estructural de acero y concreto, con experiencia en edificaciones, minería, infraestructura eléctrica y evaluación sísmica avanzada. Mi trabajo integra modelación, verificación de elementos y cimentaciones, revisión de memorias y planos, y coordinación con arquitectura y MEP. Actualmente desarrollo ingeniería estructural para minería en SRK; la investigación y las herramientas computacionales complementan mi práctica de diseño y revisión.",
+    "en": "Civil engineer specializing in the structural design and analysis of steel and concrete structures, with experience in buildings, mining, electrical infrastructure and advanced seismic assessment. My work combines modelling, member and foundation checks, review of calculation reports and drawings, and coordination with architecture and MEP disciplines. I currently work on structural engineering for mining projects at SRK; research and computational tools support my design and review practice."
+  },
+  "experience": [
+    {
+      "company": "SRK",
+      "period": {
+        "es": "Actualidad",
+        "en": "Present"
+      },
+      "dates": {
+        "start": null,
+        "end": null,
+        "isCurrent": true
+      },
+      "role": {
+        "es": "Ingeniería estructural para minería",
+        "en": "Structural engineering for mining projects"
+      },
+      "description": {
+        "es": "Diseño, modelación y verificación de estructuras de acero y concreto para infraestructura minera.",
+        "en": "Design, modelling and verification of steel and concrete structures for mining infrastructure."
+      },
+      "responsibilities": {
+        "es": [
+          "Diseño de estructuras metálicas y de concreto.",
+          "Modelación, análisis y verificación estructural.",
+          "Desarrollo de ingeniería aplicada a infraestructura minera."
+        ],
+        "en": [
+          "Design of steel and concrete structures.",
+          "Structural modelling, analysis and verification.",
+          "Engineering work for mining infrastructure."
+        ]
+      }
+    },
+    {
+      "company": "HMV Ingenieros",
+      "period": {
+        "es": "2026",
+        "en": "2026"
+      },
+      "dates": {
+        "start": "2026-02",
+        "end": null,
+        "isCurrent": false
+      },
+      "role": {
+        "es": "Ingeniero estructural — Profesional III",
+        "en": "Structural Engineer — Professional III"
+      },
+      "description": {
+        "es": "Diseño y revisión de estructuras para infraestructura eléctrica de media y alta tensión. Participación en CEPITOCE, documentada en el CV.",
+        "en": "Design and review of structures for medium- and high-voltage electrical infrastructure. Work on CEPITOCE is documented in the CV."
+      },
+      "responsibilities": {
+        "es": [
+          "Diseño de torres de transmisión, pórticos de subestaciones y soportes de equipos eléctricos.",
+          "Modelación y verificación de estructuras metálicas y sus cimentaciones.",
+          "Revisión técnica de modelos, memorias de cálculo, planos y entregables de ingeniería.",
+          "En CEPITOCE, desarrollo de criterios de diseño, optimización de soluciones y coordinación técnica."
+        ],
+        "en": [
+          "Design of transmission towers, substation gantries and electrical equipment supports.",
+          "Modelling and verification of steel structures and their foundations.",
+          "Technical review of models, calculation reports, drawings and engineering deliverables.",
+          "For CEPITOCE, development of design criteria, assessment of design alternatives and technical coordination."
+        ]
+      },
+      "dateNote": {
+        "es": "El CV anterior indica inicio en febrero de 2026. El mes de transición a SRK no se ha especificado.",
+        "en": "The earlier CV records a February 2026 start date. The month of the transition to SRK has not been specified."
+      }
+    },
+    {
+      "company": "MRZ Ingenieros",
+      "period": {
+        "es": "Noviembre 2018 — enero 2026",
+        "en": "November 2018 — January 2026"
+      },
+      "dates": {
+        "start": "2018-11",
+        "end": "2026-01",
+        "isCurrent": false
+      },
+      "role": {
+        "es": "Ingeniero estructural",
+        "en": "Structural Engineer"
+      },
+      "description": {
+        "es": "Modelación y diseño de edificaciones de 5 a 22 niveles, estructuras metálicas, cimentaciones y soluciones de reforzamiento.",
+        "en": "Modelling and design of buildings from 5 to 22 storeys, steel structures, foundations and strengthening solutions."
+      },
+      "responsibilities": {
+        "es": [
+          "Modelación y análisis sísmico de edificios con y sin sótanos en ETABS.",
+          "Diseño y detallado de vigas, columnas, placas, losas y cimentaciones; análisis de cimentaciones en SAFE.",
+          "Diseño de estructuras de acero, naves industriales y tijerales.",
+          "Evaluación de soluciones de encamisado y refuerzo con FRP.",
+          "Auditoría técnica, optimización estructural, memorias de cálculo y planos.",
+          "Compatibilización de estructuras con arquitectura e instalaciones MEP."
+        ],
+        "en": [
+          "Modelling and seismic analysis in ETABS of buildings with and without basements.",
+          "Design and detailing of beams, columns, structural walls, slabs and foundations; foundation analysis in SAFE.",
+          "Design of steel structures, industrial buildings and roof trusses.",
+          "Assessment of jacketing and FRP strengthening solutions.",
+          "Technical reviews, structural design optimization, calculation reports and drawings.",
+          "Coordination of structural designs with architecture and MEP systems."
+        ]
+      }
+    },
+    {
+      "company": "AMEC Foster Wheeler Perú",
+      "period": {
+        "es": "Marzo — julio 2018",
+        "en": "March — July 2018"
+      },
+      "dates": {
+        "start": "2018-03",
+        "end": "2018-07",
+        "isCurrent": false
+      },
+      "role": {
+        "es": "Asistente de ingeniería",
+        "en": "Engineering Assistant"
+      },
+      "description": {
+        "es": "Participación en la reactivación de la planta de cal Pachachaca.",
+        "en": "Engineering support for the reactivation of the Pachachaca lime plant."
+      },
+      "responsibilities": {
+        "es": [
+          "Inspección estructural.",
+          "Levantamiento topográfico.",
+          "Desarrollo de inventarios y metrados."
+        ],
+        "en": [
+          "Structural inspections.",
+          "Topographic surveying.",
+          "Preparation of inventories and quantity take-offs."
+        ]
+      }
+    },
+    {
+      "company": "Grupo MIMCO S.A.C.",
+      "period": {
+        "es": "Enero 2017 — marzo 2018",
+        "en": "January 2017 — March 2018"
+      },
+      "dates": {
+        "start": "2017-01",
+        "end": "2018-03",
+        "isCurrent": false
+      },
+      "role": {
+        "es": "Asistente de ingeniería básica",
+        "en": "Basic Engineering Assistant"
+      },
+      "description": {
+        "es": "Ingeniería básica para torres y monopolos de telecomunicaciones.",
+        "en": "Basic engineering work for telecommunications towers and monopoles."
+      },
+      "responsibilities": {
+        "es": [
+          "Participación en el diseño de torres y monopolos de telecomunicaciones.",
+          "Elaboración de memorias de cálculo."
+        ],
+        "en": [
+          "Contribution to the design of telecommunications towers and monopoles.",
+          "Preparation of calculation reports."
+        ]
+      }
+    }
+  ],
+  "expertise": [
+    {
+      "id": "concrete",
+      "title": {
+        "es": "Concreto armado",
+        "en": "Reinforced concrete"
+      },
+      "description": {
+        "es": "Diseño y revisión de elementos resistentes y cimentaciones de edificaciones. La experiencia en MRZ comprende modelos de 5 a 22 niveles y coordinación de entregables.",
+        "en": "Design and review of building members and foundations. Experience at MRZ includes models of 5- to 22-storey buildings and coordination of engineering deliverables."
+      },
+      "applications": {
+        "es": [
+          "Edificaciones y sótanos.",
+          "Vigas, columnas, placas y losas.",
+          "Cimentaciones y coordinación con arquitectura y MEP."
+        ],
+        "en": [
+          "Buildings and basements.",
+          "Beams, columns, structural walls and slabs.",
+          "Foundations and coordination with architecture and MEP."
+        ]
+      },
+      "method": {
+        "es": "Definir el sistema resistente y las hipótesis de análisis, revisar la distribución de demandas y enlazar la verificación de elementos con el detallado y la memoria de cálculo.",
+        "en": "Define the structural system and analysis assumptions, review demand distribution, and connect member verification with detailing and the calculation report."
+      },
+      "tools": [
+        "ETABS",
+        "SAFE",
+        "Mathcad",
+        "AutoCAD"
+      ]
+    },
+    {
+      "id": "steel",
+      "title": {
+        "es": "Estructuras de acero",
+        "en": "Steel structures"
+      },
+      "description": {
+        "es": "Diseño y verificación de estructuras industriales, torres, pórticos y soportes. Aplicaciones en infraestructura eléctrica, naves y proyectos de minería.",
+        "en": "Design and verification of industrial structures, towers, gantries and supports, with applications in electrical infrastructure, industrial buildings and mining projects."
+      },
+      "applications": {
+        "es": [
+          "Estructuras industriales y mineras.",
+          "Torres, pórticos y soportes de equipos.",
+          "Conexiones y sistemas de cimentación."
+        ],
+        "en": [
+          "Industrial and mining structures.",
+          "Towers, gantries and equipment supports.",
+          "Connections and foundation systems."
+        ]
+      },
+      "method": {
+        "es": "Revisar el recorrido de las cargas, la estabilidad del sistema, los elementos y las conexiones, y coordinar la transferencia de acciones hacia las cimentaciones.",
+        "en": "Review load paths, system stability, members and connections, and coordinate the transfer of actions into the foundations."
+      },
+      "tools": [
+        "SAP2000",
+        "Mathcad",
+        "IDEA StatiCa",
+        "Revit",
+        "Tekla Structures"
+      ]
+    },
+    {
+      "id": "seismic",
+      "title": {
+        "es": "Ingeniería sísmica",
+        "en": "Earthquake engineering"
+      },
+      "description": {
+        "es": "Modelación y evaluación de la respuesta sísmica de edificaciones. La investigación en tanques con base aislada complementa el trabajo profesional de análisis estructural.",
+        "en": "Modelling and assessment of building response to earthquakes. Research on base-isolated tanks complements professional structural analysis work."
+      },
+      "applications": {
+        "es": [
+          "Análisis estático y modal espectral.",
+          "Evaluación de respuesta y desempeño.",
+          "Estudio de sistemas con aislamiento sísmico."
+        ],
+        "en": [
+          "Static and response-spectrum analysis.",
+          "Assessment of structural response and performance.",
+          "Study of seismic isolation systems."
+        ]
+      },
+      "method": {
+        "es": "Contrastar masas, rigideces y condiciones de apoyo; interpretar modos y demandas globales, y comprobar la coherencia entre el modelo y las verificaciones locales.",
+        "en": "Check mass, stiffness and support assumptions; interpret modes and global demands, and verify consistency between the model and local checks."
+      },
+      "tools": [
+        "ETABS",
+        "SAP2000",
+        "Mathcad",
+        "Python"
+      ]
+    },
+    {
+      "id": "nonlinear",
+      "title": {
+        "es": "Análisis no lineal",
+        "en": "Nonlinear analysis"
+      },
+      "description": {
+        "es": "Estudio del comportamiento inelástico, curvas pushover y mecanismos de respuesta. Los casos de investigación distinguen hipótesis, calibración y límites de interpretación.",
+        "en": "Study of inelastic behaviour, pushover curves and response mechanisms. Research cases distinguish assumptions, calibration and interpretation limits."
+      },
+      "applications": {
+        "es": [
+          "Curvas de capacidad y respuesta cíclica.",
+          "Modelos de secciones de fibras.",
+          "Evaluación de mecanismos y alternativas de reforzamiento."
+        ],
+        "en": [
+          "Capacity curves and cyclic response.",
+          "Fibre-section models.",
+          "Assessment of response mechanisms and strengthening alternatives."
+        ]
+      },
+      "method": {
+        "es": "Seleccionar relaciones constitutivas y parámetros coherentes con la evidencia, controlar la convergencia y revisar la sensibilidad antes de interpretar la respuesta del modelo.",
+        "en": "Select constitutive relationships and parameters consistent with the evidence, monitor convergence and examine sensitivity before interpreting model response."
+      },
+      "tools": [
+        "OpenSeesPy",
+        "ETABS",
+        "SAP2000",
+        "Python"
+      ]
+    },
+    {
+      "id": "finite-elements",
+      "title": {
+        "es": "Elementos finitos",
+        "en": "Finite element analysis"
+      },
+      "description": {
+        "es": "Modelación con Abaqus para estudiar componentes y sistemas mediante una representación explícita de geometría, materiales, vínculos y cargas.",
+        "en": "Modelling in Abaqus to study components and systems through explicit representations of geometry, materials, constraints and loading."
+      },
+      "applications": {
+        "es": [
+          "Estudio de componentes estructurales.",
+          "Discretización y condiciones de borde.",
+          "Interpretación de esfuerzos, deformaciones y mecanismos."
+        ],
+        "en": [
+          "Study of structural components.",
+          "Discretization and boundary conditions.",
+          "Interpretation of stresses, strains and response mechanisms."
+        ]
+      },
+      "method": {
+        "es": "Justificar la idealización, el tipo de elemento y la malla; contrastar equilibrio, sensibilidad a la discretización y consistencia física de los resultados.",
+        "en": "Justify the idealization, element type and mesh; check equilibrium, mesh sensitivity and the physical consistency of results."
+      },
+      "tools": [
+        "Abaqus",
+        "Python"
+      ]
+    },
+    {
+      "id": "computational",
+      "title": {
+        "es": "Ingeniería computacional",
+        "en": "Computational engineering"
+      },
+      "description": {
+        "es": "Programación como apoyo al análisis y a la revisión: organización de datos, procesamiento de resultados, comprobaciones repetibles y automatización de tareas.",
+        "en": "Programming in support of analysis and review: data organization, result processing, repeatable checks and task automation."
+      },
+      "applications": {
+        "es": [
+          "Análisis e investigación con OpenSeesPy.",
+          "Procesamiento y comparación de resultados.",
+          "Automatización de cálculo y dibujo técnico."
+        ],
+        "en": [
+          "Analysis and research with OpenSeesPy.",
+          "Processing and comparison of results.",
+          "Automation of calculation and technical drafting tasks."
+        ]
+      },
+      "method": {
+        "es": "Separar entradas, unidades, hipótesis y salidas; contrastar casos simples y documentar el alcance de cada herramienta antes de integrarla a un flujo de ingeniería.",
+        "en": "Separate inputs, units, assumptions and outputs; check simple cases and document each tool's scope before incorporating it into an engineering workflow."
+      },
+      "tools": [
+        "Python",
+        "OpenSeesPy",
+        "AutoLISP",
+        "Mathcad"
+      ]
+    },
+    {
+      "id": "retrofit",
+      "title": {
+        "es": "Evaluación y reforzamiento",
+        "en": "Assessment and strengthening"
+      },
+      "description": {
+        "es": "Evaluación de estructuras existentes y estudio de alternativas de encamisado y FRP. El trabajo combina revisión del sistema resistente y comparación de soluciones.",
+        "en": "Assessment of existing structures and study of jacketing and FRP alternatives, combining review of the structural system with comparison of strengthening solutions."
+      },
+      "applications": {
+        "es": [
+          "Revisión de estructuras existentes.",
+          "Encamisados de elementos de concreto.",
+          "Refuerzo con FRP y confinamiento con CFRP."
+        ],
+        "en": [
+          "Review of existing structures.",
+          "Jacketing of concrete members.",
+          "FRP strengthening and CFRP confinement."
+        ]
+      },
+      "method": {
+        "es": "Identificar la información disponible y las deficiencias a investigar; contrastar la respuesta global y local, la compatibilidad del refuerzo y los mecanismos que gobiernan la intervención.",
+        "en": "Identify available information and deficiencies to investigate; review global and local response, strengthening compatibility and the mechanisms governing the intervention."
+      },
+      "tools": [
+        "ETABS",
+        "SAP2000",
+        "OpenSeesPy",
+        "Mathcad"
+      ]
+    },
+    {
+      "id": "documentation",
+      "title": {
+        "es": "Modelación y documentación",
+        "en": "Modelling and documentation"
+      },
+      "description": {
+        "es": "Desarrollo y revisión de modelos, memorias y planos, con coordinación entre disciplinas. La documentación conecta las decisiones de análisis con el proyecto que se comunica.",
+        "en": "Development and review of models, calculation reports and drawings, with multidisciplinary coordination. Documentation connects analysis decisions with the project deliverables."
+      },
+      "applications": {
+        "es": [
+          "Memorias de cálculo y planos estructurales.",
+          "Compatibilización con arquitectura y MEP.",
+          "Modelos BIM y documentación de conexiones."
+        ],
+        "en": [
+          "Calculation reports and structural drawings.",
+          "Coordination with architecture and MEP.",
+          "BIM models and connection documentation."
+        ]
+      },
+      "method": {
+        "es": "Mantener coherencia entre geometría, cargas, resultados y planos; organizar revisiones y criterios para que cada entrega pueda ser revisada y actualizada.",
+        "en": "Maintain consistency between geometry, loads, results and drawings; organize revisions and design criteria so each deliverable can be reviewed and updated."
+      },
+      "tools": [
+        "ETABS",
+        "SAP2000",
+        "SAFE",
+        "Mathcad",
+        "AutoCAD",
+        "Revit",
+        "Tekla Structures",
+        "IDEA StatiCa"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "es": "Ingeniero Civil titulado — Universidad Nacional de Ingeniería, Facultad de Ingeniería Civil.",
+      "en": "Civil Engineer — professional degree, Universidad Nacional de Ingeniería, Faculty of Civil Engineering."
+    },
+    {
+      "es": "Estudios de Ingeniería Civil: 2013–2017. Tercio superior, según el CV.",
+      "en": "Civil engineering studies: 2013–2017. Upper third of the class, as reported in the CV."
+    }
+  ],
+  "contactPolicy": {
+    "es": "El correo profesional se habilita únicamente cuando el titular complete y autorice ese dato. El CV público omite domicilio, documentos de identidad, teléfono personal y datos de terceros.",
+    "en": "A professional email address is enabled only when the owner provides and authorizes it. The public CV omits home address, identity documents, personal phone number and third-party personal information."
+  }
+}

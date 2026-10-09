@@ -5,6 +5,8 @@
   const canvas = document.getElementById('structural-model');
   if (!canvas || !canvas.closest('.hero-model')) return;
   const host = canvas.closest('.hero-model');
+  const english = document.documentElement.lang === 'en';
+  let staticMode = Boolean(navigator.connection?.saveData);
   let ctx;
   try { ctx = canvas.getContext('2d', { alpha: false }); } catch (_) { return; }
   if (!ctx) return;
@@ -235,6 +237,7 @@
   }
 
   function schedule() {
+    if (staticMode) return;
     if (!pendingFrame) pendingFrame = window.requestAnimationFrame(() => {
       try { render(); } catch (_) {
         host.classList.remove('is-ready');
@@ -250,15 +253,28 @@
     camera = { ...views[name] };
     host.dataset.view = name;
     buttons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.modelView === name)));
-    canvas.setAttribute('aria-label', `${camera.label} de una estructura industrial conceptual de acero con plataformas, arriostramientos y fundaciones de concreto. Sin resultados de cálculo.`);
+    canvas.setAttribute('aria-label', english ? `${name === 'iso' ? 'Isometric' : name === 'front' ? 'Front' : 'Side'} view of a conceptual industrial steel frame with platforms, bracing and concrete foundations. No analysis results.` : `${camera.label} de una estructura industrial conceptual de acero con plataformas, arriostramientos y fundaciones de concreto. Sin resultados de cálculo.`);
     schedule();
   }
   buttons.forEach(button => button.addEventListener('click', () => selectView(button.dataset.modelView)));
   const reset = document.getElementById('model-reset');
   if (reset) reset.addEventListener('click', () => selectView('iso'));
 
+  const staticToggle = document.getElementById('model-static-toggle');
+  function setStaticMode(enabled) {
+    staticMode = enabled;
+    host.classList.toggle('is-static', enabled);
+    // Keep the static control available even when the first canvas render is skipped.
+    if (enabled) host.classList.add('is-ready');
+    staticToggle?.setAttribute('aria-pressed', String(enabled));
+    buttons.forEach(button => { button.disabled = enabled; });
+    if (reset) reset.disabled = enabled;
+    if (!enabled) schedule();
+  }
+  staticToggle?.addEventListener('click', () => setStaticMode(!staticMode));
+
   canvas.addEventListener('pointerdown', event => {
-    if (!event.isPrimary || event.button !== 0) return;
+    if (staticMode || !event.isPrimary || event.button !== 0) return;
     pointer = { id: event.pointerId, x: event.clientX, y: event.clientY, yaw: camera.yaw, pitch: camera.pitch, touch: event.pointerType === 'touch', active: false };
     if (!pointer.touch) canvas.setPointerCapture(event.pointerId);
   });
@@ -274,7 +290,7 @@
       host.classList.add('is-dragging');
       host.dataset.view = 'custom';
       buttons.forEach(button => button.setAttribute('aria-pressed', 'false'));
-      canvas.setAttribute('aria-label', 'Vista girada de una estructura industrial conceptual de acero y concreto. Sin resultados de cálculo.');
+      canvas.setAttribute('aria-label', english ? 'Rotated view of a conceptual industrial steel and concrete structure. No analysis results.' : 'Vista girada de una estructura industrial conceptual de acero y concreto. Sin resultados de cálculo.');
     }
     camera.yaw = pointer.yaw + dx * 0.008;
     camera.pitch = clamp(pointer.pitch + (pointer.touch ? 0 : dy * 0.005), 0, 0.95);
@@ -292,5 +308,6 @@
 
   if ('ResizeObserver' in window) new ResizeObserver(schedule).observe(canvas);
   else window.addEventListener('resize', schedule, { passive: true });
+  if (staticMode) setStaticMode(true);
   selectView('iso');
 })();

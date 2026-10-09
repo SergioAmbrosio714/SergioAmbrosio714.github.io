@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Conceptual liquid storage tank with base isolation</title>
+  <desc id="desc">Original schematic of a reinforced concrete tank, water level, isolation interface and idealised sliding bearing. Geometry only, not an analysis result.</desc>
+  <defs><linearGradient id="wall" x1="0" x2="1"><stop stop-color="#d4dce0"/><stop offset=".5" stop-color="#f5f7f8"/><stop offset="1" stop-color="#bccbd1"/></linearGradient><linearGradient id="water" x1="0" x2="1"><stop stop-color="#527c8a" stop-opacity=".28"/><stop offset="1" stop-color="#6c99a8" stop-opacity=".52"/></linearGradient><marker id="arrow" markerWidth="7" markerHeight="7" refX="3.5" refY="3.5" orient="auto-start-reverse"><path d="M0 0L7 3.5L0 7" fill="none" stroke="#466675" stroke-width="1"/></marker></defs>
+  <rect width="1200" height="720" fill="#f1f4f5"/>
+  <path d="M66 86H1134M66 635H1134M742 117V602" stroke="#d3dde1" fill="none"/>
+  <g stroke-linejoin="round">
+    <path d="M168 202V466C168 527 592 527 592 466V202" fill="url(#wall)" stroke="#718893" stroke-width="2"/>
+    <ellipse cx="380" cy="202" rx="212" ry="62" fill="#f8fafb" stroke="#718893" stroke-width="2"/>
+    <path d="M186 257V459C186 514 574 514 574 459V257" fill="url(#water)" stroke="#6d919d" stroke-width="1.5"/>
+    <ellipse cx="380" cy="257" rx="194" ry="49" fill="#cadde3" stroke="#6d919d" stroke-width="1.5"/>
+    <path d="M197 257Q245 248 291 257T386 257T481 257T563 257" fill="none" stroke="#527d8d" stroke-width="1.4"/>
+    <path d="M168 202V466M592 202V466" stroke="#637d88" stroke-width="4"/>
+    <path d="M157 481C170 551 589 551 606 481L606 503C590 569 173 569 157 503Z" fill="#173f4b" stroke="#173f4b" stroke-width="2"/>
+    <path d="M208 545Q231 558 254 545M208 558Q231 571 254 558M357 560Q380 573 403 560M357 573Q380 586 403 573M511 543Q534 556 557 543M511 556Q534 569 557 556" fill="none" stroke="#476c7b" stroke-width="5"/>
+    <path d="M149 586L384 633L617 588L382 554Z" fill="none" stroke="#96acb6" stroke-width="1.5"/>
+    <path d="M114 262V474M106 262H122M106 474H122M380 202H589" fill="none" stroke="#466675" stroke-width="1.5" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+    <path d="M596 476H670V339H794" fill="none" stroke="#8ca4ae" stroke-width="1.5"/>
+  </g>
+  <g transform="translate(792 241)" fill="none" stroke-linejoin="round">
+    <rect x="0" y="-7" width="311" height="213" rx="3" stroke="#cad5da"/>
+    <path d="M27 28H285V55Q157 103 27 55ZM27 154Q157 106 285 154V181H27Z" fill="#d0dce0" stroke="#738f9c" stroke-width="2"/>
+    <path d="M111 77Q157 94 203 77L187 133Q157 125 126 133Z" fill="#173f4b" stroke="#173f4b" stroke-width="2"/>
+    <path d="M109 220H204" stroke="#466675" stroke-width="1.5" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  </g>
+  <g font-family="Arial,Helvetica,sans-serif" fill="#173f4b"><text x="67" y="58" font-size="16" letter-spacing="3">RESEARCH / SEISMIC ISOLATION</text><text x="89" y="376" font-size="24">H</text><text x="475" y="187" font-size="24">R</text><text x="940" y="493" font-size="21">u<tspan baseline-shift="sub" font-size="13">b</tspan></text><text x="67" y="672" font-size="12" letter-spacing="2">CONCEPTUAL SCHEME · GEOMETRY ONLY · NOT TO SCALE</text></g>
+</svg>

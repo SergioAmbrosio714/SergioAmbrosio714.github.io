@@ -6,7 +6,7 @@ const assert = require('node:assert/strict');
 const root = path.resolve(__dirname, '..');
 function filesIn(dir) {
   return fs.readdirSync(dir, { withFileTypes: true }).flatMap(entry =>
-    entry.isDirectory() && !entry.name.startsWith('.') && entry.name !== 'node_modules'
+    entry.isDirectory() && !entry.name.startsWith('.') && !['node_modules', 'templates', '__pycache__'].includes(entry.name)
       ? filesIn(path.join(dir, entry.name)) : entry.isFile() ? [path.join(dir, entry.name)] : []);
 }
 const files = filesIn(root);
@@ -33,7 +33,8 @@ function checkTarget(source, target) {
   if (!target || target === '#' || /^(?:https?:|mailto:|tel:|data:|\/\/)/i.test(target)) return;
   assert(!/^javascript:/i.test(target), `Enlace ejecutable: ${source}: ${target}`);
   const url = new URL(target.replaceAll('&amp;', '&'), 'https://local.test/' + path.relative(root, source).split(path.sep).join('/'));
-  const linked = path.resolve(root, '.' + decodeURIComponent(url.pathname));
+  let linked = path.resolve(root, '.' + decodeURIComponent(url.pathname));
+  if (fs.existsSync(linked) && fs.statSync(linked).isDirectory()) linked = path.join(linked, 'index.html');
   assert(linked === root || linked.startsWith(root + path.sep), `Ruta fuera del sitio: ${target}`);
   assert(fs.existsSync(linked) && fs.statSync(linked).isFile(), `Archivo faltante: ${source} → ${target}`);
   // Windows tolera errores de mayúsculas que rompen los enlaces en GitHub Pages.
@@ -52,7 +53,8 @@ function checkTarget(source, target) {
 for (const file of pages) {
   const content = fs.readFileSync(file, 'utf8');
   assert(!content.includes('\uFFFD'), `Texto con errores de codificación: ${file}`);
-  assert.match(content, /<html\b[^>]*\blang=["']es["']/i, `Idioma español ausente: ${file}`);
+  const expectedLanguage = path.relative(root, file).split(path.sep)[0] === 'en' || /(?:^|[\\/\-_])en\.html$/.test(file) ? 'en' : 'es';
+  assert.match(content, new RegExp('<html\\b[^>]*\\blang=["\']' + expectedLanguage + '["\']', 'i'), `Idioma incorrecto: ${file}`);
   assert.equal([...content.matchAll(/<h1\b/gi)].length, 1, `Se espera un título h1: ${file}`);
   const ids = idsIn(file);
   for (const [tag] of content.matchAll(/<[a-z][^>]*>/gi)) {
@@ -76,8 +78,8 @@ for (const file of files.filter(file => file.endsWith('.css'))) {
   const css = fs.readFileSync(file, 'utf8');
   for (const [, , target] of css.matchAll(/url\(\s*(["']?)([^)'"\s]+)\1\s*\)/g)) checkTarget(file, target);
 }
-const js = fs.readFileSync(path.join(root, 'app.js'), 'utf8');
-for (const [, , target] of js.matchAll(/\bdoc\s*:\s*(["'])(casos\/[^"']+)\1/g)) {
-  checkTarget(path.join(root, 'index.html'), target);
+for (const language of ['es', 'en']) {
+  const data = JSON.parse(fs.readFileSync(path.join(root, 'data', language === 'es' ? 'lab.json' : 'lab-en.json'), 'utf8'));
+  for (const project of Object.values(data.es || data)) if (project.doc) checkTarget(path.join(root, language === 'es' ? 'index.html' : 'en/index.html'), project.doc);
 }
 console.log(`PASS: ${pages.length} páginas HTML; ${resources} rutas, ${anchors} anclas y ${accessibleReferences} referencias ARIA válidas.`);

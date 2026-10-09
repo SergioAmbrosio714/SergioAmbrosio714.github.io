@@ -1,0 +1,46 @@
+{
+  "cfrp": {
+    "number": "001 / SEISMIC ANALYSIS",
+    "eyebrow": "NUMERICAL STUDY",
+    "title": "Seismic response of CFRP-strengthened concrete piers",
+    "intro": "Comparison of a reinforced concrete pier in its unstrengthened (BASE) condition and with carbon-fibre confinement, under cyclic lateral loading.",
+    "tags": ["OpenSeesPy", "Concrete04", "CFRP", "Nonlinear response"],
+    "method": "The project documentation describes calibration of a fibre-section model against a reference cyclic test (column C7), equivalent core confinement and comparison of force, stiffness, drift and energy in the BASE and CFRP conditions. The supporting data and analysis files are not yet publicly available.",
+    "result": "The documentation reports a calibration NRMSE of 7.928%, completion of 117/117 cyclic targets and a 12.725% increase in positive lateral force at +5% drift for the studied case. Initial stiffness did not increase. These are reported findings; source data and calculation files needed to reproduce them have not been supplied.",
+    "caution": "Numerical study awaiting reproducible supporting evidence. Its indicators cannot be generalized to other structures. The diagrams are conceptual and do not display simulated project results.",
+    "doc": "casos/01-pilares-cfrp.html"
+  },
+  "e030": {
+    "number": "002 / WORKFLOW IN DEVELOPMENT",
+    "eyebrow": "AUTOMATION · IN DEVELOPMENT",
+    "title": "Seismic verification with ETABS, Python and Mathcad Prime",
+    "intro": "A proposed controlled workflow to extract structural information, organize model data and produce documented verification calculations.",
+    "tags": ["ETABS API", "Python", "Mathcad Prime", "E.030"],
+    "method": "The architecture separates read-only extraction from ETABS, normalization and validation in Python, calculation in Mathcad Prime and document production. Its defined scope includes checks of structural regularity, drift, seismic weight and design parameters.",
+    "result": "The architecture and functional scope are defined; the calculation engine and final report format remain in development. This is not released software for certifying code compliance.",
+    "caution": "Prototype in development. The code edition implemented by this prototype has not been verified. References to E.030 do not imply official validation or replace the assessment of the responsible engineer.",
+    "doc": "casos/02-motor-e030.html"
+  },
+  "lisp": {
+    "number": "003 / DRAWING PRODUCTION",
+    "eyebrow": "DOCUMENTED ROUTINES",
+    "title": "AutoLISP routines for structural detailing",
+    "intro": "Automation routines intended to reduce repetitive tasks in the production and revision of structural detail drawings.",
+    "tags": ["AutoCAD", "AutoLISP", "Detailing", "Drawing checks"],
+    "method": "The documentation describes commands for beam and column sections, transverse and longitudinal reinforcement, walls, stairs, dimensions and auxiliary geometry, with configurable layer, colour, spacing and drawing conventions.",
+    "result": "Families of commands for structural members are documented. Source .lsp files, reproducible examples and AutoCAD screenshots have not been provided, so no measured time savings or independent validation are claimed.",
+    "caution": "Documented development awaiting public supporting evidence. Images are conceptual diagrams, not AutoCAD screenshots or construction drawings.",
+    "doc": "casos/03-autolisp.html"
+  },
+  "columnas": {
+    "number": "004 / PROPOSED RESEARCH",
+    "eyebrow": "RESEARCH PROPOSAL",
+    "title": "Response of strengthened columns in buildings up to 12 storeys",
+    "intro": "A proposed study comparing preventive strengthening alternatives and their effects on seismic response indicators.",
+    "tags": ["Buildings", "Seismic assessment", "CFRP", "Jacketing"],
+    "method": "The proposal defines a manageable set of reinforced concrete column models and demand scenarios, comparing local strengthening options such as CFRP and jacketing. Controlled parameters would be used to explain trends in strength, deformation capacity and ductility.",
+    "result": "The study is at the scope-definition stage. No findings or quantitative improvements that have not been obtained are presented.",
+    "caution": "Research proposal. This is not a structural diagnostic service and includes no validated results for existing buildings.",
+    "doc": "casos/04-columnas.html"
+  }
+}

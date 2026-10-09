@@ -1,0 +1,46 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Architecture under development for a seismic review workflow: ETABS, Python, Mathcad Prime and a traceable calculation report.">
+  <meta name="theme-color" content="#173f4b">
+  <title>E.030 review workflow · Case 02 — Sergio Ambrosio</title>
+  <link rel="canonical" href="https://sergioambrosio714.github.io/en/casos/02-motor-e030.html">
+  <link rel="alternate" hreflang="es" href="https://sergioambrosio714.github.io/casos/02-motor-e030.html">
+  <link rel="alternate" hreflang="en" href="https://sergioambrosio714.github.io/en/casos/02-motor-e030.html">
+  <link rel="alternate" hreflang="x-default" href="https://sergioambrosio714.github.io/casos/02-motor-e030.html">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="E.030 review workflow · Sergio Ambrosio">
+  <meta property="og:description" content="ETABS → Python → Mathcad Prime → report. Architecture under development, with validation pending.">
+  <meta property="og:url" content="https://sergioambrosio714.github.io/en/casos/02-motor-e030.html">
+  <meta property="og:image" content="https://sergioambrosio714.github.io/assets/og-cover.png">
+  <meta property="og:image:alt" content="Sergio Ambrosio — Structural engineering, modelling and analysis.">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../casos/case.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Skip to content</a>
+  <header class="top"><div class="wrap"><a class="brand" href="../index.html">SERGIO AMBROSIO<small>STRUCTURAL ENGINEERING</small></a><nav aria-label="Main navigation"><a href="../index.html#herramientas">← Back to portfolio</a><a href="../../assets/cv-sergio-ambrosio-en.pdf" download>Download CV</a><a href="https://www.linkedin.com/in/sergio-junior-ambrosio-camayo-668241116/">LinkedIn</a><span class="language-switch" role="group" aria-label="Language"><a href="../../casos/02-motor-e030.html" lang="es" hreflang="es" aria-label="Leer esta ficha en español">ES</a><a href="02-motor-e030.html" lang="en" hreflang="en" aria-current="page">EN</a></span></nav></div></header>
+  <main id="contenido">
+    <header class="head"><div class="wrap"><span class="id">CASE 02 / CALCULATION AUTOMATION</span><h1>From a structural model to a traceable report.</h1><p>Design of an E.030 seismic review workflow separating data extraction, normalisation, calculation and documentation.</p><span class="status">In development · Architecture defined</span></div></header>
+    <div class="wrap content">
+      <aside class="sidebar" aria-label="Case contents and tools"><h2>In this case</h2><nav aria-label="Case contents"><a href="#problema">01. Problem and objective</a><a href="#metodologia">02. Methodology</a><a href="#procedimiento">03. Planned procedure</a><a href="#evidencia">04. Progress and evidence</a><a href="#competencias">05. Skills addressed</a></nav><dl><dt>Planned tools</dt><dd>ETABS / API<br>Python<br>Mathcad Prime</dd><dt>Planned output</dt><dd>Technical report<br>Review record</dd></dl></aside>
+      <article class="article" aria-label="E.030 workflow technical case">
+        <section id="problema"><h2>Technical problem and objective</h2><p>Transferring structural model results to spreadsheets and reports requires control of units, case names and the correspondence between inputs and results. Manual transcription makes it difficult to trace a value's origin and review model changes.</p><p><strong>Objective:</strong> design a reproducible workflow that reduces transcription errors and allows each check to be traced back to its source data. The architecture envisages reading ETABS without modifying the model and documenting processing outside it.</p></section>
+        <figure class="figure"><img src="../../assets/project-e030-en.svg" alt="Conceptual diagram of the ETABS, Python, Mathcad Prime and calculation report stages." width="820" height="470"><figcaption>Conceptual architecture. It is not a screenshot of ETABS, Python or Mathcad Prime, nor evidence of a completed integration.</figcaption></figure>
+        <section id="metodologia"><h2>Methodology and tools</h2><div class="flow" role="group" aria-label="Workflow from ETABS to Python, Mathcad Prime and report"><span>ETABS</span><b aria-hidden="true">→</b><span>Python</span><b aria-hidden="true">→</b><span>Mathcad Prime</span><b aria-hidden="true">→</b><span>Report</span></div><ul><li><strong>ETABS / API:</strong> planned extraction of model properties, storeys, masses, systems, internal forces and drifts, subject to data availability and quality.</li><li><strong>Python:</strong> data contracts, unit normalisation, detection of missing values and logging of review states.</li><li><strong>Mathcad Prime:</strong> visible formulation of calculations and assumptions within the scope to be defined.</li><li><strong>Report:</strong> inputs, references, tables and conclusions traceable to the source model.</li></ul></section>
+        <section id="procedimiento"><h2>Planned procedure</h2><ol><li><strong>Set the scope:</strong> identify the code edition, included checks, structural system and required data before programming rules.</li><li><strong>Extract and validate:</strong> check units, table integrity, identifiers and analysis cases before accepting data.</li><li><strong>Apply checks:</strong> develop bounded checks of seismic parameters, regularity and drift, with explicit references.</li><li><strong>Provide distinct states:</strong> “pass”, “fail”, “not applicable” and “data error”, avoiding any interpretation of missing input as a favourable result.</li><li><strong>Compare and document:</strong> compare against independently solved examples and retain versions of inputs, rules and results.</li></ol></section>
+        <section id="evidencia"><h2>Progress and available evidence</h2><p><strong>The architecture and requirements definition constitute the progress described.</strong> The working implementation, testing with real data and final report are still to be consolidated. This portfolio does not include an executable implementation of the engine.</p><table class="evidence-table"><thead><tr><th scope="col">Available</th><th scope="col">Required for validation</th></tr></thead><tbody><tr><td>Description of components and data flow.</td><td>Integration code, data contracts and version compatibility.</td></tr><tr><td>Planned review states and traceability criteria.</td><td>Test cases, independent calculation checks and reproducible results.</td></tr><tr><td>Architecture diagram.</td><td>Authentic ETABS and Mathcad screenshots, a Python execution record and a sample report.</td></tr></tbody></table><div class="note"><strong>Code implementation status.</strong> The code edition implemented in this prototype has not been verified. The 2026 E.030 update does not imply that this development has been adapted to it. Before implementing or using checks, they must be compared with the applicable official publications. The project is under development; it is neither a completed nor a certified checking tool and does not establish code compliance.</div></section>
+        <section id="competencias"><h2>Skills addressed</h2><p>Engineering data workflow design, separation of calculation and presentation, unit control and requirements documentation. The planned use of ETABS, Python and Mathcad Prime describes the project scope; a working integration still requires demonstration.</p><p><a href="../index.html#referencias-normativas">View the code references and the E.030 update</a>.</p></section>
+        <nav class="case-nav" aria-label="Case navigation"><a href="01-pilares-cfrp.html">← Previous: CFRP columns</a><a href="03-autolisp.html">Next: AutoLISP →</a></nav>
+      </article>
+    </div>
+  </main>
+  <footer class="foot wrap"><span>SERGIO AMBROSIO / TECHNICAL PORTFOLIO</span><a href="https://github.com/SergioAmbrosio714">GitHub · SergioAmbrosio714</a></footer>
+</body>
+</html>

@@ -1,0 +1,46 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Described AutoLISP routine families for structural detailing in AutoCAD. Scope, procedure and outstanding evidence.">
+  <meta name="theme-color" content="#173f4b">
+  <title>AutoLISP for structural detailing · Case 03 — Sergio Ambrosio</title>
+  <link rel="canonical" href="https://sergioambrosio714.github.io/en/casos/03-autolisp.html">
+  <link rel="alternate" hreflang="es" href="https://sergioambrosio714.github.io/casos/03-autolisp.html">
+  <link rel="alternate" hreflang="en" href="https://sergioambrosio714.github.io/en/casos/03-autolisp.html">
+  <link rel="alternate" hreflang="x-default" href="https://sergioambrosio714.github.io/casos/03-autolisp.html">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="AutoLISP for structural detailing · Sergio Ambrosio">
+  <meta property="og:description" content="Described automation for beams, columns, structural walls and stairs. Source files and screenshots remain to be added.">
+  <meta property="og:url" content="https://sergioambrosio714.github.io/en/casos/03-autolisp.html">
+  <meta property="og:image" content="https://sergioambrosio714.github.io/assets/og-cover.png">
+  <meta property="og:image:alt" content="Sergio Ambrosio — Structural engineering, modelling and analysis.">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../casos/case.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Skip to content</a>
+  <header class="top"><div class="wrap"><a class="brand" href="../index.html">SERGIO AMBROSIO<small>STRUCTURAL ENGINEERING</small></a><nav aria-label="Main navigation"><a href="../index.html#herramientas">← Back to portfolio</a><a href="../../assets/cv-sergio-ambrosio-en.pdf" download>Download CV</a><a href="https://www.linkedin.com/in/sergio-junior-ambrosio-camayo-668241116/">LinkedIn</a><span class="language-switch" role="group" aria-label="Language"><a href="../../casos/03-autolisp.html" lang="es" hreflang="es" aria-label="Leer esta ficha en español">ES</a><a href="03-autolisp.html" lang="en" hreflang="en" aria-current="page">EN</a></span></nav></div></header>
+  <main id="contenido">
+    <header class="head"><div class="wrap"><span class="id">CASE 03 / DRAFTING AUTOMATION</span><h1>Structural details with parametric logic.</h1><p>Described AutoLISP routine families for organising repetitive drafting, reinforcement, dimensioning and presentation tasks in AutoCAD.</p><span class="status">Described technical development · Source files pending</span></div></header>
+    <div class="wrap content">
+      <aside class="sidebar" aria-label="Case contents and tools"><h2>In this case</h2><nav aria-label="Case contents"><a href="#problema">01. Problem and objective</a><a href="#metodologia">02. Families and methodology</a><a href="#procedimiento">03. Procedure</a><a href="#evidencia">04. Outcome and evidence</a><a href="#competencias">05. Skills addressed</a></nav><dl><dt>Tools described</dt><dd>AutoCAD<br>AutoLISP</dd><dt>Members</dt><dd>Beams and columns<br>Structural walls and stairs</dd></dl></aside>
+      <article class="article" aria-label="AutoLISP automation technical case">
+        <section id="problema"><h2>Technical problem and objective</h2><p>Drafting reinforced concrete members involves repeated operations for outlines, stirrup distribution, longitudinal reinforcement, dimensions and intersections. Consistency between layers, text and geometry requires explicit criteria.</p><p><strong>Objective:</strong> organise these operations through parameterised commands to support detail production and facilitate review. The described automation concerns drafting; it does not validate the structural design of a member.</p></section>
+        <figure class="figure"><img src="../../assets/project-lisp-en.svg" alt="Conceptual schematic of a parameterised beam detail and its reinforcement." width="820" height="470"><figcaption>Conceptual technical illustration. It is not an AutoCAD screenshot, an approved detail or a verified reinforcement ratio.</figcaption></figure>
+        <section id="metodologia"><h2>Described families and methodology</h2><ul><li><strong>Beams:</strong> stirrup configuration and drafting by segment or selected area.</li><li><strong>Reinforcement and dimensions:</strong> routines for longitudinal reinforcement and dimensioning with consistent graphic conventions.</li><li><strong>Columns and structural walls:</strong> sections with parameterised geometry and reinforcement arrangement.</li><li><strong>Stairs and intersections:</strong> generation of geometry, boundary elements and junctions.</li><li><strong>Graphic organisation:</strong> rules for layers, colours, spacing and text to maintain document consistency.</li></ul><p>The described methodology separates input parameters, geometric construction and presentation. The <code>.lsp</code> files are not included, so this description is not presented as an audit of implemented commands.</p></section>
+        <section id="procedimiento"><h2>Described operating procedure</h2><ol><li><strong>Prepare parameters:</strong> dimensions, concrete cover, diameters, distribution and drafting conventions for the required detail.</li><li><strong>Select the member or segment:</strong> identify the geometry and relevant command family.</li><li><strong>Generate the drawing:</strong> construct outlines, reinforcement representations, dimensions and text on their layers.</li><li><strong>Review the output:</strong> check geometry, legibility, units and clashes with the other drawings.</li><li><strong>Review technical criteria:</strong> check confinement, development lengths, spacing and compatibility with the approved structural drawings.</li></ol></section>
+        <section id="evidencia"><h2>Described outcome and outstanding evidence</h2><p>The documentation describes a more systematic and configurable drafting workflow. <strong>No source files, execution screenshots or measurements are included to verify operation or quantify productivity.</strong> No percentage time savings are claimed.</p><table class="evidence-table"><thead><tr><th scope="col">Available</th><th scope="col">Material still to be added</th></tr></thead><tbody><tr><td>Description of routine families and operations.</td><td>Shareable code examples and command documentation.</td></tr><tr><td>Conceptual detailing schematic.</td><td>Authentic AutoCAD screenshots, input and output examples, and compatible software version.</td></tr><tr><td>Drawing review criteria.</td><td>Executed cases, error records and comparable measurements if processing time is to be assessed.</td></tr></tbody></table><div class="note"><strong>Scope.</strong> Automated detailing requires technical review of the applicable criteria and overall compatibility. A generated drawing does not, by itself, demonstrate code compliance or replace the designer's responsibility.</div></section>
+        <section id="competencias"><h2>Skills addressed</h2><p>Breaking down repetitive tasks, geometric parameterisation, organisation of technical drawings and procedure documentation. AutoCAD and AutoLISP are the technologies described for these families; executable evidence remains to be published.</p></section>
+        <nav class="case-nav" aria-label="Case navigation"><a href="02-motor-e030.html">← Previous: E.030 workflow</a><a href="04-columnas.html">Next: column study →</a></nav>
+      </article>
+    </div>
+  </main>
+  <footer class="foot wrap"><span>SERGIO AMBROSIO / TECHNICAL PORTFOLIO</span><a href="https://github.com/SergioAmbrosio714">GitHub · SergioAmbrosio714</a></footer>
+</body>
+</html>

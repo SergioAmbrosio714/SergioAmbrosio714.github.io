@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Conceptual comparison of fixed-base and isolated tanks</title>
+  <desc id="desc">Original comparison schematic. A denotes a fixed base and B denotes an isolation interface. No computed displacement or performance curve is shown.</desc>
+  <defs><g id="tank"><path d="M0 0V260Q160 328 320 260V0" fill="#e3eaed" stroke="#647e8c" stroke-width="3"/><ellipse cx="160" cy="0" rx="160" ry="43" fill="#f8fafb" stroke="#647e8c" stroke-width="3"/><path d="M13 55V251Q160 312 307 251V55" fill="#b9d1da" fill-opacity=".72" stroke="#7398a6"/><ellipse cx="160" cy="55" rx="147" ry="36" fill="#d3e3e9" stroke="#7398a6"/></g></defs>
+  <rect width="1200" height="720" fill="#f1f4f5"/>
+  <path d="M65 86H1135M65 632H1135M600 126V598" fill="none" stroke="#cfdade"/>
+  <use href="#tank" x="156" y="208"/><use href="#tank" x="719" y="208"/>
+  <g fill="none" stroke="#173f4b" stroke-linejoin="round"><path d="M145 489Q316 560 489 489V514Q316 585 145 514Z" fill="#173f4b" stroke-width="2"/><path d="M708 489Q879 560 1052 489V506Q879 577 708 506Z" fill="#173f4b" stroke-width="2"/><path d="M177 527L191 514M211 539L225 526M248 549L262 536M286 555L300 542M324 556L338 543M362 552L376 539M400 543L414 530M438 530L452 517" stroke-width="1.5"/><path d="M750 535Q775 552 800 535M750 550Q775 567 800 550M853 551Q879 568 905 551M853 566Q879 583 905 566M957 535Q982 552 1007 535M957 550Q982 567 1007 550" stroke="#4b7585" stroke-width="5"/><path d="M701 577Q879 637 1057 577M141 552Q316 614 493 552" stroke="#a2b5bd" stroke-width="2"/></g>
+  <g font-family="Arial,Helvetica,sans-serif" fill="#173f4b"><text x="65" y="58" font-size="16" letter-spacing="3">RESEARCH / BOUNDARY CONDITIONS</text><text x="152" y="136" font-size="33">A</text><text x="717" y="136" font-size="33">B</text><text x="65" y="670" font-size="12" letter-spacing="2">CONCEPTUAL COMPARISON · NO ANALYSIS RESULTS</text></g>
+</svg>
