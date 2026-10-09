@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "storey": [
+    {
+      "id": "missing-displacement",
+      "csv": "case,level,elevation,displacement,elevation_unit,displacement_unit\nSERVICE_A,L00,0,0,m,mm\nSERVICE_A,L01,3,,m,mm\nSERVICE_A,L02,6,6,m,mm\nSERVICE_A,L03,9,12,m,mm\nSERVICE_B,L00,0,0,m,mm\nSERVICE_B,L01,3,3,m,mm\nSERVICE_B,L02,6,8,m,mm\nSERVICE_B,L03,9,15,m,mm\n",
+      "error_code": "missing_field"
+    },
+    {
+      "id": "duplicate-level",
+      "csv": "case,level,elevation,displacement,elevation_unit,displacement_unit\nSERVICE_A,L00,0,0,m,mm\nSERVICE_A,L01,3,2,m,mm\nSERVICE_A,L02,6,6,m,mm\nSERVICE_A,L03,9,12,m,mm\nSERVICE_B,L00,0,0,m,mm\nSERVICE_B,L01,3,3,m,mm\nSERVICE_B,L02,6,8,m,mm\nSERVICE_B,L03,9,15,m,mm\nSERVICE_A,L00,0,0,m,mm\n",
+      "error_code": "duplicate_case_level"
+    },
+    {
+      "id": "unsupported-unit",
+      "csv": "case,level,elevation,displacement,elevation_unit,displacement_unit\nSERVICE_A,L00,0,0,m,kN\nSERVICE_A,L01,3,2,m,mm\nSERVICE_A,L02,6,6,m,mm\nSERVICE_A,L03,9,12,m,mm\nSERVICE_B,L00,0,0,m,mm\nSERVICE_B,L01,3,3,m,mm\nSERVICE_B,L02,6,8,m,mm\nSERVICE_B,L03,9,15,m,mm\n",
+      "error_code": "unsupported_unit"
+    },
+    {
+      "id": "incompatible-elevation",
+      "csv": "case,level,elevation,displacement,elevation_unit,displacement_unit\nSERVICE_A,L00,0,0,m,mm\nSERVICE_A,L01,3,2,m,mm\nSERVICE_A,L02,6,6,m,mm\nSERVICE_A,L03,9,12,m,mm\nSERVICE_B,L00,0,0,m,mm\nSERVICE_B,L01,4,3,m,mm\nSERVICE_B,L02,6,8,m,mm\nSERVICE_B,L03,9,15,m,mm\n",
+      "error_code": "incompatible_profile"
+    },
+    {
+      "id": "missing-level",
+      "csv": "case,level,elevation,displacement,elevation_unit,displacement_unit\nSERVICE_A,L00,0,0,m,mm\nSERVICE_A,L01,3,2,m,mm\nSERVICE_A,L02,6,6,m,mm\nSERVICE_A,L03,9,12,m,mm\nSERVICE_B,L00,0,0,m,mm\nSERVICE_B,L01,3,3,m,mm\nSERVICE_B,L02,6,8,m,mm\n",
+      "error_code": "incompatible_profile"
+    },
+    {
+      "id": "duplicate-elevation",
+      "csv": "case,level,elevation,displacement,elevation_unit,displacement_unit\nSERVICE_A,L00,0,0,m,mm\nSERVICE_A,L01,0,2,m,mm\nSERVICE_A,L02,6,6,m,mm\nSERVICE_A,L03,9,12,m,mm\nSERVICE_B,L00,0,0,m,mm\nSERVICE_B,L01,3,3,m,mm\nSERVICE_B,L02,6,8,m,mm\nSERVICE_B,L03,9,15,m,mm\n",
+      "error_code": "duplicate_elevation"
+    },
+    {
+      "id": "not-finite",
+      "csv": "case,level,elevation,displacement,elevation_unit,displacement_unit\nSERVICE_A,L00,0,0,m,mm\nSERVICE_A,L01,3,NaN,m,mm\nSERVICE_A,L02,6,6,m,mm\nSERVICE_A,L03,9,12,m,mm\nSERVICE_B,L00,0,0,m,mm\nSERVICE_B,L01,3,3,m,mm\nSERVICE_B,L02,6,8,m,mm\nSERVICE_B,L03,9,15,m,mm\n",
+      "error_code": "invalid_number"
+    },
+    {
+      "id": "overflow",
+      "csv": "case,level,elevation,displacement,elevation_unit,displacement_unit\nSERVICE_A,L00,0,0,m,mm\nSERVICE_A,L01,3,1e309,m,mm\nSERVICE_A,L02,6,6,m,mm\nSERVICE_A,L03,9,12,m,mm\nSERVICE_B,L00,0,0,m,mm\nSERVICE_B,L01,3,3,m,mm\nSERVICE_B,L02,6,8,m,mm\nSERVICE_B,L03,9,15,m,mm\n",
+      "error_code": "invalid_number"
+    },
+    {
+      "id": "spreadsheet-formula",
+      "csv": "case,level,elevation,displacement,elevation_unit,displacement_unit\n=1+1,L00,0,0,m,mm\n=1+1,L01,3,2,m,mm\n=1+1,L02,6,6,m,mm\n=1+1,L03,9,12,m,mm\nSERVICE_B,L00,0,0,m,mm\nSERVICE_B,L01,3,3,m,mm\nSERVICE_B,L02,6,8,m,mm\nSERVICE_B,L03,9,15,m,mm\n",
+      "error_code": "invalid_identifier"
+    },
+    {
+      "id": "unknown-reference",
+      "csv": "case,level,elevation,displacement,elevation_unit,displacement_unit\nSERVICE_A,L00,0,0,m,mm\nSERVICE_A,L01,3,2,m,mm\nSERVICE_A,L02,6,6,m,mm\nSERVICE_A,L03,9,12,m,mm\nSERVICE_B,L00,0,0,m,mm\nSERVICE_B,L01,3,3,m,mm\nSERVICE_B,L02,6,8,m,mm\nSERVICE_B,L03,9,15,m,mm\n",
+      "reference": "UNKNOWN",
+      "error_code": "invalid_reference"
+    },
+    {
+      "id": "duplicate-header",
+      "csv": "case,case,elevation,displacement,elevation_unit,displacement_unit\nSERVICE_A,L00,0,0,m,mm\nSERVICE_A,L01,3,2,m,mm\nSERVICE_A,L02,6,6,m,mm\nSERVICE_A,L03,9,12,m,mm\nSERVICE_B,L00,0,0,m,mm\nSERVICE_B,L01,3,3,m,mm\nSERVICE_B,L02,6,8,m,mm\nSERVICE_B,L03,9,15,m,mm\n",
+      "error_code": "invalid_csv"
+    },
+    {
+      "id": "no-data",
+      "csv": "case,level,elevation,displacement,elevation_unit,displacement_unit\n",
+      "error_code": "empty_data"
+    },
+    {
+      "id": "only-one-level",
+      "csv": "case,level,elevation,displacement,elevation_unit,displacement_unit\nSERVICE_A,L00,0,0,m,mm\n",
+      "error_code": "insufficient_levels"
+    }
+  ],
+  "cantilever": [
+    {
+      "id": "zero-length",
+      "csv": "scenario,length_m,width_m,depth_m,elastic_modulus_pa,tip_load_n,reference_stress_pa\nBASE,0,0.1,0.2,200000000000,10000,250000000\nHALF_LOAD,2,0.1,0.2,200000000000,5000,250000000\nDOUBLE_E,2,0.1,0.2,400000000000,10000,250000000\nDOUBLE_DEPTH,2,0.1,0.4,200000000000,10000,250000000\n",
+      "error_code": "invalid_number"
+    },
+    {
+      "id": "negative-modulus",
+      "csv": "scenario,length_m,width_m,depth_m,elastic_modulus_pa,tip_load_n,reference_stress_pa\nBASE,2,0.1,0.2,-200000000000,10000,250000000\nHALF_LOAD,2,0.1,0.2,200000000000,5000,250000000\nDOUBLE_E,2,0.1,0.2,400000000000,10000,250000000\nDOUBLE_DEPTH,2,0.1,0.4,200000000000,10000,250000000\n",
+      "error_code": "invalid_number"
+    },
+    {
+      "id": "nonfinite-load",
+      "csv": "scenario,length_m,width_m,depth_m,elastic_modulus_pa,tip_load_n,reference_stress_pa\nBASE,2,0.1,0.2,200000000000,Infinity,250000000\nHALF_LOAD,2,0.1,0.2,200000000000,5000,250000000\nDOUBLE_E,2,0.1,0.2,400000000000,10000,250000000\nDOUBLE_DEPTH,2,0.1,0.4,200000000000,10000,250000000\n",
+      "error_code": "invalid_number"
+    },
+    {
+      "id": "missing-reference-stress",
+      "csv": "scenario,length_m,width_m,depth_m,elastic_modulus_pa,tip_load_n,reference_stress_pa\nBASE,2,0.1,0.2,200000000000,10000,\nHALF_LOAD,2,0.1,0.2,200000000000,5000,250000000\nDOUBLE_E,2,0.1,0.2,400000000000,10000,250000000\nDOUBLE_DEPTH,2,0.1,0.4,200000000000,10000,250000000\n",
+      "error_code": "missing_field"
+    },
+    {
+      "id": "duplicate-scenario",
+      "csv": "scenario,length_m,width_m,depth_m,elastic_modulus_pa,tip_load_n,reference_stress_pa\nBASE,2,0.1,0.2,200000000000,10000,250000000\nHALF_LOAD,2,0.1,0.2,200000000000,5000,250000000\nDOUBLE_E,2,0.1,0.2,400000000000,10000,250000000\nDOUBLE_DEPTH,2,0.1,0.4,200000000000,10000,250000000\nBASE,2,0.1,0.2,200000000000,10000,250000000\n",
+      "error_code": "duplicate_scenario"
+    },
+    {
+      "id": "spreadsheet-formula",
+      "csv": "scenario,length_m,width_m,depth_m,elastic_modulus_pa,tip_load_n,reference_stress_pa\n@SUM(A1:A2),2,0.1,0.2,200000000000,10000,250000000\nHALF_LOAD,2,0.1,0.2,200000000000,5000,250000000\nDOUBLE_E,2,0.1,0.2,400000000000,10000,250000000\nDOUBLE_DEPTH,2,0.1,0.4,200000000000,10000,250000000\n",
+      "error_code": "invalid_identifier"
+    },
+    {
+      "id": "too-few-stations",
+      "csv": "scenario,length_m,width_m,depth_m,elastic_modulus_pa,tip_load_n,reference_stress_pa\nBASE,2,0.1,0.2,200000000000,10000,250000000\nHALF_LOAD,2,0.1,0.2,200000000000,5000,250000000\nDOUBLE_E,2,0.1,0.2,400000000000,10000,250000000\nDOUBLE_DEPTH,2,0.1,0.4,200000000000,10000,250000000\n",
+      "samples": 1,
+      "error_code": "invalid_samples"
+    },
+    {
+      "id": "too-many-stations",
+      "csv": "scenario,length_m,width_m,depth_m,elastic_modulus_pa,tip_load_n,reference_stress_pa\nBASE,2,0.1,0.2,200000000000,10000,250000000\nHALF_LOAD,2,0.1,0.2,200000000000,5000,250000000\nDOUBLE_E,2,0.1,0.2,400000000000,10000,250000000\nDOUBLE_DEPTH,2,0.1,0.4,200000000000,10000,250000000\n",
+      "samples": 1002,
+      "error_code": "invalid_samples"
+    },
+    {
+      "id": "section-overflow",
+      "csv": "scenario,length_m,width_m,depth_m,elastic_modulus_pa,tip_load_n,reference_stress_pa\nBASE,2,0.1,1e200,200000000000,10000,250000000\nHALF_LOAD,2,0.1,0.2,200000000000,5000,250000000\nDOUBLE_E,2,0.1,0.2,400000000000,10000,250000000\nDOUBLE_DEPTH,2,0.1,0.4,200000000000,10000,250000000\n",
+      "error_code": "numeric_range"
+    },
+    {
+      "id": "rigidity-denominator-overflow",
+      "csv": "scenario,length_m,width_m,depth_m,elastic_modulus_pa,tip_load_n,reference_stress_pa\nBASE,2,1000,0.2,1e308,10000,250000000\nHALF_LOAD,2,0.1,0.2,200000000000,5000,250000000\nDOUBLE_E,2,0.1,0.2,400000000000,10000,250000000\nDOUBLE_DEPTH,2,0.1,0.4,200000000000,10000,250000000\n",
+      "error_code": "numeric_range"
+    }
+  ]
+}

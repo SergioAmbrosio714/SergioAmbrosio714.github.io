@@ -118,7 +118,69 @@
             "title": "Herramientas y referencias de diseño",
             "paragraphs": [
               "Herramientas declaradas: ETABS, SAFE, Mathcad y AutoCAD. El CV identifica el Reglamento Nacional de Edificaciones y ACI 318 como referencias del trabajo.",
-              "Las ediciones normativas y los criterios aplicados deben consultarse en la memoria del proyecto. Esta ficha identifica experiencia y alcance; no certifica cumplimiento a partir de la ilustración pública."
+              "Las ediciones normativas y los criterios aplicados deben consultarse en la memoria del proyecto. Esta ficha identifica experiencia y alcance; no certifica cumplimiento a partir de la ilustración pública.",
+              "Como marco de revisión, E.020 relaciona las acciones con el uso; E.030, la respuesta sísmica; E.060 y ACI 318, el diseño de concreto; y E.050, los criterios geotécnicos de cimentación. RNE y ACI 318 están declarados para el proyecto; la identificación de cada texto y edición aplicada exige la memoria. Las ediciones de referencia consultadas en 2026 no se atribuyen retrospectivamente a este trabajo de 2024."
+            ],
+            "bullets": [
+              "Método de análisis a documentar: casos, masas, rigideces y procedimiento sísmico del modelo ETABS, con sus hipótesis y unidades.",
+              "Verificaciones relacionadas con el alcance: respuesta global y desplazamientos; resistencia y detallado de elementos principales; reacciones y criterios de cimentación.",
+              "Trazabilidad documental: vincular cada comprobación con el caso de carga, la revisión del modelo, la memoria y los planos coordinados."
+            ],
+            "links": [
+              {
+                "href": {
+                  "es": "normativa/index.html#e030",
+                  "en": "en/normativa/index.html#e030"
+                },
+                "label": {
+                  "es": "RNE: acciones y respuesta sísmica",
+                  "en": "RNE: loads and seismic response"
+                }
+              },
+              {
+                "href": {
+                  "es": "normativa/index.html#aci318",
+                  "en": "en/normativa/index.html#aci318"
+                },
+                "label": {
+                  "es": "Concreto: referencias y ediciones",
+                  "en": "Concrete: references and editions"
+                }
+              },
+              {
+                "href": {
+                  "es": "normativa/index.html#e050",
+                  "en": "en/normativa/index.html#e050"
+                },
+                "label": {
+                  "es": "Criterios de cimentación",
+                  "en": "Foundation criteria"
+                }
+              }
+            ]
+          },
+          {
+            "title": "Python como apoyo: aplicaciones posibles",
+            "paragraphs": [
+              "En un flujo de revisión de edificios de esta escala, Python puede ayudar a organizar resultados exportados y comparar revisiones. Estas son oportunidades de aplicación; no se afirma que se desarrollara o utilizara una herramienta Python en SUNSETGOLF.",
+              "Los demostradores enlazados se crearon para el portafolio en octubre de 2026 con datos didácticos. El procesamiento por nivel no calcula automáticamente derivas normativas ni representa una conexión activa con ETABS."
+            ],
+            "bullets": [
+              "Normalizar unidades e identificar datos faltantes en tablas exportadas por nivel y caso.",
+              "Comparar desplazamientos entre casos o revisiones conservando nivel, unidades y procedencia.",
+              "Preparar gráficos y tablas de revisión para una memoria, sujetos a interpretación y comprobación del ingeniero."
+            ],
+            "links": [
+              {
+                "href": {
+                  "es": "laboratorio/resultados-por-nivel.html",
+                  "en": "en/laboratorio/resultados-por-nivel.html"
+                },
+                "label": {
+                  "es": "Explorar el procesamiento de resultados por nivel",
+                  "en": "Explore level-results processing"
+                }
+              }
             ]
           },
           {
@@ -230,7 +292,69 @@
             "title": "Tools and design references",
             "paragraphs": [
               "Declared tools: ETABS, SAFE, Mathcad and AutoCAD. The CV identifies Peru's National Building Regulations (RNE) and ACI 318 as references for the work.",
-              "The applicable editions and project criteria must be established from the calculation report. This page records experience and scope; it does not certify compliance from the public illustration."
+              "The applicable editions and project criteria must be established from the calculation report. This page records experience and scope; it does not certify compliance from the public illustration.",
+              "As a review framework, E.020 connects loads with occupancy; E.030 addresses seismic response; E.060 and ACI 318 address concrete design; and E.050 addresses geotechnical foundation criteria. RNE and ACI 318 are declared for this project; identifying each applied text and edition requires the calculation report. Reference editions consulted in 2026 are not retrospectively attributed to this 2024 work."
+            ],
+            "bullets": [
+              "Analysis method to document: ETABS cases, mass, stiffness and seismic procedure, including assumptions and units.",
+              "Checks related to the scope: global response and displacement; strength and detailing of primary members; foundation reactions and criteria.",
+              "Document traceability: connect each check with its load case, model revision, calculation report and coordinated drawings."
+            ],
+            "links": [
+              {
+                "href": {
+                  "es": "normativa/index.html#e030",
+                  "en": "en/normativa/index.html#e030"
+                },
+                "label": {
+                  "es": "RNE: acciones y respuesta sísmica",
+                  "en": "RNE: loads and seismic response"
+                }
+              },
+              {
+                "href": {
+                  "es": "normativa/index.html#aci318",
+                  "en": "en/normativa/index.html#aci318"
+                },
+                "label": {
+                  "es": "Concreto: referencias y ediciones",
+                  "en": "Concrete: references and editions"
+                }
+              },
+              {
+                "href": {
+                  "es": "normativa/index.html#e050",
+                  "en": "en/normativa/index.html#e050"
+                },
+                "label": {
+                  "es": "Criterios de cimentación",
+                  "en": "Foundation criteria"
+                }
+              }
+            ]
+          },
+          {
+            "title": "Python support: potential applications",
+            "paragraphs": [
+              "In the review of buildings of this scale, Python can help organize exported results and compare revisions. These are potential applications; no Python tool is claimed to have been developed or used on SUNSETGOLF.",
+              "The linked demonstrations were created for this portfolio in October 2026 using educational data. The level-results processor does not automatically calculate code-defined drift or provide a live ETABS connection."
+            ],
+            "bullets": [
+              "Normalize units and identify missing data in exported tables by level and case.",
+              "Compare displacements between cases or revisions while retaining level, units and provenance.",
+              "Prepare review plots and tables for a calculation report, subject to engineering interpretation and checking."
+            ],
+            "links": [
+              {
+                "href": {
+                  "es": "laboratorio/resultados-por-nivel.html",
+                  "en": "en/laboratorio/resultados-por-nivel.html"
+                },
+                "label": {
+                  "es": "Explorar el procesamiento de resultados por nivel",
+                  "en": "Explore level-results processing"
+                }
+              }
             ]
           },
           {
@@ -380,7 +504,59 @@
             "title": "Herramientas y criterios técnicos",
             "paragraphs": [
               "El CV no desglosa paquetes de software ni ediciones normativas específicamente para CEPITOCE. Por ello, esta ficha no asigna aplicaciones, tensiones, cargas de equipos ni combinaciones que no estén documentadas.",
-              "Las futuras capturas podrán identificar software, fecha, autoría y condición de uso. Los extractos de cálculo deberán mantener los criterios y unidades necesarios para interpretar su alcance."
+              "Las futuras capturas podrán identificar software, fecha, autoría y condición de uso. Los extractos de cálculo deberán mantener los criterios y unidades necesarios para interpretar su alcance.",
+              "Como referencias relacionadas con esta tipología, ASCE/SEI 7 organiza acciones y AISC 360 aporta criterios de acero; las cimentaciones requieren además una base estructural y geotécnica definida. Esta relación explica un método de revisión: no acredita que CEPITOCE empleara esos documentos. La jurisdicción, las especificaciones del cliente y la memoria deben establecer las normas y ediciones efectivamente adoptadas."
+            ],
+            "bullets": [
+              "Método a documentar: geometría, apoyos, estados de equipos y procedimiento de análisis, incluyendo estabilidad y efectos de segundo orden cuando correspondan.",
+              "Elementos del alcance declarado: torres, pórticos, soportes y cimentaciones; las conexiones deben ser coherentes con la transferencia de acciones y la rigidez modelada.",
+              "Registro de revisión: criterios, estados de carga compatibles, verificaciones y coordinación entre memoria, planos y entregables. No se publican resultados o ratios no aportados."
+            ],
+            "links": [
+              {
+                "href": {
+                  "es": "normativa/index.html#asce7",
+                  "en": "en/normativa/index.html#asce7"
+                },
+                "label": {
+                  "es": "Acciones: referencia ASCE/SEI 7",
+                  "en": "Loads: ASCE/SEI 7 reference"
+                }
+              },
+              {
+                "href": {
+                  "es": "normativa/index.html#aisc360",
+                  "en": "en/normativa/index.html#aisc360"
+                },
+                "label": {
+                  "es": "Acero: referencia AISC 360",
+                  "en": "Steel: AISC 360 reference"
+                }
+              }
+            ]
+          },
+          {
+            "title": "Python como apoyo: aplicaciones posibles",
+            "paragraphs": [
+              "La programación puede apoyar el control de tablas de cargas de equipos, reacciones y revisiones de modelos. Se presentan oportunidades de automatización, sin afirmar que existió una integración Python en CEPITOCE.",
+              "El demostrador de voladizo es una comprobación analítica didáctica desarrollada para el portafolio en octubre de 2026. No representa una torre ni un soporte real del proyecto y no verifica conexiones ni cumplimiento normativo."
+            ],
+            "bullets": [
+              "Comprobar unidades, signos, ejes y estados compatibles antes de ordenar tablas de reacciones.",
+              "Comparar alternativas geométricas mediante indicadores claramente definidos, conservando hipótesis y límites del modelo.",
+              "Generar resúmenes de cambios entre revisiones para apoyar la revisión de memorias y planos."
+            ],
+            "links": [
+              {
+                "href": {
+                  "es": "laboratorio/voladizo-parametrico.html",
+                  "en": "en/laboratorio/voladizo-parametrico.html"
+                },
+                "label": {
+                  "es": "Explorar el voladizo paramétrico didáctico",
+                  "en": "Explore the educational parametric cantilever"
+                }
+              }
             ]
           },
           {
@@ -492,7 +668,59 @@
             "title": "Tools and technical criteria",
             "paragraphs": [
               "The CV does not specify software packages or code editions for CEPITOCE. This page therefore does not assign applications, voltages, equipment loads or load combinations without supporting documentation.",
-              "Future screenshots can identify software, date, authorship and publication permission. Calculation extracts should retain the criteria and units needed to interpret their scope."
+              "Future screenshots can identify software, date, authorship and publication permission. Calculation extracts should retain the criteria and units needed to interpret their scope.",
+              "As references related to this type of structure, ASCE/SEI 7 organizes actions and AISC 360 provides steel criteria; foundations also require a defined structural and geotechnical basis. This relationship explains a review method, not documented use of those standards on CEPITOCE. Jurisdiction, client specifications and the calculation report must establish the documents and editions actually adopted."
+            ],
+            "bullets": [
+              "Method to document: geometry, supports, equipment states and analysis procedure, including stability and second-order effects where relevant.",
+              "Members within the declared scope: towers, gantries, supports and foundations; connections must be consistent with load transfer and modelled stiffness.",
+              "Review record: criteria, compatible load states, checks and coordination between the calculation report, drawings and deliverables. Unavailable results or utilization ratios are not published."
+            ],
+            "links": [
+              {
+                "href": {
+                  "es": "normativa/index.html#asce7",
+                  "en": "en/normativa/index.html#asce7"
+                },
+                "label": {
+                  "es": "Acciones: referencia ASCE/SEI 7",
+                  "en": "Loads: ASCE/SEI 7 reference"
+                }
+              },
+              {
+                "href": {
+                  "es": "normativa/index.html#aisc360",
+                  "en": "en/normativa/index.html#aisc360"
+                },
+                "label": {
+                  "es": "Acero: referencia AISC 360",
+                  "en": "Steel: AISC 360 reference"
+                }
+              }
+            ]
+          },
+          {
+            "title": "Python support: potential applications",
+            "paragraphs": [
+              "Programming can support the control of equipment-load tables, reactions and model revisions. These are automation opportunities; no Python integration is claimed for CEPITOCE.",
+              "The cantilever demonstration is an educational analytical check developed for this portfolio in October 2026. It does not represent a project tower or equipment support and does not check connections or code compliance."
+            ],
+            "bullets": [
+              "Check units, signs, axes and compatible states before organizing reaction tables.",
+              "Compare geometric alternatives through defined indicators while retaining model assumptions and limitations.",
+              "Generate change summaries between revisions to support review of calculation reports and drawings."
+            ],
+            "links": [
+              {
+                "href": {
+                  "es": "laboratorio/voladizo-parametrico.html",
+                  "en": "en/laboratorio/voladizo-parametrico.html"
+                },
+                "label": {
+                  "es": "Explorar el voladizo paramétrico didáctico",
+                  "en": "Explore the educational parametric cantilever"
+                }
+              }
             ]
           },
           {
@@ -640,7 +868,69 @@
             "title": "Herramientas y referencias de diseño",
             "paragraphs": [
               "Herramientas declaradas: SAP2000, SAFE, Mathcad, IDEA StatiCa y Revit. Las referencias normativas indicadas en el CV son RNE y AISC.",
-              "No se asignan ediciones, resistencias de materiales, combinaciones de carga ni capacidades resistentes sin acceso a la memoria correspondiente. Los resultados cuantitativos podrán incorporarse sólo con evidencia y autorización."
+              "No se asignan ediciones, resistencias de materiales, combinaciones de carga ni capacidades resistentes sin acceso a la memoria correspondiente. Los resultados cuantitativos podrán incorporarse sólo con evidencia y autorización.",
+              "La declaración documental de este proyecto identifica RNE y AISC como familias de referencia. E.020, E.050 y AISC 360 permiten explicar, respectivamente, acciones, criterios geotécnicos y revisión del acero; esta asociación temática no confirma documentos o ediciones específicos empleados en 2024. La aplicación personal de E.090 permanece por confirmar."
+            ],
+            "bullets": [
+              "Método a documentar: casos y combinaciones del modelo SAP2000, hipótesis de apoyos, estabilidad y correspondencia con el sistema construido.",
+              "Verificaciones del alcance: miembros principales, conexiones y cimentaciones, con atención a compatibilidad de deformaciones y transferencia de reacciones.",
+              "Documentación a relacionar: comprobaciones, memoria, detalles de conexiones y planos Revit, con sus unidades, criterios y revisión."
+            ],
+            "links": [
+              {
+                "href": {
+                  "es": "normativa/index.html#aisc360",
+                  "en": "en/normativa/index.html#aisc360"
+                },
+                "label": {
+                  "es": "Acero: normativa y alcance",
+                  "en": "Steel: standards and scope"
+                }
+              },
+              {
+                "href": {
+                  "es": "normativa/index.html#e020",
+                  "en": "en/normativa/index.html#e020"
+                },
+                "label": {
+                  "es": "Cargas y combinaciones",
+                  "en": "Loads and combinations"
+                }
+              },
+              {
+                "href": {
+                  "es": "normativa/index.html#e050",
+                  "en": "en/normativa/index.html#e050"
+                },
+                "label": {
+                  "es": "Criterios de cimentación",
+                  "en": "Foundation criteria"
+                }
+              }
+            ]
+          },
+          {
+            "title": "Python como apoyo: aplicaciones posibles",
+            "paragraphs": [
+              "En una estructura metálica, Python puede facilitar la organización de resultados y la comparación de alternativas bajo hipótesis constantes. Se trata de aplicaciones posibles; no se atribuye su uso al trabajo ejecutado para CIDELSA.",
+              "El demostrador paramétrico enlazado fue creado para este portafolio en octubre de 2026. Resuelve un voladizo idealizado, no la estructura de 20 × 30 m, sus conexiones ni su cimentación."
+            ],
+            "bullets": [
+              "Ordenar fuerzas y reacciones exportadas por miembro, caso y unidad, conservando estados compatibles.",
+              "Comparar parámetros geométricos y sensibilidad con un modelo analítico limitado antes de interpretar escenarios más complejos.",
+              "Producir tablas y gráficos que documenten supuestos y cambios, sujetos a revisión del modelo y de los criterios de diseño."
+            ],
+            "links": [
+              {
+                "href": {
+                  "es": "laboratorio/voladizo-parametrico.html",
+                  "en": "en/laboratorio/voladizo-parametrico.html"
+                },
+                "label": {
+                  "es": "Explorar el ejemplo paramétrico independiente",
+                  "en": "Explore the independent parametric example"
+                }
+              }
             ]
           },
           {
@@ -753,7 +1043,69 @@
             "title": "Tools and design references",
             "paragraphs": [
               "Declared tools: SAP2000, SAFE, Mathcad, IDEA StatiCa and Revit. The design references identified in the CV are RNE and AISC.",
-              "Code editions, material strengths, load combinations and structural capacities are not assigned without the corresponding calculation report. Quantitative results can be added only with evidence and publication permission."
+              "Code editions, material strengths, load combinations and structural capacities are not assigned without the corresponding calculation report. Quantitative results can be added only with evidence and publication permission.",
+              "The project information identifies RNE and AISC as reference families. E.020, E.050 and AISC 360 explain loads, geotechnical criteria and steel checks respectively; this thematic association does not establish the specific documents or editions used in 2024. Personal application of E.090 remains unconfirmed."
+            ],
+            "bullets": [
+              "Method to document: SAP2000 cases and combinations, support and stability assumptions, and correspondence with the constructed system.",
+              "Checks within the scope: primary members, connections and foundations, considering deformation compatibility and reaction transfer.",
+              "Documentation to connect: checks, calculation report, connection details and Revit drawings, with identified units, criteria and revision."
+            ],
+            "links": [
+              {
+                "href": {
+                  "es": "normativa/index.html#aisc360",
+                  "en": "en/normativa/index.html#aisc360"
+                },
+                "label": {
+                  "es": "Acero: normativa y alcance",
+                  "en": "Steel: standards and scope"
+                }
+              },
+              {
+                "href": {
+                  "es": "normativa/index.html#e020",
+                  "en": "en/normativa/index.html#e020"
+                },
+                "label": {
+                  "es": "Cargas y combinaciones",
+                  "en": "Loads and combinations"
+                }
+              },
+              {
+                "href": {
+                  "es": "normativa/index.html#e050",
+                  "en": "en/normativa/index.html#e050"
+                },
+                "label": {
+                  "es": "Criterios de cimentación",
+                  "en": "Foundation criteria"
+                }
+              }
+            ]
+          },
+          {
+            "title": "Python support: potential applications",
+            "paragraphs": [
+              "For a steel structure, Python can help organize results and compare alternatives under consistent assumptions. These are potential applications; their use is not attributed to the completed CIDELSA work.",
+              "The linked parametric demonstration was created for this portfolio in October 2026. It solves an idealized cantilever, not the 20 × 30 m structure, its connections or its foundations."
+            ],
+            "bullets": [
+              "Organize exported forces and reactions by member, case and unit while retaining compatible response states.",
+              "Compare geometry and sensitivity through a limited analytical model before interpreting more complex scenarios.",
+              "Produce tables and plots documenting assumptions and changes, subject to review of the model and design criteria."
+            ],
+            "links": [
+              {
+                "href": {
+                  "es": "laboratorio/voladizo-parametrico.html",
+                  "en": "en/laboratorio/voladizo-parametrico.html"
+                },
+                "label": {
+                  "es": "Explorar el ejemplo paramétrico independiente",
+                  "en": "Explore the independent parametric example"
+                }
+              }
             ]
           },
           {

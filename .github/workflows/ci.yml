@@ -24,6 +24,14 @@ jobs:
           node --check hero-model.js
           node --check navigation.js
           node --check profile-data.js
+          node --check demo-core.js
+          node --check demo-ui.js
+      - name: Probar herramientas Python y soluciones independientes
+        run: |
+          python -m unittest discover -s python/tests -v
+          python python/build_fixtures.py --check
+      - name: Comparar cálculos y exportaciones Python/JavaScript
+        run: node tests/demo-core.test.cjs
       - name: Probar interacciones y cálculos
         run: node tests/smoke.test.cjs
       - name: Verificar enlaces locales
@@ -40,6 +48,12 @@ jobs:
           AXE_PATH: ${{ runner.temp }}/portfolio-qa/node_modules/axe-core/axe.min.js
           QA_SCREENSHOTS: ${{ runner.temp }}/portfolio-artifacts
         run: node tests/browser.test.cjs
+      - name: Probar demostradores y catálogo normativo
+        env:
+          PLAYWRIGHT_MODULE: ${{ runner.temp }}/portfolio-qa/node_modules/playwright
+          AXE_PATH: ${{ runner.temp }}/portfolio-qa/node_modules/axe-core/axe.min.js
+          QA_SCREENSHOTS: ${{ runner.temp }}/portfolio-artifacts
+        run: node tests/demo-browser.test.cjs
       - name: Guardar capturas e informe
         if: always()
         uses: actions/upload-artifact@v4

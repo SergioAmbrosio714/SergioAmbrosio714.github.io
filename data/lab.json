@@ -29,21 +29,21 @@
       ],
       "method": "La arquitectura definida separa la extracción de datos del software ETABS (modo lectura), la normalización y validación en Python, el desarrollo de operaciones con Mathcad Prime y la salida documental. Se contemplan verificaciones de regularidad, derivas, peso sísmico y parámetros de diseño dentro de un alcance acotado.",
       "result": "La arquitectura y el alcance funcional están definidos; el motor y el formato final se encuentran en evolución. No se presenta todavía como software listo para certificar cumplimiento normativo.",
-      "caution": "Estado: prototipo en desarrollo. La edición y vigencia normativa no se han verificado. Las referencias a la E.030 no implican validación oficial ni sustituyen la evaluación de un ingeniero responsable.",
+      "caution": "Estado: prototipo en desarrollo. No se ha verificado la edición implementada ni su adaptación a la E.030 de 2026. La normativa actual se documenta en la sección de referencias; ello no valida el prototipo ni sustituye la evaluación de un ingeniero responsable.",
       "doc": "casos/02-motor-e030.html"
     },
     "lisp": {
       "number": "003 / PRODUCCIÓN DE PLANOS",
       "eyebrow": "RUTINAS DESCRITAS",
       "title": "Rutinas AutoLISP para detalles estructurales",
-      "intro": "Conjunto de automatizaciones orientadas a reducir tareas repetitivas en producción y actualización de planos de detalle.",
+      "intro": "Rutinas descritas para organizar el dibujo estructural y conectar parámetros revisados con detalles y convenciones gráficas consistentes.",
       "tags": [
         "AutoCAD",
         "AutoLISP",
         "Detallado",
         "Control gráfico"
       ],
-      "method": "Se describen comandos para secciones de vigas y columnas, distribución de estribos, armado longitudinal, placas, escaleras, cotas y geometría auxiliar, con criterios parametrizables y convenciones de capas, colores, distancias y representación.",
+      "method": "Se describen comandos para vigas, columnas, placas, escaleras, estribos, acero longitudinal y cotas. Una integración futura puede usar Python para validar tablas de parámetros y AutoLISP para generar geometría, conservando identificadores, unidades y revisiones. No se afirma que esa integración esté implementada.",
       "result": "La documentación describe familias de comandos para elementos estructurales. No se han adjuntado fuentes .lsp, ejemplos reproducibles ni capturas de AutoCAD; por ello no se atribuyen ahorros medidos ni validación independiente.",
       "caution": "Desarrollo descrito, pendiente de evidencia pública. Las imágenes son conceptuales y no son capturas de AutoCAD ni planos de obra ejecutada.",
       "doc": "casos/03-autolisp.html"

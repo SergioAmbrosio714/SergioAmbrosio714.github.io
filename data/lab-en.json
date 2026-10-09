@@ -25,9 +25,9 @@
     "number": "003 / DRAWING PRODUCTION",
     "eyebrow": "DOCUMENTED ROUTINES",
     "title": "AutoLISP routines for structural detailing",
-    "intro": "Automation routines intended to reduce repetitive tasks in the production and revision of structural detail drawings.",
+    "intro": "Described routines for organizing structural drafting and connecting reviewed parameters with consistent details and drawing conventions.",
     "tags": ["AutoCAD", "AutoLISP", "Detailing", "Drawing checks"],
-    "method": "The documentation describes commands for beam and column sections, transverse and longitudinal reinforcement, walls, stairs, dimensions and auxiliary geometry, with configurable layer, colour, spacing and drawing conventions.",
+    "method": "The documentation describes commands for beams, columns, structural walls, stairs, stirrups, longitudinal reinforcement and dimensions. A future integration could use Python to validate parameter tables and AutoLISP to generate geometry while retaining identifiers, units and revisions. That integration is not claimed to be implemented.",
     "result": "Families of commands for structural members are documented. Source .lsp files, reproducible examples and AutoCAD screenshots have not been provided, so no measured time savings or independent validation are claimed.",
     "caution": "Documented development awaiting public supporting evidence. Images are conceptual diagrams, not AutoCAD screenshots or construction drawings.",
     "doc": "casos/03-autolisp.html"

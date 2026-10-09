@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "demo": "storey-results",
+  "reference_case": "SERVICE_A",
+  "level_order": [
+    "L00",
+    "L01",
+    "L02",
+    "L03"
+  ],
+  "cases": [
+    {
+      "case": "SERVICE_A",
+      "max_abs_displacement_m": 0.012,
+      "max_abs_drift_ratio": 0.002,
+      "points": [
+        {
+          "level": "L00",
+          "elevation_m": 0.0,
+          "displacement_m": 0.0,
+          "storey_height_m": null,
+          "interstorey_displacement_m": null,
+          "drift_ratio": null,
+          "difference_from_reference_m": 0.0
+        },
+        {
+          "level": "L01",
+          "elevation_m": 3.0,
+          "displacement_m": 0.002,
+          "storey_height_m": 3.0,
+          "interstorey_displacement_m": 0.002,
+          "drift_ratio": 0.0006666666666666666,
+          "difference_from_reference_m": 0.0
+        },
+        {
+          "level": "L02",
+          "elevation_m": 6.0,
+          "displacement_m": 0.006,
+          "storey_height_m": 3.0,
+          "interstorey_displacement_m": 0.004,
+          "drift_ratio": 0.0013333333333333333,
+          "difference_from_reference_m": 0.0
+        },
+        {
+          "level": "L03",
+          "elevation_m": 9.0,
+          "displacement_m": 0.012,
+          "storey_height_m": 3.0,
+          "interstorey_displacement_m": 0.006,
+          "drift_ratio": 0.002,
+          "difference_from_reference_m": 0.0
+        }
+      ]
+    },
+    {
+      "case": "SERVICE_B",
+      "max_abs_displacement_m": 0.015,
+      "max_abs_drift_ratio": 0.002333333333333333,
+      "points": [
+        {
+          "level": "L00",
+          "elevation_m": 0.0,
+          "displacement_m": 0.0,
+          "storey_height_m": null,
+          "interstorey_displacement_m": null,
+          "drift_ratio": null,
+          "difference_from_reference_m": 0.0
+        },
+        {
+          "level": "L01",
+          "elevation_m": 3.0,
+          "displacement_m": 0.003,
+          "storey_height_m": 3.0,
+          "interstorey_displacement_m": 0.003,
+          "drift_ratio": 0.001,
+          "difference_from_reference_m": 0.001
+        },
+        {
+          "level": "L02",
+          "elevation_m": 6.0,
+          "displacement_m": 0.008,
+          "storey_height_m": 3.0,
+          "interstorey_displacement_m": 0.005,
+          "drift_ratio": 0.0016666666666666668,
+          "difference_from_reference_m": 0.002
+        },
+        {
+          "level": "L03",
+          "elevation_m": 9.0,
+          "displacement_m": 0.015,
+          "storey_height_m": 3.0,
+          "interstorey_displacement_m": 0.006999999999999999,
+          "drift_ratio": 0.002333333333333333,
+          "difference_from_reference_m": 0.002999999999999999
+        }
+      ]
+    }
+  ]
+}

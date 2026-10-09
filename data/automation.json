@@ -1,0 +1,237 @@
+{
+  "reviewed": "2026-10-08",
+  "title": {
+    "es": "Programación y automatización estructural",
+    "en": "Python & Structural Engineering Automation"
+  },
+  "intro": {
+    "es": "Convertir resultados en decisiones exige más que exportar tablas. Python permite ordenar datos, comprobar hipótesis y repetir verificaciones con un procedimiento legible. El criterio estructural define qué se calcula y cómo se interpreta.",
+    "en": "Turning results into decisions requires more than exporting tables. Python helps organize data, check assumptions and repeat calculations through a readable procedure. Engineering judgement determines what is calculated and how it is interpreted."
+  },
+  "scope": {
+    "es": "Los dos demostradores publicados aquí se desarrollaron para este portafolio en octubre de 2026. Ilustran procedimientos verificables y no se atribuyen a proyectos profesionales anteriores. Las herramientas históricas conservan su estado documental en Structural Lab.",
+    "en": "The two demonstrations published here were developed for this portfolio in October 2026. They illustrate verifiable procedures and are not attributed to earlier professional projects. Historical tools retain their documented development status in Structural Lab."
+  },
+  "applications": [
+    {
+      "id": "csi",
+      "es": {
+        "title": "Resultados de ETABS y SAP2000",
+        "problem": "Las tablas exportadas pueden variar entre modelos, casos y versiones.",
+        "method": "Definir el formato de intercambio, identificar casos y unidades, y mantener el vínculo con el modelo de origen.",
+        "output": "Tablas normalizadas para revisión. El demostrador utiliza CSV; no establece una conexión con la API de CSI."
+      },
+      "en": {
+        "title": "ETABS and SAP2000 results",
+        "problem": "Exported tables can differ between models, load cases and software versions.",
+        "method": "Define the exchange format, identify cases and units, and retain the link to the source model.",
+        "output": "Normalized review tables. The demonstration uses CSV; it does not connect to the CSI API."
+      }
+    },
+    {
+      "id": "data",
+      "es": {
+        "title": "Extracción, limpieza y normalización",
+        "problem": "Un dato incompleto o una unidad mezclada puede alterar una comparación.",
+        "method": "Validar encabezados, valores finitos, identificadores únicos y dimensiones físicas antes de convertir a SI.",
+        "output": "Un conjunto consistente o un error explícito que impida continuar con datos inválidos."
+      },
+      "en": {
+        "title": "Extraction, cleaning and normalization",
+        "problem": "A missing value or mixed unit can distort a comparison.",
+        "method": "Validate headers, finite values, unique identifiers and physical dimensions before converting to SI.",
+        "output": "A consistent dataset or an explicit error that prevents invalid data from being processed."
+      }
+    },
+    {
+      "id": "forces",
+      "es": {
+        "title": "Fuerzas internas y desplazamientos",
+        "problem": "Una cifra aislada oculta dónde ocurre el máximo y bajo qué caso.",
+        "method": "Organizar resultados por elemento, posición y caso; conservar la convención de signos y la magnitud física.",
+        "output": "Envolventes, perfiles y puntos críticos trazables a los datos originales."
+      },
+      "en": {
+        "title": "Internal forces and displacements",
+        "problem": "An isolated value hides where the maximum occurs and under which case.",
+        "method": "Organize results by member, location and case; retain the sign convention and physical quantity.",
+        "output": "Envelopes, profiles and critical points traceable to the original data."
+      }
+    },
+    {
+      "id": "compare",
+      "es": {
+        "title": "Comparación de escenarios",
+        "problem": "Comparar modelos sin controlar geometría y unidades puede producir conclusiones falsas.",
+        "method": "Alinear niveles y casos, documentar el escenario de referencia y separar diferencias absolutas de relativas.",
+        "output": "Diferencias explicables entre escenarios; el demostrador de niveles incluye una referencia seleccionable."
+      },
+      "en": {
+        "title": "Scenario comparison",
+        "problem": "Comparing models without controlling geometry and units can produce misleading conclusions.",
+        "method": "Align levels and cases, document the reference scenario and distinguish absolute from relative differences.",
+        "output": "Interpretable differences between scenarios; the storey demonstration includes a selectable reference case."
+      }
+    },
+    {
+      "id": "spreadsheets",
+      "es": {
+        "title": "Hojas de cálculo reproducibles",
+        "problem": "La edición manual dificulta rastrear entradas, fórmulas y revisiones.",
+        "method": "Separar datos de cálculo, establecer formatos de salida y comprobar unidades, totales y campos obligatorios.",
+        "output": "CSV procesado que puede importarse en una hoja de cálculo, con encabezados y unidades explícitos."
+      },
+      "en": {
+        "title": "Reproducible spreadsheets",
+        "problem": "Manual editing makes inputs, formulas and revisions harder to trace.",
+        "method": "Separate data from calculations, define output formats and check units, totals and required fields.",
+        "output": "Processed CSV that can be imported into a spreadsheet, with explicit headers and units."
+      }
+    },
+    {
+      "id": "report",
+      "es": {
+        "title": "Gráficos y reportes técnicos",
+        "problem": "Una figura pierde valor cuando no identifica casos, unidades y alcance.",
+        "method": "Generar gráficos a partir de los mismos datos exportables y acompañarlos de parámetros, convenciones y limitaciones.",
+        "output": "Gráficos SVG descargables y salidas CSV/JSON de los demostradores."
+      },
+      "en": {
+        "title": "Technical plots and reporting",
+        "problem": "A plot loses meaning when it omits cases, units and scope.",
+        "method": "Generate plots from the same exportable data and accompany them with parameters, conventions and limitations.",
+        "output": "Downloadable SVG plots and CSV/JSON outputs from the demonstrations."
+      }
+    },
+    {
+      "id": "nonlinear",
+      "es": {
+        "title": "Análisis no lineal con OpenSeesPy",
+        "problem": "La respuesta inelástica depende del modelo constitutivo, del protocolo y de la convergencia.",
+        "method": "Documentar materiales, discretización y control de la solución; procesar fuerza, deformación y registros de convergencia.",
+        "output": "Un flujo de interpretación reproducible. La ficha CFRP conserva resultados reportados y evidencia reproducible pendiente."
+      },
+      "en": {
+        "title": "Nonlinear analysis with OpenSeesPy",
+        "problem": "Inelastic response depends on constitutive models, loading protocols and convergence.",
+        "method": "Document materials, discretization and solution controls; process forces, deformations and convergence records.",
+        "output": "A reproducible interpretation workflow. The CFRP case retains its reported results and pending supporting evidence."
+      }
+    },
+    {
+      "id": "parametric",
+      "es": {
+        "title": "Estudios paramétricos",
+        "problem": "Cambiar varios parámetros a la vez dificulta explicar la respuesta.",
+        "method": "Controlar escenarios, variar parámetros identificables y contrastar tendencias con una solución independiente.",
+        "output": "Comparación de rigidez, deformación y esfuerzos. El voladizo permite explorar la influencia cúbica del peralte en la inercia."
+      },
+      "en": {
+        "title": "Parametric studies",
+        "problem": "Changing several parameters at once makes the response harder to explain.",
+        "method": "Control scenarios, vary identifiable parameters and compare trends against an independent solution.",
+        "output": "Comparison of stiffness, deformation and stress. The cantilever explores the cubic influence of section depth on second moment of area."
+      }
+    },
+    {
+      "id": "validation",
+      "es": {
+        "title": "Unidades y consistencia",
+        "problem": "La convergencia numérica no demuestra que las entradas representen el problema previsto.",
+        "method": "Comprobar dimensiones, rangos físicos, equilibrio, condiciones de borde y casos límite antes de interpretar resultados.",
+        "output": "Pruebas automatizadas y controles explícitos; sin indicadores de aprobación normativa ficticios."
+      },
+      "en": {
+        "title": "Units and consistency",
+        "problem": "Numerical convergence does not prove that inputs represent the intended problem.",
+        "method": "Check dimensions, physical ranges, equilibrium, boundary conditions and limiting cases before interpreting results.",
+        "output": "Automated tests and explicit checks, without fictitious code-compliance indicators."
+      }
+    },
+    {
+      "id": "cad",
+      "es": {
+        "title": "AutoLISP y documentación CAD",
+        "problem": "El detallado repetitivo exige consistencia entre geometría, armado, cotas y capas.",
+        "method": "Parametrizar vigas, columnas, placas y escaleras; controlar acero longitudinal, estribos y convenciones gráficas.",
+        "output": "Documentación organizada para revisión. Las rutinas históricas descritas aún no cuentan con código ni capturas auténticas publicados."
+      },
+      "en": {
+        "title": "AutoLISP and CAD documentation",
+        "problem": "Repetitive detailing requires consistency between geometry, reinforcement, dimensions and layers.",
+        "method": "Parameterize beams, columns, walls and stairs; control longitudinal bars, ties and drawing conventions.",
+        "output": "Organized documentation for review. The documented historical routines do not yet include published source code or authentic screenshots."
+      }
+    }
+  ],
+  "workflow": {
+    "engineering": {
+      "es": [
+        "Problema de ingeniería",
+        "Normativa aplicable",
+        "Modelo estructural",
+        "Análisis",
+        "Verificación",
+        "Documentación"
+      ],
+      "en": [
+        "Engineering problem",
+        "Applicable codes",
+        "Structural model",
+        "Analysis",
+        "Verification",
+        "Documentation"
+      ]
+    },
+    "data": {
+      "es": [
+        "Datos estructurales",
+        "Python",
+        "Validación",
+        "Resultados",
+        "Informe técnico"
+      ],
+      "en": [
+        "Structural data",
+        "Python",
+        "Validation",
+        "Results",
+        "Technical report"
+      ]
+    }
+  },
+  "demos": [
+    {
+      "id": "storeys",
+      "slug": "resultados-por-nivel",
+      "source": "python/process_results.py",
+      "example": "python/examples/storey-results.csv",
+      "es": {
+        "title": "De un CSV a una revisión por niveles",
+        "subtitle": "Desplazamientos, diferencias entre casos y control de unidades.",
+        "description": "Carga resultados exportados en el formato documentado, revisa perfiles por nivel y descarga datos normalizados. Los datos iniciales son sintéticos y no proceden de un proyecto real."
+      },
+      "en": {
+        "title": "From a CSV to a storey-by-storey review",
+        "subtitle": "Displacements, case differences and unit checks.",
+        "description": "Load exported results in the documented format, review storey profiles and download normalized data. The initial dataset is synthetic and does not come from an actual project."
+      }
+    },
+    {
+      "id": "cantilever",
+      "slug": "voladizo-parametrico",
+      "source": "python/cantilever.py",
+      "example": "python/examples/cantilever-scenarios.csv",
+      "es": {
+        "title": "Un voladizo. Parámetros que explican la respuesta.",
+        "subtitle": "Equilibrio, rigidez, desplazamiento y esfuerzos con una solución analítica.",
+        "description": "Explora una viga rectangular de Euler–Bernoulli bajo carga puntual y compara escenarios. El ejemplo permite contrastar resultados con fórmulas y pruebas independientes."
+      },
+      "en": {
+        "title": "One cantilever. Parameters that explain the response.",
+        "subtitle": "Equilibrium, stiffness, displacement and stress with an analytical solution.",
+        "description": "Explore a rectangular Euler–Bernoulli beam under a tip load and compare scenarios. The example supports checks against formulas and independent tests."
+      }
+    }
+  ]
+}

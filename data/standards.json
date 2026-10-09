@@ -1,0 +1,1178 @@
+{
+  "reviewed": "2026-10-08",
+  "es": {
+    "title": "Normativa y criterios de diseño",
+    "intro": "Relacionar acciones, modelo, resistencia y detallado exige una base de diseño coherente. El RNE y las referencias internacionales se presentan aquí por su función dentro del proceso de ingeniería.",
+    "scope": "La aplicación profesional declarada procede de la información aportada por Sergio Ambrosio. Las ediciones mostradas son referencias verificadas en fuentes oficiales, no ediciones acreditadas para todos sus proyectos. Una norma consultada no supone certificación; E.090 permanece por confirmar y AISC 341/AWS D1.1 son referencias complementarias."
+  },
+  "en": {
+    "title": "Design Codes & Engineering Standards",
+    "intro": "Connecting loads, the model, resistance and detailing requires a coherent design basis. RNE and international references are presented here by their role in the engineering process.",
+    "scope": "Declared professional application comes from information provided by Sergio Ambrosio. The editions shown are references checked against official sources, not editions established for every project. Consulting a standard does not imply certification; E.090 remains unconfirmed and AISC 341/AWS D1.1 are supplementary references."
+  },
+  "items": [
+    {
+      "id": "e020",
+      "designation": "RNE E.020",
+      "group": "peru",
+      "issuer": "Ministerio de Vivienda, Construcción y Saneamiento (MVCS)",
+      "referenceEdition": "RNE E.020 · D.S. 011-2006-VIVIENDA",
+      "year": 2006,
+      "practice": "declared",
+      "reviewed": "2026-10-08",
+      "es": {
+        "name": "Cargas",
+        "family": "Acciones y combinaciones",
+        "region": "Perú",
+        "editionStatus": "Texto oficial publicado por el MVCS; marco base del RNE de 2006.",
+        "practiceStatus": "Aplicación profesional declarada",
+        "applications": [
+          "Definición de cargas permanentes, de uso y ambientales según ocupación y condiciones del proyecto.",
+          "Organización de acciones y combinaciones coherentes con la norma de cada material."
+        ],
+        "checks": [
+          "Cargas mínimas, áreas tributarias y transferencia de acciones.",
+          "Coherencia entre cargas de servicio, combinaciones y unidades."
+        ],
+        "projectRelation": "SUNSETGOLF y CIDELSA declaran RNE como referencia general. La asociación específica con E.020 y la edición del expediente requieren la memoria de cálculo.",
+        "scope": "Las cargas de equipos y sus estados operativos requieren datos del fabricante; una tabla normativa no sustituye esos datos."
+      },
+      "en": {
+        "name": "Loads",
+        "family": "Actions and load combinations",
+        "region": "Peru",
+        "editionStatus": "Official text published by MVCS within the original 2006 RNE framework.",
+        "practiceStatus": "Professional application declared",
+        "applications": [
+          "Definition of permanent, occupancy and environmental loads for the project.",
+          "Organization of actions and combinations consistent with the material design standard."
+        ],
+        "checks": [
+          "Minimum loads, tributary areas and load transfer.",
+          "Consistency of service loads, combinations and units."
+        ],
+        "projectRelation": "SUNSETGOLF and CIDELSA identify RNE as a general reference. The specific use of E.020 and the project edition require the calculation report.",
+        "scope": "Equipment loads and operating states require manufacturer information; a code table does not replace it."
+      },
+      "references": [
+        {
+          "title": {
+            "es": "MVCS · E.020 Cargas, texto oficial",
+            "en": "MVCS · E.020 Loads, official text"
+          },
+          "url": "https://cdn.www.gob.pe/uploads/document/file/2366640/50%20E.020%20CARGAS.pdf"
+        },
+        {
+          "title": {
+            "es": "MVCS · Compendio del RNE",
+            "en": "MVCS · RNE collection"
+          },
+          "url": "https://www.gob.pe/institucion/vivienda/informes-publicaciones/2309793-reglamento-nacional-de-edificaciones-rne"
+        }
+      ],
+      "referenceVerified": true
+    },
+    {
+      "id": "e030",
+      "designation": "RNE E.030",
+      "group": "peru",
+      "issuer": "Ministerio de Vivienda, Construcción y Saneamiento (MVCS)",
+      "referenceEdition": "RNE E.030 · R.M. 183-2026-VIVIENDA + R.M. 217-2026-VIVIENDA",
+      "year": 2026,
+      "practice": "declared",
+      "reviewed": "2026-10-08",
+      "es": {
+        "name": "Diseño sismorresistente",
+        "family": "Ingeniería sísmica",
+        "region": "Perú",
+        "editionStatus": "Texto 2026 modificado por R.M. 183-2026; disposición transitoria modificada por R.M. 217-2026. Son actos aprobados.",
+        "practiceStatus": "Aplicación profesional declarada · actualización consultada",
+        "applications": [
+          "Definición de demanda sísmica, sistema resistente y procedimiento de análisis.",
+          "Revisión de configuración, respuesta global y desplazamientos."
+        ],
+        "checks": [
+          "Parámetros, regularidad, masas, respuesta modal y fuerzas sísmicas.",
+          "Derivas y compatibilidad de desplazamientos según el texto aplicable."
+        ],
+        "projectRelation": "Relacionada con la experiencia en edificios y el prototipo E.030. La edición 2026 no se atribuye a SUNSETGOLF 2024 ni se presume implementada en el prototipo.",
+        "scope": "La R.M. 217 permite conservar el texto anterior en los supuestos de proyectos en curso que describe. La selección exige revisar el estado del expediente; no existe una migración automática de todos los proyectos."
+      },
+      "en": {
+        "name": "Earthquake-resistant design",
+        "family": "Earthquake engineering",
+        "region": "Peru",
+        "editionStatus": "2026 text amended by Resolution 183-2026; transitional provision amended by Resolution 217-2026. Both are approved instruments.",
+        "practiceStatus": "Professional application declared · update consulted",
+        "applications": [
+          "Definition of seismic demand, resisting system and analysis procedure.",
+          "Review of configuration, global response and displacements."
+        ],
+        "checks": [
+          "Parameters, regularity, mass, modal response and seismic forces.",
+          "Drift and displacement compatibility under the applicable text."
+        ],
+        "projectRelation": "Related to building experience and the E.030 prototype. The 2026 edition is not attributed to SUNSETGOLF 2024 or assumed to be implemented in the prototype.",
+        "scope": "Resolution 217 permits the previous text for specified ongoing-project conditions. Selection requires reviewing the submission status; the new edition does not automatically apply to every ongoing project."
+      },
+      "references": [
+        {
+          "title": {
+            "es": "MVCS · R.M. 183-2026-VIVIENDA, 28 de abril de 2026",
+            "en": "MVCS · Resolution 183-2026-VIVIENDA, 28 April 2026"
+          },
+          "url": "https://www.gob.pe/institucion/vivienda/normas-legales/8081915-183-2026-vivienda"
+        },
+        {
+          "title": {
+            "es": "MVCS · R.M. 217-2026-VIVIENDA, 2 de junio de 2026",
+            "en": "MVCS · Resolution 217-2026-VIVIENDA, 2 June 2026"
+          },
+          "url": "https://www.gob.pe/institucion/vivienda/normas-legales/8219609-217-2026-vivienda"
+        },
+        {
+          "title": {
+            "es": "El Peruano · Disposición transitoria modificada, publicación del 3 de junio de 2026",
+            "en": "El Peruano · Amended transitional provision, published 3 June 2026"
+          },
+          "url": "https://busquedas.elperuano.pe/dispositivo/NL/2521423-1"
+        }
+      ],
+      "referenceVerified": true
+    },
+    {
+      "id": "e050",
+      "designation": "RNE E.050",
+      "group": "peru",
+      "issuer": "Ministerio de Vivienda, Construcción y Saneamiento (MVCS)",
+      "referenceEdition": "RNE E.050 · R.M. 406-2018-VIVIENDA",
+      "year": 2018,
+      "practice": "declared",
+      "reviewed": "2026-10-08",
+      "es": {
+        "name": "Suelos y cimentaciones",
+        "family": "Geotecnia y cimentaciones",
+        "region": "Perú",
+        "editionStatus": "Actualización de 2018 identificada en la resolución y el compendio oficial del MVCS.",
+        "practiceStatus": "Aplicación profesional declarada",
+        "applications": [
+          "Coordinación del estudio de mecánica de suelos con el sistema de cimentación.",
+          "Interpretación de parámetros geotécnicos y condiciones del terreno."
+        ],
+        "checks": [
+          "Presiones de contacto, asentamientos y condiciones de apoyo.",
+          "Compatibilidad entre reacciones del modelo y criterios del estudio geotécnico."
+        ],
+        "projectRelation": "El diseño de cimentaciones está documentado en SUNSETGOLF, CIDELSA y la experiencia en HMV. La aplicación específica de E.050 se confirma con cada expediente.",
+        "scope": "El diseño estructural no sustituye la investigación geotécnica. Parámetros admisibles, asentamientos y recomendaciones deben conservar su procedencia."
+      },
+      "en": {
+        "name": "Soils and foundations",
+        "family": "Geotechnics and foundations",
+        "region": "Peru",
+        "editionStatus": "2018 update identified in the resolution and the official MVCS collection.",
+        "practiceStatus": "Professional application declared",
+        "applications": [
+          "Coordination of the geotechnical investigation with the foundation system.",
+          "Interpretation of ground parameters and site conditions."
+        ],
+        "checks": [
+          "Contact pressures, settlement and support conditions.",
+          "Compatibility between model reactions and geotechnical design criteria."
+        ],
+        "projectRelation": "Foundation design is documented for SUNSETGOLF, CIDELSA and HMV experience. Project-specific use of E.050 is established from each design record.",
+        "scope": "Structural design does not replace geotechnical investigation. Allowable parameters, settlement estimates and recommendations must retain their provenance."
+      },
+      "references": [
+        {
+          "title": {
+            "es": "MVCS · R.M. 406-2018-VIVIENDA",
+            "en": "MVCS · Resolution 406-2018-VIVIENDA"
+          },
+          "url": "https://www.gob.pe/institucion/vivienda/normas-legales/222983-406-2018-vivienda"
+        },
+        {
+          "title": {
+            "es": "MVCS · E.050, texto actualizado de 2018",
+            "en": "MVCS · E.050, updated 2018 text"
+          },
+          "url": "https://cdn.www.gob.pe/uploads/document/file/2366655/54%20E.050%20SUELOS%20Y%20CIMENTACIONES%20RM%20N%C2%B0%20406-2018-VIVIENDA.pdf"
+        }
+      ],
+      "referenceVerified": true
+    },
+    {
+      "id": "e060",
+      "designation": "RNE E.060",
+      "group": "peru",
+      "issuer": "Ministerio de Vivienda, Construcción y Saneamiento (MVCS)",
+      "referenceEdition": "RNE E.060 · D.S. 010-2009-VIVIENDA",
+      "year": 2009,
+      "practice": "declared",
+      "reviewed": "2026-10-08",
+      "es": {
+        "name": "Concreto armado",
+        "family": "Diseño y detallado de concreto",
+        "region": "Perú",
+        "editionStatus": "Texto de 2009 identificado por D.S. 010-2009 en el compendio oficial consultado.",
+        "practiceStatus": "Aplicación profesional declarada",
+        "applications": [
+          "Diseño de vigas, columnas, muros, losas y componentes de cimentación dentro de su alcance.",
+          "Coordinación de resistencia, servicio y detallado."
+        ],
+        "checks": [
+          "Flexión, cortante, interacción axial-flexión y punzonamiento cuando corresponda.",
+          "Anclaje, empalmes, disposición del refuerzo y requisitos sísmicos."
+        ],
+        "projectRelation": "Relacionada con el alcance de concreto y cimentaciones de SUNSETGOLF y la experiencia en MRZ. La ficha del proyecto declara RNE; su memoria debe identificar la edición aplicada.",
+        "scope": "Una edición reciente de ACI 318 no modifica automáticamente E.060. Debe mantenerse la jerarquía normativa del proyecto."
+      },
+      "en": {
+        "name": "Reinforced concrete",
+        "family": "Concrete design and detailing",
+        "region": "Peru",
+        "editionStatus": "2009 text identified under Supreme Decree 010-2009 in the official collection consulted.",
+        "practiceStatus": "Professional application declared",
+        "applications": [
+          "Design of beams, columns, walls, slabs and foundation components within its scope.",
+          "Coordination of strength, serviceability and detailing."
+        ],
+        "checks": [
+          "Flexure, shear, axial-flexural interaction and punching shear where relevant.",
+          "Development, splices, reinforcement arrangement and seismic provisions."
+        ],
+        "projectRelation": "Related to concrete and foundation work on SUNSETGOLF and experience at MRZ. The project entry identifies RNE; the report must establish the edition used.",
+        "scope": "A newer ACI 318 edition does not automatically amend E.060. The project's regulatory hierarchy must be retained."
+      },
+      "references": [
+        {
+          "title": {
+            "es": "MVCS · E.060 Concreto armado, D.S. 010-2009",
+            "en": "MVCS · E.060 Reinforced Concrete, Supreme Decree 010-2009"
+          },
+          "url": "https://cdn.www.gob.pe/uploads/document/file/2366660/55%20E.060%20CONCRETO%20ARMADO%20DS%20N%C2%B0%20010-2009.pdf"
+        },
+        {
+          "title": {
+            "es": "MVCS · Compendio del RNE",
+            "en": "MVCS · RNE collection"
+          },
+          "url": "https://www.gob.pe/institucion/vivienda/informes-publicaciones/2309793-reglamento-nacional-de-edificaciones-rne"
+        }
+      ],
+      "referenceVerified": true
+    },
+    {
+      "id": "e090",
+      "designation": "RNE E.090",
+      "group": "peru",
+      "issuer": "Ministerio de Vivienda, Construcción y Saneamiento (MVCS)",
+      "referenceEdition": "RNE E.090 · D.S. 011-2006-VIVIENDA",
+      "year": 2006,
+      "practice": "pending",
+      "reviewed": "2026-10-08",
+      "es": {
+        "name": "Estructuras metálicas",
+        "family": "Acero estructural",
+        "region": "Perú",
+        "editionStatus": "Texto oficial disponible en el RNE; base de 2006. No se atribuye una edición nueva de 2026.",
+        "practiceStatus": "Aplicación personal por confirmar",
+        "applications": [
+          "Marco peruano para diseño, fabricación y montaje de estructuras de acero en edificaciones.",
+          "Criterios LRFD o ASD y compatibilidad entre el modelo y las conexiones."
+        ],
+        "checks": [
+          "Resistencia y estabilidad de miembros.",
+          "Conexiones, servicio y requisitos de fabricación y montaje."
+        ],
+        "projectRelation": "Referencia relacionada con CIDELSA y estructuras industriales. Su inclusión no confirma que haya sido aplicada por Sergio en esos proyectos.",
+        "scope": "No se identifica E.090 como equivalente actualizado de AISC 360-22 ni se combinan sus factores sin una base de diseño coherente."
+      },
+      "en": {
+        "name": "Steel structures",
+        "family": "Structural steel",
+        "region": "Peru",
+        "editionStatus": "Official RNE text available from the 2006 framework. No new 2026 edition is claimed.",
+        "practiceStatus": "Personal application awaiting confirmation",
+        "applications": [
+          "Peruvian framework for structural steel design, fabrication and erection in buildings.",
+          "LRFD or ASD criteria and consistency between the model and connections."
+        ],
+        "checks": [
+          "Member strength and stability.",
+          "Connections, serviceability, fabrication and erection requirements."
+        ],
+        "projectRelation": "A reference related to CIDELSA and industrial structures. Its inclusion does not confirm Sergio's use of it on those projects.",
+        "scope": "E.090 is not presented as an updated equivalent of AISC 360-22; factors from the two documents are not combined without a coherent design basis."
+      },
+      "references": [
+        {
+          "title": {
+            "es": "Gob.pe · E.090 Estructuras metálicas, texto oficial",
+            "en": "Gob.pe · E.090 Steel Structures, official text"
+          },
+          "url": "https://cdn.www.gob.pe/uploads/document/file/2686420/E.090%20Estructuras%20Met%C3%A1licas.pdf"
+        },
+        {
+          "title": {
+            "es": "MVCS · Compendio del RNE",
+            "en": "MVCS · RNE collection"
+          },
+          "url": "https://www.gob.pe/institucion/vivienda/informes-publicaciones/2309793-reglamento-nacional-de-edificaciones-rne"
+        }
+      ],
+      "referenceVerified": true
+    },
+    {
+      "id": "aci318",
+      "designation": "ACI 318",
+      "group": "international",
+      "issuer": "American Concrete Institute (ACI)",
+      "referenceEdition": "ACI CODE-318-25",
+      "year": 2025,
+      "practice": "declared",
+      "reviewed": "2026-10-08",
+      "es": {
+        "name": "Código para concreto estructural",
+        "family": "Concreto estructural",
+        "region": "Estados Unidos · referencia internacional",
+        "editionStatus": "Edición 2025 publicada por ACI. La edición empleada en trabajos anteriores no está documentada en este portafolio.",
+        "practiceStatus": "Aplicación profesional declarada",
+        "applications": [
+          "Diseño y detallado de elementos, sistemas y conexiones de concreto.",
+          "Vinculación de análisis, resistencia, servicio y durabilidad."
+        ],
+        "checks": [
+          "Flexión, cortante, interacción y anclajes según el sistema.",
+          "Deformaciones, desarrollo del refuerzo y requisitos de detallado."
+        ],
+        "projectRelation": "ACI 318 figura expresamente entre las referencias declaradas de SUNSETGOLF. El trabajo es de 2024: no se le atribuye la edición 2025.",
+        "scope": "La edición de referencia consultada no acredita una adopción local ni reemplaza la base de diseño aprobada."
+      },
+      "en": {
+        "name": "Building Code for Structural Concrete",
+        "family": "Structural concrete",
+        "region": "United States · international reference",
+        "editionStatus": "2025 edition published by ACI. The edition used in earlier work is not documented in this portfolio.",
+        "practiceStatus": "Professional application declared",
+        "applications": [
+          "Design and detailing of concrete members, systems and connections.",
+          "Integration of analysis, strength, serviceability and durability."
+        ],
+        "checks": [
+          "Flexure, shear, interaction and anchorage for the selected system.",
+          "Deformations, reinforcement development and detailing requirements."
+        ],
+        "projectRelation": "ACI 318 is explicitly listed among SUNSETGOLF's declared references. The work dates from 2024; the 2025 edition is not attributed to it.",
+        "scope": "The reference edition consulted does not establish local adoption or replace the approved project design basis."
+      },
+      "references": [
+        {
+          "title": {
+            "es": "ACI · Portal ACI 318, edición 2025",
+            "en": "ACI · ACI 318 portal, 2025 edition"
+          },
+          "url": "https://www.concrete.org/topicsinconcrete/318buildingcodeportal.aspx"
+        },
+        {
+          "title": {
+            "es": "ACI · Alcance oficial de CODE-318-25",
+            "en": "ACI · Official scope of CODE-318-25"
+          },
+          "url": "https://www.concrete.org/publications/concreteresourcesubscriptions/collectiononline/collectionsearch.aspx?MCP_DocID=4388&m=abstract"
+        }
+      ],
+      "referenceVerified": true
+    },
+    {
+      "id": "asce7",
+      "designation": "ASCE/SEI 7",
+      "group": "international",
+      "issuer": "American Society of Civil Engineers / Structural Engineering Institute",
+      "referenceEdition": "ASCE/SEI 7-22",
+      "year": 2022,
+      "practice": "declared",
+      "reviewed": "2026-10-08",
+      "es": {
+        "name": "Cargas mínimas de diseño y criterios asociados para edificios y otras estructuras",
+        "family": "Acciones y criterios de diseño",
+        "region": "Estados Unidos · referencia internacional",
+        "editionStatus": "ASCE identifica 7-22 como edición actual. Su portal incluye suplementos 1–3 y erratas; deben revisarse junto con la edición adoptada.",
+        "practiceStatus": "Aplicación profesional declarada",
+        "applications": [
+          "Definición de acciones ambientales, gravitacionales y combinaciones.",
+          "Organización de categorías y criterios de diseño según la jurisdicción."
+        ],
+        "checks": [
+          "Casos y combinaciones de cargas coherentes.",
+          "Demanda de viento y sismo, y condiciones particulares dentro de su alcance."
+        ],
+        "projectRelation": "Relacionada con infraestructura industrial y eléctrica como ámbito profesional. No existe una memoria pública que confirme ASCE 7 en CEPITOCE o CIDELSA.",
+        "scope": "Los mapas de amenaza y parámetros de Estados Unidos no se trasladan directamente a un emplazamiento peruano."
+      },
+      "en": {
+        "name": "Minimum Design Loads and Associated Criteria for Buildings and Other Structures",
+        "family": "Loads and design criteria",
+        "region": "United States · international reference",
+        "editionStatus": "ASCE identifies 7-22 as the current edition. Its portal lists Supplements 1–3 and errata, to be checked with the adopted edition.",
+        "practiceStatus": "Professional application declared",
+        "applications": [
+          "Definition of environmental and gravity actions and combinations.",
+          "Organization of design categories and criteria for the jurisdiction."
+        ],
+        "checks": [
+          "Consistent load cases and combinations.",
+          "Wind and seismic demand, and specific conditions within its scope."
+        ],
+        "projectRelation": "Related to the professional context of industrial and electrical infrastructure. No public calculation report establishes its use on CEPITOCE or CIDELSA.",
+        "scope": "United States hazard maps and parameters cannot be transferred directly to a Peruvian site."
+      },
+      "references": [
+        {
+          "title": {
+            "es": "ASCE · ASCE/SEI 7-22, suplementos y erratas",
+            "en": "ASCE · ASCE/SEI 7-22, supplements and errata"
+          },
+          "url": "https://www.asce.org/publications-and-news/asce-7/"
+        },
+        {
+          "title": {
+            "es": "ASCE · Normas SEI y edición actual",
+            "en": "ASCE · SEI standards and current edition"
+          },
+          "url": "https://www.asce.org/communities/institutes-and-technical-groups/structural-engineering-institute/asce-7-and-sei-standards"
+        }
+      ],
+      "referenceVerified": true
+    },
+    {
+      "id": "aisc360",
+      "designation": "AISC 360",
+      "group": "international",
+      "issuer": "American Institute of Steel Construction (AISC)",
+      "referenceEdition": "ANSI/AISC 360-22",
+      "year": 2022,
+      "practice": "declared",
+      "reviewed": "2026-10-08",
+      "es": {
+        "name": "Especificación para edificios de acero estructural",
+        "family": "Acero: resistencia y estabilidad",
+        "region": "Estados Unidos · referencia internacional",
+        "editionStatus": "Edición 2022 publicada como norma actual. El registro oficial incluye erratas de enero de 2025 y septiembre de 2026.",
+        "practiceStatus": "Aplicación profesional declarada",
+        "applications": [
+          "Diseño de miembros y conexiones de acero mediante LRFD o ASD.",
+          "Revisión de estabilidad del sistema y estados límite."
+        ],
+        "checks": [
+          "Tracción, compresión, flexión, cortante e interacción.",
+          "Pandeo, conexiones y condiciones de servicio pertinentes."
+        ],
+        "projectRelation": "CIDELSA declara AISC como familia normativa; la referencia concreta y su edición requieren confirmación en la memoria. CEPITOCE no tiene edición publicada.",
+        "scope": "Elegir LRFD o ASD exige mantener coherencia entre demandas, factores y resistencias; el tamaño de una sección no acredita la ductilidad del sistema."
+      },
+      "en": {
+        "name": "Specification for Structural Steel Buildings",
+        "family": "Steel: strength and stability",
+        "region": "United States · international reference",
+        "editionStatus": "2022 edition listed as current. The official register includes January 2025 and September 2026 errata.",
+        "practiceStatus": "Professional application declared",
+        "applications": [
+          "Design of steel members and connections using LRFD or ASD.",
+          "Review of system stability and limit states."
+        ],
+        "checks": [
+          "Tension, compression, flexure, shear and interaction.",
+          "Buckling, connections and relevant serviceability conditions."
+        ],
+        "projectRelation": "CIDELSA identifies AISC as a standards family; the specific document and edition require the calculation report. No edition is published for CEPITOCE.",
+        "scope": "LRFD or ASD requires consistent demands, factors and strengths; a member size does not establish system ductility."
+      },
+      "references": [
+        {
+          "title": {
+            "es": "AISC · ANSI/AISC 360-22, norma actual",
+            "en": "AISC · ANSI/AISC 360-22, current standard"
+          },
+          "url": "https://www.aisc.org/aisc/publications/current-standards/aisc-360/"
+        },
+        {
+          "title": {
+            "es": "AISC · Revisiones y erratas",
+            "en": "AISC · Revisions and errata"
+          },
+          "url": "https://www.aisc.org/aisc/publications/revisions-and-errata/"
+        }
+      ],
+      "referenceVerified": true
+    },
+    {
+      "id": "asce41",
+      "designation": "ASCE/SEI 41",
+      "group": "international",
+      "issuer": "American Society of Civil Engineers / Structural Engineering Institute",
+      "referenceEdition": "ASCE/SEI 41-23",
+      "year": 2023,
+      "practice": "declared",
+      "reviewed": "2026-10-08",
+      "es": {
+        "name": "Evaluación y reforzamiento sísmico de edificios existentes",
+        "family": "Evaluación sísmica y desempeño",
+        "region": "Estados Unidos · referencia internacional",
+        "editionStatus": "Edición 2023 identificada por ASCE; la evaluación se organiza en tres niveles y objetivos de desempeño.",
+        "practiceStatus": "Aplicación profesional declarada",
+        "applications": [
+          "Evaluación de deficiencias y formulación de objetivos de intervención.",
+          "Selección de procedimientos y revisión de respuesta global y local."
+        ],
+        "checks": [
+          "Compatibilidad entre amenaza, objetivo, modelo y criterio de aceptación.",
+          "Demandas de fuerza y deformación de componentes dentro de su alcance."
+        ],
+        "projectRelation": "Relacionada con la experiencia declarada en evaluación y reforzamiento y con las notas técnicas. No se presenta como validación del estudio CFRP ni de sus cifras.",
+        "scope": "La edición 2023 remite a documentos específicos para concreto y acero existentes; no es suficiente aplicar reglas de edificios nuevos por analogía."
+      },
+      "en": {
+        "name": "Seismic Evaluation and Retrofit of Existing Buildings",
+        "family": "Seismic assessment and performance",
+        "region": "United States · international reference",
+        "editionStatus": "2023 edition identified by ASCE; evaluation uses three tiers and performance objectives.",
+        "practiceStatus": "Professional application declared",
+        "applications": [
+          "Assessment of deficiencies and definition of retrofit objectives.",
+          "Selection of procedures and review of global and local response."
+        ],
+        "checks": [
+          "Consistency between hazard, objective, model and acceptance criteria.",
+          "Component force and deformation demands within its scope."
+        ],
+        "projectRelation": "Related to declared assessment and retrofit experience and the technical notes. It does not validate the CFRP study or its reported figures.",
+        "scope": "The 2023 edition references specific documents for existing concrete and steel; new-building rules cannot simply be transferred by analogy."
+      },
+      "references": [
+        {
+          "title": {
+            "es": "ASCE · ASCE/SEI 41-23 y alcance",
+            "en": "ASCE · ASCE/SEI 41-23 and scope"
+          },
+          "url": "https://www.asce.org/publications-and-news/codes-and-standards/asce-sei-41"
+        }
+      ],
+      "referenceVerified": true
+    },
+    {
+      "id": "aci562",
+      "designation": "ACI 562",
+      "group": "international",
+      "issuer": "American Concrete Institute (ACI)",
+      "referenceEdition": "ACI CODE-562-25",
+      "year": 2025,
+      "practice": "declared",
+      "reviewed": "2026-10-08",
+      "es": {
+        "name": "Evaluación, reparación y rehabilitación de estructuras de concreto existentes",
+        "family": "Concreto existente y rehabilitación",
+        "region": "Estados Unidos · referencia internacional",
+        "editionStatus": "Edición 2025 publicada por ACI; no se atribuye retrospectivamente a intervenciones anteriores.",
+        "practiceStatus": "Aplicación profesional declarada",
+        "applications": [
+          "Diagnóstico y definición de la base de evaluación del concreto existente.",
+          "Desarrollo de reparaciones y rehabilitación con criterios de compatibilidad y ejecución."
+        ],
+        "checks": [
+          "Propiedades investigadas, condición de los materiales y capacidad.",
+          "Interacción entre intervención, estructura existente y etapas de obra."
+        ],
+        "projectRelation": "Relacionada con el alcance declarado de encamisados y FRP en MRZ. No se publica una intervención identificada con memoria que confirme esta edición.",
+        "scope": "La rehabilitación incluye condiciones existentes y ejecución; no se reduce a aumentar una resistencia nominal."
+      },
+      "en": {
+        "name": "Assessment, Repair, and Rehabilitation of Existing Concrete Structures",
+        "family": "Existing concrete and rehabilitation",
+        "region": "United States · international reference",
+        "editionStatus": "2025 edition published by ACI; it is not retrospectively attributed to earlier interventions.",
+        "practiceStatus": "Professional application declared",
+        "applications": [
+          "Diagnosis and definition of the assessment basis for existing concrete.",
+          "Development of repairs and rehabilitation considering compatibility and execution."
+        ],
+        "checks": [
+          "Investigated properties, material condition and capacity.",
+          "Interaction between the intervention, existing structure and construction stages."
+        ],
+        "projectRelation": "Related to declared jacketing and FRP work at MRZ. No identified intervention with a published report establishes this edition.",
+        "scope": "Rehabilitation addresses existing conditions and execution; increasing nominal strength alone is insufficient."
+      },
+      "references": [
+        {
+          "title": {
+            "es": "ACI · CODE-562-25, ficha oficial",
+            "en": "ACI · CODE-562-25, official catalogue"
+          },
+          "url": "https://www.concrete.org/store/productdetail.aspx?itemid=56225"
+        },
+        {
+          "title": {
+            "es": "ACI · Vista previa de CODE-562-25",
+            "en": "ACI · CODE-562-25 preview"
+          },
+          "url": "https://www.concrete.org/Portals/0/Files/PDF/Previews/562-25_preview.pdf"
+        }
+      ],
+      "referenceVerified": true
+    },
+    {
+      "id": "aci440",
+      "designation": "ACI 440.2R / ACI PRC-440.2",
+      "group": "international",
+      "issuer": "American Concrete Institute (ACI)",
+      "referenceEdition": "ACI PRC-440.2-23",
+      "year": 2023,
+      "practice": "reference",
+      "reviewed": "2026-10-08",
+      "es": {
+        "name": "Guía de sistemas FRP adheridos para reforzar estructuras de concreto",
+        "family": "Refuerzo con FRP",
+        "region": "Estados Unidos · referencia internacional",
+        "editionStatus": "ACI PRC-440.2-23 reemplaza ACI 440.2R-17. ACI CODE-440.13-24 es un código relacionado de alcance distinto; no reemplaza universalmente la guía.",
+        "practiceStatus": "Referencia declarada para FRP",
+        "applications": [
+          "Selección del mecanismo de refuerzo y revisión del sustrato, orientación y adherencia.",
+          "Estudio de refuerzo a flexión, cortante y confinamiento dentro del alcance correspondiente."
+        ],
+        "checks": [
+          "Anclaje, desprendimiento, deformación efectiva y condición ambiental.",
+          "Compatibilidad del refuerzo con el mecanismo resistente."
+        ],
+        "projectRelation": "Relacionada con la experiencia FRP y el caso de estudio CFRP. La edición de la guía empleada en trabajos previos y en el estudio no se ha verificado.",
+        "scope": "CODE-440.13-24 permite miembros en SDC A o fuera del sistema sismorresistente; el refuerzo del sistema sísmico en SDC B–F queda fuera de su alcance. La guía sigue aportando orientación sísmica."
+      },
+      "en": {
+        "name": "Guide to externally bonded FRP systems for strengthening concrete structures",
+        "family": "FRP strengthening",
+        "region": "United States · international reference",
+        "editionStatus": "ACI PRC-440.2-23 supersedes ACI 440.2R-17. ACI CODE-440.13-24 is a related code with a different scope, not a universal replacement for the guide.",
+        "practiceStatus": "Declared FRP reference",
+        "applications": [
+          "Selection of the strengthening mechanism and review of substrate, orientation and bond.",
+          "Study of flexural, shear and confinement strengthening within the relevant scope."
+        ],
+        "checks": [
+          "Anchorage, debonding, effective strain and environmental conditions.",
+          "Compatibility of strengthening with the resisting mechanism."
+        ],
+        "projectRelation": "Related to FRP experience and the CFRP case study. The guide edition used in previous work and in the study has not been verified.",
+        "scope": "CODE-440.13-24 permits members in SDC A or outside the seismic-force-resisting system; strengthening that system in SDC B–F is outside its scope. The guide continues to provide seismic guidance."
+      },
+      "references": [
+        {
+          "title": {
+            "es": "ACI · PRC-440.2-23, guía actual",
+            "en": "ACI · PRC-440.2-23, current guide"
+          },
+          "url": "https://www.concrete.org/store/productdetail.aspx?ItemID=440223&Language=English&Units=US_AND_METRIC"
+        },
+        {
+          "title": {
+            "es": "ACI · PRC-440.2-23, declaración de reemplazo de 440.2R-17",
+            "en": "ACI · PRC-440.2-23, statement superseding 440.2R-17"
+          },
+          "url": "https://www.concrete.org/Portals/0/Files/PDF/Previews/440.2-23_preview.pdf"
+        },
+        {
+          "title": {
+            "es": "ACI · CODE-440.13-24, alcance y limitaciones sísmicas",
+            "en": "ACI · CODE-440.13-24, scope and seismic limitations"
+          },
+          "url": "https://www.concrete.org/Portals/0/Files/PDF/Previews/440.13-24_preview.pdf"
+        }
+      ],
+      "referenceVerified": true
+    },
+    {
+      "id": "aisc341",
+      "designation": "AISC 341",
+      "group": "international",
+      "issuer": "American Institute of Steel Construction (AISC)",
+      "referenceEdition": "ANSI/AISC 341-22",
+      "year": 2022,
+      "practice": "reference",
+      "reviewed": "2026-10-08",
+      "es": {
+        "name": "Disposiciones sísmicas para edificios de acero estructural",
+        "family": "Acero y sistemas sismorresistentes",
+        "region": "Estados Unidos · referencia complementaria",
+        "editionStatus": "Edición 2022 publicada por AISC, coordinada con AISC 360-22.",
+        "practiceStatus": "Referencia complementaria · uso profesional no acreditado",
+        "applications": [
+          "Definición de requisitos para sistemas de acero y compuestos resistentes a sismo.",
+          "Coordinación del sistema, miembros, conexiones y detallado."
+        ],
+        "checks": [
+          "Requisitos específicos del sistema seleccionado y su mecanismo previsto.",
+          "Demandas de conexiones y compatibilidad del detallado."
+        ],
+        "projectRelation": "Referencia contextual para estructuras industriales. No se atribuye uso en CEPITOCE, CIDELSA ni proyectos de SRK.",
+        "scope": "No equivale a una acreditación personal ni convierte cualquier pórtico de acero en un sistema dúctil."
+      },
+      "en": {
+        "name": "Seismic Provisions for Structural Steel Buildings",
+        "family": "Steel seismic-force-resisting systems",
+        "region": "United States · supplementary reference",
+        "editionStatus": "2022 edition published by AISC, coordinated with AISC 360-22.",
+        "practiceStatus": "Supplementary reference · professional use not established",
+        "applications": [
+          "Requirements for seismic-force-resisting steel and composite systems.",
+          "Coordination of system, members, connections and detailing."
+        ],
+        "checks": [
+          "Requirements of the selected system and intended mechanism.",
+          "Connection demands and detailing compatibility."
+        ],
+        "projectRelation": "A contextual reference for industrial structures. No use is attributed to CEPITOCE, CIDELSA or SRK projects.",
+        "scope": "This is not a personal credential and does not make every steel frame a ductile system."
+      },
+      "references": [
+        {
+          "title": {
+            "es": "AISC · ANSI/AISC 341-22, documento oficial",
+            "en": "AISC · ANSI/AISC 341-22, official document"
+          },
+          "url": "https://www.aisc.org/aisc/publications/current-standards/aisc-341/"
+        },
+        {
+          "title": {
+            "es": "AISC · Normas actuales",
+            "en": "AISC · Current standards"
+          },
+          "url": "https://www.aisc.org/aisc/publications/current-standards/"
+        }
+      ],
+      "referenceVerified": true
+    },
+    {
+      "id": "awsd11",
+      "designation": "AWS D1.1/D1.1M",
+      "group": "international",
+      "issuer": "American Welding Society (AWS)",
+      "referenceEdition": "AWS D1.1/D1.1M:2025-AMD1",
+      "year": 2025,
+      "practice": "reference",
+      "reviewed": "2026-10-08",
+      "es": {
+        "name": "Código de soldadura estructural: acero",
+        "family": "Conexiones soldadas y ejecución",
+        "region": "Estados Unidos · referencia complementaria",
+        "editionStatus": "AWS publica la edición 2025 con enmienda AMD1; su registro identifica segunda impresión de febrero de 2026 y erratas.",
+        "practiceStatus": "Referencia complementaria · uso profesional no acreditado",
+        "applications": [
+          "Especificación y revisión de soldaduras estructurales dentro de su alcance.",
+          "Coordinación de requisitos de fabricación, calificación e inspección."
+        ],
+        "checks": [
+          "Procedimientos, calificaciones y criterios de aceptación.",
+          "Consistencia entre detalles, materiales y documentación de soldadura."
+        ],
+        "projectRelation": "Relacionada con interfaces de conexiones metálicas. No se atribuye su aplicación a un proyecto concreto ni una certificación de inspector a Sergio.",
+        "scope": "La edición contractual y sus enmiendas deben identificarse; citar el código no acredita la calidad de una soldadura ejecutada."
+      },
+      "en": {
+        "name": "Structural Welding Code—Steel",
+        "family": "Welded connections and execution",
+        "region": "United States · supplementary reference",
+        "editionStatus": "AWS publishes the 2025 edition with AMD1; its register identifies a February 2026 second printing and errata.",
+        "practiceStatus": "Supplementary reference · professional use not established",
+        "applications": [
+          "Specification and review of structural welds within its scope.",
+          "Coordination of fabrication, qualification and inspection requirements."
+        ],
+        "checks": [
+          "Procedures, qualifications and acceptance criteria.",
+          "Consistency of details, materials and welding documentation."
+        ],
+        "projectRelation": "Related to steel-connection interfaces. No use on a specific project or welding-inspector certification is attributed to Sergio.",
+        "scope": "The contractual edition and amendments must be identified; citing the code does not establish the quality of an executed weld."
+      },
+      "references": [
+        {
+          "title": {
+            "es": "AWS · D1.1/D1.1M:2025-AMD1 y erratas",
+            "en": "AWS · D1.1/D1.1M:2025-AMD1 and errata"
+          },
+          "url": "https://www.aws.org/standards-and-publications/codes-and-standards/"
+        },
+        {
+          "title": {
+            "es": "AWS · Publicación de D1.1/D1.1M:2025",
+            "en": "AWS · Release of D1.1/D1.1M:2025"
+          },
+          "url": "https://www.aws.org/about/news/d11-release/"
+        }
+      ],
+      "referenceVerified": true
+    }
+  ],
+  "cases": [
+    {
+      "id": "concrete-building",
+      "es": {
+        "title": "A · Edificio de concreto armado",
+        "summary": "Relacionar las acciones con la respuesta global, el diseño de elementos y la cimentación mediante una base de diseño única.",
+        "status": "Ejemplo conceptual de método · sin resultados de una obra",
+        "steps": [
+          {
+            "title": "01 · Fijar la base de diseño",
+            "description": "Identificar ubicación, uso, expediente, sistema estructural y ediciones aplicables. En un expediente peruano, resolver la transición de E.030 antes de generar el espectro; una referencia ACI no sustituye automáticamente al RNE.",
+            "codes": [
+              "e030",
+              "e060",
+              "aci318"
+            ]
+          },
+          {
+            "title": "02 · Construir el registro de acciones",
+            "description": "Separar peso propio, acabados, tabiquería, uso y equipos. Documentar áreas tributarias, masas sísmicas, combinaciones y unidades, evitando contar dos veces la misma carga.",
+            "codes": [
+              "e020",
+              "e030"
+            ]
+          },
+          {
+            "title": "03 · Representar el sistema",
+            "description": "Definir niveles, diafragmas, rigidez efectiva, vínculos y continuidad hasta la cimentación. Registrar las hipótesis que afectan periodos, distribución de fuerzas y desplazamientos.",
+            "codes": [
+              "e030",
+              "e060"
+            ]
+          },
+          {
+            "title": "04 · Revisar el análisis",
+            "description": "Contrastar masas y equilibrio, examinar modos, torsión, distribución de cortantes y derivas. Una tabla de resultados sólo es interpretable con su caso, combinación y estado de respuesta.",
+            "codes": [
+              "e030"
+            ]
+          },
+          {
+            "title": "05 · Diseñar elementos y cimentación",
+            "description": "Conectar demandas compatibles con verificaciones de flexión, cortante, interacción y detallado. Coordinar reacciones y combinaciones con el estudio geotécnico para separar resistencia estructural, presiones y asentamientos.",
+            "codes": [
+              "e060",
+              "e050",
+              "aci318"
+            ]
+          },
+          {
+            "title": "06 · Cerrar la trazabilidad",
+            "description": "Relacionar cada comprobación con su entrada, criterio, edición, resultado y plano. Python puede normalizar tablas y señalar inconsistencias; la selección del criterio y la revisión permanecen a cargo del ingeniero.",
+            "codes": [
+              "e020",
+              "e030",
+              "e050",
+              "e060"
+            ]
+          }
+        ],
+        "deliverable": "Registro de cargas, modelo revisado, matriz de verificaciones, memoria y planos coordinados.",
+        "scope": "Flujo didáctico de un edificio genérico. No describe los resultados de SUNSETGOLF ni asegura que sus verificaciones usaran las ediciones aquí consultadas."
+      },
+      "en": {
+        "title": "A · Reinforced concrete building",
+        "summary": "Connect actions with global response, member design and foundations through a single design basis.",
+        "status": "Conceptual workflow · no results from a built project",
+        "steps": [
+          {
+            "title": "01 · Establish the design basis",
+            "description": "Identify site, occupancy, submission status, structural system and applicable editions. For a Peruvian submission, resolve the E.030 transition before generating the spectrum; an ACI reference does not automatically replace RNE.",
+            "codes": [
+              "e030",
+              "e060",
+              "aci318"
+            ]
+          },
+          {
+            "title": "02 · Build the load register",
+            "description": "Separate self-weight, finishes, partitions, occupancy and equipment. Record tributary areas, seismic mass, combinations and units, avoiding duplicate loads.",
+            "codes": [
+              "e020",
+              "e030"
+            ]
+          },
+          {
+            "title": "03 · Represent the system",
+            "description": "Define levels, diaphragms, effective stiffness, restraints and continuity into the foundations. Record assumptions affecting periods, force distribution and displacements.",
+            "codes": [
+              "e030",
+              "e060"
+            ]
+          },
+          {
+            "title": "04 · Review the analysis",
+            "description": "Check mass and equilibrium; examine modes, torsion, shear distribution and drift. Results need an identified case, combination and response state to be meaningful.",
+            "codes": [
+              "e030"
+            ]
+          },
+          {
+            "title": "05 · Design members and foundations",
+            "description": "Connect compatible demands with flexural, shear, interaction and detailing checks. Coordinate reactions and combinations with the geotechnical report, distinguishing structural strength, bearing pressures and settlement.",
+            "codes": [
+              "e060",
+              "e050",
+              "aci318"
+            ]
+          },
+          {
+            "title": "06 · Complete the audit trail",
+            "description": "Link each check to its input, criterion, edition, result and drawing. Python can normalize tables and flag inconsistencies; selection of criteria and engineering review remain the engineer's responsibility.",
+            "codes": [
+              "e020",
+              "e030",
+              "e050",
+              "e060"
+            ]
+          }
+        ],
+        "deliverable": "Load register, reviewed model, verification matrix, calculation report and coordinated drawings.",
+        "scope": "Educational workflow for a generic building. It does not describe SUNSETGOLF results or establish that its checks used the editions consulted here."
+      }
+    },
+    {
+      "id": "industrial-steel",
+      "es": {
+        "title": "B · Estructura metálica industrial",
+        "summary": "Seguir las acciones desde el equipo y la estructura hasta las conexiones, anclajes y cimentación.",
+        "status": "Ejemplo conceptual de método · sin resultados de una obra",
+        "steps": [
+          {
+            "title": "01 · Definir operación y base normativa",
+            "description": "Distinguir operación, mantenimiento, montaje y condiciones excepcionales. Identificar normas exigidas por la jurisdicción y el contrato, y escoger un marco coherente de acciones y resistencia.",
+            "codes": [
+              "e020",
+              "asce7",
+              "aisc360"
+            ]
+          },
+          {
+            "title": "02 · Controlar las interfaces de equipos",
+            "description": "Solicitar cargas, ejes, puntos de aplicación, estados simultáneos, frecuencias y límites del fabricante. No sumar máximos de estados incompatibles ni convertir una carga estimada en un dato definitivo.",
+            "codes": [
+              "e020",
+              "asce7"
+            ]
+          },
+          {
+            "title": "03 · Revisar estabilidad y modelo",
+            "description": "Representar arriostramientos, apoyos y rigidez de conexiones. Evaluar efectos de segundo orden y longitudes o condiciones de pandeo con el método adoptado, incluyendo las etapas de montaje pertinentes.",
+            "codes": [
+              "aisc360"
+            ]
+          },
+          {
+            "title": "04 · Verificar miembros y conexiones",
+            "description": "Comprobar estados límite e interacción sin mezclar LRFD y ASD. Seguir el recorrido de fuerzas por placas, pernos y soldaduras; AISC 341 se considera cuando el sistema sísmico y la base de diseño lo requieren.",
+            "codes": [
+              "aisc360",
+              "aisc341",
+              "awsd11"
+            ]
+          },
+          {
+            "title": "05 · Revisar servicio y cimentaciones",
+            "description": "Contrastar deformaciones y vibración con requisitos funcionales y del equipo. Revisar reacciones compatibles, levantamiento, anclajes, pedestales y terreno con los criterios estructurales y geotécnicos pertinentes.",
+            "codes": [
+              "aisc360",
+              "e050",
+              "e060"
+            ]
+          },
+          {
+            "title": "06 · Documentar decisiones",
+            "description": "Conservar criterios, hipótesis, alternativas y revisión de conexiones. Python puede comparar escenarios y organizar reacciones; los límites de equipo, la estabilidad y el detallado exigen interpretación técnica.",
+            "codes": [
+              "aisc360",
+              "asce7"
+            ]
+          }
+        ],
+        "deliverable": "Base de diseño, matriz de estados operativos, modelo, comprobaciones de miembros y conexiones, e interfaces de cimentación.",
+        "scope": "Estructura industrial genérica. No se atribuye uso de AISC 341 o AWS D1.1 a CEPITOCE, CIDELSA o SRK. La aplicación personal de E.090 sigue pendiente de confirmación."
+      },
+      "en": {
+        "title": "B · Industrial steel structure",
+        "summary": "Follow actions from equipment and framing through connections, anchors and foundations.",
+        "status": "Conceptual workflow · no results from a built project",
+        "steps": [
+          {
+            "title": "01 · Define operation and the code basis",
+            "description": "Distinguish operation, maintenance, erection and exceptional conditions. Identify jurisdictional and contractual standards and choose a coherent framework for loads and resistance.",
+            "codes": [
+              "e020",
+              "asce7",
+              "aisc360"
+            ]
+          },
+          {
+            "title": "02 · Control equipment interfaces",
+            "description": "Obtain manufacturer loads, axes, application points, concurrent states, frequencies and limits. Do not add maxima from incompatible states or present estimated loads as final information.",
+            "codes": [
+              "e020",
+              "asce7"
+            ]
+          },
+          {
+            "title": "03 · Review stability and the model",
+            "description": "Represent bracing, supports and connection stiffness. Evaluate second-order effects and buckling lengths or conditions using the adopted method, including relevant erection stages.",
+            "codes": [
+              "aisc360"
+            ]
+          },
+          {
+            "title": "04 · Check members and connections",
+            "description": "Assess limit states and interaction without mixing LRFD and ASD. Follow forces through plates, bolts and welds; consider AISC 341 when required by the seismic system and design basis.",
+            "codes": [
+              "aisc360",
+              "aisc341",
+              "awsd11"
+            ]
+          },
+          {
+            "title": "05 · Review serviceability and foundations",
+            "description": "Compare deflections and vibration with functional and equipment requirements. Review compatible reactions, uplift, anchors, pedestals and ground using the relevant structural and geotechnical criteria.",
+            "codes": [
+              "aisc360",
+              "e050",
+              "e060"
+            ]
+          },
+          {
+            "title": "06 · Document decisions",
+            "description": "Retain criteria, assumptions, alternatives and connection reviews. Python can compare scenarios and organize reactions; equipment limits, stability and detailing require engineering interpretation.",
+            "codes": [
+              "aisc360",
+              "asce7"
+            ]
+          }
+        ],
+        "deliverable": "Design basis, operating-state matrix, model, member and connection checks, and foundation interfaces.",
+        "scope": "A generic industrial structure. Use of AISC 341 or AWS D1.1 is not attributed to CEPITOCE, CIDELSA or SRK. Personal application of E.090 remains unconfirmed."
+      }
+    },
+    {
+      "id": "assessment-retrofit",
+      "es": {
+        "title": "C · Evaluación y reforzamiento",
+        "summary": "Vincular evidencia, diagnóstico, objetivo de desempeño y mecanismo de intervención antes de seleccionar un material de refuerzo.",
+        "status": "Ejemplo conceptual de método · sin resultados de una intervención",
+        "steps": [
+          {
+            "title": "01 · Establecer la condición existente",
+            "description": "Distinguir información documentada, observada, ensayada e inferida. Registrar geometría, materiales, daños, cambios de uso y confiabilidad de los datos antes de definir capacidades.",
+            "codes": [
+              "aci562",
+              "asce41"
+            ]
+          },
+          {
+            "title": "02 · Definir objetivo y marco de evaluación",
+            "description": "Precisar la deficiencia, la amenaza y el desempeño buscado. Seleccionar el procedimiento y los criterios de aceptación para estructuras existentes; no trasladar automáticamente requisitos de edificios nuevos.",
+            "codes": [
+              "asce41",
+              "aci562"
+            ]
+          },
+          {
+            "title": "03 · Formular y contrastar el modelo",
+            "description": "Representar mecanismos relevantes, rigideces, resistencia y condiciones de apoyo. Distinguir convergencia numérica, sensibilidad y validación; la incertidumbre de las propiedades debe quedar visible.",
+            "codes": [
+              "asce41"
+            ]
+          },
+          {
+            "title": "04 · Comparar demanda y capacidad",
+            "description": "Revisar acciones y deformaciones compatibles con el procedimiento. Identificar mecanismos frágiles, conexiones y componentes que gobiernan antes de interpretar una capacidad global.",
+            "codes": [
+              "asce41",
+              "aci562"
+            ]
+          },
+          {
+            "title": "05 · Seleccionar la intervención",
+            "description": "Comparar encamisados, FRP y otras alternativas según el mecanismo. Para FRP, comprobar sustrato, orientación, adherencia, anclaje y alcance sísmico del documento elegido; CODE-440.13 no cubre todas las aplicaciones de la guía.",
+            "codes": [
+              "aci562",
+              "aci440"
+            ]
+          },
+          {
+            "title": "06 · Revisar el sistema modificado",
+            "description": "Reevaluar redistribución, compatibilidad, cimentaciones y etapas de ejecución. Documentar incertidumbre, inspección y criterios de aceptación; un aumento local de resistencia no demuestra mejora global por sí solo.",
+            "codes": [
+              "asce41",
+              "aci562",
+              "e050"
+            ]
+          }
+        ],
+        "deliverable": "Diagnóstico sustentado, objetivo de evaluación, modelo con incertidumbre explícita, comparación de alternativas y programa de verificación de la intervención.",
+        "scope": "Método conceptual. No reproduce ensayos ni valida los resultados reportados del caso CFRP; tampoco representa una propuesta ejecutable para una estructura existente."
+      },
+      "en": {
+        "title": "C · Assessment and retrofit",
+        "summary": "Connect evidence, diagnosis, performance objectives and the intervention mechanism before choosing a strengthening material.",
+        "status": "Conceptual workflow · no results from an actual intervention",
+        "steps": [
+          {
+            "title": "01 · Establish the existing condition",
+            "description": "Distinguish documented, observed, tested and inferred information. Record geometry, materials, damage, changes in use and data reliability before defining capacities.",
+            "codes": [
+              "aci562",
+              "asce41"
+            ]
+          },
+          {
+            "title": "02 · Define the objective and assessment framework",
+            "description": "Specify the deficiency, hazard and target performance. Select procedures and acceptance criteria for existing structures rather than automatically transferring new-building requirements.",
+            "codes": [
+              "asce41",
+              "aci562"
+            ]
+          },
+          {
+            "title": "03 · Formulate and check the model",
+            "description": "Represent relevant mechanisms, stiffness, strength and supports. Distinguish numerical convergence, sensitivity and validation; property uncertainty must remain explicit.",
+            "codes": [
+              "asce41"
+            ]
+          },
+          {
+            "title": "04 · Compare demand and capacity",
+            "description": "Review actions and deformations consistent with the procedure. Identify brittle mechanisms, connections and governing components before interpreting global capacity.",
+            "codes": [
+              "asce41",
+              "aci562"
+            ]
+          },
+          {
+            "title": "05 · Select the intervention",
+            "description": "Compare jacketing, FRP and other alternatives against the mechanism. For FRP, assess substrate, orientation, bond, anchorage and the chosen document's seismic scope; CODE-440.13 does not cover every application addressed by the guide.",
+            "codes": [
+              "aci562",
+              "aci440"
+            ]
+          },
+          {
+            "title": "06 · Review the modified system",
+            "description": "Reassess redistribution, compatibility, foundations and construction stages. Document uncertainty, inspection and acceptance criteria; a local strength increase alone does not establish a global improvement.",
+            "codes": [
+              "asce41",
+              "aci562",
+              "e050"
+            ]
+          }
+        ],
+        "deliverable": "Evidence-based diagnosis, assessment objective, model with explicit uncertainty, alternatives comparison and an intervention verification programme.",
+        "scope": "Conceptual method. It does not reproduce tests, validate the reported CFRP case results or constitute an executable intervention for an existing structure."
+      }
+    }
+  ]
+}

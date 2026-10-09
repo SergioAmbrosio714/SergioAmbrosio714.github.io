@@ -276,6 +276,52 @@
       },
       "width": 1000,
       "height": 600
+    },
+    {
+      "src": "assets/insight-python-review.svg",
+      "source": {
+        "es": "Diagrama vectorial original del flujo de revisión del demostrador.",
+        "en": "Original vector diagram of the demonstrator's review workflow."
+      },
+      "software": "SVG",
+      "date": "2026-10-08",
+      "description": {
+        "es": "Tabla sintética SERVICE_A con cuatro niveles y su perfil de desplazamiento, conectados mediante controles de datos.",
+        "en": "Synthetic SERVICE_A table with four levels and its displacement profile, connected through data checks."
+      },
+      "usage": {
+        "es": "Datos de demostración del portafolio 2026; no son resultados de ETABS ni de un proyecto profesional.",
+        "en": "2026 portfolio demonstration data; not ETABS output or results from a professional project."
+      },
+      "caption": {
+        "es": "SERVICE_A: cotas 0, 3, 6 y 9 m; desplazamientos 0, 2, 6 y 12 mm. Validar unidades y correspondencia entre niveles precede al cálculo de diferencias.",
+        "en": "SERVICE_A: elevations 0, 3, 6 and 9 m; displacements 0, 2, 6 and 12 mm. Unit and level checks precede calculation of differences."
+      },
+      "width": 1000,
+      "height": 600
+    },
+    {
+      "src": "assets/insight-design-codes.svg",
+      "source": {
+        "es": "Diagrama editorial vectorial original, preparado para esta nota.",
+        "en": "Original editorial vector diagram prepared for this note."
+      },
+      "software": "SVG",
+      "date": "2026-10-08",
+      "description": {
+        "es": "Secuencia desde base de diseño y modelo hasta verificaciones de resistencia, servicio y detalle, con registro de fuente y edición.",
+        "en": "Sequence from design basis and model to strength, serviceability and detailing checks, with source and edition records."
+      },
+      "usage": {
+        "es": "Método conceptual de revisión; no reproduce una tabla normativa ni representa la aprobación de un proyecto.",
+        "en": "Conceptual review method; not a reproduced code table or evidence of project approval."
+      },
+      "caption": {
+        "es": "Una base de diseño conecta el documento aplicable con hipótesis, demanda, capacidad y detalle. Cada comparación conserva su combinación, unidades y condición de aceptación.",
+        "en": "A design basis connects the applicable document to assumptions, demand, capacity and detailing. Each comparison retains its combination, units and acceptance condition."
+      },
+      "width": 1000,
+      "height": 600
     }
   ]
 }

@@ -1,0 +1,9 @@
+case,level,elevation,displacement,elevation_unit,displacement_unit
+SERVICE_A,L00,0,0,m,mm
+SERVICE_A,L01,3,2,m,mm
+SERVICE_A,L02,6,6,m,mm
+SERVICE_A,L03,9,12,m,mm
+SERVICE_B,L00,0,0,m,mm
+SERVICE_B,L01,3,3,m,mm
+SERVICE_B,L02,6,8,m,mm
+SERVICE_B,L03,9,15,m,mm

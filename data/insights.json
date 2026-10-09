@@ -110,6 +110,28 @@
             "equation": "V(δ) = 25δ, si δ ≤ 20 mm;  V(δ) = 500 + 2(δ − 20), si δ > 20 mm"
           },
           {
+            "title": "Una comprobación reproducible del ejemplo",
+            "paragraphs": [
+              "Antes de procesar una curva exportada conviene comprobar una relación conocida. El fragmento reproduce exclusivamente los tres valores del ejemplo; no busca un punto de desempeño. En una serie real se conservarían el incremento, desplazamiento de control y reacción basal con sus signos, unidades y estado convergido. La representación de ramas con retroceso exige examinar el camino de solución y no ordenar ciegamente las filas por desplazamiento."
+            ],
+            "code": {
+              "language": "python",
+              "text": "from math import isclose\n\nvy_kn, dy_mm, kpost_kn_mm = 500.0, 20.0, 2.0\nd_mm = 60.0\nv_kn = vy_kn + kpost_kn_mm * (d_mm - dy_mm)\nksec_kn_mm = v_kn / d_mm\nmu = d_mm / dy_mm\nassert isclose(v_kn, 580.0)\nassert isclose(ksec_kn_mm, 29.0 / 3.0)\nassert isclose(mu, 3.0)"
+            },
+            "links": [
+              {
+                "href": {
+                  "es": "notas/python-revision-modelos-estructurales.html",
+                  "en": "en/notas/python-revision-modelos-estructurales.html"
+                },
+                "label": {
+                  "es": "Contrato de datos y revisión con Python",
+                  "en": "Data contracts and Python review"
+                }
+              }
+            ]
+          },
+          {
             "title": "Errores habituales",
             "bullets": [
               "Comparar dos curvas sin conservar el peso, el punto de control, las unidades y el patrón lateral.",
@@ -172,6 +194,28 @@
               "The 60 mm displacement was not obtained from a response spectrum and must not be labelled a performance point. Estimating such a point additionally requires seismic demand, a modal transformation and a compatibility procedure. Evaluating acceptance also requires component demands and applicable limits."
             ],
             "equation": "V(δ) = 25δ for δ ≤ 20 mm;  V(δ) = 500 + 2(δ − 20) for δ > 20 mm"
+          },
+          {
+            "title": "A reproducible check of the example",
+            "paragraphs": [
+              "Before processing an exported curve, check a known relationship. This snippet reproduces only the three example values; it does not find a performance point. A real series would retain the increment, control displacement and base reaction with their signs, units and converged state. Response branches with reversals require examining the solution path rather than blindly sorting rows by displacement."
+            ],
+            "code": {
+              "language": "python",
+              "text": "from math import isclose\n\nvy_kn, dy_mm, kpost_kn_mm = 500.0, 20.0, 2.0\nd_mm = 60.0\nv_kn = vy_kn + kpost_kn_mm * (d_mm - dy_mm)\nksec_kn_mm = v_kn / d_mm\nmu = d_mm / dy_mm\nassert isclose(v_kn, 580.0)\nassert isclose(ksec_kn_mm, 29.0 / 3.0)\nassert isclose(mu, 3.0)"
+            },
+            "links": [
+              {
+                "href": {
+                  "es": "notas/python-revision-modelos-estructurales.html",
+                  "en": "en/notas/python-revision-modelos-estructurales.html"
+                },
+                "label": {
+                  "es": "Contrato de datos y revisión con Python",
+                  "en": "Data contracts and Python review"
+                }
+              }
+            ]
           },
           {
             "title": "Common mistakes",
@@ -332,6 +376,32 @@
             }
           },
           {
+            "title": "Una referencia elástica para probar el modelo",
+            "paragraphs": [
+              "El voladizo descargable añade un control de proporcionalidad. Para sección y material constantes, δ = PL³/(3EI): duplicar P duplica δ; duplicar L la multiplica por ocho. En una sección rectangular, duplicar h multiplica I por ocho y divide δ por ocho, manteniendo b. Desde la referencia de 2 mm se obtienen, respectivamente, 4; 16 y 0,25 mm.",
+              "Estas relaciones permiten detectar conversiones erróneas o cambios involuntarios de hipótesis. Corresponden a Euler–Bernoulli, que omite deformación por cortante: al duplicar h en este ejemplo, L/h pasa de 10 a 5 y debe revisarse la validez de esa idealización. Una pérdida de proporcionalidad en un modelo no lineal debe explicarse por su mecanismo y no corregirse forzando esta referencia."
+            ],
+            "links": [
+              {
+                "href": {
+                  "es": "laboratorio/voladizo-parametrico.html",
+                  "en": "en/laboratorio/voladizo-parametrico.html"
+                },
+                "label": {
+                  "es": "Explorar sensibilidad del voladizo",
+                  "en": "Explore cantilever sensitivity"
+                }
+              },
+              {
+                "href": "python/cantilever.py",
+                "label": {
+                  "es": "Código del demostrador elástico",
+                  "en": "Elastic demonstrator source"
+                }
+              }
+            ]
+          },
+          {
             "title": "Errores habituales",
             "bullets": [
               "Aplicar superposición a estados no lineales con trayectorias o condiciones de contacto diferentes.",
@@ -414,6 +484,32 @@
                 ]
               ]
             }
+          },
+          {
+            "title": "An elastic benchmark for model checks",
+            "paragraphs": [
+              "The downloadable cantilever adds a proportionality check. With fixed section and material, δ = PL³/(3EI): doubling P doubles δ; doubling L multiplies it by eight. For a rectangular section, doubling h multiplies I by eight and divides δ by eight, with b unchanged. Starting from 2 mm gives 4, 16 and 0.25 mm, respectively.",
+              "These relationships help identify conversion errors or unintended changes in assumptions. They follow Euler–Bernoulli theory, which omits shear deformation: doubling h in this example changes L/h from 10 to 5, requiring review of that idealization. Loss of proportionality in a nonlinear model must be explained by its mechanism rather than corrected by forcing this benchmark."
+            ],
+            "links": [
+              {
+                "href": {
+                  "es": "laboratorio/voladizo-parametrico.html",
+                  "en": "en/laboratorio/voladizo-parametrico.html"
+                },
+                "label": {
+                  "es": "Explorar sensibilidad del voladizo",
+                  "en": "Explore cantilever sensitivity"
+                }
+              },
+              {
+                "href": "python/cantilever.py",
+                "label": {
+                  "es": "Código del demostrador elástico",
+                  "en": "Elastic demonstrator source"
+                }
+              }
+            ]
           },
           {
             "title": "Common mistakes",
@@ -565,6 +661,48 @@
             "equation": "M = Fh = 80 × 6 = 480 kN·m;  ΔN = M/B = 480/4 = 120 kN"
           },
           {
+            "title": "Convertir la interfaz en una verificación trazable",
+            "paragraphs": [
+              "Una revisión de reacciones debe conservar el estado que produce cada conjunto de fuerzas. El mayor N, el mayor V y el mayor M obtenidos por separado no constituyen necesariamente una combinación simultánea para la placa base. Antes de automatizar sumas o relaciones de utilización, se registra sistema de ejes, punto de referencia y convenio de signos."
+            ],
+            "table": {
+              "headers": [
+                "Interfaz",
+                "Información que se conserva",
+                "Control"
+              ],
+              "rows": [
+                [
+                  "Equipo → plataforma",
+                  "Caso operativo; fuerzas y momentos simultáneos",
+                  "Equilibrio y excentricidad de aplicación"
+                ],
+                [
+                  "Marco → conexión",
+                  "Estado límite y combinación identificados",
+                  "Resistencia, rigidez y deformación compatibles"
+                ],
+                [
+                  "Base → cimentación",
+                  "Reacciones en una referencia común",
+                  "Equilibrio, levantamiento y transferencia a anclajes"
+                ]
+              ]
+            },
+            "links": [
+              {
+                "href": {
+                  "es": "notas/interpretar-aplicar-normas-acero-concreto.html",
+                  "en": "en/notas/interpretar-aplicar-normas-acero-concreto.html"
+                },
+                "label": {
+                  "es": "Relacionar normas, demanda y capacidad",
+                  "en": "Connect codes, demand and capacity"
+                }
+              }
+            ]
+          },
+          {
             "title": "Errores habituales",
             "bullets": [
               "Comprobar únicamente resistencia y omitir vibración, deformaciones de servicio o alineamiento de equipos.",
@@ -627,6 +765,48 @@
               "This assumes a planar mechanism and an idealized force transfer. Compatible gravity effects still need to be added, and uplift, anchors, base plates, pedestals and soil must be checked using the actual model. The example does not size a foundation or replace a three-dimensional assessment; it provides an elementary equilibrium check against model reactions."
             ],
             "equation": "M = Fh = 80 × 6 = 480 kN·m;  ΔN = M/B = 480/4 = 120 kN"
+          },
+          {
+            "title": "Turn each interface into a traceable check",
+            "paragraphs": [
+              "A reaction review must preserve the state producing each force set. Independently obtained maximum N, V and M values do not necessarily form a simultaneous combination for base-plate design. Record axes, reference point and sign conventions before automating sums or utilization ratios."
+            ],
+            "table": {
+              "headers": [
+                "Interface",
+                "Information retained",
+                "Check"
+              ],
+              "rows": [
+                [
+                  "Equipment → platform",
+                  "Operating case; simultaneous forces and moments",
+                  "Equilibrium and load eccentricity"
+                ],
+                [
+                  "Frame → connection",
+                  "Identified limit state and combination",
+                  "Compatible strength, stiffness and deformation"
+                ],
+                [
+                  "Base → foundation",
+                  "Reactions at a common reference point",
+                  "Equilibrium, uplift and anchor force transfer"
+                ]
+              ]
+            },
+            "links": [
+              {
+                "href": {
+                  "es": "notas/interpretar-aplicar-normas-acero-concreto.html",
+                  "en": "en/notas/interpretar-aplicar-normas-acero-concreto.html"
+                },
+                "label": {
+                  "es": "Relacionar normas, demanda y capacidad",
+                  "en": "Connect codes, demand and capacity"
+                }
+              }
+            ]
           },
           {
             "title": "Common mistakes",
@@ -767,6 +947,39 @@
             "equation": "I = bh³/12;  δ = PL³/(3EI);  εmalla = |q(ℓ/2) − q(ℓ)| / |q(ℓ/2)|"
           },
           {
+            "title": "Reproducir primero la referencia independiente",
+            "paragraphs": [
+              "El demostrador Python utiliza los mismos L, b, h, E y P de este ejemplo. Además de δ = 2 mm, entrega la magnitud del momento de apoyo PL = 20 kN·m y la tensión nominal de flexión Mc/I = 30 MPa, con c = h/2. El código y el CSV permiten repetir el cálculo sin un solver de elementos finitos.",
+              "Una comparación con sólidos debe evaluar desplazamientos y resultantes compatibles; la tensión nominal de viga no describe el campo tridimensional junto al empotramiento. El demostrador no ejecuta Abaqus ni estudia convergencia de malla: proporciona una referencia analítica para preparar ese estudio."
+            ],
+            "links": [
+              {
+                "href": {
+                  "es": "laboratorio/voladizo-parametrico.html",
+                  "en": "en/laboratorio/voladizo-parametrico.html"
+                },
+                "label": {
+                  "es": "Reproducir la referencia de 2 mm",
+                  "en": "Reproduce the 2 mm benchmark"
+                }
+              },
+              {
+                "href": "python/cantilever.py",
+                "label": {
+                  "es": "Descargar cálculo Python",
+                  "en": "Download Python calculation"
+                }
+              },
+              {
+                "href": "python/examples/cantilever-scenarios.csv",
+                "label": {
+                  "es": "Escenarios sintéticos del voladizo",
+                  "en": "Synthetic cantilever scenarios"
+                }
+              }
+            ]
+          },
+          {
             "title": "Errores habituales",
             "bullets": [
               "Refinar la malla mientras se cambia simultáneamente el elemento, el material y la condición de apoyo.",
@@ -829,6 +1042,39 @@
               "This is an analytical reference, not an executed simulation. A future study could compare three meshes while preserving material, loading and supports. If solid elements are used, differences from the beam idealization must be recognized; stresses near the clamp also require review without mistaking idealization singularities for physical failure. In the refinement expression, ℓ is mesh size and q is the quantity of interest, with a nonzero denominator."
             ],
             "equation": "I = bh³/12;  δ = PL³/(3EI);  εmesh = |q(ℓ/2) − q(ℓ)| / |q(ℓ/2)|"
+          },
+          {
+            "title": "Reproduce the independent benchmark first",
+            "paragraphs": [
+              "The Python demonstrator uses the same L, b, h, E and P as this example. In addition to δ = 2 mm, it gives support-moment magnitude PL = 20 kN·m and nominal bending stress Mc/I = 30 MPa, with c = h/2. The source and CSV allow reproduction without a finite-element solver.",
+              "Comparison with solid elements requires compatible displacements and section resultants; nominal beam stress does not describe the three-dimensional field near the clamp. The demonstrator runs neither Abaqus nor mesh-convergence analyses: it supplies an analytical benchmark for planning that study."
+            ],
+            "links": [
+              {
+                "href": {
+                  "es": "laboratorio/voladizo-parametrico.html",
+                  "en": "en/laboratorio/voladizo-parametrico.html"
+                },
+                "label": {
+                  "es": "Reproducir la referencia de 2 mm",
+                  "en": "Reproduce the 2 mm benchmark"
+                }
+              },
+              {
+                "href": "python/cantilever.py",
+                "label": {
+                  "es": "Descargar cálculo Python",
+                  "en": "Download Python calculation"
+                }
+              },
+              {
+                "href": "python/examples/cantilever-scenarios.csv",
+                "label": {
+                  "es": "Escenarios sintéticos del voladizo",
+                  "en": "Synthetic cantilever scenarios"
+                }
+              }
+            ]
           },
           {
             "title": "Common mistakes",
@@ -969,6 +1215,32 @@
             "equation": "θᵢ = (uᵢ − uᵢ₋₁)/hᵢ = (32 − 14)/3000 = 0,006"
           },
           {
+            "title": "Comprobar los datos antes de automatizar derivas",
+            "paragraphs": [
+              "El procesador por niveles permite practicar tres controles previos: cotas ordenadas y alturas positivas, unidades declaradas y equivalencia de niveles entre casos. Sus datos SERVICE_A y SERVICE_B son estados sintéticos de servicio. Sus cocientes geométricos no se presentan como demandas sísmicas de E.030.",
+              "Para revisar un análisis sísmico real se debe establecer además el punto del diafragma, dirección, procedimiento de combinación y transformación exigida por la norma aplicable. Esa decisión queda fuera del CSV simplificado. Conservar esta distinción evita que una operación aritmética correcta produzca una conclusión normativa incorrecta."
+            ],
+            "links": [
+              {
+                "href": {
+                  "es": "laboratorio/resultados-por-nivel.html",
+                  "en": "en/laboratorio/resultados-por-nivel.html"
+                },
+                "label": {
+                  "es": "Practicar validación de desplazamientos",
+                  "en": "Practise displacement-data checks"
+                }
+              },
+              {
+                "href": "python/process_results.py",
+                "label": {
+                  "es": "Código del procesador por niveles",
+                  "en": "Story-results processor source"
+                }
+              }
+            ]
+          },
+          {
             "title": "Errores habituales",
             "bullets": [
               "Ajustar la masa para obtener un periodo esperado en vez de investigar sus causas.",
@@ -1031,6 +1303,32 @@
               "This is a geometric example and does not establish compliance: the code-defined displacement, any required amplification and the applicable limit are not specified. Likewise, two independent modal or time-history maxima cannot simply be subtracted as though they necessarily occurred simultaneously."
             ],
             "equation": "θᵢ = (uᵢ − uᵢ₋₁)/hᵢ = (32 − 14)/3000 = 0.006"
+          },
+          {
+            "title": "Check data before automating drift calculations",
+            "paragraphs": [
+              "The story-results processor demonstrates three preliminary checks: ordered elevations with positive story heights, declared units and matching levels between cases. Its SERVICE_A and SERVICE_B datasets are synthetic service states. Their geometric ratios are not presented as E.030 seismic demands.",
+              "Reviewing an actual seismic analysis also requires defining the diaphragm location, direction, combination procedure and transformation required by the applicable code. That decision lies outside the simplified CSV contract. Preserving this distinction prevents correct arithmetic from producing an incorrect code conclusion."
+            ],
+            "links": [
+              {
+                "href": {
+                  "es": "laboratorio/resultados-por-nivel.html",
+                  "en": "en/laboratorio/resultados-por-nivel.html"
+                },
+                "label": {
+                  "es": "Practicar validación de desplazamientos",
+                  "en": "Practise displacement-data checks"
+                }
+              },
+              {
+                "href": "python/process_results.py",
+                "label": {
+                  "es": "Código del procesador por niveles",
+                  "en": "Story-results processor source"
+                }
+              }
+            ]
           },
           {
             "title": "Common mistakes",
@@ -1109,6 +1407,28 @@
             "es": "Edición 2022 para evaluación y reforzamiento sísmico de estructuras de acero existentes; su adopción depende de la base de evaluación.",
             "en": "2022 edition for seismic evaluation and retrofit of existing steel structures; adoption depends on the assessment basis."
           }
+        },
+        {
+          "title": {
+            "es": "ACI PRC-440.2-23 — Vista previa oficial: sustitución de ACI 440.2R-17 (2023)",
+            "en": "ACI PRC-440.2-23 — Official preview: supersedes ACI 440.2R-17 (2023)"
+          },
+          "url": "https://www.concrete.org/Portals/0/Files/PDF/Previews/440.2-23_preview.pdf",
+          "note": {
+            "es": "La página inicial declara expresamente la sustitución de la guía de 2017. Consultado el 8 de octubre de 2026.",
+            "en": "The opening page expressly identifies the superseded 2017 guide. Accessed 8 October 2026."
+          }
+        },
+        {
+          "title": {
+            "es": "ACI CODE-440.13-24 — Strengthening Structural Concrete with FRP Systems (2024), vista previa oficial",
+            "en": "ACI CODE-440.13-24 — Strengthening Structural Concrete with FRP Systems (2024), official preview"
+          },
+          "url": "https://www.concrete.org/Portals/0/Files/PDF/Previews/440.13-24_preview.pdf",
+          "note": {
+            "es": "Alcance 1.1 y 1.2.2; el comentario R1.2.2 distingue el reforzamiento del sistema sismorresistente en SDC B–F.",
+            "en": "Scope 1.1 and 1.2.2; commentary R1.2.2 distinguishes strengthening of seismic-force-resisting systems in SDC B–F."
+          }
         }
       ],
       "image": {
@@ -1169,6 +1489,25 @@
               "El cálculo muestra compatibilidad de desplazamientos y equilibrio, no eficacia de una intervención real. Se ha mantenido artificialmente la misma fuerza total: en un análisis sísmico, cambiar rigidez también puede modificar periodos y demanda. Antes de concluir que el refuerzo es favorable habría que revisar resistencia, deformaciones, conexiones y cimentaciones bajo la nueva respuesta."
             ],
             "equation": "F₁ = [k₁/(k₁ + k₂)] F;  F₂ = [k₂/(k₁ + k₂)] F"
+          },
+          {
+            "title": "Leer el alcance antes de cambiar la referencia FRP",
+            "paragraphs": [
+              "ACI PRC-440.2-23 declara que sustituye a la guía ACI 440.2R-17 [5]. Por separado, ACI CODE-440.13-24 establece requisitos para refuerzo con FRP y delimita su aplicación: SDC A o miembros fuera del sistema sismorresistente [6]. No representa una sustitución universal de la guía para cualquier intervención sísmica.",
+              "El registro de una evaluación debe identificar qué documento se emplea, para qué mecanismo y con qué objetivo. Una hoja automatizada puede organizar geometría y demandas; seleccionar propiedades, anclajes y criterios de aceptación requiere evidencia del elemento existente y una revisión del sistema."
+            ],
+            "links": [
+              {
+                "href": {
+                  "es": "notas/interpretar-aplicar-normas-acero-concreto.html",
+                  "en": "en/notas/interpretar-aplicar-normas-acero-concreto.html"
+                },
+                "label": {
+                  "es": "Definir la base normativa de la evaluación",
+                  "en": "Define the assessment's code basis"
+                }
+              }
+            ]
           },
           {
             "title": "Errores habituales",
@@ -1235,6 +1574,25 @@
             "equation": "F₁ = [k₁/(k₁ + k₂)] F;  F₂ = [k₂/(k₁ + k₂)] F"
           },
           {
+            "title": "Read the scope before changing the FRP reference",
+            "paragraphs": [
+              "ACI PRC-440.2-23 expressly supersedes the ACI 440.2R-17 guide [5]. Separately, ACI CODE-440.13-24 establishes FRP strengthening requirements and limits its application to SDC A or members outside the seismic-force-resisting system [6]. It is not a universal replacement for the guide across all seismic interventions.",
+              "An assessment record should identify the document used, the mechanism addressed and the objective. An automated worksheet can organize geometry and demands; selecting properties, anchors and acceptance criteria requires evidence from the existing member and a system review."
+            ],
+            "links": [
+              {
+                "href": {
+                  "es": "notas/interpretar-aplicar-normas-acero-concreto.html",
+                  "en": "en/notas/interpretar-aplicar-normas-acero-concreto.html"
+                },
+                "label": {
+                  "es": "Definir la base normativa de la evaluación",
+                  "en": "Define the assessment's code basis"
+                }
+              }
+            ]
+          },
+          {
             "title": "Common mistakes",
             "bullets": [
               "Selecting a solution before recording damage, materials, geometry and the performance objective.",
@@ -1259,6 +1617,738 @@
           {
             "label": "Scope",
             "value": "Educational · not project-specific design"
+          }
+        ]
+      }
+    },
+    {
+      "id": "python-review",
+      "slug": "python-revision-modelos-estructurales",
+      "date": "2026-10-08",
+      "references": [
+        {
+          "title": {
+            "es": "Python 3.12 — csv: lectura y escritura CSV, documentación oficial",
+            "en": "Python 3.12 — csv: CSV File Reading and Writing, official documentation"
+          },
+          "url": "https://docs.python.org/3.12/library/csv.html",
+          "note": {
+            "es": "Describe el formato y DictReader/DictWriter. El contrato de ingeniería del demostrador se documenta por separado.",
+            "en": "Describes the format and DictReader/DictWriter. The demonstrator's engineering data contract is documented separately."
+          }
+        },
+        {
+          "title": {
+            "es": "CSI — ETABS Choose Tables / Table Options, documentación oficial",
+            "en": "CSI — ETABS Choose Tables / Table Options, official documentation"
+          },
+          "url": "https://docs.csiamerica.com/help-files/etabs/Keyboard_Commands_and_Special_Features/Table_Options_form.htm",
+          "note": {
+            "es": "Permite revisar la selección de casos y el formato de las tablas antes de exportarlas.",
+            "en": "Supports review of case selection and table formatting before export."
+          }
+        },
+        {
+          "title": {
+            "es": "CSI — ETABS Display Units, documentación oficial",
+            "en": "CSI — ETABS Display Units, official documentation"
+          },
+          "url": "https://docs.csiamerica.com/help-files/etabs/Menus/Options/Display_Units.htm",
+          "note": {
+            "es": "Distingue configuración de unidades y presentación. El programa publicado importa un CSV normalizado; no usa la API de CSI.",
+            "en": "Explains unit settings and display. The published program imports a normalized CSV; it does not use the CSI API."
+          }
+        },
+        {
+          "title": {
+            "es": "Python 3.12 — math.isfinite y math.isclose, documentación oficial",
+            "en": "Python 3.12 — math.isfinite and math.isclose, official documentation"
+          },
+          "url": "https://docs.python.org/3.12/library/math.html",
+          "note": {
+            "es": "Funciones para rechazar valores no finitos y comparar resultados con tolerancias explícitas.",
+            "en": "Functions for rejecting nonfinite values and comparing results with explicit tolerances."
+          }
+        },
+        {
+          "title": {
+            "es": "Python 3.12 — unittest, documentación oficial",
+            "en": "Python 3.12 — unittest, official documentation"
+          },
+          "url": "https://docs.python.org/3.12/library/unittest.html",
+          "note": {
+            "es": "Marco de pruebas utilizado por los demostradores; una prueba de código no certifica un diseño estructural.",
+            "en": "Testing framework used by the demonstrators; a software test does not certify a structural design."
+          }
+        }
+      ],
+      "image": {
+        "src": "assets/insight-python-review.svg",
+        "source": {
+          "es": "Diagrama vectorial original del flujo de revisión del demostrador.",
+          "en": "Original vector diagram of the demonstrator's review workflow."
+        },
+        "software": "SVG",
+        "date": "2026-10-08",
+        "description": {
+          "es": "Tabla sintética SERVICE_A con cuatro niveles y su perfil de desplazamiento, conectados mediante controles de datos.",
+          "en": "Synthetic SERVICE_A table with four levels and its displacement profile, connected through data checks."
+        },
+        "usage": {
+          "es": "Datos de demostración del portafolio 2026; no son resultados de ETABS ni de un proyecto profesional.",
+          "en": "2026 portfolio demonstration data; not ETABS output or results from a professional project."
+        },
+        "caption": {
+          "es": "SERVICE_A: cotas 0, 3, 6 y 9 m; desplazamientos 0, 2, 6 y 12 mm. Validar unidades y correspondencia entre niveles precede al cálculo de diferencias.",
+          "en": "SERVICE_A: elevations 0, 3, 6 and 9 m; displacements 0, 2, 6 and 12 mm. Unit and level checks precede calculation of differences."
+        },
+        "width": 1000,
+        "height": 600
+      },
+      "es": {
+        "title": "Cómo integrar Python en la revisión de modelos estructurales",
+        "subtitle": "Del archivo exportado a una comprobación reproducible: contrato de datos, cálculo y trazabilidad.",
+        "summary": "Un programa útil conserva el significado de los resultados. El demostrador por niveles muestra cómo validar unidades, comparar estados compatibles y documentar cada transformación antes de emitir conclusiones.",
+        "category": "Python y verificación",
+        "status": "Nota técnica · Demostrador de portafolio 2026",
+        "scope": "Demostradores desarrollados para este portafolio en 2026 con datos sintéticos. No acreditan uso en proyectos históricos ni verifican cumplimiento normativo.",
+        "imageAlt": "Tabla conceptual de cuatro niveles SERVICE_A y perfil de desplazamientos, con controles de unidades y datos.",
+        "facts": [
+          {
+            "label": "Revisión",
+            "value": "08.10.2026"
+          },
+          {
+            "label": "Implementación",
+            "value": "Python estándar · CSV documentado"
+          },
+          {
+            "label": "Alcance",
+            "value": "Datos sintéticos · sin conexión API"
+          }
+        ],
+        "sections": [
+          {
+            "title": "La pregunta estructural define el programa",
+            "paragraphs": [
+              "Revisar un modelo no consiste en acumular tablas. Primero se define qué decisión requiere evidencia: identificar un cambio de rigidez, comparar desplazamientos de servicio o comprobar equilibrio. Después se seleccionan variables, estados y tolerancias. Python permite repetir operaciones y registrar excepciones; interpretar una diferencia sigue exigiendo conocer la estructura, la carga y la idealización.",
+              "El laboratorio publicado acompaña este método con código ejecutable y datos sintéticos. Fue construido para este portafolio en 2026; no se atribuye su utilización a Sunsetgolf, CEPITOCE, CIDELSA ni otros proyectos históricos."
+            ]
+          },
+          {
+            "title": "Establecer un contrato antes de leer el CSV",
+            "paragraphs": [
+              "El módulo csv convierte filas en registros, pero no conoce unidades ni compatibilidad estructural [1]. El formato del demostrador exige case, level, elevation, displacement, elevation_unit y displacement_unit. Cada caso representa un estado de desplazamientos firmados y simultáneos sobre los mismos niveles.",
+              "En una exportación comercial se revisan previamente casos seleccionados, ejes, ubicación de lectura y significado del resultado [2–3]. Para usar datos reales, hay que adaptar esa exportación al formato documentado y conservar su procedencia. No existe aquí una conexión automática con ETABS o SAP2000."
+            ],
+            "table": {
+              "headers": [
+                "Dato",
+                "Control necesario",
+                "Error que evita"
+              ],
+              "rows": [
+                [
+                  "case + level",
+                  "Identificador único; niveles equivalentes",
+                  "Comparar plantas distintas"
+                ],
+                [
+                  "elevation / displacement",
+                  "Número finito y unidad declarada",
+                  "Leer NaN o confundir mm con m"
+                ],
+                [
+                  "Estado de respuesta",
+                  "Mismo caso, dirección y estado compatible",
+                  "Restar máximos no simultáneos"
+                ]
+              ]
+            }
+          },
+          {
+            "title": "Normalizar sin esconder errores",
+            "paragraphs": [
+              "La entrada admite m, cm y mm; el proceso normaliza cotas y desplazamientos a metros. La presentación puede expresar desplazamientos en milímetros, conservando la unidad visible. Una unidad desconocida se rechaza. También se detectan campos ausentes, registros duplicados, valores no finitos y perfiles de niveles incompatibles. Corregir silenciosamente una celda vacía como cero modificaría el modelo que se pretende revisar.",
+              "Los nombres de caso y nivel siguen el contrato documentado, que excluye identificadores interpretables como fórmulas de hoja de cálculo. Debe mantenerse separado el archivo original del resultado procesado, con caso de referencia, unidades de salida y versión del código identificados."
+            ]
+          },
+          {
+            "title": "Ejemplo verificable: dos perfiles de servicio",
+            "paragraphs": [
+              "SERVICE_A contiene cotas 0, 3, 6 y 9 m y desplazamientos 0, 2, 6 y 12 mm. SERVICE_B mantiene las cotas y utiliza 0, 3, 8 y 15 mm. Las diferencias B − A son 0, 1, 2 y 3 mm. Para A, las derivas geométricas son 0,000667; 0,001333 y 0,002. El máximo de B es 7/3000 ≈ 0,002333.",
+              "Estos valores se calculan entre niveles consecutivos del mismo estado. No son derivas reglamentarias amplificadas ni se comparan automáticamente con un límite. Una envolvente modal o máximos independientes de una historia temporal requieren otro tratamiento y no son entradas válidas para esta resta."
+            ],
+            "equation": "Δuᵢ = uᵢ,B − uᵢ,A;  θᵢ = (uᵢ − uᵢ₋₁)/(1000 × (zᵢ − zᵢ₋₁)), con u en mm y z en m",
+            "code": {
+              "language": "python",
+              "text": "from math import isclose\n\nz_m = [0.0, 3.0, 6.0, 9.0]\nu_mm = [0.0, 2.0, 6.0, 12.0]\ndrift = [(u_mm[i] - u_mm[i-1]) / (1000 * (z_m[i] - z_m[i-1]))\n         for i in range(1, len(z_m))]\nassert isclose(max(drift), 0.002, rel_tol=1e-12)"
+            }
+          },
+          {
+            "title": "Probar resultados y rechazos",
+            "paragraphs": [
+              "Una prueba independiente comprueba el máximo anterior; otras entradas deben provocar errores controlados. Conviene verificar que convertir todos los desplazamientos de mm a m conserva el resultado y que permutar filas no altera el perfil ordenado. Las comparaciones numéricas usan tolerancias explícitas y comprueban finitud [4]. unittest organiza estas comprobaciones [5].",
+              "El segundo demostrador ofrece una referencia diferente: un voladizo elástico con solución cerrada. Ayuda a distinguir validación de lectura, equilibrio, dependencia de parámetros y alcance mecánico; ninguna de estas comprobaciones demuestra por sí sola conformidad normativa."
+            ],
+            "links": [
+              {
+                "href": {
+                  "es": "laboratorio/resultados-por-nivel.html",
+                  "en": "en/laboratorio/resultados-por-nivel.html"
+                },
+                "label": {
+                  "es": "Abrir demostrador por niveles",
+                  "en": "Open story-results demonstrator"
+                }
+              },
+              {
+                "href": "python/process_results.py",
+                "label": {
+                  "es": "Ver código Python del procesador",
+                  "en": "View Python processor source"
+                }
+              },
+              {
+                "href": "python/examples/storey-results.csv",
+                "label": {
+                  "es": "Descargar CSV sintético",
+                  "en": "Download synthetic CSV"
+                }
+              },
+              {
+                "href": "python/README.md",
+                "label": {
+                  "es": "Ejecución, pruebas y contrato de datos",
+                  "en": "Execution, tests and data contract"
+                }
+              }
+            ]
+          },
+          {
+            "title": "Del resultado al informe técnico",
+            "bullets": [
+              "Registrar qué archivos y casos se compararon, con unidades y supuestos.",
+              "Separar datos rechazados, hallazgos geométricos y verificaciones normativas pendientes.",
+              "Conservar exportaciones originales, resultados CSV/JSON y revisión del código.",
+              "Revisar manualmente casos representativos y explicar las discrepancias."
+            ],
+            "paragraphs": [
+              "La automatización aporta trazabilidad cuando un tercero puede reconstruir la operación y comprender sus límites. Un gráfico debe conducir a una pregunta estructural concreta y a una decisión documentada."
+            ]
+          }
+        ]
+      },
+      "en": {
+        "title": "How to integrate Python into structural model review",
+        "subtitle": "From exported files to reproducible checks: data contracts, calculations and traceability.",
+        "summary": "Useful software preserves the meaning of results. The story-results demonstrator shows how to validate units, compare compatible states and document transformations before drawing conclusions.",
+        "category": "Python and verification",
+        "status": "Technical note · 2026 portfolio demonstrator",
+        "scope": "Demonstrators developed for this portfolio in 2026 using synthetic data. They do not establish use in historical projects or verify code compliance.",
+        "imageAlt": "Conceptual four-level SERVICE_A table and displacement profile with unit and data checks.",
+        "facts": [
+          {
+            "label": "Reviewed",
+            "value": "2026-10-08"
+          },
+          {
+            "label": "Implementation",
+            "value": "Python standard library · documented CSV"
+          },
+          {
+            "label": "Scope",
+            "value": "Synthetic data · no API connection"
+          }
+        ],
+        "sections": [
+          {
+            "title": "The structural question defines the program",
+            "paragraphs": [
+              "Model review starts by identifying a decision that requires evidence: locating a stiffness change, comparing service displacements or checking equilibrium. Variables, response states and tolerances follow from that decision. Python makes operations repeatable and exceptions traceable; interpreting a difference still requires understanding the structure, loading and idealization.",
+              "The published laboratory supports this method with executable code and synthetic data. It was created for this portfolio in 2026. Its use is not attributed to Sunsetgolf, CEPITOCE, CIDELSA or other historical projects."
+            ]
+          },
+          {
+            "title": "Define a contract before reading the CSV",
+            "paragraphs": [
+              "The csv module turns rows into records but has no knowledge of units or structural compatibility [1]. The demonstrator requires case, level, elevation, displacement, elevation_unit and displacement_unit. Each case represents one signed, simultaneous displacement state at the same levels.",
+              "Before processing commercial exports, review selected cases, axes, measurement locations and the meaning of each result [2–3]. Real exports must be mapped to the documented format while preserving provenance. No automatic connection to ETABS or SAP2000 is implemented here."
+            ],
+            "table": {
+              "headers": [
+                "Data",
+                "Required check",
+                "Error prevented"
+              ],
+              "rows": [
+                [
+                  "case + level",
+                  "Unique identifier; matching levels",
+                  "Comparing different floors"
+                ],
+                [
+                  "elevation / displacement",
+                  "Finite number and declared unit",
+                  "Reading NaN or mixing mm and m"
+                ],
+                [
+                  "Response state",
+                  "Same case, direction and compatible state",
+                  "Subtracting nonsimultaneous maxima"
+                ]
+              ]
+            }
+          },
+          {
+            "title": "Normalize without hiding errors",
+            "paragraphs": [
+              "Input accepts m, cm and mm. Processing normalizes both elevations and displacements to metres. Displays may express displacement in millimetres with the unit clearly identified. Unknown units are rejected, along with missing fields, duplicate records, nonfinite values and incompatible level profiles. Silently replacing an empty cell with zero would change the model being reviewed.",
+              "Case and level names follow the documented contract, excluding identifiers that spreadsheet software might interpret as formulas. Preserve the original file separately from processed results and identify the reference case, output units and code version."
+            ]
+          },
+          {
+            "title": "A checkable example: two service profiles",
+            "paragraphs": [
+              "SERVICE_A contains elevations of 0, 3, 6 and 9 m and displacements of 0, 2, 6 and 12 mm. SERVICE_B uses the same elevations with displacements of 0, 3, 8 and 15 mm. Differences B − A are 0, 1, 2 and 3 mm. For A, geometric drift ratios are 0.000667, 0.001333 and 0.002. The maximum for B is 7/3000 ≈ 0.002333.",
+              "These values are calculated between consecutive levels in the same response state. They are not amplified code-defined drift demands and are not automatically compared with a limit. Modal envelopes or independent time-history maxima require different processing and are invalid inputs for this subtraction."
+            ],
+            "equation": "Δuᵢ = uᵢ,B − uᵢ,A;  θᵢ = (uᵢ − uᵢ₋₁)/(1000 × (zᵢ − zᵢ₋₁)), with u in mm and z in m",
+            "code": {
+              "language": "python",
+              "text": "from math import isclose\n\nz_m = [0.0, 3.0, 6.0, 9.0]\nu_mm = [0.0, 2.0, 6.0, 12.0]\ndrift = [(u_mm[i] - u_mm[i-1]) / (1000 * (z_m[i] - z_m[i-1]))\n         for i in range(1, len(z_m))]\nassert isclose(max(drift), 0.002, rel_tol=1e-12)"
+            }
+          },
+          {
+            "title": "Test results and rejected inputs",
+            "paragraphs": [
+              "An independent check verifies the maximum above; other inputs should produce controlled errors. Converting all input displacements from mm to m should preserve the result, while shuffling rows should not change the sorted profile. Numerical comparisons require explicit tolerances and finiteness checks [4]. unittest organizes these checks [5].",
+              "The second demonstrator offers a different benchmark: an elastic cantilever with a closed-form solution. It helps distinguish data parsing, equilibrium, parameter dependence and mechanical scope. None of these checks establishes code compliance on its own."
+            ],
+            "links": [
+              {
+                "href": {
+                  "es": "laboratorio/resultados-por-nivel.html",
+                  "en": "en/laboratorio/resultados-por-nivel.html"
+                },
+                "label": {
+                  "es": "Abrir demostrador por niveles",
+                  "en": "Open story-results demonstrator"
+                }
+              },
+              {
+                "href": "python/process_results.py",
+                "label": {
+                  "es": "Ver código Python del procesador",
+                  "en": "View Python processor source"
+                }
+              },
+              {
+                "href": "python/examples/storey-results.csv",
+                "label": {
+                  "es": "Descargar CSV sintético",
+                  "en": "Download synthetic CSV"
+                }
+              },
+              {
+                "href": "python/README.md",
+                "label": {
+                  "es": "Ejecución, pruebas y contrato de datos",
+                  "en": "Execution, tests and data contract"
+                }
+              }
+            ]
+          },
+          {
+            "title": "From results to the technical report",
+            "bullets": [
+              "Record the files and cases compared, including units and assumptions.",
+              "Separate rejected data, geometric findings and outstanding code checks.",
+              "Preserve original exports, processed CSV/JSON results and the code revision.",
+              "Manually review representative cases and explain discrepancies."
+            ],
+            "paragraphs": [
+              "Automation supports traceability when another engineer can reconstruct the operation and understand its limits. A plot should lead to a specific structural question and a documented decision."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "design-codes",
+      "slug": "interpretar-aplicar-normas-acero-concreto",
+      "date": "2026-10-08",
+      "references": [
+        {
+          "title": {
+            "es": "MVCS — Reglamento Nacional de Edificaciones: índice oficial y textos E.020, E.050 y E.060",
+            "en": "MVCS — National Building Regulations: official index and E.020, E.050 and E.060 texts"
+          },
+          "url": "https://www.gob.pe/institucion/vivienda/informes-publicaciones/2309793-reglamento-nacional-de-edificaciones-rne",
+          "note": {
+            "es": "E.050: R.M. 406-2018-VIVIENDA; E.060: D.S. 010-2009-VIVIENDA. La fecha de publicación del portal no constituye una nueva edición de todas las normas.",
+            "en": "E.050: Resolution 406-2018-VIVIENDA; E.060: Decree 010-2009-VIVIENDA. The portal publication date is not a new edition of every standard."
+          }
+        },
+        {
+          "title": {
+            "es": "MVCS — R.M. 183-2026-VIVIENDA, modificación de la N.T. E.030 y texto E.030 2026; resolución de 28 de abril de 2026",
+            "en": "MVCS — Ministerial Resolution 183-2026-VIVIENDA, amendment to N.T. E.030 and the 2026 E.030 text; resolution of 28 April 2026"
+          },
+          "url": "https://www.gob.pe/institucion/vivienda/normas-legales/8081915-183-2026-vivienda",
+          "note": {
+            "es": "Resolución aprobada el 28 de abril de 2026 y sus anexos oficiales. La aplicabilidad se revisa junto con su disposición transitoria modificada.",
+            "en": "Resolution approved on 28 April 2026 and its official annexes. Applicability is reviewed together with its amended transitional provision."
+          }
+        },
+        {
+          "title": {
+            "es": "MVCS — R.M. 217-2026-VIVIENDA, modificación de la disposición transitoria de la R.M. 183-2026; resolución de 2 de junio de 2026",
+            "en": "MVCS — Ministerial Resolution 217-2026-VIVIENDA, amendment to the transitional provision of Resolution 183-2026; resolution of 2 June 2026"
+          },
+          "url": "https://www.gob.pe/institucion/vivienda/normas-legales/8219609-217-2026-vivienda",
+          "note": {
+            "es": "Resolución de 2 de junio de 2026 que modifica la disposición transitoria de la R.M. 183-2026-VIVIENDA; no se presenta como otra edición técnica de E.030.",
+            "en": "Resolution of 2 June 2026 amending the transitional provision of Resolution 183-2026-VIVIENDA; it is not presented as another technical edition of E.030."
+          }
+        },
+        {
+          "title": {
+            "es": "ACI CODE-318-25 — Building Code for Structural Concrete: Code Requirements and Commentary (2025)",
+            "en": "ACI CODE-318-25 — Building Code for Structural Concrete: Code Requirements and Commentary (2025)"
+          },
+          "url": "https://www.concrete.org/topicsinconcrete/318buildingcodeportal.aspx",
+          "note": {
+            "es": "Edición de referencia verificada en el portal oficial de ACI; no se atribuye su aplicación a proyectos anteriores ni su adopción automática en Perú.",
+            "en": "Reference edition verified through ACI's official portal; its use in earlier projects or automatic adoption in Peru is not implied."
+          }
+        },
+        {
+          "title": {
+            "es": "ANSI/AISC 360-22 — Specification for Structural Steel Buildings (2022)",
+            "en": "ANSI/AISC 360-22 — Specification for Structural Steel Buildings (2022)"
+          },
+          "url": "https://www.aisc.org/aisc/publications/current-standards/aisc-360/",
+          "note": {
+            "es": "Edición 2022 de la especificación general. Su aplicación y sus erratas deben identificarse en la base de diseño del proyecto.",
+            "en": "2022 edition of the general specification. Its applicability and errata should be identified in the project's design basis."
+          }
+        },
+        {
+          "title": {
+            "es": "ASCE/SEI 7-22 — Minimum Design Loads and Associated Criteria for Buildings and Other Structures (2022)",
+            "en": "ASCE/SEI 7-22 — Minimum Design Loads and Associated Criteria for Buildings and Other Structures (2022)"
+          },
+          "url": "https://www.asce.org/publications-and-news/asce-7/",
+          "note": {
+            "es": "Portal oficial con suplementos y erratas. La base de diseño debe identificar cuáles corresponden al proyecto y su adopción.",
+            "en": "Official portal with supplements and errata. The design basis must identify which apply to the project and their adoption status."
+          }
+        },
+        {
+          "title": {
+            "es": "AISC — Revisions and Errata, listado oficial (revisado 2026-10-08)",
+            "en": "AISC — Revisions and Errata, official listing (reviewed 2026-10-08)"
+          },
+          "url": "https://www.aisc.org/aisc/publications/revisions-and-errata/",
+          "note": {
+            "es": "Listado oficial revisado el 8 de octubre de 2026. Antes de diseñar, comprobar las correcciones correspondientes a cada edición utilizada.",
+            "en": "Official listing reviewed on 8 October 2026. Before design, check the corrections corresponding to each edition used."
+          }
+        },
+        {
+          "title": {
+            "es": "ASCE/SEI 41-23 — Seismic Evaluation and Retrofit of Existing Buildings (2023), presentación oficial",
+            "en": "ASCE/SEI 41-23 — Seismic Evaluation and Retrofit of Existing Buildings (2023), official overview"
+          },
+          "url": "https://www.asce.org/publications-and-news/codes-and-standards/asce-sei-41",
+          "note": {
+            "es": "Presentación oficial de la edición 2023. El texto completo y su adopción deben consultarse para establecer objetivos y criterios específicos.",
+            "en": "Official overview of the 2023 edition. Consult the full text and its adoption status to establish specific objectives and criteria."
+          }
+        },
+        {
+          "title": {
+            "es": "ACI CODE-562-25 — Assessment, Repair, and Rehabilitation of Existing Concrete Structures (2025), ficha y alcance oficiales",
+            "en": "ACI CODE-562-25 — Assessment, Repair, and Rehabilitation of Existing Concrete Structures (2025), official listing and scope"
+          },
+          "url": "https://www.concrete.org/store/productdetail.aspx?itemid=56225",
+          "note": {
+            "es": "Ficha oficial de la edición 2025 para concreto existente. La nota distingue su alcance del de la evaluación sísmica de edificios.",
+            "en": "Official listing for the 2025 edition addressing existing concrete structures. This note distinguishes its scope from seismic evaluation of buildings."
+          }
+        }
+      ],
+      "image": {
+        "src": "assets/insight-design-codes.svg",
+        "source": {
+          "es": "Diagrama editorial vectorial original, preparado para esta nota.",
+          "en": "Original editorial vector diagram prepared for this note."
+        },
+        "software": "SVG",
+        "date": "2026-10-08",
+        "description": {
+          "es": "Secuencia desde base de diseño y modelo hasta verificaciones de resistencia, servicio y detalle, con registro de fuente y edición.",
+          "en": "Sequence from design basis and model to strength, serviceability and detailing checks, with source and edition records."
+        },
+        "usage": {
+          "es": "Método conceptual de revisión; no reproduce una tabla normativa ni representa la aprobación de un proyecto.",
+          "en": "Conceptual review method; not a reproduced code table or evidence of project approval."
+        },
+        "caption": {
+          "es": "Una base de diseño conecta el documento aplicable con hipótesis, demanda, capacidad y detalle. Cada comparación conserva su combinación, unidades y condición de aceptación.",
+          "en": "A design basis connects the applicable document to assumptions, demand, capacity and detailing. Each comparison retains its combination, units and acceptance condition."
+        },
+        "width": 1000,
+        "height": 600
+      },
+      "es": {
+        "title": "Cómo interpretar y aplicar normas de diseño en acero y concreto",
+        "subtitle": "Convertir documentos y ediciones en decisiones de modelación, verificaciones y detalles trazables.",
+        "summary": "La aplicación normativa empieza por definir jurisdicción, alcance y edición. Después exige conectar cada requisito con un modelo compatible, una demanda identificable y una comprobación documentada.",
+        "category": "Normativa y criterio estructural",
+        "status": "Nota técnica · Casos conceptuales",
+        "scope": "Criterios educativos y ejemplos conceptuales. Las ediciones se citan como referencias consultadas; su adopción y uso en cada proyecto requieren documentación.",
+        "imageAlt": "Diagrama conceptual que conecta base normativa, modelo estructural y verificaciones de resistencia, servicio y detalle.",
+        "facts": [
+          {
+            "label": "Revisión",
+            "value": "08.10.2026"
+          },
+          {
+            "label": "Contexto",
+            "value": "RNE Perú · referencias ACI, AISC y ASCE"
+          },
+          {
+            "label": "Alcance",
+            "value": "Método educativo · sin diseño de obra"
+          }
+        ],
+        "sections": [
+          {
+            "title": "Comenzar por la base de diseño",
+            "paragraphs": [
+              "Una norma no se aplica seleccionando su nombre en el programa. La base de diseño debe identificar jurisdicción, uso, sistema resistente, materiales, condiciones del sitio y requisitos contractuales. También debe distinguir obra nueva, evaluación existente e intervención. Esa definición determina qué documentos gobiernan y cuáles se consultan como apoyo.",
+              "Conviene registrar designación, edición, modificaciones, fuente oficial y motivo de aplicación. Una edición recién publicada puede servir para estudiar cambios sin convertirse en la adoptada por un expediente. Las referencias actuales de esta nota no se atribuyen retrospectivamente a los proyectos del portafolio."
+            ]
+          },
+          {
+            "title": "Relacionar acciones, análisis y material",
+            "paragraphs": [
+              "Para un edificio peruano de concreto, E.020 organiza cargas, E.030 la base sismorresistente, E.060 el diseño y detallado del concreto y E.050 la relación geotécnica y de cimentaciones [1]. Deben coordinarse las hipótesis y transferencias entre esas disciplinas. E.030 2026 se vincula con la R.M. 183-2026 y su disposición transitoria modificada por la R.M. 217-2026 [2–3].",
+              "ACI 318-25 es una referencia verificada para concreto; AISC 360-22, para estructuras de acero; ASCE 7-22, para acciones y criterios asociados [4–6]. Su disponibilidad editorial no demuestra adopción local ni autoriza combinar selectivamente reglas de ediciones diferentes. Deben revisarse también suplementos y erratas oficiales [6–7]."
+            ]
+          },
+          {
+            "title": "Tres decisiones que deben quedar visibles",
+            "table": {
+              "headers": [
+                "Caso conceptual",
+                "Decisión de modelación",
+                "Verificación/documentación"
+              ],
+              "rows": [
+                [
+                  "Edificio de concreto",
+                  "Masas, rigidez efectiva y diafragmas coherentes",
+                  "Derivas, elementos, detallado y transferencia a cimentaciones"
+                ],
+                [
+                  "Acero industrial",
+                  "Acciones de equipos, estabilidad y flexibilidad de conexiones",
+                  "Miembros, uniones, servicio, anclajes y montaje"
+                ],
+                [
+                  "Evaluación y refuerzo",
+                  "Estado existente y propiedades con incertidumbre",
+                  "Objetivo de desempeño, mecanismos y compatibilidad de intervención"
+                ]
+              ]
+            },
+            "paragraphs": [
+              "En concreto, obtener esfuerzos no resuelve el anclaje del refuerzo ni la compatibilidad de deformaciones. En acero, una relación demanda/capacidad de un miembro no comprueba la unión ni su arriostramiento. En evaluación, ASCE 41-23 y ACI 562-25 tienen alcances propios [8–9]; no basta trasladar una lista de diseño nuevo al sistema existente."
+            ]
+          },
+          {
+            "title": "Separar las comprobaciones de resistencia y servicio",
+            "paragraphs": [
+              "Una comprobación de resistencia debe comparar demanda y capacidad compatibles. En formato LRFD se identifica la demanda factorizada y la resistencia de diseño; en ASD, la demanda correspondiente y la resistencia admisible. Las reglas para combinar acciones y evaluar estados límite pertenecen al mismo marco adoptado. Mezclar una demanda LRFD con una capacidad ASD altera esa comparación.",
+              "Ejemplo puramente conceptual: se suponen Mu = 120 kN·m y una resistencia de diseño ya determinada de 150 kN·m. La razón es 0,80. En otra comprobación, una flecha de servicio de 8 mm se compara con un criterio del proyecto supuesto de 16 mm: razón 0,50. No se han dimensionado una sección ni sus conexiones, y 16 mm no se presenta como límite normativo general."
+            ],
+            "equation": "ηresistencia = Mu / (φMn) = 120/150 = 0,80;  ηservicio = δservicio / δcriterio = 8/16 = 0,50"
+          },
+          {
+            "title": "Programar una regla exige conservar su alcance",
+            "paragraphs": [
+              "Antes de automatizar, debe escribirse una ficha de verificación: elemento y ubicación, acción o combinación, estado límite, unidades, cláusula/edición, parámetros y excepciones. El resultado se clasifica como comprobado, no aplicable o pendiente; un dato ausente no equivale a cumplimiento.",
+              "El voladizo descargable ilustra esta frontera: calcula equilibrio, flecha y tensión elástica a partir de hipótesis declaradas. Un cociente entre tensión y valor de referencia no sustituye verificaciones de pandeo, interacción, fatiga o detalle. Python puede producir datos para una revisión normativa; la selección del criterio requiere una decisión independiente."
+            ],
+            "links": [
+              {
+                "href": {
+                  "es": "laboratorio/voladizo-parametrico.html",
+                  "en": "en/laboratorio/voladizo-parametrico.html"
+                },
+                "label": {
+                  "es": "Explorar el voladizo y sus límites",
+                  "en": "Explore the cantilever and its limits"
+                }
+              },
+              {
+                "href": "python/cantilever.py",
+                "label": {
+                  "es": "Ver el cálculo Python",
+                  "en": "View the Python calculation"
+                }
+              },
+              {
+                "href": {
+                  "es": "index.html#normativa",
+                  "en": "en/index.html#normativa"
+                },
+                "label": {
+                  "es": "Consultar normativa y criterios de diseño",
+                  "en": "Explore design codes and criteria"
+                }
+              }
+            ]
+          },
+          {
+            "title": "Errores frecuentes y cierre de la revisión",
+            "bullets": [
+              "Citar una norma sin registrar edición, adopción ni erratas.",
+              "Confundir una guía técnica con una exigencia obligatoria.",
+              "Tomar una envolvente de máximos como un estado de equilibrio simultáneo.",
+              "Cerrar una revisión de resistencia sin documentar servicio, estabilidad y detalles."
+            ],
+            "paragraphs": [
+              "Un expediente revisable conecta cada decisión con sus entradas, documento aplicable y consecuencia constructiva. La aprobación de un cálculo aislado no sustituye esa continuidad."
+            ]
+          }
+        ]
+      },
+      "en": {
+        "title": "How to interpret and apply steel and concrete design codes",
+        "subtitle": "Translate documents and editions into traceable modelling decisions, checks and details.",
+        "summary": "Code application begins with jurisdiction, scope and edition. Each requirement must then connect to a compatible model, an identifiable demand and a documented check.",
+        "category": "Codes and engineering judgement",
+        "status": "Technical note · Conceptual cases",
+        "scope": "Educational criteria and conceptual examples. Editions are cited as consulted references; adoption and use on each project require documentation.",
+        "imageAlt": "Conceptual diagram connecting the design basis, structural model and strength, serviceability and detailing checks.",
+        "facts": [
+          {
+            "label": "Reviewed",
+            "value": "2026-10-08"
+          },
+          {
+            "label": "Context",
+            "value": "Peruvian RNE · ACI, AISC and ASCE references"
+          },
+          {
+            "label": "Scope",
+            "value": "Educational method · not project-specific design"
+          }
+        ],
+        "sections": [
+          {
+            "title": "Start with the design basis",
+            "paragraphs": [
+              "Applying a code requires more than selecting its name in software. The design basis identifies jurisdiction, occupancy, resisting system, materials, site conditions and contractual requirements. It also distinguishes new construction, assessment of existing structures and intervention. These decisions determine which documents govern and which provide supporting guidance.",
+              "Record designation, edition, amendments, official source and the reason for applicability. A newly published edition may support a review of changes without becoming the edition adopted for a submission. Current references in this note are not retrospectively attributed to portfolio projects."
+            ]
+          },
+          {
+            "title": "Connect actions, analysis and materials",
+            "paragraphs": [
+              "For a Peruvian concrete building, E.020 addresses loads, E.030 the seismic basis, E.060 concrete design and detailing, and E.050 geotechnical and foundation matters [1]. Assumptions and transfers between disciplines must be coordinated. E.030 2026 is linked to Resolution 183-2026 and its transitional provision as amended by Resolution 217-2026 [2–3].",
+              "ACI 318-25 is a verified reference for concrete; AISC 360-22 for structural steel; ASCE 7-22 for actions and associated criteria [4–6]. Publication does not establish local adoption or permit selective mixing of requirements from different editions. Official supplements and errata also need review [6–7]."
+            ]
+          },
+          {
+            "title": "Three decisions to make explicit",
+            "table": {
+              "headers": [
+                "Conceptual case",
+                "Modelling decision",
+                "Verification/documentation"
+              ],
+              "rows": [
+                [
+                  "Concrete building",
+                  "Consistent masses, effective stiffness and diaphragms",
+                  "Drift, members, detailing and transfer to foundations"
+                ],
+                [
+                  "Industrial steel",
+                  "Equipment actions, stability and connection flexibility",
+                  "Members, connections, serviceability, anchors and erection"
+                ],
+                [
+                  "Assessment and retrofit",
+                  "As-built condition and uncertain properties",
+                  "Performance objective, mechanisms and intervention compatibility"
+                ]
+              ]
+            },
+            "paragraphs": [
+              "In concrete, obtaining internal forces does not resolve reinforcement anchorage or deformation compatibility. In steel, a member demand/capacity ratio does not verify its connection or bracing. ASCE 41-23 and ACI 562-25 have distinct assessment scopes [8–9]; transferring a new-design checklist to an existing system is insufficient."
+            ]
+          },
+          {
+            "title": "Keep strength and serviceability checks distinct",
+            "paragraphs": [
+              "A strength check compares compatible demand and resistance. LRFD identifies factored demand and design strength; ASD uses the corresponding demand and allowable strength. Action combinations and limit-state evaluation belong to the adopted framework. Comparing LRFD demand with ASD allowable strength changes the intended basis.",
+              "In a purely conceptual example, assume Mu = 120 kN·m and a previously determined design strength of 150 kN·m: the ratio is 0.80. In a separate check, an 8 mm service deflection is compared with an assumed project criterion of 16 mm: the ratio is 0.50. No section or connection has been designed, and 16 mm is not presented as a general code limit."
+            ],
+            "equation": "ηstrength = Mu / (φMn) = 120/150 = 0.80;  ηservice = δservice / δcriterion = 8/16 = 0.50"
+          },
+          {
+            "title": "Programming a rule requires preserving its scope",
+            "paragraphs": [
+              "Before automation, define a verification record: member and location, action or combination, limit state, units, clause and edition, parameters and exceptions. Classify the outcome as checked, not applicable or pending. Missing information does not establish compliance.",
+              "The downloadable cantilever illustrates this boundary: it calculates equilibrium, deflection and elastic stress from stated assumptions. A stress-to-reference ratio does not replace buckling, interaction, fatigue or detailing checks. Python can produce data for code review; selecting the criterion remains a separate engineering decision."
+            ],
+            "links": [
+              {
+                "href": {
+                  "es": "laboratorio/voladizo-parametrico.html",
+                  "en": "en/laboratorio/voladizo-parametrico.html"
+                },
+                "label": {
+                  "es": "Explorar el voladizo y sus límites",
+                  "en": "Explore the cantilever and its limits"
+                }
+              },
+              {
+                "href": "python/cantilever.py",
+                "label": {
+                  "es": "Ver el cálculo Python",
+                  "en": "View the Python calculation"
+                }
+              },
+              {
+                "href": {
+                  "es": "index.html#normativa",
+                  "en": "en/index.html#normativa"
+                },
+                "label": {
+                  "es": "Consultar normativa y criterios de diseño",
+                  "en": "Explore design codes and criteria"
+                }
+              }
+            ]
+          },
+          {
+            "title": "Common mistakes and review close-out",
+            "bullets": [
+              "Citing a code without recording edition, adoption or errata.",
+              "Treating a technical guide as a mandatory requirement.",
+              "Using an envelope of maxima as a simultaneous equilibrium state.",
+              "Closing a strength review without documenting serviceability, stability and details."
+            ],
+            "paragraphs": [
+              "A reviewable record connects each decision to its inputs, applicable document and construction consequence. Approval of an isolated calculation does not establish that continuity."
+            ]
           }
         ]
       }

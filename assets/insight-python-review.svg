@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600" role="img" aria-labelledby="title desc">
+<title id="title">Datos estructurales y revisión con Python / Structural data and Python review</title>
+<desc id="desc">Datos sintéticos SERVICE_A: cotas de cero, tres, seis y nueve metros y desplazamientos de cero, dos, seis y doce milímetros. Un flujo de validación conecta la tabla y el perfil. Synthetic SERVICE_A data: elevations zero, three, six and nine metres; displacements zero, two, six and twelve millimetres. Not results from a project.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 9 5 1 9" fill="none" stroke="#245563" stroke-width="1.5"/></marker></defs>
+<rect width="1000" height="600" fill="#eef2f1"/>
+<g font-family="Arial,Helvetica,sans-serif" fill="#24373f">
+<text x="54" y="58" font-size="29" font-weight="700">DE LOS DATOS AL PERFIL</text>
+<text x="54" y="89" font-size="19" fill="#4b6670">FROM DATA TO A REVIEWABLE PROFILE</text>
+<path d="M54 112H946" stroke="#bdccce"/>
+<text x="54" y="146" font-size="20" font-weight="700">01 / CSV · SERVICE_A</text>
+<rect x="54" y="171" width="370" height="264" fill="#fff" stroke="#b9cacc"/>
+<rect x="54" y="171" width="370" height="53" fill="#dfe9e9"/>
+<g font-size="22" text-anchor="middle"><text x="114" y="205">level</text><text x="239" y="205">z [m]</text><text x="354" y="205">u [mm]</text></g>
+<g stroke="#d1dcdc"><path d="M54 224H424M54 277H424M54 330H424M54 383H424"/><path d="M177 171V435M299 171V435"/></g>
+<g font-size="24" text-anchor="middle">
+<text x="114" y="259">L00</text><text x="239" y="259">0</text><text x="354" y="259">0</text>
+<text x="114" y="312">L01</text><text x="239" y="312">3</text><text x="354" y="312">2</text>
+<text x="114" y="365">L02</text><text x="239" y="365">6</text><text x="354" y="365">6</text>
+<text x="114" y="418">L03</text><text x="239" y="418">9</text><text x="354" y="418">12</text>
+</g>
+<path d="M452 303H520" stroke="#245563" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+<text x="550" y="146" font-size="20" font-weight="700">02 / PERFIL · PROFILE</text>
+<g stroke="#c8d6d7" stroke-width="1"><path d="M600 200H914M600 276.667H914M600 353.333H914M600 430H914"/><path d="M750 200V430M900 200V430"/></g>
+<path d="M600 187V430H926" stroke="#557680" stroke-width="2" fill="none"/>
+<g font-size="20" fill="#4b6670" text-anchor="end"><text x="584" y="437">0</text><text x="584" y="360">3</text><text x="584" y="284">6</text><text x="584" y="207">9</text></g>
+<g font-size="20" fill="#4b6670" text-anchor="middle"><text x="600" y="461">0</text><text x="750" y="461">6</text><text x="900" y="461">12</text></g>
+<text x="550" y="181" font-size="19" fill="#4b6670">z [m]</text><text x="920" y="493" font-size="19" fill="#4b6670" text-anchor="end">u [mm]</text>
+<polyline points="600,430 650,353.333 750,276.667 900,200" fill="none" stroke="#245563" stroke-width="4"/>
+<g fill="#fff" stroke="#245563" stroke-width="3"><circle cx="600" cy="430" r="6"/><circle cx="650" cy="353.333" r="6"/><circle cx="750" cy="276.667" r="6"/><circle cx="900" cy="200" r="6"/></g>
+<text x="54" y="475" font-size="20">Unidades + niveles + estado</text><text x="54" y="502" font-size="18" fill="#4b6670">Units + levels + response state</text>
+<path d="M54 523H946" stroke="#bdccce"/>
+<text x="54" y="555" font-size="18" font-weight="700" fill="#245563">DATOS SINTÉTICOS / SYNTHETIC DATA</text>
+<text x="946" y="555" text-anchor="end" font-size="18" fill="#4b6670">PORTFOLIO DEMO · 2026</text>
+</g></svg>

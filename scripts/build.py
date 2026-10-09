@@ -10,6 +10,7 @@ import argparse
 import json
 import posixpath
 import re
+from engineering_sections import standards_home, standards_page, automation_home, demo_page
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = 'https://sergioambrosio714.github.io/'
@@ -67,7 +68,7 @@ def head(path, lang, title, description, counterpart, kind='website', home=False
 <meta property="og:title" content="{e(title)} — Sergio Ambrosio"><meta property="og:description" content="{e(description)}"><meta property="og:url" content="{canonical}">
 <meta property="og:image" content="{BASE}assets/og-cover.png"><meta property="og:image:alt" content="Sergio Ambrosio — Structural Engineering"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="{href(path, 'assets/favicon.svg')}" type="image/svg+xml">
-<link rel="stylesheet" href="{href(path, 'styles.css')}"><link rel="stylesheet" href="{href(path, 'editorial.css')}">
+<link rel="stylesheet" href="{href(path, 'styles.css')}"><link rel="stylesheet" href="{href(path, 'editorial.css')}"><link rel="stylesheet" href="{href(path, 'engineering.css')}">
 {scripts}
 <noscript><style>.nav-toggle,.control,.lab-reset,.filter-bar{{display:none!important}}@media(max-width:1100px){{.primary-nav{{display:flex;position:static;flex-wrap:wrap;flex-direction:row;grid-column:1/-1;width:100%;padding:12px 0;gap:12px}}.primary-nav a{{padding:4px 0}}.nav-row{{flex-wrap:wrap}}}}</style></noscript>
 </head><body class="editorial">
@@ -76,7 +77,7 @@ def head(path, lang, title, description, counterpart, kind='website', home=False
 
 def header(path, lang, counterpart):
     home = route(lang)
-    labels = [('inicio', 'Inicio', 'Home'), ('experiencia', 'Experiencia', 'Experience'), ('proyectos', 'Proyectos', 'Projects'), ('investigacion', 'Investigación', 'Research'), ('especialidades', 'Especialidades', 'Expertise'), ('notas', 'Notas técnicas', 'Insights'), ('perfil', 'Sobre mí', 'About'), ('contacto', 'Contacto', 'Contact')]
+    labels = [('inicio', 'Inicio', 'Home'), ('experiencia', 'Experiencia', 'Experience'), ('proyectos', 'Proyectos', 'Projects'), ('investigacion', 'Investigación', 'Research'), ('normativa', 'Normativa', 'Design codes'), ('especialidades', 'Especialidades', 'Expertise'), ('programacion', 'Python', 'Python'), ('notas', 'Notas técnicas', 'Insights'), ('perfil', 'Sobre mí', 'About'), ('contacto', 'Contacto', 'Contact')]
     nav = ''.join(f'<a href="{href(path, home)}#{key}">{tr(lang, es, en)}</a>' for key, es, en in labels)
     return f'''<header class="site-header" id="header"><div class="container identity-row">
 <a class="brand" href="{href(path, home)}" aria-label="Sergio Ambrosio, {tr(lang, 'inicio', 'home')}"><img src="{href(path, 'assets/logo.svg')}" width="37" height="37" alt=""><span><strong>SERGIO AMBROSIO</strong><small>STRUCTURAL ENGINEERING</small></span></a>
@@ -115,12 +116,16 @@ def references(item, lang):
     return f'<section id="referencias" class="reference-section"><h2>{tr(lang, "Fuentes y referencias", "Sources and references")}</h2><ol>{rows}</ol></section>'
 
 
-def sections(data):
+def sections(data, path, lang):
     result = []
     for index, sec in enumerate(data.get('sections', []), 1):
         content = ''.join(f'<p>{e(p)}</p>' for p in sec.get('paragraphs', []))
         if sec.get('equation'):
             content += f'<div class="equation">{e(sec["equation"])}</div>'
+        if sec.get('code'):
+            content += f'<pre class="article-code" tabindex="0"><code>{e(sec["code"]["text"])}</code></pre>'
+        if sec.get('links'):
+            content += '<div class="section-links">' + ''.join(f'<a href="{href(path, loc(link["href"], lang))}">{e(loc(link["label"], lang))} ↗</a>' for link in sec['links']) + '</div>'
         if sec.get('bullets'):
             content += '<ul>' + ''.join(f'<li>{e(p)}</li>' for p in sec['bullets']) + '</ul>'
         if sec.get('table'):
@@ -143,7 +148,7 @@ def article(item, group, lang):
     description = re.split(r'(?<=[.!?])\s+', data['summary'])[0]
     body = head(path, lang, data['title'], description, counterpart, 'article') + header(path, lang, counterpart)
     body += f'''<main id="contenido"><header class="article-heading container"><a class="back-link" href="{href(path, route(lang))}#{section_key}">← {label}</a><span class="eyebrow">{e(data.get('category', label))} / {e(item.get('year', date[:4]))}</span><h1>{e(data['title'])}</h1><p class="article-deck">{e(data.get('subtitle', data['summary']))}</p>{authors}<div class="article-status">{e(data.get('status', tr(lang, 'Nota de divulgación técnica', 'Technical explainer')))}<span>{tr(lang, 'Revisado', 'Reviewed')} {e(date)}</span></div>{scope}{facts(data)}</header>
-<div class="container article-layout"><aside class="article-aside"><nav aria-label="{tr(lang, 'Índice del artículo', 'Article contents')}"><span class="eyebrow">{tr(lang, 'En esta página', 'On this page')}</span>{toc}<a href="#referencias">{tr(lang, 'Fuentes', 'References')} ↗</a></nav><a class="aside-cv" href="{href(path, f'assets/cv-sergio-ambrosio-{lang}.pdf')}">{tr(lang, 'Descargar CV', 'Download CV')} ↓</a></aside><article class="article-body"><p class="article-intro">{e(data['summary'])}</p>{image_figure(item, path, lang, eager=True)}{sections(data)}{references(item, lang)}<nav class="article-bottom" aria-label="{tr(lang, 'Continuar explorando', 'Continue exploring')}"><a href="{href(path, route(lang))}#{section_key}">← {label}</a><a href="{href(path, counterpart)}" hreflang="{tr(lang, 'en', 'es')}">{tr(lang, 'Read in English', 'Leer en español')} →</a></nav></article></div></main>'''
+<div class="container article-layout"><aside class="article-aside"><nav aria-label="{tr(lang, 'Índice del artículo', 'Article contents')}"><span class="eyebrow">{tr(lang, 'En esta página', 'On this page')}</span>{toc}<a href="#referencias">{tr(lang, 'Fuentes', 'References')} ↗</a></nav><a class="aside-cv" href="{href(path, f'assets/cv-sergio-ambrosio-{lang}.pdf')}">{tr(lang, 'Descargar CV', 'Download CV')} ↓</a></aside><article class="article-body"><p class="article-intro">{e(data['summary'])}</p>{image_figure(item, path, lang, eager=True)}{sections(data, path, lang)}{references(item, lang)}<nav class="article-bottom" aria-label="{tr(lang, 'Continuar explorando', 'Continue exploring')}"><a href="{href(path, route(lang))}#{section_key}">← {label}</a><a href="{href(path, counterpart)}" hreflang="{tr(lang, 'en', 'es')}">{tr(lang, 'Read in English', 'Leer en español')} →</a></nav></article></div></main>'''
     if group == 'investigacion':
         schema = {'@context': 'https://schema.org', '@type': 'ScholarlyArticle', 'headline': item.get('referenceTitle', data['title']), 'author': [{'@type': 'Person', 'name': a} for a in item['authors']], 'datePublished': str(item['year']), 'inLanguage': lang, 'url': BASE + path, 'citation': [r['url'] for r in item.get('references', []) if r.get('url')]}
         body += '<script type="application/ld+json">' + json.dumps(schema, ensure_ascii=False).replace('<', '\\u003c') + '</script>'
@@ -159,7 +164,7 @@ def home(lang):
     counterpart = route(tr(lang, 'en', 'es'))
     description = tr(lang, 'Ingeniero Civil titulado por la UNI. Diseño de acero y concreto para minería, edificaciones e infraestructura; análisis sísmico y no lineal.', 'Civil engineer with a professional degree from UNI. Steel and concrete design for mining, buildings and infrastructure; seismic and nonlinear analysis.')
     body = head(path, lang, tr(lang, 'Ingeniería estructural · Acero, concreto y minería', 'Structural Engineer · Steel, Concrete & Mining'), description, counterpart, home=True) + header(path, lang, counterpart)
-    body += f'''<main id="contenido"><section class="hero" id="inicio" aria-labelledby="hero-title"><div class="container hero-layout"><div class="hero-copy"><span class="eyebrow">{tr(lang, 'INGENIERO CIVIL TITULADO · UNI', 'CIVIL ENGINEER · UNI PROFESSIONAL DEGREE')}</span><h1 id="hero-title">Structural<br><em>Engineering.</em></h1><p class="hero-lead">{tr(lang, 'Diseño estructural en acero y concreto.<br><strong>Minería, edificaciones e infraestructura.</strong>', 'Steel and concrete structural design.<br><strong>Mining, buildings and infrastructure.</strong>')}</p><p class="hero-analysis">{tr(lang, 'Análisis sísmico y modelación avanzada.', 'Seismic analysis and advanced modelling.')}</p><div class="hero-actions"><a class="button button-primary" href="#proyectos">{tr(lang, 'Explorar proyectos', 'Explore projects')} <span aria-hidden="true">↗</span></a><a class="hero-research-link" href="#investigacion">{tr(lang, 'Investigación y publicaciones', 'Research & publications')} <span aria-hidden="true">↓</span></a></div><div class="hero-current"><span class="current-dot" aria-hidden="true"></span><div><strong>{tr(lang, 'Actualmente en SRK', 'Currently at SRK')}</strong><span>{tr(lang, 'Ingeniería estructural para minería', 'Structural engineering for mining')}</span></div></div></div>
+    body += f'''<main id="contenido"><section class="hero" id="inicio" aria-labelledby="hero-title"><div class="container hero-layout"><div class="hero-copy"><span class="eyebrow">{tr(lang, 'INGENIERO CIVIL TITULADO · UNI', 'CIVIL ENGINEER · UNI PROFESSIONAL DEGREE')}</span><h1 id="hero-title">Structural<br><em>Engineering.</em></h1><p class="hero-lead">{tr(lang, 'Diseño estructural en acero y concreto.<br><strong>Minería, edificaciones e infraestructura.</strong>', 'Steel and concrete structural design.<br><strong>Mining, buildings and infrastructure.</strong>')}</p><p class="hero-analysis">{tr(lang, 'Acero · Concreto · Minería · Análisis avanzado', 'Steel · Concrete · Mining · Advanced analysis')}</p><p class="hero-code-line">{tr(lang, "Diseño normativo · Python · Automatización estructural", "Design codes · Python · Structural automation")}</p><div class="hero-actions"><a class="button button-primary" href="#proyectos">{tr(lang, 'Explorar proyectos', 'Explore projects')} <span aria-hidden="true">↗</span></a><a class="hero-research-link" href="#investigacion">{tr(lang, 'Investigación y publicaciones', 'Research & publications')} <span aria-hidden="true">↓</span></a></div><div class="hero-current"><span class="current-dot" aria-hidden="true"></span><div><strong>{tr(lang, 'Actualmente en SRK', 'Currently at SRK')}</strong><span>{tr(lang, 'Ingeniería estructural para minería', 'Structural engineering for mining')}</span></div></div></div>
 <figure class="hero-art" aria-labelledby="hero-model-caption"><div class="model-topline"><span>01 / {tr(lang, 'GEOMETRÍA ESTRUCTURAL', 'STRUCTURAL GEOMETRY')}</span><span>{tr(lang, 'ACERO + CONCRETO', 'STEEL + CONCRETE')}</span></div><div class="hero-model"><img class="hero-drawing" src="{href(path, 'assets/hero-structure.svg')}" width="900" height="760" fetchpriority="high" alt="{tr(lang, 'Modelo conceptual de estructura industrial con perfiles de acero, plataformas, arriostres y cimentaciones de concreto.', 'Conceptual industrial frame with steel members, platforms, bracing and concrete foundations.')}"><canvas id="structural-model" width="900" height="760" role="img" aria-label="{tr(lang, 'Modelo industrial conceptual tridimensional. Utiliza los controles de vista.', 'Conceptual three-dimensional industrial model. Use the view controls.')}" aria-describedby="hero-model-caption"></canvas></div><div class="model-toolbar" role="group" aria-label="{tr(lang, 'Orientación del modelo', 'Model orientation')}"><span class="model-hint">{tr(lang, 'Arrastra para girar', 'Drag to rotate')}</span><button type="button" data-model-view="iso" aria-pressed="true">3D</button><button type="button" data-model-view="front" aria-pressed="false">{tr(lang, 'Frontal', 'Front')}</button><button type="button" data-model-view="side" aria-pressed="false">{tr(lang, 'Lateral', 'Side')}</button><button type="button" id="model-reset" aria-label="{tr(lang, 'Restablecer vista del modelo', 'Reset model view')}">↺</button><button type="button" id="model-static-toggle" aria-pressed="false">{tr(lang, 'Estática', 'Static')}</button></div><figcaption id="hero-model-caption">{tr(lang, 'Modelo conceptual de geometría. Acero y concreto; sin resultados de cálculo.', 'Conceptual geometric model. Steel and concrete; no analysis results.')}</figcaption></figure></div></section>
 <div class="credential-strip"><div class="container credential-row"><div><strong>{PROFILE['yearsExperience']} <small>{tr(lang, 'años', 'years')}</small></strong><span>{tr(lang, 'Diseño y revisión estructural', 'Structural design and review')}</span></div><div><strong>21 + 3</strong><span>{tr(lang, 'Niveles y sótanos · SUNSETGOLF C', 'Storeys and basements · SUNSETGOLF C')}</span></div><a href="{href(path, route(lang, 'investigacion', RESEARCH['items'][0]['slug']))}"><strong>17WCEE</strong><span>{tr(lang, 'Coautor y expositor · Congreso mundial', 'Co-author and presenter · World conference')} ↗</span></a></div></div>
 <section class="section work-section" id="proyectos"><div class="container">{heading('01', tr(lang, 'Del modelo<br>al proyecto.', 'From the model<br>to the project.'), tr(lang, 'Edificaciones de concreto, infraestructura eléctrica y estructuras metálicas. Una selección de mi experiencia en diseño y revisión.', 'Concrete buildings, electrical infrastructure and steel structures. Selected experience in structural design and review.'), lang)}<div class="selected-projects">'''
@@ -168,6 +173,7 @@ def home(lang):
         link = href(path, route(lang, 'proyectos', item['slug']))
         body += f'<article class="selected-project selected-project-{i+1}"><a class="project-visual" href="{link}" aria-label="{e(data["title"])}"><img src="{href(path, item["image"]["src"])}" width="1200" height="760" loading="lazy" alt="{e(data.get("imageAlt", ""))}"><span class="visual-label">{tr(lang, "ILUSTRACIÓN ESTRUCTURAL", "STRUCTURAL ILLUSTRATION")}</span><span class="visual-arrow" aria-hidden="true">↗</span></a><div class="selected-project-copy"><span class="eyebrow">0{i+1} / {e(data.get("category", ""))} · {item.get("year", "")}</span><h3><a href="{link}">{e(data["title"])}</a></h3><p>{e(data["summary"])}</p><a class="text-link" href="{link}">{tr(lang, "Ver alcance y desarrollo", "Explore scope and approach")} ↗</a></div></article>'
     body += '</div></div></section>'
+    body += standards_home(path, lang, STANDARDS, AUTOMATION)
     primary = RESEARCH['items'][0]
     rp = primary[lang]
     body += f'''<section class="section research-section" id="investigacion"><div class="container"><div class="research-feature"><div class="research-editorial"><span class="eyebrow">02 / RESEARCH &amp; PUBLICATIONS</span><p class="conference-mark">17<span>WCEE</span><small>SENDAI · 2021</small></p><h2>{tr(lang, 'Entender la respuesta.<br>Ampliar el criterio.', 'Understand the response.<br>Inform the design.')}</h2><p>{tr(lang, 'Investigación sobre aislamiento sísmico de tanques: la interacción entre estructura, líquido y sistema de protección.', 'Research into seismic isolation of storage tanks: the interaction between the structure, the liquid and the protective system.')}</p></div><div class="research-paper"><span class="paper-type">{tr(lang, 'TRABAJO EN ACTAS · COAUTORÍA', 'CONFERENCE PAPER · CO-AUTHOR')}</span><h3><a href="{href(path, route(lang, 'investigacion', primary['slug']))}">{e(primary['referenceTitle'].title())}</a></h3><p>{e(' · '.join(primary['authors']))}</p>{image_figure(primary, path, lang, metadata=False)}<a class="button button-primary" href="{href(path, route(lang, 'investigacion', primary['slug']))}">{tr(lang, 'Explorar la investigación', 'Explore the research')} ↗</a><span class="research-format">{tr(lang, 'C000391 · Presentación breve en línea (SOP) · Conferencia híbrida', 'C000391 · Online short oral presentation (SOP) · Hybrid conference')}</span></div></div><div class="publication-list">'''
@@ -194,7 +200,8 @@ def home(lang):
             body += '<ul>' + ''.join(f'<li>{e(a)}</li>' for a in (applications if isinstance(applications, list) else [applications])) + '</ul>'
         body += f'</details><span class="tool-names">{e(" · ".join(spec["tools"]))}</span></article>'
     body += '</div></div></section>'
-    body += f'<section class="section insights-section" id="notas"><div class="container">{heading("05", tr(lang, "Notas desde<br>la ingeniería.", "Notes on<br>engineering practice."), tr(lang, "Modelar, interpretar y verificar. Seis artículos con fundamentos, ejemplos conceptuales y referencias para desarrollar criterio técnico.", "Model, interpret and verify. Six articles with fundamentals, conceptual examples and references to support engineering judgement."), lang)}<div class="insight-list">'
+    body += automation_home(path, lang, AUTOMATION)
+    body += f'<section class="section insights-section" id="notas"><div class="container">{heading("05", tr(lang, "Notas desde<br>la ingeniería.", "Notes on<br>engineering practice."), tr(lang, "Modelar, interpretar y verificar. Artículos con fundamentos, ejemplos calculados, código y referencias para desarrollar criterio técnico.", "Model, interpret and verify. Articles with fundamentals, worked examples, source code and references to support engineering judgement."), lang)}<div class="insight-list">'
     for i, item in enumerate(INSIGHTS['items'], 1):
         data = item[lang]
         link = href(path, route(lang, 'notas', item['slug']))
@@ -234,7 +241,10 @@ def cv(lang):
     text += f'</section><section><h2>{tr(lang, "Investigación y publicaciones", "Research and publications")}</h2>'
     for item in RESEARCH['items']:
         text += f'<article><h3><a href="{BASE + route(lang, "investigacion", item["slug"])}">{e(item.get("referenceTitle", item[lang]["title"]))}</a></h3><p>{e("; ".join(item["authors"]))} · {item["year"]}</p><p>{e(item[lang].get("subtitle", ""))}</p></article>'
-    text += f'</section><section><h2>{tr(lang, "Especialidades y herramientas", "Expertise and tools")}</h2><p>' + e(' · '.join(x['title'][lang] for x in PROFILE['expertise'])) + '</p><p>' + e(' · '.join(dict.fromkeys(t for x in PROFILE['expertise'] for t in x['tools']))) + f'</p></section><section><h2>{tr(lang, "Formación", "Education")}</h2>' + ''.join(f'<p>{e(x[lang])}</p>' for x in PROFILE['education']) + f'</section><footer>{tr(lang, "Versión pública", "Public version")} · {PROFILE["lastReviewed"]} · sergioambrosio714.github.io</footer></main></body></html>'
+    text += f'</section><section><h2>{tr(lang, "Especialidades y herramientas", "Expertise and tools")}</h2><p>' + e(' · '.join(x['title'][lang] for x in PROFILE['expertise'])) + '</p><p>' + e(' · '.join(dict.fromkeys(t for x in PROFILE['expertise'] for t in x['tools']))) + '</p>'
+    text += f'<p><strong>{tr(lang,"Normativa y verificación","Codes and verification")}:</strong> RNE E.020 / E.030 / E.050 / E.060; ACI 318, ASCE 7, AISC 360, ASCE 41, ACI 562. <a href="{BASE + ("en/" if lang == "en" else "") + "normativa/index.html"}">{tr(lang,"Alcances y ediciones de referencia","Scope and reference editions")}</a>.</p>'
+    text += f'<p><strong>Python / AutoLISP:</strong> {tr(lang,"procesamiento de resultados, validación y documentación. Demostradores nuevos del portafolio (2026)","results processing, validation and documentation. New portfolio demonstrations (2026)")}: <a href="{BASE + route(lang,"laboratorio","resultados-por-nivel")}">CSV / SI</a> · <a href="{BASE + route(lang,"laboratorio","voladizo-parametrico")}">{tr(lang,"voladizo paramétrico","parametric cantilever")}</a>.</p>'
+    text += f'</section><section><h2>{tr(lang, "Formación", "Education")}</h2>' + ''.join(f'<p>{e(x[lang])}</p>' for x in PROFILE['education']) + f'</section><footer>{tr(lang, "Versión pública", "Public version")} · {PROFILE["lastReviewed"]} · sergioambrosio714.github.io</footer></main></body></html>'
     emit(path, text)
 
 
@@ -264,9 +274,17 @@ Diseño, modelación y revisión de estructuras de acero y concreto. Actualmente
 
 Coautor en **17WCEE** y expositor de una presentación breve en línea (SOP) del congreso híbrido de 2021. Las fichas enlazan las fuentes originales y distinguen publicaciones, presentaciones y actividades académicas.
 
-### Criterio y herramientas
+### Normativa, análisis y verificación
 
-Concreto armado, acero, ingeniería sísmica, análisis no lineal, elementos finitos y reforzamiento. ETABS · SAP2000 · SAFE · Mathcad · AutoCAD · Revit · IDEA StatiCa; Python, OpenSeesPy y Abaqus como herramientas de análisis y desarrollo técnico.
+Marco de aplicación declarado: RNE E.020, E.030, E.050 y E.060; ACI 318, ASCE/SEI 7, AISC 360, ASCE/SEI 41, ACI 562 y referencias FRP. [Ediciones, alcance y fuentes oficiales]({BASE}normativa/index.html). Análisis sísmico y no lineal, elementos finitos y reforzamiento; ETABS, SAP2000, SAFE, Mathcad, OpenSeesPy y Abaqus vinculados al problema estructural.
+
+### Python comprobable
+
+- [Resultados por nivel]({BASE}laboratorio/resultados-por-nivel.html): importar CSV, validar unidades, comparar casos y exportar datos.
+- [Voladizo paramétrico]({BASE}laboratorio/voladizo-parametrico.html): equilibrio, deformación y esfuerzos con solución analítica.
+- [Código Python, ejemplos y pruebas](https://github.com/SergioAmbrosio714/SergioAmbrosio714.github.io/tree/main/python).
+
+Demostraciones desarrolladas para este portafolio en octubre de 2026; no se atribuyen a proyectos profesionales anteriores. Python complementa el criterio de diseño y la revisión, con procedimientos reproducibles y salidas trazables.
 
 [Notas técnicas]({BASE}#notas) · [Experiencia profesional]({BASE}#experiencia) · [Structural Lab]({BASE}#herramientas)
 '''
@@ -276,8 +294,9 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--check', action='store_true')
     args = parser.parse_args()
-    global PROFILE, PROJECTS, RESEARCH, INSIGHTS, LAB
+    global PROFILE, PROJECTS, RESEARCH, INSIGHTS, LAB, STANDARDS, AUTOMATION
     PROFILE, PROJECTS, RESEARCH, INSIGHTS = [read(x) for x in ('profile', 'projects', 'research', 'insights')]
+    STANDARDS, AUTOMATION = read('standards'), read('automation')
     for collection in (PROJECTS, RESEARCH, INSIGHTS):
         for item in collection['items']:
             image = item.get('image')
@@ -294,6 +313,15 @@ def main():
     for lang in ('es', 'en'):
         home(lang)
         cv(lang)
+        code_path = ('en/' if lang == 'en' else '') + 'normativa/index.html'
+        counterpart = ('en/' if lang == 'es' else '') + 'normativa/index.html'
+        emit(code_path, head(code_path, lang, STANDARDS[lang]['title'], STANDARDS[lang]['intro'], counterpart) + header(code_path, lang, counterpart) + standards_page(code_path, lang, STANDARDS) + footer(code_path, lang))
+        for demo in AUTOMATION['demos']:
+            demo_path = route(lang, 'laboratorio', demo['slug'])
+            counterpart = route(tr(lang, 'en', 'es'), 'laboratorio', demo['slug'])
+            sample = (ROOT / demo['example']).read_text(encoding='utf-8')
+            body = head(demo_path, lang, demo[lang]['title'], demo[lang]['description'], counterpart).replace('</head>', f'<script src="{href(demo_path, "demo-core.js")}" defer></script><script src="{href(demo_path, "demo-ui.js")}" defer></script></head>')
+            emit(demo_path, body + header(demo_path, lang, counterpart) + demo_page(demo_path, lang, demo, sample) + footer(demo_path, lang))
         for group, collection in [('proyectos', PROJECTS), ('investigacion', RESEARCH), ('notas', INSIGHTS)]:
             for item in collection['items']:
                 article(item, group, lang)
